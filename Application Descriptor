@@ -1,0 +1,7 @@
+MIDlet-Version: 1.0.6
+MIDlet-Vendor: Gameloft SA
+MicroEdition-Configuration: CLDC-1.0
+MIDlet-1: Green Farm 3, /icon.png, GloftGF2M
+MIDlet-Name: Green Farm 3
+MicroEdition-Profile: MIDP-2.0
+MIDlet-Jar-URL: GreenFarm3_Samsung_S8000_106.jar
