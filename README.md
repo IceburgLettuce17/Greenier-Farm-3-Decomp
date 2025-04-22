@@ -1,5 +1,5 @@
 # Greenier-Farm-3-Decomp
- A de-compilation of Gameloft's J2ME title from 2013 and a prequel to a series of titles, Green Farm 3. This decomp is based on the launch version (1.0.6) for the Samsung GT-S8000 Jet. The goal is not matching, but deobfuscating and documenting it enough for the code to by readable and logically identical.
+ A de-compilation of the third version of Gameloft's Green Farm series. This decomp is based on the launch version (1.0.6) for the Samsung GT-S8000 Jet. The goal is not matching, but deobfuscating and documenting it enough for the code to by readable and logically identical.
 # Building
 ## J2ME Setup (nnproject)
 - [Windows](https://nnp.nnchan.ru/wiki/?page=j2medevwin)
