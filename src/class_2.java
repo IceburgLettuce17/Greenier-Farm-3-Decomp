@@ -31630,7 +31630,7 @@ public final class class_2 extends class_1 implements class_0 {
          ;
       }
 
-      GloftGF2M.field_1187 = null;
+      GloftGF2M.game = null;
       field_811 = null;
       field_812 = null;
       field_813 = null;

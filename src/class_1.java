@@ -231,7 +231,7 @@ public abstract class class_1 extends Canvas implements Runnable {
    }
 
    // $FF: renamed from: j () void
-   protected final void method_3() {
+   protected final void initValues() {
       if(field_4 < 0) {
          width = 800;
          height = 480;

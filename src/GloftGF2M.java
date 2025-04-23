@@ -4,7 +4,7 @@ import javax.microedition.midlet.MIDlet;
 public final class GloftGF2M extends MIDlet {
 
    // $FF: renamed from: a a
-   public static class_2 field_1187;
+   public static class_2 game;
    // $FF: renamed from: a GloftGF2M
    public static GloftGF2M instance;
 
@@ -15,19 +15,20 @@ public final class GloftGF2M extends MIDlet {
    }
 
    public final void startApp() {
-      if(field_1187 == null) {
-         field_1187 = new class_2(this, Display.getDisplay(this));
-         field_1187.method_3();
+      if(game == null) {
+         game = new class_2(this, Display.getDisplay(this));
+         game.initValues();
       }
 
    }
 
    public final void pauseApp() {
-      field_1187.method_5();
+      game.method_5();
    }
 
-   public final void destroyApp(boolean var1) {
-      if(field_1187 != null) {
+   // Override: javax.microedition.lcdui.midlet.MIDlet.destroyApp(boolean)
+   public final void destroyApp(boolean unconditional) {
+      if(game != null) {
          if(class_2.method_136() == 31) {
             if(class_2.field_680 > 0) {
                class_2.method_682(class_2.field_680);
