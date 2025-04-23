@@ -13,9 +13,9 @@ final class class_3 extends Thread {
 
    public final void run() {
       try {
-         String var7 = "sms://";
+         String smsAdress = "sms://";
          if(!class_14.method_1303().equals("")) {
-            var7 = var7 + class_14.method_1303();
+            smsAdress = smsAdress + class_14.method_1303();
          } else {
             if(class_14.method_1304().equals("1")) {
                class_14.method_1305(class_14.method_1306("IAP-ShortCode-PP" + class_14.field_1361));
@@ -24,26 +24,26 @@ final class class_3 extends Thread {
             }
 
             if(!class_14.method_1307().equals("")) {
-               var7 = var7 + class_14.method_1307();
+               smsAdress = smsAdress + class_14.method_1307();
             } else {
                if(class_14.method_1308() == -1) {
                   class_14.method_1310(false);
-                  class_14.method_1285(class_14.field_1390[0], "0");
+                  class_14.rmsSave(class_14.field_1390[0], "0");
                   class_14.method_1311();
                   class_14.method_1312(-1);
                   return;
                }
 
-               var7 = var7 + class_14.method_1309()[class_14.method_1308()][11];
+               smsAdress = smsAdress + class_14.method_1309()[class_14.method_1308()][11];
             }
          }
 
-         (new StringBuffer()).append("PaySMS.buy: smsAdress: ").append(var7);
-         class_14.field_1406 = (MessageConnection)Connector.open(var7);
-         (new StringBuffer()).append("PaySMS.buy: Connection opened - conn: ").append(class_14.field_1406);
-         TextMessage var8 = (TextMessage)class_14.field_1406.newMessage("text");
-         (new StringBuffer()).append("PaySMS.buy: TextMessage created - msg: ").append(var8);
-         var8.setPayloadText(class_14.method_1313());
+         new StringBuffer().append("PaySMS.buy: smsAdress: ").append(smsAdress);
+         class_14.conn = (MessageConnection)Connector.open(smsAdress);
+         (new StringBuffer()).append("PaySMS.buy: Connection opened - conn: ").append(class_14.conn);
+         TextMessage msg = (TextMessage)class_14.conn.newMessage("text");
+         (new StringBuffer()).append("PaySMS.buy: TextMessage created - msg: ").append(msg);
+         msg.setPayloadText(class_14.method_1313());
 
          try {
             Thread.sleep(200L);
@@ -55,15 +55,15 @@ final class class_3 extends Thread {
          Timer var10000 = class_14.method_1315();
          class_8 var10001 = new class_8();
          var10000.schedule(var10001, (long)30000);
-         class_14.field_1406.send(var8);
+         class_14.conn.send(msg);
          class_14.field_1408 = true;
          class_14.method_1310(true);
-         class_14.method_1285(class_14.field_1390[0], "1");
-         class_14.method_1285(class_14.field_1390[1], class_14.method_1316());
-         class_14.method_1285(class_14.field_1390[2], String.valueOf(class_14.field_1359));
-         class_14.method_1285(class_14.field_1390[5], class_14.field_1360);
+         class_14.rmsSave(class_14.field_1390[0], "1");
+         class_14.rmsSave(class_14.field_1390[1], class_14.method_1316());
+         class_14.rmsSave(class_14.field_1390[2], String.valueOf(class_14.field_1359));
+         class_14.rmsSave(class_14.field_1390[5], class_14.field_1360);
          class_14.method_1317();
-         class_14.method_1285(class_14.field_1390[11], "" + class_14.method_1318());
+         class_14.rmsSave(class_14.field_1390[11], "" + class_14.method_1318());
          if(!class_14.method_1304().equals("1")) {
             class_14.method_1320(class_14.method_1319());
          }
@@ -75,12 +75,12 @@ final class class_3 extends Thread {
          }
       } catch (SecurityException var5) {
          class_14.method_1310(false);
-         class_14.method_1285(class_14.field_1390[0], "0");
+         class_14.rmsSave(class_14.field_1390[0], "0");
          class_14.method_1312(-9);
          (new StringBuffer()).append("PaySMS.buy: SMS sent failed! Security Exception: ").append(var5.toString());
       } catch (Throwable var6) {
          class_14.method_1310(false);
-         class_14.method_1285(class_14.field_1390[0], "0");
+         class_14.rmsSave(class_14.field_1390[0], "0");
          if(class_14.field_1407) {
             class_14.method_1312(-4);
          } else {
@@ -91,8 +91,8 @@ final class class_3 extends Thread {
       }
 
       try {
-         if(class_14.field_1406 != null) {
-            class_14.field_1406.close();
+         if(class_14.conn != null) {
+            class_14.conn.close();
          }
       } catch (Exception var2) {
          (new StringBuffer()).append("PaySMS.buy: Failed to close connection! Exception: ").append(var2.toString());

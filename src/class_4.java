@@ -7,22 +7,18 @@ import javax.microedition.io.HttpConnection;
 // $FF: renamed from: d
 public final class class_4 implements Runnable {
 
-   // $FF: renamed from: c boolean
-   private boolean field_912;
    // $FF: renamed from: a java.lang.Thread
-   private Thread field_913;
+   private Thread thread;
    // $FF: renamed from: b java.lang.String
-   private String field_914;
+   private String url;
    // $FF: renamed from: a javax.microedition.io.HttpConnection
-   private HttpConnection field_915;
+   private HttpConnection conn;
    // $FF: renamed from: a java.io.InputStream
-   private InputStream field_916;
+   private InputStream reqStream;
    // $FF: renamed from: a java.io.OutputStream
-   private OutputStream field_917;
+   private OutputStream outStream;
    // $FF: renamed from: a java.lang.String
    public String field_918;
-   // $FF: renamed from: d boolean
-   private boolean field_919;
    // $FF: renamed from: a boolean
    boolean field_920;
    // $FF: renamed from: e boolean
@@ -30,64 +26,53 @@ public final class class_4 implements Runnable {
    // $FF: renamed from: b boolean
    public boolean field_922;
    // $FF: renamed from: a int
-   private int field_923;
-   // $FF: renamed from: c java.lang.String
-   private String field_924;
-
+   private int responseCode;
+   
    // $FF: renamed from: <init> (boolean) void
-   public class_4(boolean var1) {
+   public class_4(boolean unused) {
       super();
-      this.field_912 = var1;
-      String var2 = "application/x-www-form-urlencoded";
-      this.field_924 = "application/x-www-form-urlencoded";
    }
 
    // $FF: renamed from: a () void
-   public final synchronized void method_905() {
+   public final synchronized void reset() {
       if(!this.field_921) {
          this.field_921 = true;
-         if(this.field_915 != null) {
-            HttpConnection var1;
-            if(this.field_916 != null) {
+         if(this.conn != null) {
+            if(this.reqStream != null) {
                try {
-                  var1 = this.field_915;
-                  synchronized(this.field_915) {
-                     this.field_916.close();
+                  synchronized(this.conn) {
+                     this.reqStream.close();
                   }
-               } catch (Exception var8) {
+               } catch (Exception e) {
+               }
+            }
+
+            if(this.conn != null) {
+               try {
+                  synchronized(this.conn) {
+                     this.conn.close();
+                  }
+               } catch (Exception e2) {
+               }
+            }
+
+            if(this.outStream != null) {
+               try {
+                  synchronized(this.outStream) {
+                     this.outStream.close();
+                  }
+               } catch (Exception e3) {
                   ;
                }
             }
 
-            if(this.field_915 != null) {
-               try {
-                  var1 = this.field_915;
-                  synchronized(this.field_915) {
-                     this.field_915.close();
-                  }
-               } catch (Exception var6) {
-                  ;
-               }
-            }
-
-            if(this.field_917 != null) {
-               try {
-                  OutputStream var9 = this.field_917;
-                  synchronized(this.field_917) {
-                     this.field_917.close();
-                  }
-               } catch (Exception var4) {
-                  ;
-               }
-            }
-
-            this.field_917 = null;
+            this.outStream = null;
          }
 
-         this.field_916 = null;
-         this.field_915 = null;
+         this.reqStream = null;
+         this.conn = null;
          this.field_920 = false;
-         this.field_913 = null;
+         this.thread = null;
          System.gc();
       }
 
@@ -95,7 +80,6 @@ public final class class_4 implements Runnable {
 
    // $FF: renamed from: a (java.lang.String, java.lang.String) void
    public final void method_906(String var1, String var2) {
-      this.field_919 = false;
       System.gc();
 
       while(this.field_920) {
@@ -108,20 +92,20 @@ public final class class_4 implements Runnable {
          }
       }
 
-      this.method_905();
+      this.reset();
       this.field_922 = false;
       this.field_918 = null;
       this.field_920 = true;
       this.field_921 = false;
-      this.field_914 = var1 + var2;
+      this.url = var1 + var2;
       this.field_922 = false;
-      this.field_913 = new Thread(this);
-      this.field_913.start();
+      this.thread = new Thread(this);
+      this.thread.start();
    }
 
    public final void run() {
-      if(this.field_914 == null) {
-         this.method_905();
+      if(this.url == null) {
+         this.reset();
          this.field_922 = true;
          this.field_920 = false;
       } else {
@@ -132,23 +116,23 @@ public final class class_4 implements Runnable {
                return;
             }
 
-            this.field_915 = (HttpConnection)Connector.open(this.field_914, 3);
-            this.field_915.setRequestMethod("GET");
-            this.field_915.setRequestProperty("Connection", "close");
-            this.field_923 = this.field_915.getResponseCode();
-            this.field_915.getResponseMessage();
-            this.field_915.getDate();
-            if(this.field_923 != 200 && this.field_923 != 202) {
-               this.method_905();
+            this.conn = (HttpConnection)Connector.open(this.url, 3);
+            this.conn.setRequestMethod("GET");
+            this.conn.setRequestProperty("Connection", "close");
+            this.responseCode = this.conn.getResponseCode();
+            this.conn.getResponseMessage();
+            this.conn.getDate();
+         
+            if(this.responseCode != 200 && this.responseCode != 202) {
+               this.reset();
                this.field_922 = true;
                this.field_920 = false;
                return;
             }
 
             if(!this.field_921) {
-               HttpConnection var1 = this.field_915;
-               synchronized(this.field_915) {
-                  this.field_916 = this.field_915.openInputStream();
+               synchronized(this.conn) {
+                  this.reqStream = this.conn.openInputStream();
                }
 
                Thread.yield();
@@ -167,7 +151,7 @@ public final class class_4 implements Runnable {
                         var2[var3] = 0;
                      }
 
-                     if(this.field_916.read(var2, 0, 256) != -1) {
+                     if(this.reqStream.read(var2, 0, 256) != -1) {
                         for(var3 = 255; var3 >= 0 && var2[var3] == 0; --var3) {
                            ;
                         }
@@ -190,13 +174,13 @@ public final class class_4 implements Runnable {
             this.field_920 = false;
             return;
          } finally {
-            this.method_905();
+            this.reset();
          }
 
       }
    }
 
    public final String toString() {
-      return null + ": " + this.field_914;
+      return null + ": " + this.url;
    }
 }

@@ -85,15 +85,15 @@ public final class class_2 extends class_1 implements class_0 {
    // $FF: renamed from: f byte[]
    private static byte[] field_126;
    // $FF: renamed from: a k[]
-   private static class_10[] field_127;
+   private static cSoundEngine[] field_127;
    // $FF: renamed from: b k[]
-   private static class_10[] field_128;
+   private static cSoundEngine[] field_128;
    // $FF: renamed from: c k[]
-   private static class_10[] field_129;
+   private static cSoundEngine[] field_129;
    // $FF: renamed from: a k
-   private static class_10 field_130;
+   private static cSoundEngine field_130;
    // $FF: renamed from: d k[]
-   private static class_10[] field_131;
+   private static cSoundEngine[] field_131;
    // $FF: renamed from: b int[][]
    private static int[][] field_132;
    // $FF: renamed from: c int[][]
@@ -241,7 +241,7 @@ public final class class_2 extends class_1 implements class_0 {
    // $FF: renamed from: a byte
    static byte field_204;
    // $FF: renamed from: b k
-   private static class_10 field_205;
+   private static cSoundEngine field_205;
    // $FF: renamed from: aF int
    private static int field_206;
    // $FF: renamed from: k int[]
@@ -373,7 +373,7 @@ public final class class_2 extends class_1 implements class_0 {
    // $FF: renamed from: bg int
    private static int field_270;
    // $FF: renamed from: c k
-   private static class_10 field_271;
+   private static cSoundEngine field_271;
    // $FF: renamed from: bh int
    private static int field_272;
    // $FF: renamed from: bi int
@@ -521,7 +521,7 @@ public final class class_2 extends class_1 implements class_0 {
    // $FF: renamed from: F int[]
    private static int[] field_344;
    // $FF: renamed from: d k
-   private static class_10 field_345;
+   private static cSoundEngine field_345;
    // $FF: renamed from: a byte[]
    static byte[] field_346;
    // $FF: renamed from: j int[][]
@@ -1671,8 +1671,8 @@ public final class class_2 extends class_1 implements class_0 {
       if(field_93 != null && field_92 != -1 && ((var1 = field_93[field_92]) == 17 || var1 == 18) && var0 != 19 && var0 != 35 && var0 != 17 && var0 != 18 && var0 != 36 && var0 != 12) {
          field_156 = true;
          field_97 = true;
-         class_10.method_1158(0);
-         class_10.method_1158(1);
+         cSoundEngine.method_1158(0);
+         cSoundEngine.method_1158(1);
       }
 
       if(field_92 < 15) {
@@ -1696,8 +1696,8 @@ public final class class_2 extends class_1 implements class_0 {
       if(field_93 != null && field_92 != -1 && ((var1 = field_93[field_92]) == 17 || var1 == 18 || var1 == 26) && var0 != 19 && var0 != 35 && var0 != 17 && var0 != 18 && var0 != 36 && var0 != 12) {
          field_156 = true;
          field_97 = true;
-         class_10.method_1158(0);
-         class_10.method_1158(1);
+         cSoundEngine.method_1158(0);
+         cSoundEngine.method_1158(1);
       }
 
       if(field_92 < 15) {
@@ -2025,8 +2025,8 @@ public final class class_2 extends class_1 implements class_0 {
                method_151(0, 3);
                break;
             case 21:
-               class_10.method_1158(0);
-               class_10.method_1158(1);
+               cSoundEngine.method_1158(0);
+               cSoundEngine.method_1158(1);
                break;
             case 22:
                class_6.method_993();
@@ -2094,7 +2094,7 @@ public final class class_2 extends class_1 implements class_0 {
                break;
             case 39:
                class_1.method_33("/0");
-               class_10.method_1127(119);
+               cSoundEngine.method_1127(119);
                method_163(61, 0);
                method_163(113, 0);
                break;
@@ -2432,9 +2432,9 @@ public final class class_2 extends class_1 implements class_0 {
                break;
             case 49:
                if(field_881 > 0 && field_881 <= 10) {
-                  var0 = class_7.field_1130[8].field_1133[field_881 - 1][3];
+                  var0 = cResource.resources[8].field_1133[field_881 - 1][3];
                   method_153(0, var0, 1, 0, 24, 0, -1);
-                  if((var0 = class_7.field_1130[18].field_1133[method_670() - 1][1 + field_881 - 1]) > field_294[field_881 - 1][0]) {
+                  if((var0 = cResource.resources[18].field_1133[method_670() - 1][1 + field_881 - 1]) > field_294[field_881 - 1][0]) {
                      field_294[field_881 - 1][0] = var0;
                   }
                }
@@ -2547,13 +2547,13 @@ public final class class_2 extends class_1 implements class_0 {
 
       int var0 = field_864[var2].field_928[0] & '\uffff';
       int var1 = field_864[var2].field_929[0] & '\uffff';
-      class_10.method_1151(class_1.width, class_1.height, var0, var1);
+      cSoundEngine.method_1151(class_1.width, class_1.height, var0, var1);
       if(field_113 == null) {
          field_113 = class_1.method_27(0);
       }
 
-      class_10.method_1154();
-      class_10.method_1157(0, class_1.method_27(2), field_113, class_1.method_27(1), field_864[var2], 0, 16, 2, 2, true);
+      cSoundEngine.method_1154();
+      cSoundEngine.method_1157(0, class_1.method_27(2), field_113, class_1.method_27(1), field_864[var2], 0, 16, 2, 2, true);
       class_1.method_23();
    }
 
@@ -2884,12 +2884,12 @@ public final class class_2 extends class_1 implements class_0 {
          return true;
       } else {
          if((field_120[var0] & 5) != 0) {
-            if(class_10.method_1129(var0)) {
+            if(cSoundEngine.method_1129(var0)) {
                return true;
             }
 
             try {
-               class_10.method_1128("/3", var0, false);
+               cSoundEngine.method_1128("/3", var0, false);
                field_120[var0] &= -2;
             } catch (Exception var3) {
                ;
@@ -2897,12 +2897,12 @@ public final class class_2 extends class_1 implements class_0 {
 
             var1 = false;
          } else if((field_120[var0] & 10) != 0) {
-            if(!class_10.method_1129(var0)) {
+            if(!cSoundEngine.method_1129(var0)) {
                return true;
             }
 
             try {
-               class_10.method_1130(var0);
+               cSoundEngine.method_1130(var0);
             } catch (Exception var2) {
                ;
             }
@@ -2916,7 +2916,7 @@ public final class class_2 extends class_1 implements class_0 {
 
    // $FF: renamed from: e (int, int) void
    private static void method_163(int var0, int var1) {
-      if(!class_10.method_1129(var0)) {
+      if(!cSoundEngine.method_1129(var0)) {
          field_120[var0] = 1;
       }
    }
@@ -3143,7 +3143,7 @@ public final class class_2 extends class_1 implements class_0 {
       var0[4] = (byte)field_862;
       var0[5] = (byte)field_863;
       var0[6] = (byte)(field_158?1:0);
-      var0[7] = (byte)class_10.field_1148;
+      var0[7] = (byte)cSoundEngine.field_1148;
       var0[10] = (byte)(field_697?1:0);
 
       try {
@@ -3172,7 +3172,7 @@ public final class class_2 extends class_1 implements class_0 {
          field_697 = var0[10] == 1;
 
          try {
-            class_10.method_1135(var0[7]);
+            cSoundEngine.method_1135(var0[7]);
          } catch (Exception var2) {
             ;
          }
@@ -3661,7 +3661,7 @@ public final class class_2 extends class_1 implements class_0 {
          long var6;
          int var9;
          byte var14;
-         class_7 var18;
+         cResource var18;
          for(var3 = 0; var3 < field_495; ++var3) {
             var14 = class_1.method_57(var12, var13);
             ++var13;
@@ -3674,7 +3674,7 @@ public final class class_2 extends class_1 implements class_0 {
             boolean var8 = class_1.method_57(var12, var13) != 0;
             ++var13;
             var4 = var5;
-            var18 = class_7.field_1130[7];
+            var18 = cResource.resources[7];
 
             for(var9 = 0; var9 < var18.field_1132 && var4 != var18.field_1133[var9][1]; ++var9) {
                ;
@@ -3707,8 +3707,8 @@ public final class class_2 extends class_1 implements class_0 {
             var5 = class_1.method_59(var12, var13);
             var13 += 4;
             var4 = var5;
-            class_7 var17 = class_7.field_1130[22];
-            var18 = class_7.field_1130[1];
+            cResource var17 = cResource.resources[22];
+            var18 = cResource.resources[1];
 
             for(var9 = 0; var9 < var17.field_1132 && var4 != var17.field_1133[var9][1]; ++var9) {
                ;
@@ -4229,19 +4229,19 @@ public final class class_2 extends class_1 implements class_0 {
       var4 = 65;
       if(var0) {
          field_212 = var1;
-         class_7 var6 = null;
+         cResource var6 = null;
          byte var7 = 0;
          var3 = 0;
          switch(field_212) {
          case 0:
             var7 = 12;
-            var6 = class_7.field_1130[2];
+            var6 = cResource.resources[2];
             var3 = 1;
             field_211 = 11;
             break;
          case 1:
             var7 = 8;
-            var6 = class_7.field_1130[21];
+            var6 = cResource.resources[21];
             field_211 = 0;
          }
 
@@ -4457,14 +4457,14 @@ public final class class_2 extends class_1 implements class_0 {
 
    // $FF: renamed from: i (int) int
    private static int method_192(int var0) {
-      return class_7.field_1130[2].field_1133[var0][5] - 1;
+      return cResource.resources[2].field_1133[var0][5] - 1;
    }
 
    // $FF: renamed from: h (boolean) void
    private static void method_193(boolean var0) {
       method_185(false);
       method_577(var0);
-      class_10.method_1174();
+      cSoundEngine.method_1174();
       field_880 = true;
       if(field_182 == 0 || field_182 == 1 || field_182 == 4) {
          field_182 = -1;
@@ -4690,8 +4690,8 @@ public final class class_2 extends class_1 implements class_0 {
       field_438 = 0;
       field_436 = 0;
       method_732(0);
-      class_7 var2;
-      int var1 = (var2 = class_7.field_1130[1]).field_1132;
+      cResource var2;
+      int var1 = (var2 = cResource.resources[1]).field_1132;
 
       for(int var3 = 0; var3 < var1; ++var3) {
          if(method_666(0, var3) > 0 && var2.field_1133[var3][12] > 0) {
@@ -4870,7 +4870,7 @@ public final class class_2 extends class_1 implements class_0 {
       }
 
       if(method_623(field_441[field_440])) {
-         class_7 var0 = class_7.field_1130[1];
+         cResource var0 = cResource.resources[1];
          method_564(49);
 
          for(int var1 = 0; var1 < 3; ++var1) {
@@ -4888,7 +4888,7 @@ public final class class_2 extends class_1 implements class_0 {
 
          field_436 += method_713(field_443[field_440]);
          field_437 += method_713(field_444[field_440]);
-         method_622(field_440, (class_7)null);
+         method_622(field_440, (cResource)null);
          method_726(field_440, field_440);
          method_728(field_440 - field_439);
          method_627(0, 1, 40);
@@ -4928,7 +4928,7 @@ public final class class_2 extends class_1 implements class_0 {
    // $FF: renamed from: ao () void
    private static void method_233() {
       method_564(23);
-      method_622(field_440, (class_7)null);
+      method_622(field_440, (cResource)null);
       method_726(field_440, field_440);
       method_728(field_440 - field_439);
       method_727(field_440, true);
@@ -5008,7 +5008,7 @@ public final class class_2 extends class_1 implements class_0 {
          int var4;
          byte var6;
          if(field_698 == ((var1 = class_1.method_74(292)) == null?"":var1)) {
-            class_7 var3 = class_7.field_1130[3];
+            cResource var3 = cResource.resources[3];
             int var5 = method_169(field_883);
             var4 = var3.field_1133[var5][1];
             if(field_883 == 1) {
@@ -5438,7 +5438,7 @@ public final class class_2 extends class_1 implements class_0 {
             if(var0 == 10) {
                field_91 = 1;
                method_634();
-               class_7 var7 = class_7.field_1130[11];
+               cResource var7 = cResource.resources[11];
                int var6 = 0;
                int var3 = 0;
                if(var7 != null) {
@@ -5675,7 +5675,7 @@ public final class class_2 extends class_1 implements class_0 {
          int[] var4 = new int[(var3 = var2 + var0 + var13) << 1];
          int[] var5 = new int[var3 << 1];
          int[] var6 = new int[var3 << 1];
-         class_7 var8 = class_7.field_1130[11];
+         cResource var8 = cResource.resources[11];
 
          int var9;
          int var10;
@@ -5774,7 +5774,7 @@ public final class class_2 extends class_1 implements class_0 {
    // $FF: renamed from: j (int) int
    private static int method_248(int var0) {
       int var1 = 0;
-      class_7 var2 = class_7.field_1130[11];
+      cResource var2 = cResource.resources[11];
 
       for(int var3 = 0; var3 < 67; ++var3) {
          if(var0 == var2.field_1133[var3][1]) {
@@ -6109,7 +6109,7 @@ public final class class_2 extends class_1 implements class_0 {
       char var1 = field_450;
       int var2 = field_463;
       boolean var3 = false;
-      class_7 var4 = class_7.field_1130[7];
+      cResource var4 = cResource.resources[7];
 
       for(int var5 = 0; var5 < var4.field_1132; ++var5) {
          if(var4.field_1133[var5][18] == var0 && method_670() >= var4.field_1133[var5][5]) {
@@ -6168,7 +6168,7 @@ public final class class_2 extends class_1 implements class_0 {
       int var3;
       byte var5;
       byte var6;
-      class_7 var7;
+      cResource var7;
       if(var1 == 27) {
          if(!field_540) {
             method_564(61);
@@ -6178,7 +6178,7 @@ public final class class_2 extends class_1 implements class_0 {
 
             var0 += field_518;
             if(!field_510) {
-               var7 = class_7.field_1130[22];
+               var7 = cResource.resources[22];
                var2 = 0;
 
                for(var3 = 0; var3 < 6; ++var3) {
@@ -6221,7 +6221,7 @@ public final class class_2 extends class_1 implements class_0 {
 
             var0 += field_498;
             if(!field_510) {
-               var7 = class_7.field_1130[7];
+               var7 = cResource.resources[7];
                var2 = 0;
                var3 = 0;
 
@@ -8167,7 +8167,7 @@ public final class class_2 extends class_1 implements class_0 {
       class_6.method_1037(100);
       field_365 = method_662();
       field_882 = field_728 + 1;
-      int var10000 = class_7.field_1130[8].field_1133[field_728][1];
+      int var10000 = cResource.resources[8].field_1133[field_728][1];
       byte var2 = 23;
       byte var1 = 1;
       method_888(var10000, var1, var2, false);
@@ -8239,8 +8239,8 @@ public final class class_2 extends class_1 implements class_0 {
    private static void method_381() {
       method_564(61);
       if(field_733 >= field_295[field_728][2] && field_736 >= field_295[field_728][5]) {
-         class_7 var0 = class_7.field_1130[24];
-         class_7 var1 = class_7.field_1130[1];
+         cResource var0 = cResource.resources[24];
+         cResource var1 = cResource.resources[1];
          int var2 = field_294[field_728][1] / field_878[25];
          int var3 = field_295[field_728][2];
          int var4 = field_295[field_728][5];
@@ -8486,9 +8486,9 @@ public final class class_2 extends class_1 implements class_0 {
             var6[0] = field_272 + field_274 >> 1;
             var6[1] = field_273 + field_275 >> 1;
             method_639(var6, var4);
-            var8[0] = var4[0] * field_858 / 100 - class_10.method_1168(0);
-            var8[1] = var4[1] * field_858 / 100 - class_10.method_1169(0);
-            class_10 var10000 = new class_10(field_864[13], 0, 0);
+            var8[0] = var4[0] * field_858 / 100 - cSoundEngine.method_1168(0);
+            var8[1] = var4[1] * field_858 / 100 - cSoundEngine.method_1169(0);
+            cSoundEngine var10000 = new cSoundEngine(field_864[13], 0, 0);
             field_271 = var10000;
             var10000.method_1109(2, 2);
             field_270 = 1;
@@ -8749,7 +8749,7 @@ public final class class_2 extends class_1 implements class_0 {
             method_564(49);
             method_784((short)2);
             if(field_601 == 0L) {
-               class_7 var2 = class_7.field_1130[3];
+               cResource var2 = cResource.resources[3];
                int var3 = method_169(field_883 + 1);
                field_609 = (long)(var2.field_1133[var3][21] * 60);
                field_614 = var2.field_1133[var3][22];
@@ -8908,7 +8908,7 @@ public final class class_2 extends class_1 implements class_0 {
          method_541(15);
          field_132[0][9] = -40;
          method_548(0);
-         if(method_570(0) && class_10.method_1141() == 13) {
+         if(method_570(0) && cSoundEngine.method_1141() == 13) {
             method_568();
          }
 
@@ -8937,7 +8937,7 @@ public final class class_2 extends class_1 implements class_0 {
 
    // $FF: renamed from: dJ () void
    private static void method_424() {
-      if(method_570(0) && class_10.method_1141() == 13) {
+      if(method_570(0) && cSoundEngine.method_1141() == 13) {
          method_568();
       }
 
@@ -9062,7 +9062,7 @@ public final class class_2 extends class_1 implements class_0 {
 
    // $FF: renamed from: dR () void
    private static void method_432() {
-      if(method_570(0) && class_10.method_1141() == 0) {
+      if(method_570(0) && cSoundEngine.method_1141() == 0) {
          method_568();
       }
 
@@ -9570,7 +9570,7 @@ public final class class_2 extends class_1 implements class_0 {
          method_634();
          method_541(15);
          field_150 = true;
-         if(method_570(0) && class_10.method_1141() == 13) {
+         if(method_570(0) && cSoundEngine.method_1141() == 13) {
             method_568();
          }
       }
@@ -10229,7 +10229,7 @@ public final class class_2 extends class_1 implements class_0 {
          field_132[var0] = null;
       }
 
-      field_127 = new class_10[30];
+      field_127 = new cSoundEngine[30];
 
       for(var0 = 0; var0 < 30; ++var0) {
          field_127[var0] = null;
@@ -10237,7 +10237,7 @@ public final class class_2 extends class_1 implements class_0 {
 
       field_336 = new int[40][8];
       field_344 = new int[50];
-      class_10 var10000 = new class_10();
+      cSoundEngine var10000 = new cSoundEngine();
       field_345 = var10000;
       class_1.method_104();
       method_634();
@@ -10372,35 +10372,35 @@ public final class class_2 extends class_1 implements class_0 {
          class_1.method_23();
       }
 
-      class_10[] var10000;
-      class_10 var10002;
+      cSoundEngine[] var10000;
+      cSoundEngine var10002;
       switch(var0) {
       case 25:
-         field_128 = new class_10[7];
+         field_128 = new cSoundEngine[7];
 
          for(var0 = 0; var0 < 7; ++var0) {
             var10000 = field_128;
-            var10002 = new class_10(field_124[32], 0, 0);
+            var10002 = new cSoundEngine(field_124[32], 0, 0);
             var10000[var0] = var10002;
          }
       case 29:
-         field_129 = new class_10[6];
+         field_129 = new cSoundEngine[6];
 
          for(var0 = 0; var0 < 6; ++var0) {
             var10000 = field_129;
-            var10002 = new class_10(field_124[36], 0, 0);
+            var10002 = new cSoundEngine(field_124[36], 0, 0);
             var10000[var0] = var10002;
          }
 
-         field_131 = new class_10[3];
+         field_131 = new cSoundEngine[3];
 
          for(var0 = 0; var0 < 3; ++var0) {
             var10000 = field_131;
-            var10002 = new class_10(field_124[36], 0, 0);
+            var10002 = new cSoundEngine(field_124[36], 0, 0);
             var10000[var0] = var10002;
          }
 
-         class_10 var2 = new class_10(field_124[36], 0, 0);
+         cSoundEngine var2 = new cSoundEngine(field_124[36], 0, 0);
          field_130 = var2;
          return;
       default:
@@ -13879,8 +13879,8 @@ public final class class_2 extends class_1 implements class_0 {
       if(var4 < 30) {
          short var5;
          class_5 var6 = (var5 = field_121[var0][var1][5]) < 1000?field_124[var5]:field_864[var5 - 1000];
-         class_10[] var10000 = field_127;
-         class_10 var10002 = new class_10(var6, 0, 0);
+         cSoundEngine[] var10000 = field_127;
+         cSoundEngine var10002 = new cSoundEngine(var6, 0, 0);
          var10000[var4] = var10002;
          field_127[var4].method_1109(var2, var3);
          field_121[var0][var1][17] = (short)var4;
@@ -13937,7 +13937,7 @@ public final class class_2 extends class_1 implements class_0 {
    // $FF: renamed from: c (int, int, boolean) void
    private static void method_566(int var0, int var1, boolean var2) {
       if(!method_570(0) || field_169[var1][1] < field_169[field_170][1]) {
-         if(class_10.method_1129(var1)) {
+         if(cSoundEngine.method_1129(var1)) {
             if(field_158) {
                if((field_170 < 0 || field_169[var1][1] >= field_169[field_170][1]) && System.currentTimeMillis() - field_175 <= 1000L) {
                   (new StringBuffer()).append("==========Sound: ").append(var1).append(" --- DELAY");
@@ -13963,7 +13963,7 @@ public final class class_2 extends class_1 implements class_0 {
                   int var8;
                   try {
                      Player var4;
-                     if((var4 = class_10.method_1122(var0)) != null) {
+                     if((var4 = cSoundEngine.Snd_GetChannelPlayer(var0)) != null) {
                         if((var8 = ((VolumeControl)var4.getControl("VolumeControl")).getLevel()) > field_167) {
                            var8 = field_167;
                         }
@@ -13978,7 +13978,7 @@ public final class class_2 extends class_1 implements class_0 {
                }
 
                if(!field_168) {
-                  class_10.method_1131(var0, var3, var2?0:1, field_166, field_169[var1][1]);
+                  cSoundEngine.method_1131(var0, var3, var2?0:1, field_166, field_169[var1][1]);
                   long var9 = System.currentTimeMillis();
                   if(var1 < 15) {
                      field_178 = var9;
@@ -14002,7 +14002,7 @@ public final class class_2 extends class_1 implements class_0 {
          if(field_158) {
             int var1 = field_166;
             if(!field_168) {
-               class_10.method_1131(0, var0, 1, var1, field_169[var0][1]);
+               cSoundEngine.method_1131(0, var0, 1, var1, field_169[var0][1]);
             }
          }
 
@@ -14013,7 +14013,7 @@ public final class class_2 extends class_1 implements class_0 {
    private static void method_568() {
       if(field_158) {
          try {
-            class_10.method_1132(0, true);
+            cSoundEngine.method_1132(0, true);
             return;
          } catch (Exception var0) {
             ;
@@ -14106,7 +14106,7 @@ public final class class_2 extends class_1 implements class_0 {
                         field_179 = var0;
                      }
 
-                     var7 = class_10.method_1141();
+                     var7 = cSoundEngine.method_1141();
                      if(method_570(0) && var7 >= 63 && var7 <= 65) {
                         field_180 = var7;
                      }
@@ -14121,7 +14121,7 @@ public final class class_2 extends class_1 implements class_0 {
    // $FF: renamed from: a (int) boolean
    static boolean method_570(int var0) {
       try {
-         return class_10.method_1139(0);
+         return cSoundEngine.method_1139(0);
       } catch (Exception var1) {
          return false;
       }
@@ -14342,7 +14342,7 @@ public final class class_2 extends class_1 implements class_0 {
             field_183.field_1117 = true;
             if(field_205 == null) {
                var2 = field_864[3];
-               class_10 var10000 = new class_10(var2, field_183.field_1087, field_183.field_1088);
+               cSoundEngine var10000 = new cSoundEngine(var2, field_183.field_1087, field_183.field_1088);
                field_205 = var10000;
                var10000.method_1109(2, -1);
             } else {
@@ -14364,7 +14364,7 @@ public final class class_2 extends class_1 implements class_0 {
                   field_183.field_1057 = System.currentTimeMillis();
                } else if(field_182 == 4) {
                   field_183.field_1038 = System.currentTimeMillis() / 1000L;
-                  class_7 var6 = class_7.field_1130[0];
+                  cResource var6 = cResource.resources[0];
                   field_183.field_1037 = var6.field_1133[field_183.field_1100][13] * 60;
                   field_183.field_1056 = true;
                   field_183.field_1057 = System.currentTimeMillis();
@@ -14399,8 +14399,8 @@ public final class class_2 extends class_1 implements class_0 {
             method_641(var0);
          }
 
-         field_183.field_1091 = field_183.field_1087 * field_858 / 100 - class_10.method_1168(0);
-         field_183.field_1092 = field_183.field_1088 * field_858 / 100 - class_10.method_1169(0);
+         field_183.field_1091 = field_183.field_1087 * field_858 / 100 - cSoundEngine.method_1168(0);
+         field_183.field_1092 = field_183.field_1088 * field_858 / 100 - cSoundEngine.method_1169(0);
          field_121[1][62][2] = (short)(field_183.field_1091 + -67);
          field_121[1][62][3] = (short)(field_183.field_1092 + 75);
          field_121[1][63][2] = (short)(field_183.field_1091 + 23);
@@ -14426,10 +14426,10 @@ public final class class_2 extends class_1 implements class_0 {
                var4 = var2.method_919(field_183.field_1110) >> 1;
             }
 
-            if(field_183.field_1087 - var3 > class_10.method_1168(0) && field_183.field_1088 - var4 > class_10.method_1169(0)) {
+            if(field_183.field_1087 - var3 > cSoundEngine.method_1168(0) && field_183.field_1088 - var4 > cSoundEngine.method_1169(0)) {
                field_183.method_1094();
             } else {
-               class_10.method_1174();
+               cSoundEngine.method_1174();
                field_880 = true;
             }
          }
@@ -14598,7 +14598,7 @@ public final class class_2 extends class_1 implements class_0 {
                field_183.method_1053(2);
             }
          } else if(field_183.field_1086 == 20) {
-            if((field_182 == 0 || field_182 == 1) && (var4 = class_7.field_1130[4].field_1133[field_183.field_1100][19]) > 0) {
+            if((field_182 == 0 || field_182 == 1) && (var4 = cResource.resources[4].field_1133[field_183.field_1100][19]) > 0) {
                int[] var7 = new int[]{0, 0, 14};
                class_6.method_1079(47, 2, var7).method_1068(field_183.field_1087, field_183.field_1088, 37, 1000, false, var4);
             }
@@ -14722,7 +14722,7 @@ public final class class_2 extends class_1 implements class_0 {
          var0 = 1;
       }
 
-      class_7 var1 = class_7.field_1130[2];
+      cResource var1 = cResource.resources[2];
       field_195 = var0;
       field_196 = var1.field_1133[field_195][14];
       field_197 = var1.field_1133[field_195][11];
@@ -14882,7 +14882,7 @@ public final class class_2 extends class_1 implements class_0 {
          }
       }
 
-      class_10.method_1160((Graphics)null, 0, 0, 0);
+      cSoundEngine.method_1160((Graphics)null, 0, 0, 0);
       method_569();
       if(field_121[1][78][10] != 0) {
          if(field_671 < 100) {
@@ -14985,7 +14985,7 @@ public final class class_2 extends class_1 implements class_0 {
       method_587(var4, var3);
       method_638(var3, var4);
       method_639(var4, var3);
-      class_7 var7 = class_7.field_1130[var0];
+      cResource var7 = cResource.resources[var0];
       int[] var5;
       switch(var0) {
       case 0:
@@ -16788,7 +16788,7 @@ public final class class_2 extends class_1 implements class_0 {
       field_621 = false;
       field_622 = false;
       field_270 = 0;
-      class_7 var0 = class_7.field_1130[12];
+      cResource var0 = cResource.resources[12];
       int var5 = 0;
       boolean var2 = false;
 
@@ -16832,7 +16832,7 @@ public final class class_2 extends class_1 implements class_0 {
          short var14;
          switch(var12) {
          case 1:
-            var0 = class_7.field_1130[0];
+            var0 = cResource.resources[0];
             var14 = 1008;
             var6 = 0;
             short var7 = 0;
@@ -16868,7 +16868,7 @@ public final class class_2 extends class_1 implements class_0 {
             }
             break;
          case 2:
-            var0 = class_7.field_1130[2];
+            var0 = cResource.resources[2];
             var14 = 9;
             var6 = 0;
             var8 = var0.field_1132;
@@ -16903,7 +16903,7 @@ public final class class_2 extends class_1 implements class_0 {
             }
             break;
          case 3:
-            var0 = class_7.field_1130[1];
+            var0 = cResource.resources[1];
             var14 = 2;
             var6 = 0;
             var8 = var0.field_1132;
@@ -17122,7 +17122,7 @@ public final class class_2 extends class_1 implements class_0 {
                      var10000 = var3;
                   } else if(var8 == field_274 - 2) {
                      if(var9 % 4 != 2) {
-                        if((var5 = class_10.method_1172(0, var5, var10)) >= 15) {
+                        if((var5 = cSoundEngine.method_1172(0, var5, var10)) >= 15) {
                            var5 = var5 - 15 < 0?0:(var5 - 15 > 14?14:var5 - 15);
                         }
                         break label150;
@@ -17130,7 +17130,7 @@ public final class class_2 extends class_1 implements class_0 {
 
                      var10000 = var4;
                   } else {
-                     if((var5 = class_10.method_1172(0, var5, var10)) < 15) {
+                     if((var5 = cSoundEngine.method_1172(0, var5, var10)) < 15) {
                         break label150;
                      }
 
@@ -17140,7 +17140,7 @@ public final class class_2 extends class_1 implements class_0 {
                   var5 = var10000;
                }
 
-               class_10.method_1175(var6[0], var6[1], var5);
+               cSoundEngine.method_1175(var6[0], var6[1], var5);
             }
          }
 
@@ -17148,7 +17148,7 @@ public final class class_2 extends class_1 implements class_0 {
             field_287[field_268].field_1086 = -1;
          }
 
-         class_10.method_1174();
+         cSoundEngine.method_1174();
          int var13 = field_275;
          int var15 = field_274;
          int var11 = field_273;
@@ -17199,7 +17199,7 @@ public final class class_2 extends class_1 implements class_0 {
             }
          }
 
-         class_10.method_1174();
+         cSoundEngine.method_1174();
          field_880 = true;
       }
 
@@ -17363,7 +17363,7 @@ public final class class_2 extends class_1 implements class_0 {
       field_294 = new int[10][];
       field_295 = new int[10][];
       field_296 = new long[10][];
-      class_7 var0 = class_7.field_1130[8];
+      cResource var0 = cResource.resources[8];
 
       int var1;
       for(var1 = 0; var1 < 10; ++var1) {
@@ -17377,7 +17377,7 @@ public final class class_2 extends class_1 implements class_0 {
          field_295[var1] = new int[6];
       }
 
-      field_297 = new int[(var0 = class_7.field_1130[24]).field_1132];
+      field_297 = new int[(var0 = cResource.resources[24]).field_1132];
 
       for(var1 = 0; var1 < var0.field_1132; ++var1) {
          field_297[var1] = var0.field_1133[var1][7];
@@ -17392,9 +17392,9 @@ public final class class_2 extends class_1 implements class_0 {
    // $FF: renamed from: b () boolean
    static boolean method_616() {
       long var0 = System.currentTimeMillis() / 1000L;
-      class_7 var2 = class_7.field_1130[8];
-      class_7 var3 = class_7.field_1130[18];
-      class_7 var4 = class_7.field_1130[24];
+      cResource var2 = cResource.resources[8];
+      cResource var3 = cResource.resources[18];
+      cResource var4 = cResource.resources[24];
       boolean var5 = false;
 
       for(int var6 = 0; var6 < 10; ++var6) {
@@ -17441,7 +17441,7 @@ public final class class_2 extends class_1 implements class_0 {
          int var10000;
          if(field_296[var6][2] > 0L && var0 - field_296[var6][2] >= 86400L) {
             var18 = var6;
-            class_7 var8 = class_7.field_1130[18];
+            cResource var8 = cResource.resources[18];
             field_296[var6][2] = 0L;
             if(var8.field_1133[method_670() - 1][11] > -1) {
                for(var9 = 0; var9 < 2; ++var9) {
@@ -17455,7 +17455,7 @@ public final class class_2 extends class_1 implements class_0 {
 
                for(var11 = 0; var11 < 2 && var10 < var8.field_1133[method_670() - 1][11]; ++var11) {
                   int var13;
-                  class_7 var14;
+                  cResource var14;
                   int var15;
                   int[] var16;
                   int var17;
@@ -17463,7 +17463,7 @@ public final class class_2 extends class_1 implements class_0 {
                      var10000 = var10;
                      var13 = var8.field_1133[method_670() - 1][11] - var10;
                      var10 = var18;
-                     var14 = class_7.field_1130[1];
+                     var14 = cResource.resources[1];
                      var15 = 0;
                      var16 = new int[117];
 
@@ -17486,7 +17486,7 @@ public final class class_2 extends class_1 implements class_0 {
                      var10000 = var10;
                      var13 = var8.field_1133[method_670() - 1][11] - var10;
                      var10 = var18;
-                     var14 = class_7.field_1130[4];
+                     var14 = cResource.resources[4];
                      var15 = 0;
                      var16 = new int[63];
 
@@ -17510,7 +17510,7 @@ public final class class_2 extends class_1 implements class_0 {
                      var10000 = var10;
                      var13 = var8.field_1133[method_670() - 1][11] - var10;
                      var10 = var18;
-                     var14 = class_7.field_1130[16];
+                     var14 = cResource.resources[16];
                      var15 = 0;
                      var16 = new int[15];
 
@@ -17544,7 +17544,7 @@ public final class class_2 extends class_1 implements class_0 {
                }
 
                int var19 = method_670() < (field_294[var6][0] < var10?field_294[var6][0]:var10)?method_670():(field_294[var6][0] < var10?field_294[var6][0]:var10);
-               class_7 var21 = class_7.field_1130[1];
+               cResource var21 = cResource.resources[1];
                var11 = 0;
                int[] var23 = new int[117];
 
@@ -17620,8 +17620,8 @@ public final class class_2 extends class_1 implements class_0 {
    private static void method_621() {
       field_298 = new int[20][];
       field_299 = new int[20][];
-      class_7 var0;
-      field_300 = new int[(var0 = class_7.field_1130[23]).field_1132];
+      cResource var0;
+      field_300 = new int[(var0 = cResource.resources[23]).field_1132];
 
       int var1;
       for(var1 = 0; var1 < var0.field_1132; ++var1) {
@@ -17638,9 +17638,9 @@ public final class class_2 extends class_1 implements class_0 {
    }
 
    // $FF: renamed from: a (int, h) void
-   private static void method_622(int var0, class_7 var1) {
+   private static void method_622(int var0, cResource var1) {
       if(var1 == null) {
-         var1 = class_7.field_1130[23];
+         var1 = cResource.resources[23];
       }
 
       field_299[var0][0] = method_712(0);
@@ -17671,7 +17671,7 @@ public final class class_2 extends class_1 implements class_0 {
             int var7 = var1.field_1133[method_670() - 1][4];
             int var6 = var10003;
             var3 = var0;
-            class_7 var8 = class_7.field_1130[1];
+            cResource var8 = cResource.resources[1];
             int var9 = 0;
             int[] var10 = new int[117];
 
@@ -17797,7 +17797,7 @@ public final class class_2 extends class_1 implements class_0 {
 
    // $FF: renamed from: ge () void
    private static void method_626() {
-      class_7 var0 = class_7.field_1130[25];
+      cResource var0 = cResource.resources[25];
 
       for(int var1 = 0; var1 < field_318; ++var1) {
          String var2;
@@ -18676,7 +18676,7 @@ public final class class_2 extends class_1 implements class_0 {
          } else if(var0 == 1) {
             var4 = field_888[var1];
          } else if(var0 == 2) {
-            var4 = class_7.field_1130[4].field_1133[var1][1];
+            var4 = cResource.resources[4].field_1133[var1][1];
          } else if(var0 == 3) {
             var4 = field_886[var1];
          }
@@ -18923,7 +18923,7 @@ public final class class_2 extends class_1 implements class_0 {
       field_368 = new int[99];
       field_369 = new int[99];
       field_370 = new short[99];
-      class_7 var2 = class_7.field_1130[5];
+      cResource var2 = cResource.resources[5];
 
       int var1;
       for(var1 = 0; var1 < 99; ++var1) {
@@ -18991,7 +18991,6 @@ public final class class_2 extends class_1 implements class_0 {
       if(var0 > 0) {
          byte var2 = 11;
          int var1 = var0;
-         boolean var3 = false;
          method_888(0, var1, var2, false);
       }
 
@@ -19041,7 +19040,7 @@ public final class class_2 extends class_1 implements class_0 {
       method_674(var0 = method_670() + 1);
       if(var0 <= 50) {
          if(var0 < 50) {
-            class_7 var1 = class_7.field_1130[27];
+            cResource var1 = cResource.resources[27];
 
             for(int var2 = 0; var2 < var1.field_1132; ++var2) {
                if(var1.field_1133[var2][1] == var0) {
@@ -19084,7 +19083,7 @@ public final class class_2 extends class_1 implements class_0 {
 
          field_242 = true;
          method_131(13);
-         class_7 var5 = class_7.field_1130[23];
+         cResource var5 = cResource.resources[23];
 
          for(var6 = 0; var6 < var5.field_1133[method_670() - 1][6]; ++var6) {
             if(method_713(field_299[var6][0]) == 0) {
@@ -19459,7 +19458,7 @@ public final class class_2 extends class_1 implements class_0 {
          class_6 var10000;
          class_6 var1;
          class_6[] var5;
-         class_10 var7;
+         cSoundEngine var7;
          switch(field_387[field_383][var0]) {
          case 11:
             field_867.field_1087 = field_388[field_383][var0 * 6];
@@ -19478,7 +19477,7 @@ public final class class_2 extends class_1 implements class_0 {
             break;
          case 22:
             if((var1 = class_6.method_1009(0, field_388[field_383][var0 * 6])).field_1113 == null) {
-               var7 = new class_10(field_864[var1.field_1106], var1.field_1091, var1.field_1092);
+               var7 = new cSoundEngine(field_864[var1.field_1106], var1.field_1091, var1.field_1092);
                var1.field_1113 = var7;
             }
 
@@ -19503,7 +19502,7 @@ public final class class_2 extends class_1 implements class_0 {
             class_6.method_1011(0, field_388[field_383][var0 * 6], field_388[field_383][var0 * 6 + 1], var5, 1);
             if(var5[0].field_1113 == null) {
                var10000 = var5[0];
-               var7 = new class_10(field_864[var5[0].field_1106], var5[0].field_1091, var5[0].field_1092);
+               var7 = new cSoundEngine(field_864[var5[0].field_1106], var5[0].field_1091, var5[0].field_1092);
 
                var10000.field_1113 = var7;
             }
@@ -19744,45 +19743,45 @@ public final class class_2 extends class_1 implements class_0 {
 
    // $FF: renamed from: q (boolean) void
    private static void method_716(boolean var0) {
-      class_7.field_1130 = new class_7[34];
+      cResource.resources = new cResource[34];
       class_1.method_21("/9");
 
       int var1;
       for(var1 = 0; var1 < 34; ++var1) {
-         class_7[] var10000 = class_7.field_1130;
-         class_7 var10002 = new class_7();
+         cResource[] var10000 = cResource.resources;
+         cResource var10002 = new cResource();
          var10000[var1] = var10002;
          byte[] var2 = class_1.method_27(var1);
          (new StringBuffer()).append("Open File ").append(var1);
          byte var3 = 0;
-         class_7.field_1130[var1].field_1132 = class_1.method_59(var2, 0);
+         cResource.resources[var1].field_1132 = class_1.method_59(var2, 0);
          int var11 = var3 + 4;
-         class_7.field_1130[var1].field_1131 = class_1.method_59(var2, 4);
+         cResource.resources[var1].field_1131 = class_1.method_59(var2, 4);
          var11 += 4;
-         if(class_7.field_1130[var1].field_1132 > 0 && class_7.field_1130[var1].field_1131 > 0) {
-            byte[] var4 = new byte[class_7.field_1130[var1].field_1131];
+         if(cResource.resources[var1].field_1132 > 0 && cResource.resources[var1].field_1131 > 0) {
+            byte[] var4 = new byte[cResource.resources[var1].field_1131];
 
             int var5;
-            for(var5 = 0; var5 < class_7.field_1130[var1].field_1131; ++var5) {
+            for(var5 = 0; var5 < cResource.resources[var1].field_1131; ++var5) {
                var4[var5] = var2[var11];
                ++var11;
             }
 
-            class_7.field_1130[var1].field_1133 = new int[class_7.field_1130[var1].field_1132][class_7.field_1130[var1].field_1131];
+            cResource.resources[var1].field_1133 = new int[cResource.resources[var1].field_1132][cResource.resources[var1].field_1131];
 
-            for(var5 = 0; var5 < class_7.field_1130[var1].field_1132; ++var5) {
-               for(int var6 = 0; var6 < class_7.field_1130[var1].field_1131; ++var6) {
+            for(var5 = 0; var5 < cResource.resources[var1].field_1132; ++var5) {
+               for(int var6 = 0; var6 < cResource.resources[var1].field_1131; ++var6) {
                   switch(var4[var6]) {
                   case 1:
-                     class_7.field_1130[var1].field_1133[var5][var6] = var2[var11];
+                     cResource.resources[var1].field_1133[var5][var6] = var2[var11];
                      break;
                   case 2:
-                     class_7.field_1130[var1].field_1133[var5][var6] = class_1.method_58(var2, var11);
+                     cResource.resources[var1].field_1133[var5][var6] = class_1.method_58(var2, var11);
                   case 3:
                   default:
                      break;
                   case 4:
-                     class_7.field_1130[var1].field_1133[var5][var6] = class_1.method_59(var2, var11);
+                     cResource.resources[var1].field_1133[var5][var6] = class_1.method_59(var2, var11);
                   }
 
                   var11 += var4[var6];
@@ -19791,23 +19790,23 @@ public final class class_2 extends class_1 implements class_0 {
                if(!field_746) {
                   switch(var1) {
                   case 0:
-                     class_7.field_1130[var1].field_1133[var5][15] = class_7.field_1130[var1].field_1133[var5][16];
+                     cResource.resources[var1].field_1133[var5][15] = cResource.resources[var1].field_1133[var5][16];
                      break;
                   case 1:
-                     class_7.field_1130[var1].field_1133[var5][5] = class_7.field_1130[var1].field_1133[var5][6];
-                     class_7.field_1130[var1].field_1133[var5][7] = class_7.field_1130[var1].field_1133[var5][8];
+                     cResource.resources[var1].field_1133[var5][5] = cResource.resources[var1].field_1133[var5][6];
+                     cResource.resources[var1].field_1133[var5][7] = cResource.resources[var1].field_1133[var5][8];
                      break;
                   case 2:
-                     class_7.field_1130[var1].field_1133[var5][16] = class_7.field_1130[var1].field_1133[var5][17];
-                     class_7.field_1130[var1].field_1133[var5][12] = class_7.field_1130[var1].field_1133[var5][13];
+                     cResource.resources[var1].field_1133[var5][16] = cResource.resources[var1].field_1133[var5][17];
+                     cResource.resources[var1].field_1133[var5][12] = cResource.resources[var1].field_1133[var5][13];
                      break;
                   case 3:
-                     class_7.field_1130[var1].field_1133[var5][15] = class_7.field_1130[var1].field_1133[var5][16];
-                     class_7.field_1130[var1].field_1133[var5][31] = class_7.field_1130[var1].field_1133[var5][32];
-                     class_7.field_1130[var1].field_1133[var5][13] = class_7.field_1130[var1].field_1133[var5][14];
+                     cResource.resources[var1].field_1133[var5][15] = cResource.resources[var1].field_1133[var5][16];
+                     cResource.resources[var1].field_1133[var5][31] = cResource.resources[var1].field_1133[var5][32];
+                     cResource.resources[var1].field_1133[var5][13] = cResource.resources[var1].field_1133[var5][14];
                      break;
                   case 4:
-                     class_7.field_1130[var1].field_1133[var5][19] = class_7.field_1130[var1].field_1133[var5][20];
+                     cResource.resources[var1].field_1133[var5][19] = cResource.resources[var1].field_1133[var5][20];
                   case 5:
                   case 8:
                   case 9:
@@ -19825,17 +19824,17 @@ public final class class_2 extends class_1 implements class_0 {
                   default:
                      break;
                   case 6:
-                     class_7.field_1130[var1].field_1133[var5][8] = class_7.field_1130[var1].field_1133[var5][9];
-                     class_7.field_1130[var1].field_1133[var5][10] = class_7.field_1130[var1].field_1133[var5][11];
+                     cResource.resources[var1].field_1133[var5][8] = cResource.resources[var1].field_1133[var5][9];
+                     cResource.resources[var1].field_1133[var5][10] = cResource.resources[var1].field_1133[var5][11];
                      break;
                   case 7:
-                     class_7.field_1130[var1].field_1133[var5][16] = class_7.field_1130[var1].field_1133[var5][17];
+                     cResource.resources[var1].field_1133[var5][16] = cResource.resources[var1].field_1133[var5][17];
                      break;
                   case 20:
-                     class_7.field_1130[var1].field_1133[var5][1] = class_7.field_1130[var1].field_1133[var5][2];
+                     cResource.resources[var1].field_1133[var5][1] = cResource.resources[var1].field_1133[var5][2];
                      break;
                   case 22:
-                     class_7.field_1130[var1].field_1133[var5][13] = class_7.field_1130[var1].field_1133[var5][14];
+                     cResource.resources[var1].field_1133[var5][13] = cResource.resources[var1].field_1133[var5][14];
                   }
                }
             }
@@ -19905,7 +19904,7 @@ public final class class_2 extends class_1 implements class_0 {
       field_526 = new byte[field_496];
       method_625();
       method_777();
-      class_7 var8 = class_7.field_1130[20];
+      cResource var8 = cResource.resources[20];
       field_878 = new int[30];
 
       int var9;
@@ -19913,7 +19912,7 @@ public final class class_2 extends class_1 implements class_0 {
          field_878[var9] = var8.field_1133[var9][1];
       }
 
-      class_7 var10 = class_7.field_1130[31];
+      cResource var10 = cResource.resources[31];
       field_879 = new int[14];
 
       for(var1 = 0; var1 < 14; ++var1) {
@@ -19956,7 +19955,7 @@ public final class class_2 extends class_1 implements class_0 {
       field_891 = new short[117];
       field_892 = new short[117];
       field_893 = new short[117];
-      var8 = class_7.field_1130[1];
+      var8 = cResource.resources[1];
 
       for(var9 = 0; var9 < 117; ++var9) {
          field_891[var9] = (short)var8.field_1133[var9][1];
@@ -19966,7 +19965,7 @@ public final class class_2 extends class_1 implements class_0 {
 
       field_884 = new short[22];
       field_885 = new int[22];
-      var8 = class_7.field_1130[2];
+      var8 = cResource.resources[2];
 
       for(var9 = 0; var9 < 22; ++var9) {
          field_884[var9] = (short)var8.field_1133[var9][1];
@@ -19975,7 +19974,7 @@ public final class class_2 extends class_1 implements class_0 {
 
       field_886 = new short[64];
       field_887 = new int[64];
-      var8 = class_7.field_1130[0];
+      var8 = cResource.resources[0];
 
       for(var9 = 0; var9 < 64; ++var9) {
          field_886[var9] = (short)var8.field_1133[var9][1];
@@ -19983,14 +19982,14 @@ public final class class_2 extends class_1 implements class_0 {
       }
 
       field_889 = new int[10];
-      var8 = class_7.field_1130[8];
+      var8 = cResource.resources[8];
 
       for(var9 = 0; var9 < 10; ++var9) {
          field_889[var9] = var8.field_1133[var9][1];
       }
 
       field_890 = new short[63];
-      var8 = class_7.field_1130[4];
+      var8 = cResource.resources[4];
 
       for(var9 = 0; var9 < 63; ++var9) {
          field_890[var9] = (short)var8.field_1133[var9][1];
@@ -19998,7 +19997,7 @@ public final class class_2 extends class_1 implements class_0 {
 
       field_897 = new short[297];
       field_896 = new short[297];
-      var8 = class_7.field_1130[6];
+      var8 = cResource.resources[6];
 
       for(var9 = 0; var9 < 297; ++var9) {
          field_897[var9] = (short)var8.field_1133[var9][3];
@@ -20006,21 +20005,21 @@ public final class class_2 extends class_1 implements class_0 {
       }
 
       field_894 = new short[83];
-      var8 = class_7.field_1130[7];
+      var8 = cResource.resources[7];
 
       for(var9 = 0; var9 < 83; ++var9) {
          field_894[var9] = (short)var8.field_1133[var9][1];
       }
 
       field_895 = new short[6];
-      var8 = class_7.field_1130[22];
+      var8 = cResource.resources[22];
 
       for(var9 = 0; var9 < 6; ++var9) {
          field_895[var9] = (short)var8.field_1133[var9][1];
       }
 
       field_888 = new short[20];
-      var10 = class_7.field_1130[3];
+      var10 = cResource.resources[3];
 
       for(var1 = 0; var1 < 20; ++var1) {
          field_888[var1] = (short)var10.field_1133[var1][1];
@@ -20033,7 +20032,7 @@ public final class class_2 extends class_1 implements class_0 {
 
       field_898 = new int[1440];
       field_899 = new short[1440];
-      var8 = class_7.field_1130[29];
+      var8 = cResource.resources[29];
 
       for(var9 = 0; var9 < 1440; ++var9) {
          field_898[var9] = var8.field_1133[var9][1];
@@ -20042,7 +20041,7 @@ public final class class_2 extends class_1 implements class_0 {
 
       field_900 = new int[281];
       field_901 = new short[281];
-      var10 = class_7.field_1130[32];
+      var10 = cResource.resources[32];
 
       for(var1 = 0; var1 < 281; ++var1) {
          field_900[var1] = var10.field_1133[var1][2];
@@ -20257,8 +20256,8 @@ public final class class_2 extends class_1 implements class_0 {
       field_405 = 0;
       field_420 = 0;
       var1 = 0;
-      class_7 var2;
-      int var3 = (var2 = class_7.field_1130[var0]).field_1132;
+      cResource var2;
+      int var3 = (var2 = cResource.resources[var0]).field_1132;
       if(var2 != null) {
          field_406 = new int[var3];
          field_407 = new int[var3];
@@ -20417,8 +20416,8 @@ public final class class_2 extends class_1 implements class_0 {
       field_405 = 0;
       field_420 = 0;
       var0 = 0;
-      class_7 var1;
-      int var2 = (var1 = class_7.field_1130[13]).field_1132;
+      cResource var1;
+      int var2 = (var1 = cResource.resources[13]).field_1132;
       if(var1 != null) {
          field_406 = new int[var2];
          field_407 = null;
@@ -20963,7 +20962,7 @@ public final class class_2 extends class_1 implements class_0 {
       if(field_860 != 56 || var0 == 0) {
          field_440 = field_439 + var0;
          if(field_447) {
-            class_7 var4 = class_7.field_1130[1];
+            cResource var4 = cResource.resources[1];
 
             for(int var1 = 0; var1 < 3; ++var1) {
                int var2;
@@ -21251,8 +21250,8 @@ public final class class_2 extends class_1 implements class_0 {
 
    // $FF: renamed from: gt () void
    private static void method_739() {
-      class_7 var0 = class_7.field_1130[7];
-      class_7 var1 = class_7.field_1130[1];
+      cResource var0 = cResource.resources[7];
+      cResource var1 = cResource.resources[1];
       int var2 = 0;
 
       for(int var3 = 0; var3 < var0.field_1132; ++var3) {
@@ -21400,9 +21399,9 @@ public final class class_2 extends class_1 implements class_0 {
          method_543(7, 43, true);
          method_559(7, 43, 0, 1);
          if(field_472) {
-            field_465 = class_7.field_1130[1].field_1133[field_464 + 1][7];
+            field_465 = cResource.resources[1].field_1133[field_464 + 1][7];
          } else {
-            field_465 = class_7.field_1130[1].field_1133[field_464][7];
+            field_465 = cResource.resources[1].field_1133[field_464][7];
          }
       } else {
          method_543(7, 43, false);
@@ -21429,8 +21428,8 @@ public final class class_2 extends class_1 implements class_0 {
          method_744();
          (field_448 = new int[3])[field_450] = 0;
          (field_449 = new int[3])[field_450] = 0;
-         class_7 var1 = class_7.field_1130[7];
-         class_7 var2 = class_7.field_1130[1];
+         cResource var1 = cResource.resources[7];
+         cResource var2 = cResource.resources[1];
          if(var1 != null) {
             field_452 = new int[3][];
             field_453 = new int[3][];
@@ -22024,7 +22023,7 @@ public final class class_2 extends class_1 implements class_0 {
 
    // $FF: renamed from: aq (int) void
    private static void method_753(int var0) {
-      class_7 var1 = class_7.field_1130[7];
+      cResource var1 = cResource.resources[7];
       int var2 = 0;
 
       int var3;
@@ -22088,8 +22087,8 @@ public final class class_2 extends class_1 implements class_0 {
          field_530 = 0;
          field_531 = 0;
          var1 = 0;
-         class_7 var2 = class_7.field_1130[22];
-         class_7 var3 = class_7.field_1130[1];
+         cResource var2 = cResource.resources[22];
+         cResource var3 = cResource.resources[1];
          if(var2 != null) {
             field_532 = new int[var2.field_1132];
             field_533 = new int[var2.field_1132];
@@ -22637,7 +22636,7 @@ public final class class_2 extends class_1 implements class_0 {
 
    // $FF: renamed from: au (int) void
    private static void method_765(int var0) {
-      class_7 var1 = class_7.field_1130[22];
+      cResource var1 = cResource.resources[22];
       int var2 = 0;
 
       int var3;
@@ -22796,8 +22795,8 @@ public final class class_2 extends class_1 implements class_0 {
 
    // $FF: renamed from: gz () void
    private static void method_770() {
-      class_7 var0 = class_7.field_1130[22];
-      class_7 var1 = class_7.field_1130[1];
+      cResource var0 = cResource.resources[22];
+      cResource var1 = cResource.resources[1];
       int var2 = 0;
 
       for(int var3 = 0; var3 < var0.field_1132; ++var3) {
@@ -23137,7 +23136,7 @@ public final class class_2 extends class_1 implements class_0 {
                var4 = 10;
             }
 
-            class_7 var9 = class_7.field_1130[var3];
+            cResource var9 = cResource.resources[var3];
 
             for(int var8 = 0; var8 < var4; ++var8) {
                if(method_666(var0[var7], var8) > 0) {
@@ -23791,7 +23790,7 @@ public final class class_2 extends class_1 implements class_0 {
          byte var3 = 36;
          int var4 = 0;
          int[] var6 = new int[]{0, 0, 14};
-         class_7 var5;
+         cResource var5;
          byte var9;
          switch(var0) {
          case 0:
@@ -23812,7 +23811,7 @@ public final class class_2 extends class_1 implements class_0 {
             }
 
             var3 = var9;
-            var5 = class_7.field_1130[3];
+            var5 = cResource.resources[3];
 
             for(var4 = 0; var4 < var5.field_1132; ++var4) {
                int var10000 = var5.field_1133[var4][0];
@@ -23844,7 +23843,7 @@ public final class class_2 extends class_1 implements class_0 {
          case 3:
          case 4:
             var3 = 59;
-            var5 = class_7.field_1130[1];
+            var5 = cResource.resources[1];
             var4 = 0;
             int[] var7 = new int[99];
 
@@ -23914,7 +23913,7 @@ public final class class_2 extends class_1 implements class_0 {
 
    // $FF: renamed from: v (int) boolean
    private static boolean method_780(int var0) {
-      class_7 var1 = class_7.field_1130[3];
+      cResource var1 = cResource.resources[3];
       byte var2 = 0;
       if(var0 == 0) {
          var2 = 2;
@@ -24285,13 +24284,13 @@ public final class class_2 extends class_1 implements class_0 {
       for(var2 = 0; var2 < 5; ++var2) {
          if((var0 >> var2 & 1) != 0) {
             int var3 = var2;
-            class_7 var4 = null;
+            cResource var4 = null;
             switch(var2) {
             case 0:
-               var4 = class_7.field_1130[1];
+               var4 = cResource.resources[1];
                break;
             case 1:
-               var4 = class_7.field_1130[3];
+               var4 = cResource.resources[3];
             }
 
             for(int var5 = 0; var5 < var4.field_1132; ++var5) {
@@ -24379,7 +24378,7 @@ public final class class_2 extends class_1 implements class_0 {
       default:
          field_296[field_728][4] = System.currentTimeMillis() / 1000L;
          field_294[field_728][2] |= 1;
-         class_7 var1 = class_7.field_1130[24];
+         cResource var1 = cResource.resources[24];
          int var2 = field_294[field_728][1] / field_878[25];
          method_620(field_728, field_629[var0 + field_623] * var1.field_1133[var2][3] / method_670());
          int var5;
@@ -24523,7 +24522,7 @@ public final class class_2 extends class_1 implements class_0 {
       field_635 = 0;
       field_643 = 0;
       if((var0 & 1) != 0) {
-         class_7 var3 = class_7.field_1130[1];
+         cResource var3 = cResource.resources[1];
 
          for(int var2 = 0; var2 < 117; ++var2) {
             if(var3.field_1133[var2][14] > 0 && var3.field_1133[var2][11] <= method_670()) {
@@ -24640,8 +24639,8 @@ public final class class_2 extends class_1 implements class_0 {
          field_650 = new int[100];
          field_651 = new int[100];
          field_646 = 0;
-         class_7 var1;
-         var2 = (var1 = class_7.field_1130[10]).field_1132;
+         cResource var1;
+         var2 = (var1 = cResource.resources[10]).field_1132;
          int var8 = 0;
          if(field_653 > 0) {
             field_649[0] = 1006;
@@ -25376,7 +25375,7 @@ public final class class_2 extends class_1 implements class_0 {
       field_675 = new int[15];
       field_676 = new int[15];
       field_677 = new byte[60];
-      class_7 var2 = class_7.field_1130[16];
+      cResource var2 = cResource.resources[16];
 
       for(var0 = 0; var0 < 15; ++var0) {
          field_673[var0] = (short)var2.field_1133[var0][1];
@@ -25385,7 +25384,7 @@ public final class class_2 extends class_1 implements class_0 {
          field_676[var0] = var2.field_1133[var0][6];
       }
 
-      var2 = class_7.field_1130[17];
+      var2 = cResource.resources[17];
 
       for(var0 = 0; var0 < 60; ++var0) {
          field_677[var0] = (byte)var2.field_1133[var0][3];
@@ -26268,7 +26267,7 @@ public final class class_2 extends class_1 implements class_0 {
          }
 
          method_582();
-         if(class_10.method_1173() != null) {
+         if(cSoundEngine.method_1173() != null) {
             method_590(false);
          }
 
@@ -26365,8 +26364,8 @@ public final class class_2 extends class_1 implements class_0 {
             field_156 = true;
             field_97 = true;
             field_157 = true;
-            class_10.method_1158(0);
-            class_10.method_1158(1);
+            cSoundEngine.method_1158(0);
+            cSoundEngine.method_1158(1);
             method_131(25);
          }
 
@@ -26772,7 +26771,7 @@ public final class class_2 extends class_1 implements class_0 {
          if(field_294[field_881 - 1][5] == 0) {
             field_296[field_881 - 1][3] = System.currentTimeMillis() / 1000L;
             field_294[field_881 - 1][2] |= 16;
-            class_7 var2 = class_7.field_1130[24];
+            cResource var2 = cResource.resources[24];
             int var1 = field_294[field_881 - 1][1] / field_878[25];
             method_620(field_881 - 1, var2.field_1133[var1][4]);
             if(method_895(2)) {
@@ -26802,7 +26801,7 @@ public final class class_2 extends class_1 implements class_0 {
             field_718 = null;
             field_719 = null;
             field_720 = 0;
-            class_7 var1 = class_7.field_1130[8];
+            cResource var1 = cResource.resources[8];
             field_720 = 10;
             if(var1 != null) {
                field_714 = new int[field_720];
@@ -27073,7 +27072,7 @@ public final class class_2 extends class_1 implements class_0 {
          field_121[9][var2 + 15][6] = 1;
          method_543(9, var2 + 14, field_294[var0 + field_713][4] != -1);
          if(method_544(9, var2 + 14)) {
-            class_7 var10 = class_7.field_1130[1];
+            cResource var10 = cResource.resources[1];
             field_121[9][var2 + 14][5] = (short)var10.field_1133[field_294[var0 + field_713][4]][3];
             field_121[9][var2 + 14][6] = (short)var10.field_1133[field_294[var0 + field_713][4]][4];
          }
@@ -27123,7 +27122,7 @@ public final class class_2 extends class_1 implements class_0 {
             byte var3 = 37;
             byte var2 = 1;
             method_888(var10000, var2, var3, false);
-            class_7 var1 = class_7.field_1130[24];
+            cResource var1 = cResource.resources[24];
             int var4 = field_294[var0 + field_713][1] / field_878[25];
             method_620(var0 + field_713, var1.field_1133[var4][5]);
          }
@@ -27153,7 +27152,7 @@ public final class class_2 extends class_1 implements class_0 {
 
    // $FF: renamed from: e (int, int, boolean) void
    private static void method_838(int var0, int var1, boolean var2) {
-      class_7 var3 = class_7.field_1130[1];
+      cResource var3 = cResource.resources[1];
       field_723 = var0;
       field_121[9][67][5] = (short)var3.field_1133[var1][3];
       field_121[9][67][6] = (short)var3.field_1133[var1][4];
@@ -27268,8 +27267,8 @@ public final class class_2 extends class_1 implements class_0 {
       field_737 = 0;
       int var0 = field_728;
       if(field_295[var0][0] != 0) {
-         class_7 var1;
-         field_730 = (var1 = class_7.field_1130[18]).field_1133[method_670() - 1][17];
+         cResource var1;
+         field_730 = (var1 = cResource.resources[18]).field_1133[method_670() - 1][17];
          field_731 = var1.field_1133[method_670() - 1][16];
          method_543(17, 19, true);
          method_543(17, 21, true);
@@ -27375,13 +27374,13 @@ public final class class_2 extends class_1 implements class_0 {
       int var2 = 0;
       switch(var0) {
       case 1:
-         var2 = class_7.field_1130[1].field_1133[var1][2];
+         var2 = cResource.resources[1].field_1133[var1][2];
          break;
       case 2:
-         var2 = class_7.field_1130[4].field_1133[var1][2];
+         var2 = cResource.resources[4].field_1133[var1][2];
          break;
       case 3:
-         var2 = class_7.field_1130[17].field_1133[var1][2];
+         var2 = cResource.resources[17].field_1133[var1][2];
       }
 
       return var2;
@@ -27409,7 +27408,7 @@ public final class class_2 extends class_1 implements class_0 {
       int var2 = 0;
       switch(var0) {
       case 1:
-         var2 = class_7.field_1130[1].field_1133[var1][15];
+         var2 = cResource.resources[1].field_1133[var1][15];
       default:
          return var2;
       }
@@ -28594,7 +28593,7 @@ public final class class_2 extends class_1 implements class_0 {
             method_133(19);
          }
 
-         class_7 var8 = class_7.field_1130[30];
+         cResource var8 = cResource.resources[30];
 
          for(var9 = 0; var9 < 6; ++var9) {
             field_768[var9] = var8.field_1133[var9][1];
@@ -29411,8 +29410,8 @@ public final class class_2 extends class_1 implements class_0 {
          field_157 = false;
          method_568();
          method_565(10, true);
-         class_7 var1;
-         if((var1 = class_7.field_1130[33]) != null) {
+         cResource var1;
+         if((var1 = cResource.resources[33]) != null) {
             field_807 = var1.field_1133[1][2];
             field_808 = var1.field_1133[1][3];
          }
@@ -29763,8 +29762,8 @@ public final class class_2 extends class_1 implements class_0 {
             field_785 = 0;
             method_543(24, 13, true);
             method_543(24, 7, true);
-            class_7 var4;
-            if((var4 = class_7.field_1130[33]) != null) {
+            cResource var4;
+            if((var4 = cResource.resources[33]) != null) {
                long var2;
                if((var2 = (long)(var4.field_1133[0][1] * 1000)) == 0L) {
                   var2 = 86400000L;
@@ -29812,7 +29811,7 @@ public final class class_2 extends class_1 implements class_0 {
          field_794 = new int[50];
          var0 = 0;
          int var6 = 0;
-         class_7 var3 = class_7.field_1130[19];
+         cResource var3 = cResource.resources[19];
 
          for(int var1 = 0; var1 < var3.field_1132; ++var1) {
             switch(field_785) {
@@ -29907,12 +29906,12 @@ public final class class_2 extends class_1 implements class_0 {
          var2 = 0;
          var3 = 0;
          var5 = 0;
-         class_7 var6;
+         cResource var6;
          int var7;
          label125:
          switch(field_792[var4]) {
          case 1:
-            var6 = class_7.field_1130[1];
+            var6 = cResource.resources[1];
             var7 = 0;
 
             while(true) {
@@ -29965,7 +29964,7 @@ public final class class_2 extends class_1 implements class_0 {
             field_804 += field_794[var4];
             break;
          case 5:
-            var6 = class_7.field_1130[4];
+            var6 = cResource.resources[4];
             var7 = 0;
 
             while(true) {
@@ -29983,7 +29982,7 @@ public final class class_2 extends class_1 implements class_0 {
                ++var7;
             }
          case 6:
-            var6 = class_7.field_1130[0];
+            var6 = cResource.resources[0];
             var7 = 0;
 
             while(true) {
@@ -30002,7 +30001,7 @@ public final class class_2 extends class_1 implements class_0 {
                ++var7;
             }
          case 7:
-            var6 = class_7.field_1130[2];
+            var6 = cResource.resources[2];
 
             for(var7 = 0; var7 < var6.field_1132; ++var7) {
                if(var6.field_1133[var7][1] == field_793[var4]) {
@@ -30503,7 +30502,7 @@ public final class class_2 extends class_1 implements class_0 {
          field_851[var0] = false;
       }
 
-      class_7 var1 = class_7.field_1130[6];
+      cResource var1 = cResource.resources[6];
       (field_850 = new short[22])[0] = (short)var1.field_1133[18][1];
       field_850[1] = (short)var1.field_1133[44][1];
       field_850[2] = (short)var1.field_1133[49][1];
@@ -30543,7 +30542,7 @@ public final class class_2 extends class_1 implements class_0 {
       if(field_860 != -1 && field_860 != 10) {
          return false;
       } else {
-         class_7 var1 = class_7.field_1130[6];
+         cResource var1 = cResource.resources[6];
          int var2 = 0;
 
          for(int var3 = 0; var3 < field_848; ++var3) {
@@ -30754,7 +30753,7 @@ public final class class_2 extends class_1 implements class_0 {
 
    // $FF: renamed from: f (int, int, boolean) void
    private static void method_890(int var0, int var1, boolean var2) {
-      class_7 var3 = class_7.field_1130[6];
+      cResource var3 = cResource.resources[6];
       field_811[var1] = var3.field_1133[var0][1];
       field_812[var1] = var0;
       method_545(1, 44, true);
@@ -31624,7 +31623,7 @@ public final class class_2 extends class_1 implements class_0 {
 
       try {
          for(int var2 = 0; var2 < 99; ++var2) {
-            class_10.method_1130(var2);
+            cSoundEngine.method_1130(var2);
          }
       } catch (Exception var1) {
          ;

@@ -276,7 +276,7 @@ public abstract class class_1 extends Canvas implements Runnable {
    protected void method_5() {
       if(!field_3) {
          field_3 = true;
-         class_10.method_1150();
+         cSoundEngine.method_1150();
       }
 
    }

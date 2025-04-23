@@ -10,7 +10,7 @@ import javax.microedition.media.control.TempoControl;
 import javax.microedition.media.control.VolumeControl;
 
 // $FF: renamed from: k
-final class class_10 implements Runnable {
+final class cSoundEngine implements Runnable {
 
    // $FF: renamed from: c int
    private int field_1134;
@@ -39,7 +39,7 @@ final class class_10 implements Runnable {
    // $FF: renamed from: l int
    private int field_1146;
    // $FF: renamed from: m int
-   private static int field_1147;
+   private static int maxChannels;
    // $FF: renamed from: b int
    static int field_1148;
    // $FF: renamed from: n int
@@ -51,7 +51,7 @@ final class class_10 implements Runnable {
    // $FF: renamed from: a int[]
    private static int[] field_1152;
    // $FF: renamed from: a javax.microedition.media.Player[]
-   private static Player[] field_1153;
+   private static Player[] chnPlayers;
    // $FF: renamed from: b int[]
    private static int[] field_1154;
    // $FF: renamed from: c int[]
@@ -65,7 +65,7 @@ final class class_10 implements Runnable {
    // $FF: renamed from: a java.lang.Thread
    private static Thread field_1159;
    // $FF: renamed from: a k
-   private static class_10 field_1160;
+   private static cSoundEngine field_1160;
    // $FF: renamed from: g int[]
    private static int[] field_1161;
    // $FF: renamed from: h int[]
@@ -119,13 +119,13 @@ final class class_10 implements Runnable {
 
 
    // $FF: renamed from: <init> () void
-   class_10() {
+   cSoundEngine() {
       super();
       this.method_1104();
    }
 
    // $FF: renamed from: <init> (e, int, int) void
-   class_10(class_5 var1, int var2, int var3) {
+   cSoundEngine(class_5 var1, int var2, int var3) {
       super();
       this.method_1104();
       this.field_1134 = var2;
@@ -333,16 +333,16 @@ final class class_10 implements Runnable {
    }
 
    // $FF: renamed from: a (int) javax.microedition.media.Player
-   static final Player method_1122(int var0) {
-      if(var0 < 0) {
-         (new StringBuffer()).append("Snd_GetChannelPlayer: Index is negative [").append(var0).append("]");
+   static final Player Snd_GetChannelPlayer(int i) {
+      if(i < 0) {
+         (new StringBuffer()).append("Snd_GetChannelPlayer: Index is negative [").append(i).append("]");
       }
 
-      if(var0 >= field_1147) {
-         (new StringBuffer()).append("Snd_GetChannelPlayer: Index [").append(var0).append("] is out of range. Max channels is ").append(field_1147);
+      if(i >= maxChannels) {
+         (new StringBuffer()).append("Snd_GetChannelPlayer: Index [").append(i).append("] is out of range. Max channels is ").append(maxChannels);
       }
 
-      return field_1153[var0];
+      return chnPlayers[i];
    }
 
    // $FF: renamed from: c (int) int
@@ -405,24 +405,24 @@ final class class_10 implements Runnable {
 
    // $FF: renamed from: e (int) void
    static void method_1127(int var0) {
-      field_1153 = new Player[field_1147];
-      field_1154 = new int[field_1147];
-      field_1155 = new int[field_1147];
-      field_1156 = new int[field_1147];
-      field_1157 = new int[field_1147];
-      field_1158 = new int[field_1147];
-      field_1161 = new int[field_1147 * 7 * 5];
-      field_1162 = new int[field_1147];
-      field_1163 = new int[field_1147];
+      chnPlayers = new Player[maxChannels];
+      field_1154 = new int[maxChannels];
+      field_1155 = new int[maxChannels];
+      field_1156 = new int[maxChannels];
+      field_1157 = new int[maxChannels];
+      field_1158 = new int[maxChannels];
+      field_1161 = new int[maxChannels * 7 * 5];
+      field_1162 = new int[maxChannels];
+      field_1163 = new int[maxChannels];
       field_1165 = new int[6];
-      field_1166 = new int[field_1147 * 3];
-      field_1167 = new int[field_1147 * 3];
-      field_1168 = new int[(field_1147 << 4) * 9];
-      field_1169 = new int[field_1147];
-      field_1170 = new boolean[field_1147];
-      field_1171 = new int[field_1147];
+      field_1166 = new int[maxChannels * 3];
+      field_1167 = new int[maxChannels * 3];
+      field_1168 = new int[(maxChannels << 4) * 9];
+      field_1169 = new int[maxChannels];
+      field_1170 = new boolean[maxChannels];
+      field_1171 = new int[maxChannels];
 
-      for(var0 = 0; var0 < field_1147; ++var0) {
+      for(var0 = 0; var0 < maxChannels; ++var0) {
          field_1169[var0] = 0;
          field_1166[var0 * 3] = 0;
          field_1167[var0 * 3] = 0;
@@ -439,7 +439,7 @@ final class class_10 implements Runnable {
 
       field_1172 = 0;
 
-      for(var0 = 0; var0 < field_1147; ++var0) {
+      for(var0 = 0; var0 < maxChannels; ++var0) {
          field_1154[var0] = -1;
          field_1162[var0] = 0;
          field_1163[var0] = 0;
@@ -450,7 +450,7 @@ final class class_10 implements Runnable {
       field_1152 = new int[field_1149];
       field_1148 = 100;
       field_1150 = true;
-      class_10 var10000 = new class_10();
+      cSoundEngine var10000 = new cSoundEngine();
       field_1160 = var10000;
       (field_1159 = new Thread(field_1160)).start();
    }
@@ -498,8 +498,8 @@ final class class_10 implements Runnable {
          (new StringBuffer()).append("Snd_Play: Invalid loop number of ").append(var2);
       }
 
-      if(var0 >= field_1147) {
-         (new StringBuffer()).append("Snd_Play: Attempting to play on channel ").append(var0).append(" while only have max ").append(field_1147);
+      if(var0 >= maxChannels) {
+         (new StringBuffer()).append("Snd_Play: Attempting to play on channel ").append(var0).append(" while only have max ").append(maxChannels);
       }
 
       if(var1 >= 0 && var3 != 0) {
@@ -525,20 +525,20 @@ final class class_10 implements Runnable {
       if(field_1156[var0] != 2 || field_1155[var0] >= var2) {
          if(field_1154[var0] != var1 || field_1156[var0] == 0) {
             method_1140(var0);
-            if(field_1153[var0] == null) {
+            if(chnPlayers[var0] == null) {
                if(field_1151[var1] == null) {
                   return;
                }
                try {
-            	   field_1153[var0] = Manager.createPlayer(new ByteArrayInputStream(field_1151[var1]), class_1.method_34(field_1152[var1]));
+            	   chnPlayers[var0] = Manager.createPlayer(new ByteArrayInputStream(field_1151[var1]), class_1.method_34(field_1152[var1]));
                } catch (IOException e) {
                } catch (MediaException e2) {}
             }
 
-            if(field_1153[var0] != null) {
+            if(chnPlayers[var0] != null) {
                try {
-            	   field_1153[var0].realize();
-            	   field_1153[var0].prefetch();
+            	   chnPlayers[var0].realize();
+            	   chnPlayers[var0].prefetch();
             	   field_1156[var0] = 1;
             	   field_1154[var0] = var1;
                } catch (MediaException e3) {}
@@ -552,17 +552,17 @@ final class class_10 implements Runnable {
       if(!class_1.field_3) {
          method_1133(var0, var1, var2);
          if(!class_1.field_3) {
-            if(field_1156[var0] == 1 && field_1153[var0] != null) {
+            if(field_1156[var0] == 1 && chnPlayers[var0] != null) {
                if(var3 == 0) {
-                  field_1153[var0].setLoopCount(-1);
+                  chnPlayers[var0].setLoopCount(-1);
                } else {
-                  field_1153[var0].setLoopCount(var3);
+                  chnPlayers[var0].setLoopCount(var3);
                }
 
-               ((VolumeControl)field_1153[var0].getControl("VolumeControl")).setLevel(var4 * field_1148 * 100 / 10000);
+               ((VolumeControl)chnPlayers[var0].getControl("VolumeControl")).setLevel(var4 * field_1148 * 100 / 10000);
                try {
-            	   field_1153[var0].setMediaTime(0L);
-            	   field_1153[var0].start();
+            	   chnPlayers[var0].setMediaTime(0L);
+            	   chnPlayers[var0].start();
                } catch (MediaException e) {
                } finally {
             	   field_1156[var0] = 2;
@@ -582,7 +582,7 @@ final class class_10 implements Runnable {
          field_1148 = var0;
 
          try {
-            for(var0 = 0; var0 < field_1147; ++var0) {
+            for(var0 = 0; var0 < maxChannels; ++var0) {
                method_1137(var0, field_1157[var0]);
             }
 
@@ -600,11 +600,11 @@ final class class_10 implements Runnable {
          int var1 = 0;
 
          try {
-            if(field_1153[var0] == null) {
+            if(chnPlayers[var0] == null) {
                boolean var3 = false;
             }
 
-            var1 = ((VolumeControl)field_1153[var0].getControl("VolumeControl")).getLevel() * 100 * 100 / (field_1148 * 100);
+            var1 = ((VolumeControl)chnPlayers[var0].getControl("VolumeControl")).getLevel() * 100 * 100 / (field_1148 * 100);
          } catch (Exception var2) {
             ;
          }
@@ -615,10 +615,10 @@ final class class_10 implements Runnable {
 
    // $FF: renamed from: c (int, int) void
    private static void method_1137(int var0, int var1) {
-      if(field_1150 && field_1153[var0] != null) {
+      if(field_1150 && chnPlayers[var0] != null) {
          try {
-            if(field_1153[var0] != null) {
-               ((VolumeControl)field_1153[var0].getControl("VolumeControl")).setLevel(var1 * field_1148 * 100 / 10000);
+            if(chnPlayers[var0] != null) {
+               ((VolumeControl)chnPlayers[var0].getControl("VolumeControl")).setLevel(var1 * field_1148 * 100 / 10000);
             }
 
          } catch (Exception var2) {
@@ -633,7 +633,7 @@ final class class_10 implements Runnable {
          if(!field_1164) {
             field_1164 = true;
 
-            for(int var0 = 0; var0 < field_1147; ++var0) {
+            for(int var0 = 0; var0 < maxChannels; ++var0) {
                int[] var1 = field_1165;
                method_1126(var0, field_1165);
                if(field_1165[5] > 0) {
@@ -664,21 +664,21 @@ final class class_10 implements Runnable {
                            method_1134(var0, field_1165[1], field_1165[2], field_1165[4], field_1165[3]);
                            break;
                         case 4:
-                           if(field_1153[var0] != null) {
-                              field_1153[var0].stop();
+                           if(chnPlayers[var0] != null) {
+                              chnPlayers[var0].stop();
                               field_1156[var0] = 1;
                            }
                            break;
                         case 5:
-                           if(field_1156[var0] == 2 && field_1153[var0] != null) {
-                              field_1153[var0].getState();
-                              field_1153[var0].stop();
+                           if(field_1156[var0] == 2 && chnPlayers[var0] != null) {
+                              chnPlayers[var0].getState();
+                              chnPlayers[var0].stop();
                               field_1156[var0] = 3;
                            }
                            break;
                         case 6:
-                           if(field_1156[var0] == 3 && field_1153[var0] != null) {
-                              field_1153[var0].start();
+                           if(field_1156[var0] == 3 && chnPlayers[var0] != null) {
+                              chnPlayers[var0].start();
                               field_1156[var0] = 2;
                            }
                         }
@@ -717,9 +717,9 @@ final class class_10 implements Runnable {
    protected static boolean method_1139(int var0) {
       if(!field_1150) {
          return false;
-      } else if(var0 < field_1147 && field_1153[var0] != null) {
+      } else if(var0 < maxChannels && chnPlayers[var0] != null) {
          boolean var1 = true;
-         if(field_1153[var0].getState() != 400) {
+         if(chnPlayers[var0].getState() != 400) {
             var1 = false;
          }
 
@@ -732,14 +732,14 @@ final class class_10 implements Runnable {
    // $FF: renamed from: i (int) void
    private static void method_1140(int var0) {
       if(field_1150) {
-         if(field_1153[var0] != null) {
+         if(chnPlayers[var0] != null) {
         	try {
-        		field_1153[var0].stop();
+        		chnPlayers[var0].stop();
         	} catch (MediaException e) {
         	} finally {
-        		field_1153[var0].deallocate();
-        		field_1153[var0].close();
-        		field_1153[var0] = null;
+        		chnPlayers[var0].deallocate();
+        		chnPlayers[var0].close();
+        		chnPlayers[var0] = null;
         	}
          }
 
@@ -761,7 +761,7 @@ final class class_10 implements Runnable {
          long var1 = -1L;
 
          try {
-            var1 = field_1153[var0].getMediaTime();
+            var1 = chnPlayers[var0].getMediaTime();
          } catch (Exception var3) {
             ;
          }
@@ -778,7 +778,7 @@ final class class_10 implements Runnable {
          boolean var3 = false;
          field_1168[((var0 << 4) + var1) * 9 + 3] = var2;
          MIDIControl var4;
-         if((var4 = (MIDIControl)field_1153[var0].getControl("MIDIControl")) != null) {
+         if((var4 = (MIDIControl)chnPlayers[var0].getControl("MIDIControl")) != null) {
             var4.shortMidiEvent(176 | var1, 7, var2);
             var3 = true;
          }
@@ -794,7 +794,7 @@ final class class_10 implements Runnable {
       } else {
          try {
             TempoControl var2;
-            if((var2 = (TempoControl)field_1153[var0].getControl("TempoControl")) != null) {
+            if((var2 = (TempoControl)chnPlayers[var0].getControl("TempoControl")) != null) {
                return var2.getTempo();
             }
          } catch (Exception var1) {
@@ -811,7 +811,7 @@ final class class_10 implements Runnable {
          return false;
       } else {
          TempoControl var2;
-         if((var2 = (TempoControl)field_1153[var0].getControl("TempoControl")) != null) {
+         if((var2 = (TempoControl)chnPlayers[var0].getControl("TempoControl")) != null) {
             var2.setTempo(var1);
             return true;
          } else {
@@ -875,7 +875,7 @@ final class class_10 implements Runnable {
                      break;
                   case 1:
                      field_1171[var0] = 2;
-                     field_1153[var0].stop();
+                     chnPlayers[var0].stop();
                      field_1156[var0] = 1;
                      return;
                   case 2:
@@ -1023,7 +1023,7 @@ final class class_10 implements Runnable {
    // $FF: renamed from: d () void
    static void method_1150() {
       try {
-         for(int var0 = 0; var0 < field_1147; ++var0) {
+         for(int var0 = 0; var0 < maxChannels; ++var0) {
             method_1132(var0, true);
          }
 
@@ -2299,7 +2299,7 @@ final class class_10 implements Runnable {
    // $FF: renamed from: <clinit> () void
    static void method_1183() {
       field_1145 = 50;
-      field_1147 = 1;
+      maxChannels = 1;
       field_1173 = false;
       field_1174 = 4;
       field_1175 = 20;

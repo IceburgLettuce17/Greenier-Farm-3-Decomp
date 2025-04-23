@@ -203,13 +203,13 @@ final class class_6 {
    // $FF: renamed from: c f
    private class_6 field_1112;
    // $FF: renamed from: a k
-   class_10 field_1113;
+   cSoundEngine field_1113;
    // $FF: renamed from: au int
    private int field_1114;
    // $FF: renamed from: av int
    private int field_1115;
    // $FF: renamed from: b k
-   class_10 field_1116;
+   cSoundEngine field_1116;
    // $FF: renamed from: f boolean
    boolean field_1117;
    // $FF: renamed from: J int
@@ -312,7 +312,7 @@ final class class_6 {
 
             int var6;
             class_6[] var16;
-            class_10 var10001;
+            cSoundEngine var10001;
             int var18;
             long var20;
             int var22;
@@ -491,7 +491,7 @@ final class class_6 {
                }
 
                if((var1.field_1116 == null || var1.field_1116.method_1106() != class_2.field_864[16]) && var1.field_1105 == 5) {
-                  var10001 = new class_10(class_2.field_864[16], var1.field_1091, var1.field_1092);
+                  var10001 = new cSoundEngine(class_2.field_864[16], var1.field_1091, var1.field_1092);
                   var1.field_1116 = var10001;
                   var1.field_1116.method_1109(0, -1);
                   var1.field_1116.method_1114(0);
@@ -528,12 +528,12 @@ final class class_6 {
                         }
                      }
                   } else if(var1.field_1100 == 15) {
-                     class_10 var21 = var1.field_1113;
+                     cSoundEngine var21 = var1.field_1113;
                      if(class_2.method_616()) {
                         if(var1.field_1024 >= 0) {
                            var1.field_1024 -= class_1.field_15;
                            if(var1.field_1024 < 0) {
-                              var10001 = new class_10(class_2.field_864[var1.field_1106], var1.field_1091, var1.field_1092);
+                              var10001 = new cSoundEngine(class_2.field_864[var1.field_1106], var1.field_1091, var1.field_1092);
                               var1.field_1113 = var10001;
                               var1.field_1113.method_1109(0, 1);
                            }
@@ -562,7 +562,7 @@ final class class_6 {
                         if(var1.field_1024 >= 0) {
                            var1.field_1024 -= class_1.field_15;
                            if(var1.field_1024 < 0) {
-                              var10001 = new class_10(class_2.field_864[var1.field_1106], var1.field_1091, var1.field_1092);
+                              var10001 = new cSoundEngine(class_2.field_864[var1.field_1106], var1.field_1091, var1.field_1092);
                               var1.field_1113 = var10001;
                               var1.field_1113.method_1109(0, 1);
                            }
@@ -595,7 +595,7 @@ final class class_6 {
                            short var36 = (var23 = class_2.field_864[var1.field_1106]).field_934[1];
                            var1.field_1114 = var23.method_916(var36);
                            var1.field_1115 = var23.method_917(var36);
-                           var10001 = new class_10(class_2.field_864[147], var1.field_1091, var1.field_1092);
+                           var10001 = new cSoundEngine(class_2.field_864[147], var1.field_1091, var1.field_1092);
                            var1.field_1116 = var10001;
                         }
 
@@ -636,7 +636,7 @@ final class class_6 {
 
                         if(var30) {
                            if(var1.field_1113 == null) {
-                              var10001 = new class_10(class_2.field_864[var1.field_1106], var1.field_1091, var1.field_1092);
+                              var10001 = new cSoundEngine(class_2.field_864[var1.field_1106], var1.field_1091, var1.field_1092);
                               var1.field_1113 = var10001;
                               var1.field_1113.method_1109(1, -1);
                               class_2.method_564(37);
@@ -650,7 +650,7 @@ final class class_6 {
                         if(var1.field_1024 >= 0) {
                            var1.field_1024 -= class_1.field_15;
                            if(var1.field_1024 < 0) {
-                              var10001 = new class_10(class_2.field_864[var1.field_1106], var1.field_1091, var1.field_1092);
+                              var10001 = new cSoundEngine(class_2.field_864[var1.field_1106], var1.field_1091, var1.field_1092);
                               var1.field_1113 = var10001;
                               var1.field_1113.method_1109(0, 1);
                               if(var1.method_1097()) {
@@ -714,11 +714,11 @@ final class class_6 {
             case 54:
                class_6 var3 = var1;
                if(var1.field_1113 != null) {
-                  class_7 var7;
+                  cResource var7;
                   if(var1.field_1116 != null) {
                      if((var6 = var1.field_1116.method_1110()) == 0) {
                         if(var1.field_1050 == 0) {
-                           var7 = class_7.field_1130[0];
+                           var7 = cResource.resources[0];
                            var1.field_1050 = (short)var7.field_1133[var1.field_1100][30];
                            class_5 var8;
                            short var9 = (var8 = class_2.field_864[var7.field_1133[var1.field_1100][31]]).field_934[var1.field_1050];
@@ -744,7 +744,7 @@ final class class_6 {
                   }
 
                   if((var1.field_1116 == null || var1.field_1116.method_1106() != class_2.field_864[16]) && var1.field_1044) {
-                     var10001 = new class_10(class_2.field_864[16], var1.field_1091, var1.field_1092);
+                     var10001 = new cSoundEngine(class_2.field_864[16], var1.field_1091, var1.field_1092);
                      var1.field_1116 = var10001;
                      var1.field_1116.method_1109(0, -1);
                      var1.field_1116.method_1114(1);
@@ -873,7 +873,7 @@ final class class_6 {
                      case 5:
                         int[] var5 = new int[]{0, 0, 14};
                         method_1079(47, 2, var5).method_1068(var3.field_1087, var3.field_1088, 37, 1000, false, 1);
-                        int var19 = (var7 = class_7.field_1130[0]).field_1133[var3.field_1100][18];
+                        int var19 = (var7 = cResource.resources[0]).field_1133[var3.field_1100][18];
                         var6 = var7.field_1133[var3.field_1100][19];
                         var22 = var7.field_1133[var3.field_1100][20];
                         int var10 = var7.field_1133[var3.field_1100][21];
@@ -945,7 +945,7 @@ final class class_6 {
                         long var31 = (var20 = System.currentTimeMillis()) / 1000L - var3.field_1038;
                         if(var3.field_1056 && var3.field_1057 > 0L) {
                            long var35 = var20 - var3.field_1057;
-                           class_7 var4 = class_7.field_1130[0];
+                           cResource var4 = cResource.resources[0];
                            var3.field_1037 = (int)((long)(var4.field_1133[var3.field_1100][13] * 60) + var35 / 1000L);
                         }
 
@@ -1061,9 +1061,9 @@ final class class_6 {
                   }
 
                   var5 = -15682062;
-                  class_10.field_1181[0][0].setColor(var5);
-                  class_10.method_1176(0, 0, class_10.method_1170(), var4, class_2.field_880);
-                  var5 = class_10.method_1170();
+                  cSoundEngine.field_1181[0][0].setColor(var5);
+                  cSoundEngine.method_1176(0, 0, cSoundEngine.method_1170(), var4, class_2.field_880);
+                  var5 = cSoundEngine.method_1170();
                   var6 = 800;
                   var4 = 321;
                   if(class_2.field_858 != 100) {
@@ -1075,10 +1075,10 @@ final class class_6 {
                      if(class_2.field_858 < 100 && class_2.method_852(79)) {
                         class_1.method_93();
                         var8 = class_2.field_864[79].method_934() / 2;
-                        class_10.method_1177(0, class_2.field_864[79], var8, var7, var4, class_2.field_880, (int[])null);
+                        cSoundEngine.method_1177(0, class_2.field_864[79], var8, var7, var4, class_2.field_880, (int[])null);
                         class_1.method_92();
                      } else {
-                        class_10.method_1177(0, class_2.field_864[79], 0, var7, var4, class_2.field_880, (int[])null);
+                        cSoundEngine.method_1177(0, class_2.field_864[79], 0, var7, var4, class_2.field_880, (int[])null);
                      }
                   }
 
@@ -1093,10 +1093,10 @@ final class class_6 {
                      if(class_2.field_858 < 100 && class_2.method_852(78)) {
                         class_1.method_93();
                         var8 = class_2.field_864[78].method_934() / 2;
-                        class_10.method_1177(0, class_2.field_864[78], var8, var7, var4, class_2.field_880, (int[])null);
+                        cSoundEngine.method_1177(0, class_2.field_864[78], var8, var7, var4, class_2.field_880, (int[])null);
                         class_1.method_92();
                      } else {
-                        class_10.method_1177(0, class_2.field_864[78], 0, var7, var4, class_2.field_880, (int[])null);
+                        cSoundEngine.method_1177(0, class_2.field_864[78], 0, var7, var4, class_2.field_880, (int[])null);
                      }
                   }
 
@@ -1111,10 +1111,10 @@ final class class_6 {
                      if(class_2.field_858 < 100 && class_2.method_852(77)) {
                         class_1.method_93();
                         var8 = class_2.field_864[77].method_934() / 2;
-                        class_10.method_1177(0, class_2.field_864[77], var8, var7, var4, class_2.field_880, (int[])null);
+                        cSoundEngine.method_1177(0, class_2.field_864[77], var8, var7, var4, class_2.field_880, (int[])null);
                         class_1.method_92();
                      } else {
-                        class_10.method_1177(0, class_2.field_864[77], 0, var7, var4, class_2.field_880, (int[])null);
+                        cSoundEngine.method_1177(0, class_2.field_864[77], 0, var7, var4, class_2.field_880, (int[])null);
                      }
                   }
 
@@ -1132,7 +1132,7 @@ final class class_6 {
          while(var2 != null) {
             int var10;
             if(var2.field_1086 == 10) {
-               class_10.method_1160(class_1.field_1, 0, 0, 0);
+               cSoundEngine.method_1160(class_1.field_1, 0, 0, 0);
             } else if(var2.method_1086(8)) {
                class_5 var11;
                if(var2.method_1086(16777216) && var2.field_1113 == null) {
@@ -1815,10 +1815,10 @@ final class class_6 {
          if(class_2.field_858 < 100 && class_2.method_852(var1)) {
             class_1.method_93();
             var6 = var8.method_934() / 2 + var2;
-            class_10.method_1177(0, var8, var6, var4, var5, class_2.field_880, (int[])null);
+            cSoundEngine.method_1177(0, var8, var6, var4, var5, class_2.field_880, (int[])null);
             class_1.method_92();
          } else {
-            class_10.method_1177(0, var8, var2, var4, var5, class_2.field_880, (int[])null);
+            cSoundEngine.method_1177(0, var8, var2, var4, var5, class_2.field_880, (int[])null);
          }
 
          var1 = var1;
@@ -1850,10 +1850,10 @@ final class class_6 {
                   if(class_2.field_858 < 100 && class_2.method_852(var1)) {
                      class_1.method_93();
                      var7 = var8.method_934() / 2 + var2;
-                     class_10.method_1177(0, var8, var7, var5, var6, true, field_1127[var4]);
+                     cSoundEngine.method_1177(0, var8, var7, var5, var6, true, field_1127[var4]);
                      class_1.method_92();
                   } else {
-                     class_10.method_1177(0, var8, var2, var5, var6, true, field_1127[var4]);
+                     cSoundEngine.method_1177(0, var8, var2, var5, var6, true, field_1127[var4]);
                   }
                }
             }
@@ -2196,7 +2196,7 @@ final class class_6 {
             this.field_1088 += var1;
          }
 
-         class_10.method_1167(0, this.field_1087, this.field_1088);
+         cSoundEngine.method_1167(0, this.field_1087, this.field_1088);
       }
    }
 
@@ -2204,7 +2204,7 @@ final class class_6 {
    final void method_1035(int var1, int var2) {
       this.field_1087 = var1;
       this.field_1088 = var2;
-      class_10.method_1167(0, this.field_1087, this.field_1088);
+      cSoundEngine.method_1167(0, this.field_1087, this.field_1088);
    }
 
    // $FF: renamed from: a (int, int, int) void
@@ -2243,20 +2243,20 @@ final class class_6 {
       class_2.method_564(31);
       field_1078 = 0;
       field_1079 = 4;
-      class_10 var10001;
+      cSoundEngine var10001;
       if(method_999(0, 23) > 0) {
          var0 = new class_6[1];
          method_1010(0, 23, var0, 1);
          class_5 var4 = class_2.field_864[13];
          class_6 var10000 = var0[0];
-         var10001 = new class_10(var4, var0[0].field_1087, var0[0].field_1088);
+         var10001 = new cSoundEngine(var4, var0[0].field_1087, var0[0].field_1088);
          var10000.field_1113 = var10001;
          var0[0].field_1113.method_1109(1, 1);
       } else {
          int[] var2 = new int[]{field_1080 * 100 / class_2.field_858, field_1081 * 100 / class_2.field_858, 255};
          class_6 var1 = method_1079(23, 0, var2);
          class_5 var3 = class_2.field_864[13];
-         var10001 = new class_10(var3, var1.field_1087, var1.field_1088);
+         var10001 = new cSoundEngine(var3, var1.field_1087, var1.field_1088);
          var1.field_1113 = var10001;
          var1.field_1113.method_1109(1, 1);
       }
@@ -2720,17 +2720,17 @@ final class class_6 {
          class_5 var6;
          var2 = (var6 = (var1 & '\u8000') != 0?class_2.field_124[var2]:class_2.field_864[var2]).method_918(this.field_1107) >> 1;
          var3 = var6.method_919(this.field_1107) >> 1;
-         if(this.field_1087 - var2 > class_10.method_1168(0) && this.field_1088 - var3 > class_10.method_1169(0)) {
+         if(this.field_1087 - var2 > cSoundEngine.method_1168(0) && this.field_1088 - var3 > cSoundEngine.method_1169(0)) {
             this.method_1094();
          } else {
-            class_10.method_1174();
+            cSoundEngine.method_1174();
             class_2.field_880 = true;
          }
       }
 
       class_2.method_641(this);
-      class_7 var7;
-      var2 = (var7 = class_7.field_1130[11]).field_1133[this.field_1100][3];
+      cResource var7;
+      var2 = (var7 = cResource.resources[11]).field_1133[this.field_1100][3];
       var3 = var7.field_1133[this.field_1100][4];
       int var4 = var7.field_1133[this.field_1100][5];
       var1 = var7.field_1133[this.field_1100][6];
@@ -2808,14 +2808,14 @@ final class class_6 {
 
    // $FF: renamed from: r () void
    final void method_1057() {
-      class_7 var1 = class_7.field_1130[0];
+      cResource var1 = cResource.resources[0];
       this.field_1034 = var1.field_1133[this.field_1100][25] * 60;
       this.field_1033 = System.currentTimeMillis();
    }
 
    // $FF: renamed from: s () void
    final void method_1058() {
-      class_7 var1 = class_7.field_1130[0];
+      cResource var1 = cResource.resources[0];
       this.field_1037 = var1.field_1133[this.field_1100][13] * 60;
       this.field_1038 = System.currentTimeMillis() / 1000L;
    }
@@ -2859,7 +2859,7 @@ final class class_6 {
             class_2.method_889(this.field_1118, 1, 20);
             this.method_1085(256);
             this.method_1093();
-            class_10 var10001 = new class_10(class_2.field_864[13], this.field_1091, this.field_1092);
+            cSoundEngine var10001 = new cSoundEngine(class_2.field_864[13], this.field_1091, this.field_1092);
             this.field_1116 = var10001;
             this.field_1116.method_1109(0, 2);
             this.field_1114 = this.field_1053;
@@ -2885,7 +2885,7 @@ final class class_6 {
          class_2.method_188(false, (class_6)null);
          this.method_1085(32);
          ++this.field_1100;
-         class_7 var2 = class_7.field_1130[0];
+         cResource var2 = cResource.resources[0];
          this.field_1039 = var2.field_1133[this.field_1100][24];
          this.field_1035 = var2.field_1133[this.field_1100][14];
          this.field_1045 = var2.field_1133[this.field_1100][17];
@@ -2902,7 +2902,7 @@ final class class_6 {
             this.field_1113.method_1109(0, -1);
          }
 
-         class_10 var10001 = new class_10(class_2.field_864[13], this.field_1091, this.field_1092 + -50);
+         cSoundEngine var10001 = new cSoundEngine(class_2.field_864[13], this.field_1091, this.field_1092 + -50);
          this.field_1116 = var10001;
          this.field_1116.method_1109(1, 1);
          if(class_2.field_881 == 0) {
@@ -3068,11 +3068,11 @@ final class class_6 {
    // $FF: renamed from: K () void
    private void method_1066() {
       if((class_1.method_16(0, 100) & 1) == 0) {
-         this.field_1087 = class_1.method_16(class_10.method_1170() >> 1, class_10.method_1170());
-         this.field_1088 = class_10.method_1171();
+         this.field_1087 = class_1.method_16(cSoundEngine.method_1170() >> 1, cSoundEngine.method_1170());
+         this.field_1088 = cSoundEngine.method_1171();
       } else {
-         this.field_1087 = class_10.method_1170();
-         this.field_1088 = class_1.method_16(class_10.method_1171() >> 1, class_10.method_1171());
+         this.field_1087 = cSoundEngine.method_1170();
+         this.field_1088 = class_1.method_16(cSoundEngine.method_1171() >> 1, cSoundEngine.method_1171());
       }
 
       this.field_1102 = 0;
@@ -3324,13 +3324,13 @@ final class class_6 {
          class_1.method_23();
       }
 
-      class_10 var10001;
+      cSoundEngine var10001;
       if(method_999(0, 21) > 0) {
          class_6[] var4 = new class_6[1];
          method_1010(0, 21, var4, 1);
          class_5 var5 = class_2.field_864[85];
          class_6 var10000 = var4[0];
-         var10001 = new class_10(var5, var4[0].field_1087, var4[0].field_1088);
+         var10001 = new cSoundEngine(var5, var4[0].field_1087, var4[0].field_1088);
          var10000.field_1113 = var10001;
          var4[0].field_1113.method_1109(0, 1);
          return var4[0];
@@ -3338,7 +3338,7 @@ final class class_6 {
          int[] var2 = new int[]{(class_2.field_867.field_1087 + (class_1.width >> 1)) * 100 / class_2.field_858, (class_2.field_867.field_1088 + (class_1.height >> 1)) * 100 / class_2.field_858, 255};
          class_6 var1 = method_1079(21, 0, var2);
          class_5 var3 = class_2.field_864[85];
-         var10001 = new class_10(var3, var1.field_1087, var1.field_1088);
+         var10001 = new cSoundEngine(var3, var1.field_1087, var1.field_1088);
          var1.field_1113 = var10001;
          var1.field_1113.method_1109(0, 1);
          return var1;
@@ -3442,7 +3442,7 @@ final class class_6 {
       class_5 var8;
       int var9;
       int var11;
-      class_10 var10001;
+      cSoundEngine var10001;
       label115:
       switch(var6.field_1086) {
       case 10:
@@ -3492,9 +3492,9 @@ final class class_6 {
          var6.field_1088 = var4[1];
          var6.field_1089 = var4[2];
          var6.field_1105 = 0;
-         var6.field_1019 = class_10.method_1170();
-         var6.field_1020 = class_10.method_1171();
-         class_10.method_1167(0, var6.field_1087, var6.field_1088);
+         var6.field_1019 = cSoundEngine.method_1170();
+         var6.field_1020 = cSoundEngine.method_1171();
+         cSoundEngine.method_1167(0, var6.field_1087, var6.field_1088);
          var6.method_1085(8);
          break;
       case 20:
@@ -3510,7 +3510,7 @@ final class class_6 {
          var6.field_1098 = class_2.method_654(var6.field_1096, var6.field_1097);
          if(class_2.field_864[var6.field_1106].method_933() > 0) {
             var8 = class_2.field_864[var6.field_1106];
-            var10001 = new class_10(var8, var6.field_1087, var6.field_1088);
+            var10001 = new cSoundEngine(var8, var6.field_1087, var6.field_1088);
             var6.field_1113 = var10001;
             var6.field_1113.method_1109(0, -1);
             var6.method_1084(33554432);
@@ -3539,7 +3539,7 @@ final class class_6 {
          var6.field_1087 = var4[0];
          var6.field_1088 = var4[1];
          var6.field_1089 = var4[2];
-         var10001 = new class_10(class_2.field_864[144], var6.field_1087, var6.field_1088);
+         var10001 = new cSoundEngine(class_2.field_864[144], var6.field_1087, var6.field_1088);
          var6.field_1113 = var10001;
          var6.field_1113.method_1109(0, -1);
          var6.method_1084(514);
@@ -3562,7 +3562,7 @@ final class class_6 {
          var6.field_1107 = var4[4];
          var6.field_1108 = var4[5];
          if(var4[6] != -1) {
-            var10001 = new class_10(class_2.field_864[var6.field_1106], var6.field_1087, var6.field_1088);
+            var10001 = new cSoundEngine(class_2.field_864[var6.field_1106], var6.field_1087, var6.field_1088);
             var6.field_1113 = var10001;
             var6.field_1113.method_1109(var4[6], -1);
          } else if(var6.field_1106 == 152 || var6.field_1106 == 153 || var6.field_1106 == 154 || var6.field_1106 == 156 || var6.field_1106 == 9) {
@@ -3582,7 +3582,7 @@ final class class_6 {
          var6.field_1094 = var4[5];
          var6.field_1095 = var4[6];
          if(var4.length > 7) {
-            var10001 = new class_10(class_2.field_864[var6.field_1106], var6.field_1087, var6.field_1088);
+            var10001 = new cSoundEngine(class_2.field_864[var6.field_1106], var6.field_1087, var6.field_1088);
             var6.field_1113 = var10001;
             var6.field_1113.method_1109(var4[7], var4[8]);
          } else {
@@ -3594,7 +3594,7 @@ final class class_6 {
       case 34:
          var6.field_1089 = var4[0];
          var6.field_1106 = var4[1];
-         var10001 = new class_10(class_2.field_864[var6.field_1106], 0, 0);
+         var10001 = new cSoundEngine(class_2.field_864[var6.field_1106], 0, 0);
          var6.field_1113 = var10001;
          var6.field_1113.method_1109(var4[2], -1);
          var6.field_1105 = var4[3];
@@ -3622,7 +3622,7 @@ final class class_6 {
          var6.field_1089 = var4[2];
          var6.field_1106 = var4[3];
          var8 = class_2.field_864[var6.field_1106];
-         var10001 = new class_10(var8, var6.field_1087, var6.field_1088);
+         var10001 = new cSoundEngine(var8, var6.field_1087, var6.field_1088);
          var6.field_1113 = var10001;
          var6.field_1102 = var6.field_1087;
          var6.field_1103 = var6.field_1088;
@@ -3706,7 +3706,7 @@ final class class_6 {
          var6.field_1106 = var4[4];
          var8 = class_2.field_864[var6.field_1106];
          var6.field_1107 = 0;
-         var10001 = new class_10(var8, var6.field_1087, var6.field_1088);
+         var10001 = new cSoundEngine(var8, var6.field_1087, var6.field_1088);
          var6.field_1113 = var10001;
          var6.field_1102 = var6.field_1087;
          var6.field_1103 = var6.field_1088;
@@ -3751,7 +3751,7 @@ final class class_6 {
          var6.field_1111 = var4[8];
          var6.field_1106 = var4[5];
          var6.field_1107 = var4[9];
-         var10001 = new class_10(var8, var6.field_1087, var6.field_1088);
+         var10001 = new cSoundEngine(var8, var6.field_1087, var6.field_1088);
          var6.field_1113 = var10001;
          var6.method_1062(0);
          var6.method_1084(33554945);
@@ -3975,16 +3975,16 @@ final class class_6 {
       default:
          break;
       case 20:
-         var1 = class_7.field_1130[4].field_1133[this.field_1100][18];
+         var1 = cResource.resources[4].field_1133[this.field_1100][18];
          break;
       case 49:
-         var1 = class_7.field_1130[2].field_1133[this.field_1100][18];
+         var1 = cResource.resources[2].field_1133[this.field_1100][18];
          break;
       case 50:
-         var1 = class_7.field_1130[3].field_1133[this.field_1100][33];
+         var1 = cResource.resources[3].field_1133[this.field_1100][33];
          break;
       case 54:
-         class_7 var3 = class_7.field_1130[0];
+         cResource var3 = cResource.resources[0];
          if(this.method_1086(2048)) {
             var1 = var3.field_1133[this.field_1100][11];
          } else {
@@ -4088,7 +4088,7 @@ final class class_6 {
          field_1126[3] = (field_1126[3] + var4 - 1) / var4 * var4;
          method_992(field_1126[0], field_1126[1], field_1126[2], field_1126[3]);
          if(!class_2.method_707()) {
-            class_10.method_1161(field_1126[0], field_1126[1], field_1126[2] - field_1126[0], field_1126[3] - field_1126[1], 0);
+            cSoundEngine.method_1161(field_1126[0], field_1126[1], field_1126[2] - field_1126[0], field_1126[3] - field_1126[1], 0);
          }
       }
 

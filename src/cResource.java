@@ -1,9 +1,9 @@
 
 // $FF: renamed from: h
-public final class class_7 {
+public final class cResource {
 
    // $FF: renamed from: a h[]
-   static class_7[] field_1130;
+   static cResource[] resources;
    // $FF: renamed from: a int
    public int field_1131;
    // $FF: renamed from: b int
@@ -13,7 +13,7 @@ public final class class_7 {
 
 
    // $FF: renamed from: <init> () void
-   class_7() {
+   cResource() {
       super();
    }
 }

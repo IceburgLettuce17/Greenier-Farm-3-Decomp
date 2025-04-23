@@ -107,7 +107,7 @@ public final class class_14 {
    // $FF: renamed from: a java.util.Timer
    private static Timer field_1405;
    // $FF: renamed from: a javax.wireless.messaging.MessageConnection
-   public static MessageConnection field_1406;
+   public static MessageConnection conn;
    // $FF: renamed from: a boolean
    public static boolean field_1407;
    // $FF: renamed from: b boolean
@@ -216,7 +216,7 @@ public final class class_14 {
       field_1394 = method_1287();
       if((field_1387 = method_1288()).equals("")) {
          field_1387 = method_1293();
-         method_1285(field_1390[1], field_1387);
+         rmsSave(field_1390[1], field_1387);
       }
 
       field_1389 = method_1289();
@@ -507,7 +507,7 @@ public final class class_14 {
          if(var2 && var3.equals("SMS")) {
             field_1391 = true;
             field_1392 = false;
-            method_1285(field_1390[0], "0");
+            rmsSave(field_1390[0], "0");
             field_1386 = "";
             if(field_1396.equals("1")) {
                field_1399 = method_1276("IAP-Alias-PP" + field_1361);
@@ -610,7 +610,7 @@ public final class class_14 {
                   var3 = field_1383;
                   var11 = var1;
                   var1 = var10001;
-                  field_1364.method_905();
+                  field_1364.reset();
                   String var7 = "%7C";
                   String var8 = var10;
                   var10 = "b=contentpurchase" + var7 + var3 + var7;
@@ -623,9 +623,9 @@ public final class class_14 {
                   var10 = var10 + "&phoneId=" + var6;
                   field_1365 = -100;
                   field_1364.method_906(var8, var10);
-                  method_1285(field_1390[1], field_1387);
-                  method_1285(field_1390[2], String.valueOf(field_1359));
-                  method_1285(field_1390[5], field_1360);
+                  rmsSave(field_1390[1], field_1387);
+                  rmsSave(field_1390[2], String.valueOf(field_1359));
+                  rmsSave(field_1390[5], field_1360);
                   if(!field_1396.equals("1")) {
                      method_1292(field_1373);
                   }
@@ -648,7 +648,7 @@ public final class class_14 {
    // $FF: renamed from: a () void
    public static void method_1250() {
       field_1394 = true;
-      method_1285(field_1390[4], "1");
+      rmsSave(field_1390[4], "1");
       int var0 = method_1253();
       String var1 = method_1290();
       method_1249(method_1270(var0, var1), var1);
@@ -716,7 +716,7 @@ public final class class_14 {
       } else if(field_1394) {
          field_1391 = false;
          field_1392 = true;
-         method_1285(field_1390[0], "1");
+         rmsSave(field_1390[0], "1");
          return 8;
       } else {
          method_1255();
@@ -778,7 +778,7 @@ public final class class_14 {
             long var9 = var5 + var7;
             var2 = var13 == 32?var9 / 100000L + "":"" + var9 / 100000L + var13 + var9 % 100000L;
             (new StringBuffer()).append("totalMoneySpent : ").append(var2).append("  profileID: ").append(var3);
-            method_1285(field_1390[7], var2 + "_" + var3);
+            rmsSave(field_1390[7], var2 + "_" + var3);
          } catch (Exception var11) {
             (new StringBuffer()).append("Exception : ").append(var11);
          }
@@ -799,11 +799,11 @@ public final class class_14 {
       field_1393 = false;
       field_1391 = false;
       field_1366 = false;
-      method_1285(field_1390[1], "");
+      rmsSave(field_1390[1], "");
       field_1392 = false;
-      method_1285(field_1390[0], "0");
+      rmsSave(field_1390[0], "0");
       field_1394 = false;
-      method_1285(field_1390[4], "0");
+      rmsSave(field_1390[4], "0");
       field_1422 = false;
    }
 
@@ -813,11 +813,11 @@ public final class class_14 {
       field_1376 = -1;
       field_1373 = null;
       field_1395 = false;
-      method_1285(field_1390[2], "");
-      method_1285(field_1390[5], "");
-      method_1285(field_1390[3], "");
-      method_1285(field_1390[8], "");
-      method_1285(field_1390[9], "");
+      rmsSave(field_1390[2], "");
+      rmsSave(field_1390[5], "");
+      rmsSave(field_1390[3], "");
+      rmsSave(field_1390[8], "");
+      rmsSave(field_1390[9], "");
       field_1382 = null;
       method_1255();
    }
@@ -1021,10 +1021,10 @@ public final class class_14 {
             class_1.method_8(var4);
          }
 
-         method_1285(field_1390[0], "1");
-         method_1285(field_1390[1], field_1387);
-         method_1285(field_1390[2], String.valueOf(field_1359));
-         method_1285(field_1390[5], field_1360);
+         rmsSave(field_1390[0], "1");
+         rmsSave(field_1390[1], field_1387);
+         rmsSave(field_1390[2], String.valueOf(field_1359));
+         rmsSave(field_1390[5], field_1360);
       }
    }
 
@@ -1767,24 +1767,24 @@ public final class class_14 {
    }
 
    // $FF: renamed from: a (java.lang.String, java.lang.String) void
-   public static void method_1285(String var0, String var1) {
-      RecordStore var2 = null;
+   public static void rmsSave(String var0, String var1) {
+      RecordStore record = null;
 
       try {
-         var2 = RecordStore.openRecordStore(var0, true);
+         record = RecordStore.openRecordStore(var0, true);
          byte[] var5 = var1.getBytes();
-         if(var2.getNumRecords() >= 1) {
-            var2.setRecord(1, var5, 0, var5.length);
+         if(record.getNumRecords() >= 1) {
+            record.setRecord(1, var5, 0, var5.length);
          } else {
-            var2.addRecord(var5, 0, var5.length);
+            record.addRecord(var5, 0, var5.length);
          }
       } catch (Exception var3) {
          (new StringBuffer()).append("PaySMS.rmsSave: Exception: ").append(var3.toString());
       }
 
-      if(var2 != null) {
+      if(record != null) {
          try {
-            var2.closeRecordStore();
+            record.closeRecordStore();
             return;
          } catch (Exception var4) {
             (new StringBuffer()).append("PaySMS.rmsSave: Exception: ").append(var4.toString());
@@ -1860,7 +1860,7 @@ public final class class_14 {
       }
 
       (new StringBuffer()).append("PaySMS.storeProfileID: ").append(var1);
-      method_1285(field_1390[3], String.valueOf(var1));
+      rmsSave(field_1390[3], String.valueOf(var1));
    }
 
    // $FF: renamed from: j () java.lang.String
@@ -2245,7 +2245,7 @@ public final class class_14 {
       field_1403 = "/IAP_profiles";
       field_1404 = "/IAP_texts";
       field_1405 = null;
-      field_1406 = null;
+      conn = null;
       field_1407 = false;
       field_1408 = false;
       field_1409 = 0;
