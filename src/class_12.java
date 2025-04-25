@@ -258,11 +258,11 @@ public final class class_12 implements Runnable, CommandListener {
    // $FF: renamed from: ap int
    private static int field_1310;
    // $FF: renamed from: a e[]
-   private static class_5[] field_1311;
+   private static ASprite[] field_1311;
    // $FF: renamed from: a e
-   private static class_5 field_1312;
+   private static ASprite field_1312;
    // $FF: renamed from: b e
-   private static class_5 field_1313;
+   private static ASprite field_1313;
    // $FF: renamed from: c int[]
    private static int[] field_1314;
    // $FF: renamed from: e java.lang.String[]
@@ -911,7 +911,7 @@ public final class class_12 implements Runnable, CommandListener {
          int var4;
          switch(var0) {
          case -1:
-            field_1311 = new class_5[field_1232];
+            field_1311 = new ASprite[field_1232];
             return;
          case 0:
             return;
@@ -1092,11 +1092,11 @@ public final class class_12 implements Runnable, CommandListener {
                int var9 = method_1218(0, 15);
                int var10 = method_1218(0, 29);
                field_1312.method_967(method_1195(field_1216), (char[])null);
-               class_5 var10000 = field_1312;
+               ASprite var10000 = field_1312;
                String var10001 = method_1195(field_1216);
                int var13 = var0 - var2;
                short[] var11 = var10000.method_965(var10001, var13, false);
-               field_1264 = class_5.field_996;
+               field_1264 = ASprite.field_996;
                int var18 = field_1263 = var11[0] * field_1260;
                if(var3 > field_1263) {
                   var18 = var3;
@@ -1785,7 +1785,7 @@ public final class class_12 implements Runnable, CommandListener {
       int var22 = field_1295[field_1251][1];
       int var23 = field_1295[field_1252][0];
       int var24 = field_1295[field_1252][1];
-      class_5 var10000;
+      ASprite var10000;
       String var10001;
       byte var28;
       byte var35;
@@ -2035,9 +2035,9 @@ public final class class_12 implements Runnable, CommandListener {
    }
 
    // $FF: renamed from: a (int, int, boolean, boolean) e
-   private static class_5 method_1231(int var0, int var1, boolean var2, boolean var3) {
-      class_5 var10000 = new class_5();
-      class_5 var4 = var10000;
+   private static ASprite method_1231(int var0, int var1, boolean var2, boolean var3) {
+      ASprite var10000 = new ASprite();
+      ASprite var4 = var10000;
       var10000.method_908(class_1.method_27(var0), 0);
 
       for(var0 = 0; var1 >> var0 != 0; ++var0) {

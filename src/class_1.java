@@ -871,7 +871,7 @@ public abstract class class_1 extends Canvas implements Runnable {
 
    // $FF: renamed from: b (javax.microedition.lcdui.Graphics, boolean) int
    static final int method_37(Graphics var0, boolean var1) {
-      return var1?class_5.field_970 - var0.getClipX() - var0.getClipWidth():var0.getClipY();
+      return var1?ASprite.field_970 - var0.getClipX() - var0.getClipWidth():var0.getClipY();
    }
 
    // $FF: renamed from: c (javax.microedition.lcdui.Graphics, boolean) int
@@ -887,45 +887,45 @@ public abstract class class_1 extends Canvas implements Runnable {
    // $FF: renamed from: a (javax.microedition.lcdui.Graphics, int, int, int, int, boolean) void
    static final void method_40(Graphics var0, int var1, int var2, int var3, int var4, boolean var5) {
       int var6 = var1;
-      var1 = class_5.field_970 - var2 - var4;
+      var1 = ASprite.field_970 - var2 - var4;
       var0.clipRect(var1, var6, var4, var3);
    }
 
    // $FF: renamed from: b (javax.microedition.lcdui.Graphics, int, int, int, int, boolean) void
    static final void method_41(Graphics var0, int var1, int var2, int var3, int var4, boolean var5) {
       int var6 = var1;
-      var1 = class_5.field_970 - var2 - var4;
+      var1 = ASprite.field_970 - var2 - var4;
       var0.setClip(var1, var6, var4, var3);
    }
 
    // $FF: renamed from: c (javax.microedition.lcdui.Graphics, int, int, int, int, boolean) void
    static final void method_42(Graphics var0, int var1, int var2, int var3, int var4, boolean var5) {
       int var6 = var1;
-      var1 = class_5.field_970 - var2 - 1;
+      var1 = ASprite.field_970 - var2 - 1;
       var2 = var6;
       var6 = var3;
-      var3 = class_5.field_970 - var4 - 1;
+      var3 = ASprite.field_970 - var4 - 1;
       var0.drawLine(var1, var2, var3, var6);
    }
 
    // $FF: renamed from: d (javax.microedition.lcdui.Graphics, int, int, int, int, boolean) void
    static final void method_43(Graphics var0, int var1, int var2, int var3, int var4, boolean var5) {
       int var6 = var1;
-      var1 = class_5.field_970 - var2 - var4;
+      var1 = ASprite.field_970 - var2 - var4;
       var0.fillRect(var1, var6, var4, var3);
    }
 
    // $FF: renamed from: e (javax.microedition.lcdui.Graphics, int, int, int, int, boolean) void
    static final void method_44(Graphics var0, int var1, int var2, int var3, int var4, boolean var5) {
       int var6 = var1;
-      var1 = class_5.field_970 - var2 - var4 - 1;
+      var1 = ASprite.field_970 - var2 - var4 - 1;
       var0.drawRect(var1, var6, var4, var3);
    }
 
    // $FF: renamed from: a (javax.microedition.lcdui.Graphics, int, int, int, int, int, int, boolean) void
    static final void method_45(Graphics var0, int var1, int var2, int var3, int var4, int var5, int var6, boolean var7) {
       int var8 = var1;
-      var1 = class_5.field_970 - var2 - var4;
+      var1 = ASprite.field_970 - var2 - var4;
       var5 -= 90;
       var0.fillArc(var1, var8, var4, var3, var5, var6);
    }
@@ -933,7 +933,7 @@ public abstract class class_1 extends Canvas implements Runnable {
    // $FF: renamed from: b (javax.microedition.lcdui.Graphics, int, int, int, int, int, int, boolean) void
    static final void method_46(Graphics var0, int var1, int var2, int var3, int var4, int var5, int var6, boolean var7) {
       int var8 = var1;
-      var1 = class_5.field_970 - var2 - var4;
+      var1 = ASprite.field_970 - var2 - var4;
       var5 -= 90;
       var0.drawArc(var1, var8, var4, var3, var5, var6);
    }
@@ -984,7 +984,7 @@ public abstract class class_1 extends Canvas implements Runnable {
          }
 
          var3 = var7;
-         var7 = class_5.field_970 - var8;
+         var7 = ASprite.field_970 - var8;
          var8 = var3;
          var9 = 24;
       }
@@ -1009,13 +1009,13 @@ public abstract class class_1 extends Canvas implements Runnable {
    // $FF: renamed from: c (javax.microedition.lcdui.Graphics, int, int, int, int, int, int, boolean) void
    static final void method_50(Graphics var0, int var1, int var2, int var3, int var4, int var5, int var6, boolean var7) {
       int var10 = var1;
-      var1 = class_5.field_970 - var2 - 1;
+      var1 = ASprite.field_970 - var2 - 1;
       var2 = var10;
       var10 = var3;
-      var3 = class_5.field_970 - var4 - 1;
+      var3 = ASprite.field_970 - var4 - 1;
       var4 = var10;
       var10 = var5;
-      var5 = class_5.field_970 - var6 - 1;
+      var5 = ASprite.field_970 - var6 - 1;
       var0.fillTriangle(var1, var2, var3, var4, var5, var10);
       method_42(var0, var1, var2, var3, var4, true);
       method_42(var0, var1, var2, var5, var10, true);
@@ -1045,7 +1045,7 @@ public abstract class class_1 extends Canvas implements Runnable {
          }
 
          var11 = var4;
-         var4 = class_5.field_970 - var5 - var13;
+         var4 = ASprite.field_970 - var5 - var13;
          var5 = var11;
       }
 
@@ -1058,7 +1058,7 @@ public abstract class class_1 extends Canvas implements Runnable {
             var3 = var6;
          }
 
-         var1 = class_5.method_985(var1, var6, var7, var10, (int[])null);
+         var1 = ASprite.method_985(var1, var6, var7, var10, (int[])null);
          if((var10 & 4) != 0) {
             var7 = var13;
          }
@@ -1865,7 +1865,7 @@ public abstract class class_1 extends Canvas implements Runnable {
       if(var3 > 0 && var4 > 0) {
          method_41(var0, var9, var10, var3, var4, true);
          var1 = var9;
-         var9 = class_5.field_970 - var10 - var4;
+         var9 = ASprite.field_970 - var10 - var4;
          var10 = var1;
          var1 = var3;
          if(var4 * var3 < 256) {
@@ -1965,15 +1965,15 @@ public abstract class class_1 extends Canvas implements Runnable {
 
    // $FF: renamed from: b (int, int, int, int, int[]) void
    static final void method_99(int var0, int var1, int var2, int var3, int[] var4) {
-      method_98(var0, var1, 0, var3, class_5.field_985);
-      int var5 = class_5.field_985[0];
-      int var6 = class_5.field_985[1];
-      method_98(var0, var1, var2, var3, class_5.field_985);
-      var3 = class_5.field_985[0];
-      int var7 = class_5.field_985[1];
-      method_98(var0, var1, var2, 0, class_5.field_985);
-      var0 = class_5.field_985[0];
-      var1 = class_5.field_985[1];
+      method_98(var0, var1, 0, var3, ASprite.field_985);
+      int var5 = ASprite.field_985[0];
+      int var6 = ASprite.field_985[1];
+      method_98(var0, var1, var2, var3, ASprite.field_985);
+      var3 = ASprite.field_985[0];
+      int var7 = ASprite.field_985[1];
+      method_98(var0, var1, var2, 0, ASprite.field_985);
+      var0 = ASprite.field_985[0];
+      var1 = ASprite.field_985[1];
       var4[0] = Math.max(Math.abs(var3), Math.abs(var0 - var5));
       var4[1] = Math.max(Math.abs(var7), Math.abs(var1 - var6));
    }
@@ -1993,12 +1993,12 @@ public abstract class class_1 extends Canvas implements Runnable {
             var5 = field_76;
          }
 
-         var1 = class_5.method_985(var1, var4, var5, var6, (int[])null);
+         var1 = ASprite.method_985(var1, var4, var5, var6, (int[])null);
       }
 
       field_79 = var4;
       field_80 = var5;
-      int[] var10 = class_5.method_986(var1);
+      int[] var10 = ASprite.method_986(var1);
       if((field_72 & 8192) != 0) {
          int var11;
          var8 = (var11 = field_73[13][0]) == 1?false:(var11 == 2?true:var8);
@@ -2034,14 +2034,14 @@ public abstract class class_1 extends Canvas implements Runnable {
             }
 
             if(var14 != 0) {
-               var31 = class_5.method_986(var30 = class_5.method_985(var1, var12, var5, var14, (int[])null));
+               var31 = ASprite.method_986(var30 = ASprite.method_985(var1, var12, var5, var14, (int[])null));
             }
 
             int var16 = method_17(field_39 - var13);
             var17 = method_17(var13);
-            method_99(var16, var17, var12, var5, class_5.field_985);
-            var18 = class_5.field_985[0];
-            var5 = class_5.field_985[1];
+            method_99(var16, var17, var12, var5, ASprite.field_985);
+            var18 = ASprite.field_985[0];
+            var5 = ASprite.field_985[1];
             int var29 = var18 >> 1;
             var19 = var5 >> 1;
             var20 = var18 - var12 >> 1;
@@ -2084,7 +2084,7 @@ public abstract class class_1 extends Canvas implements Runnable {
             field_80 = var5;
             field_74 = true;
             var1 = var31;
-            var10 = class_5.method_986(var31);
+            var10 = ASprite.method_986(var31);
             var2 = field_77;
             var3 = field_78;
             var4 = field_79;
@@ -2121,7 +2121,7 @@ public abstract class class_1 extends Canvas implements Runnable {
                var4 = field_76;
             }
 
-            var31 = class_5.method_986(var30 = class_5.method_985(var1, var12, var4, var20, (int[])null));
+            var31 = ASprite.method_986(var30 = ASprite.method_985(var1, var12, var4, var20, (int[])null));
          }
 
          var21 = var12 * var11 / 100 + (var12 * var11 % 100 != 0?1:0);
@@ -2404,7 +2404,7 @@ public abstract class class_1 extends Canvas implements Runnable {
          var6 = var10;
       }
 
-      int[] var11 = class_5.method_939((int[])null);
+      int[] var11 = ASprite.method_939((int[])null);
       int var12 = var9 < var11.length / var8?var9:var11.length / var8;
       int var13 = var5 >>> 24;
       int var14 = var5 >> 16 & 255;

@@ -19,7 +19,7 @@ final class cSoundEngine implements Runnable {
    // $FF: renamed from: a int
    int field_1136;
    // $FF: renamed from: a e
-   class_5 field_1137;
+   ASprite field_1137;
    // $FF: renamed from: e int
    private int field_1138;
    // $FF: renamed from: f int
@@ -113,7 +113,7 @@ final class cSoundEngine implements Runnable {
    // $FF: renamed from: s int
    private static int field_1183;
    // $FF: renamed from: a e[]
-   private static class_5[] field_1184;
+   private static ASprite[] field_1184;
    // $FF: renamed from: t int
    private static int field_1185;
 
@@ -125,7 +125,7 @@ final class cSoundEngine implements Runnable {
    }
 
    // $FF: renamed from: <init> (e, int, int) void
-   cSoundEngine(class_5 var1, int var2, int var3) {
+   cSoundEngine(ASprite var1, int var2, int var3) {
       super();
       this.method_1104();
       this.field_1134 = var2;
@@ -155,12 +155,12 @@ final class cSoundEngine implements Runnable {
    }
 
    // $FF: renamed from: a () e
-   final class_5 method_1106() {
+   final ASprite method_1106() {
       return this.field_1137;
    }
 
    // $FF: renamed from: a (e) void
-   final void method_1107(class_5 var1) {
+   final void method_1107(ASprite var1) {
       this.field_1137 = var1;
       if(var1 != null) {
          this.method_1109(-1, -1);
@@ -1048,7 +1048,7 @@ final class cSoundEngine implements Runnable {
       field_1181 = new Graphics[field_1174][1];
       if(var2 > 0 && var3 > 0) {
          field_1179 = new byte[field_1174][2][];
-         field_1184 = new class_5[field_1174];
+         field_1184 = new ASprite[field_1174];
          field_1177[2] = var2;
          field_1177[4] = 0;
          field_1177[5] = var3;
@@ -1108,7 +1108,7 @@ final class cSoundEngine implements Runnable {
    }
 
    // $FF: renamed from: a (int, byte[], byte[], byte[], e, int, int, int, int, boolean) void
-   static void method_1157(int var0, byte[] var1, byte[] var2, byte[] var3, class_5 var4, int var5, int var6, int var7, int var8, boolean var9) {
+   static void method_1157(int var0, byte[] var1, byte[] var2, byte[] var3, ASprite var4, int var5, int var6, int var7, int var8, boolean var9) {
       if(field_1173) {
          method_1159(0, false);
          field_1178[0][18] = 0;
@@ -1528,7 +1528,7 @@ final class cSoundEngine implements Runnable {
    private static void method_1162(Graphics var0, int var1, int var2, int var3, int var4, int var5, int var6, int var7, int var8, int var9, int var10, int var11, int var12) {
       if(var6 <= (var8 + var10) * 100 && var7 <= (var9 + var11) * 100 && var6 + var4 >= var8 * 100 && var7 + var5 >= var9 * 100) {
          class_1.method_40(var0, var6, var7, var4, var5, true);
-         class_1.method_48(var0, field_1180[var1][0], var3 - var7 + class_5.field_970 - field_1178[var1][8], var6 - var2, 20, false);
+         class_1.method_48(var0, field_1180[var1][0], var3 - var7 + ASprite.field_970 - field_1178[var1][8], var6 - var2, 20, false);
       }
    }
 
@@ -1551,8 +1551,8 @@ final class cSoundEngine implements Runnable {
       if(var9) {
          int var10000 = field_1178[var1][7];
          var18 = field_1178[var1][8];
-         class_5.field_969 = var10000;
-         class_5.field_970 = var18;
+         ASprite.field_969 = var10000;
+         ASprite.field_970 = var18;
       }
 
       if(var9) {
@@ -1591,8 +1591,8 @@ final class cSoundEngine implements Runnable {
 
          if(var4 < 0) {
             var1 = class_1.height;
-            class_5.field_969 = class_1.width;
-            class_5.field_970 = var1;
+            ASprite.field_969 = class_1.width;
+            ASprite.field_970 = var1;
             return;
          }
       }
@@ -1621,8 +1621,8 @@ final class cSoundEngine implements Runnable {
 
          if(var5 < 0) {
             var1 = class_1.height;
-            class_5.field_969 = class_1.width;
-            class_5.field_970 = var1;
+            ASprite.field_969 = class_1.width;
+            ASprite.field_970 = var1;
             return;
          }
       }
@@ -1744,8 +1744,8 @@ final class cSoundEngine implements Runnable {
       }
 
       var1 = class_1.height;
-      class_5.field_969 = class_1.width;
-      class_5.field_970 = var1;
+      ASprite.field_969 = class_1.width;
+      ASprite.field_970 = var1;
    }
 
    // $FF: renamed from: d (int, int, int, int, int) void
@@ -1936,7 +1936,7 @@ final class cSoundEngine implements Runnable {
    }
 
    // $FF: renamed from: a (int, e, int, int, int, boolean, int[]) void
-   static final void method_1177(int var0, class_5 var1, int var2, int var3, int var4, boolean var5, int[] var6) {
+   static final void method_1177(int var0, ASprite var1, int var2, int var3, int var4, boolean var5, int[] var6) {
       if(field_1185 != 100) {
          class_1.method_92();
          var0 = field_1185;
@@ -1978,10 +1978,10 @@ final class cSoundEngine implements Runnable {
          int var13 = 0;
          int var14;
          if(var0 == 0) {
-            var1 = ((class_5)var2).method_920(var3);
-            var8 = ((class_5)var2).method_921(var3);
-            var12 = ((class_5)var2).method_918(var3);
-            var13 = ((class_5)var2).method_919(var3);
+            var1 = ((ASprite)var2).method_920(var3);
+            var8 = ((ASprite)var2).method_921(var3);
+            var12 = ((ASprite)var2).method_918(var3);
+            var13 = ((ASprite)var2).method_919(var3);
             if((class_1.field_72 & 8192) != 0) {
                var14 = class_1.field_73[13][1];
                var1 = var1 * var14 / 100;
@@ -2038,8 +2038,8 @@ final class cSoundEngine implements Runnable {
          Graphics var20 = field_1181[0][0];
          int var10000 = field_1178[0][7];
          int var21 = field_1178[0][8];
-         class_5.field_969 = var10000;
-         class_5.field_970 = var21;
+         ASprite.field_969 = var10000;
+         ASprite.field_970 = var21;
          var21 = class_1.method_36(var20, true);
          int var22 = class_1.method_37(var20, true);
          int var23 = class_1.method_38(var20, true);
@@ -2051,10 +2051,10 @@ final class cSoundEngine implements Runnable {
 
          int var26 = var11[7];
          int var27 = var11[8];
-         int var28 = class_5.field_969;
-         int var29 = class_5.field_970;
-         class_5.field_969 = var26;
-         class_5.field_970 = var27;
+         int var28 = ASprite.field_969;
+         int var29 = ASprite.field_970;
+         ASprite.field_969 = var26;
+         ASprite.field_970 = var27;
          int var30 = var25;
          var4 += var1;
          var5 += var8;
@@ -2195,11 +2195,11 @@ final class cSoundEngine implements Runnable {
          }
 
          class_1.method_41(var20, var21, var22, var23, var24, true);
-         class_5.field_969 = var28;
-         class_5.field_970 = var29;
+         ASprite.field_969 = var28;
+         ASprite.field_970 = var29;
          var0 = class_1.height;
-         class_5.field_969 = class_1.width;
-         class_5.field_970 = var0;
+         ASprite.field_969 = class_1.width;
+         ASprite.field_970 = var0;
       }
 
    }
@@ -2218,10 +2218,10 @@ final class cSoundEngine implements Runnable {
       }
 
       if(var12 == 0) {
-         ((class_5)var1).method_981(var0, var2, var8, var9, var3);
+         ((ASprite)var1).method_981(var0, var2, var8, var9, var3);
       } else if(var12 == 5) {
          var2 = var8;
-         var8 = class_5.field_970 - var9 - var11;
+         var8 = ASprite.field_970 - var9 - var11;
          class_1.method_51(var0, (int[])var1, 0, var11, var8, var2, var11, var10, true, false, var3, -1, false);
       } else if(var12 == 4) {
          class_11 var19;
@@ -2253,8 +2253,8 @@ final class cSoundEngine implements Runnable {
       (var5 = field_1181[var0][0]).setColor(field_1178[var0][4]);
       int var6 = field_1178[var0][7];
       int var7 = field_1178[var0][8];
-      class_5.field_969 = var6;
-      class_5.field_970 = var7;
+      ASprite.field_969 = var6;
+      ASprite.field_970 = var7;
       if((var1 %= var6) < 0) {
          var1 += var6;
       }
@@ -2292,8 +2292,8 @@ final class cSoundEngine implements Runnable {
       class_1.method_43(var5, var1, var2, var3, var4, true);
       method_1165(var0, var1, var2, var3, var4);
       var1 = class_1.height;
-      class_5.field_969 = class_1.width;
-      class_5.field_970 = var1;
+      ASprite.field_969 = class_1.width;
+      ASprite.field_970 = var1;
    }
 
    // $FF: renamed from: <clinit> () void

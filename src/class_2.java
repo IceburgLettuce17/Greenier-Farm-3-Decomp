@@ -65,7 +65,7 @@ public final class class_2 extends class_1 implements class_0 {
    // $FF: renamed from: b short[][]
    private static short[][] field_116;
    // $FF: renamed from: a e[][]
-   private static class_5[][] field_117;
+   private static ASprite[][] field_117;
    // $FF: renamed from: i int[]
    private static int[] field_118;
    // $FF: renamed from: ao int
@@ -79,7 +79,7 @@ public final class class_2 extends class_1 implements class_0 {
    // $FF: renamed from: a java.lang.String[][]
    private static String[][] field_123;
    // $FF: renamed from: a e[]
-   static class_5[] field_124;
+   static ASprite[] field_124;
    // $FF: renamed from: a l[]
    private static class_11[] field_125;
    // $FF: renamed from: f byte[]
@@ -1559,9 +1559,9 @@ public final class class_2 extends class_1 implements class_0 {
    // $FF: renamed from: fI int
    private static int field_863;
    // $FF: renamed from: b e[]
-   static class_5[] field_864;
+   static ASprite[] field_864;
    // $FF: renamed from: c e[]
-   private static class_5[] field_865;
+   private static ASprite[] field_865;
    // $FF: renamed from: i f
    private static class_6 field_866;
    // $FF: renamed from: c f
@@ -2486,9 +2486,9 @@ public final class class_2 extends class_1 implements class_0 {
    }
 
    // $FF: renamed from: a (int, int, boolean, boolean, int, int) e
-   private static class_5 method_145(int var0, int var1, boolean var2, boolean var3, int var4, int var5) {
-      class_5 var10000 = new class_5();
-      class_5 var6 = var10000;
+   private static ASprite method_145(int var0, int var1, boolean var2, boolean var3, int var4, int var5) {
+      ASprite var10000 = new ASprite();
+      ASprite var6 = var10000;
       var10000.method_908(class_1.method_27(var0), 0);
 
       for(int var7 = 0; var7 < field_857.length; var7 += 2) {
@@ -2517,7 +2517,7 @@ public final class class_2 extends class_1 implements class_0 {
    }
 
    // $FF: renamed from: a (e, int, int, int) void
-   private static void method_146(class_5 var0, int var1, int var2, int var3) {
+   private static void method_146(ASprite var0, int var1, int var2, int var3) {
       int var4 = var0.field_960;
 
       for(int var5 = 0; var5 < var4; ++var5) {
@@ -8890,12 +8890,12 @@ public final class class_2 extends class_1 implements class_0 {
 
          short var3 = field_121[15][21][5];
          short var5 = field_121[15][21][7];
-         class_5 var8 = field_865[method_558(var5)];
+         ASprite var8 = field_865[method_558(var5)];
          String var6 = field_668;
          short[] var7 = var8.method_965(field_668, var3, false);
          var8 = field_865[method_558(var5)];
          var5 = var7[0];
-         class_5 var4 = var8;
+         ASprite var4 = var8;
          field_669 = (field_664 = var5 * var4.method_962() + (var5 - 1) * var4.method_957()) / 2;
          field_670 = field_664 / 2 + (class_1.height >> 1);
          field_663 = field_669;
@@ -10219,7 +10219,7 @@ public final class class_2 extends class_1 implements class_0 {
          field_123[var0] = null;
       }
 
-      field_124 = new class_5[122];
+      field_124 = new ASprite[122];
 
       for(var0 = 0; var0 < 122; ++var0) {
          field_124[var0] = null;
@@ -11080,7 +11080,7 @@ public final class class_2 extends class_1 implements class_0 {
 
             if(var9) {
                short[] var13 = field_117[2][var7].method_965(var0, var3, false);
-               class_5 var10000 = field_117[2][var7];
+               ASprite var10000 = field_117[2][var7];
                Graphics var10002 = class_1.field_1;
                var10000.method_966(class_1.field_1, var0, var13, var11, var12, 0, -1, var14, -1, false);
             } else {
@@ -11147,7 +11147,7 @@ public final class class_2 extends class_1 implements class_0 {
 
       if(var8 == 1) {
          if(var5 != -1) {
-            class_5 var23;
+            ASprite var23;
             if((var23 = var5 < 1000?field_124[var5]:field_864[var5 - 1000]) != null) {
                int var9 = 0;
                boolean var10 = false;
@@ -11243,7 +11243,7 @@ public final class class_2 extends class_1 implements class_0 {
                               var16 = 100;
                            }
 
-                           class_5 var22 = var21 < 1000?field_124[var21]:field_864[var21 - 1000];
+                           ASprite var22 = var21 < 1000?field_124[var21]:field_864[var21 - 1000];
                            if(field_342 == 2 && var21 > 1000 && (field_423 == 1 || field_423 == 2 || field_423 == 4)) {
                               byte var19;
                               if(field_423 == 1) {
@@ -11306,7 +11306,7 @@ public final class class_2 extends class_1 implements class_0 {
 
    // $FF: renamed from: e (int, int) int
    private static int method_537(int var0, int var1) {
-      class_5 var8 = field_124[var0];
+      ASprite var8 = field_124[var0];
       int var2 = Integer.MIN_VALUE;
       short var5 = var8.field_934[var1];
       int var6 = var8.method_973(var1);
@@ -11330,7 +11330,7 @@ public final class class_2 extends class_1 implements class_0 {
       if(field_125[var5] == null) {
          short var6 = var0[5];
          short var7 = var0[6];
-         class_5 var30 = field_124[var6];
+         ASprite var30 = field_124[var6];
          int var8 = Integer.MIN_VALUE;
          int var9 = Integer.MIN_VALUE;
          int var12 = 0;
@@ -11498,7 +11498,7 @@ public final class class_2 extends class_1 implements class_0 {
       short var10 = field_121[1][var1][5];
       short var12 = field_121[1][var1][6];
       short var13 = field_121[1][var2][6];
-      class_5 var11 = var10 < 1000?field_124[var10]:field_864[var10 - 1000];
+      ASprite var11 = var10 < 1000?field_124[var10]:field_864[var10 - 1000];
       int var4 = Integer.MIN_VALUE;
       short var5 = var11.field_934[var13];
       int var6 = var11.method_973(var13);
@@ -11529,7 +11529,7 @@ public final class class_2 extends class_1 implements class_0 {
          if(field_121[var0][var1][0] == 205 && field_121[var0][var1][5] > -1 && field_121[var0][var1][18] == 1 && field_121[var0][var1][10] == 1) {
             short var2 = field_121[var0][var1][5];
             short var3 = field_121[var0][var1][6];
-            class_5 var15 = var2 < 1000?field_124[var2]:field_864[var2 - 1000];
+            ASprite var15 = var2 < 1000?field_124[var2]:field_864[var2 - 1000];
             short var4 = field_121[var0][var1][2];
             short var5 = field_121[var0][var1][3];
             if(var0 == 2) {
@@ -11657,7 +11657,7 @@ public final class class_2 extends class_1 implements class_0 {
                   if(field_121[var0][var1][0] == 205) {
                      short var9 = field_121[var0][var1][5];
                      short var10 = field_121[var0][var1][6];
-                     class_5 var7;
+                     ASprite var7;
                      if((var7 = var9 < 1000?field_124[var9]:field_864[var9 - 1000]) == null || field_121[var0][var1][6] < 0) {
                         continue;
                      }
@@ -13638,7 +13638,7 @@ public final class class_2 extends class_1 implements class_0 {
          for(; var2 <= var3; ++var2) {
             field_121[var1][var2][2] = (short)(field_122[var1][var2][2] + field_132[var0][8]);
             field_121[var1][var2][3] = (short)(field_122[var1][var2][3] + field_132[var0][9]);
-            class_5 var12;
+            ASprite var12;
             if(field_121[var1][var2][0] == 205 && field_121[var1][var2][18] == 1 && (var12 = (var4 = field_121[var1][var2][5]) < 1000?field_124[var4]:field_864[var4 - 1000]) != null) {
                var5 = field_121[var1][var2][6];
                short var9 = field_121[var1][var2][2];
@@ -13878,7 +13878,7 @@ public final class class_2 extends class_1 implements class_0 {
 
       if(var4 < 30) {
          short var5;
-         class_5 var6 = (var5 = field_121[var0][var1][5]) < 1000?field_124[var5]:field_864[var5 - 1000];
+         ASprite var6 = (var5 = field_121[var0][var1][5]) < 1000?field_124[var5]:field_864[var5 - 1000];
          cSoundEngine[] var10000 = field_127;
          cSoundEngine var10002 = new cSoundEngine(var6, 0, 0);
          var10000[var4] = var10002;
@@ -14337,7 +14337,7 @@ public final class class_2 extends class_1 implements class_0 {
             field_183.method_1085(16777216);
          }
 
-         class_5 var2;
+         ASprite var2;
          if(field_183 != null) {
             field_183.field_1117 = true;
             if(field_205 == null) {
@@ -15029,7 +15029,7 @@ public final class class_2 extends class_1 implements class_0 {
          var2.field_1099 = (short)var7.field_1133[var1][12];
          var2.field_1049 = (short)var7.field_1133[var1][29];
          var2.field_1050 = (short)var7.field_1133[var1][30];
-         class_5 var8;
+         ASprite var8;
          short var9 = (var8 = field_864[var7.field_1133[var1][31]]).field_934[var2.field_1049];
          var2.field_1051 = var8.method_916(var9);
          var2.field_1052 = var8.method_917(var9);
@@ -19926,16 +19926,16 @@ public final class class_2 extends class_1 implements class_0 {
       field_861 = false;
       field_881 = 0;
       field_882 = 0;
-      field_864 = new class_5[159];
-      field_865 = new class_5[6];
-      class_5.method_948(field_738[field_738.length - 1][0]);
+      field_864 = new ASprite[159];
+      field_865 = new ASprite[6];
+      ASprite.method_948(field_738[field_738.length - 1][0]);
 
       for(var1 = 0; var1 < field_738.length - 1; ++var1) {
-         class_5.method_949(field_738[var1][0], field_738[var1][1]);
+         ASprite.method_949(field_738[var1][0], field_738[var1][1]);
       }
 
       method_523();
-      (field_117 = new class_5[3][])[0] = field_864;
+      (field_117 = new ASprite[3][])[0] = field_864;
       field_117[1] = field_124;
       field_117[2] = field_865;
       (field_118 = new int[3])[0] = 159;
@@ -23492,7 +23492,7 @@ public final class class_2 extends class_1 implements class_0 {
             class_6.method_1011(0, 50, 18, var16, 2);
             class_6.method_1038();
             field_867.method_1036(var16[0].field_1087, var16[0].field_1088, 1000);
-            class_5 var14;
+            ASprite var14;
             var3 = (var14 = field_864[128]).field_934[5];
             if(field_866 != null) {
                field_866.field_1087 = var16[0].field_1087 + var14.method_916(var3);
@@ -25041,9 +25041,9 @@ public final class class_2 extends class_1 implements class_0 {
       short var1 = field_121[15][59][5];
       short var2 = field_121[15][59][7];
       short[] var4 = field_865[method_558(var2)].method_965(var3, var1, false);
-      class_5 var10000 = field_865[method_558(var2)];
+      ASprite var10000 = field_865[method_558(var2)];
       var1 = var4[0];
-      class_5 var5 = var10000;
+      ASprite var5 = var10000;
       field_666 = (field_667 = var1 * var5.method_962() + (var1 - 1) * var5.method_957()) / 2 - field_121[15][59][6] / 2;
    }
 
@@ -26477,7 +26477,7 @@ public final class class_2 extends class_1 implements class_0 {
       method_543(4, 7, false);
       method_821(var1, var2, 3);
       var1 = method_558(field_121[4][2][7]);
-      class_5 var10000 = field_865[var1];
+      ASprite var10000 = field_865[var1];
       short var3 = field_121[4][2][5];
       short[] var10;
       int var11 = ((var10 = var10000.method_965(var0, var3, false))[0] + (var10[0] >> 1)) * field_865[var1].method_958();
@@ -26486,7 +26486,7 @@ public final class class_2 extends class_1 implements class_0 {
       var2 = var15;
       short var12 = field_121[4][1][5];
       short var4 = field_121[4][1][6];
-      class_5 var13 = new class_5();
+      ASprite var13 = new ASprite();
       short var5 = (var13 = var12 < 1000?field_124[var12]:field_864[var12 - 1000]).field_934[var4];
       int var6 = var13.method_973(var4);
       int var8 = var13.method_923(var4, 0);
@@ -27855,7 +27855,7 @@ public final class class_2 extends class_1 implements class_0 {
    }
 
    // $FF: renamed from: a (e, int) boolean
-   private static boolean method_851(class_5 var0, int var1) {
+   private static boolean method_851(ASprite var0, int var1) {
       int var2 = 0;
       boolean var3 = false;
 
@@ -28530,12 +28530,12 @@ public final class class_2 extends class_1 implements class_0 {
       short var0 = field_121[8][156][5];
       short var1 = field_121[8][156][6];
       short var2 = field_121[8][156][7];
-      class_5 var10000 = field_865[method_558(var2)];
+      ASprite var10000 = field_865[method_558(var2)];
       String var3 = field_757;
       short[] var4 = var10000.method_965(field_757, var0, false);
       var10000 = field_865[method_558(var2)];
       var2 = var4[0];
-      class_5 var5 = var10000;
+      ASprite var5 = var10000;
       if((field_776 = var2 * var5.method_962() + (var2 - 1) * var5.method_957() - var1 + 24) < 0) {
          field_776 = 0;
       }
@@ -29389,7 +29389,7 @@ public final class class_2 extends class_1 implements class_0 {
 
          field_748[var4] = var5;
          field_117[2][var3].method_967(var5, (char[])null);
-         field_752[var4] = class_5.field_996;
+         field_752[var4] = ASprite.field_996;
          field_752[var4] = field_752[var4] - field_121[8][var1][5] < 0?0:(field_752[var4] - field_121[8][var1][5] > field_752[var4]?field_752[var4]:field_752[var4] - field_121[8][var1][5]);
          field_753[var4] = 0;
          field_754[var4] = 1000;
@@ -31619,7 +31619,7 @@ public final class class_2 extends class_1 implements class_0 {
       class_1.field_19 = null;
       class_1.method_75();
       class_1.method_23();
-      class_5.field_925 = null;
+      ASprite.field_925 = null;
 
       try {
          for(int var2 = 0; var2 < 99; ++var2) {
