@@ -591,7 +591,7 @@ final class class_6 {
                   } else if(var1.field_1100 == 2) {
                      if(class_2.method_754()) {
                         if(var1.field_1116 == null) {
-                           class_5 var23;
+                           ASprite var23;
                            short var36 = (var23 = class_2.field_864[var1.field_1106]).field_934[1];
                            var1.field_1114 = var23.method_916(var36);
                            var1.field_1115 = var23.method_917(var36);
@@ -720,7 +720,7 @@ final class class_6 {
                         if(var1.field_1050 == 0) {
                            var7 = cResource.resources[0];
                            var1.field_1050 = (short)var7.field_1133[var1.field_1100][30];
-                           class_5 var8;
+                           ASprite var8;
                            short var9 = (var8 = class_2.field_864[var7.field_1133[var1.field_1100][31]]).field_934[var1.field_1050];
                            var1.field_1053 = var8.method_916(var9);
                            var1.field_1054 = var8.method_917(var9);
@@ -1134,12 +1134,12 @@ final class class_6 {
             if(var2.field_1086 == 10) {
                cSoundEngine.method_1160(class_1.field_1, 0, 0, 0);
             } else if(var2.method_1086(8)) {
-               class_5 var11;
+               ASprite var11;
                if(var2.method_1086(16777216) && var2.field_1113 == null) {
                   if(var2.field_1106 > -1 && var2.field_1107 > -1) {
                      var8 = var2.field_1106;
                      var4 = var2.field_1106 & 32767;
-                     class_5 var15 = (var8 & '\u8000') != 0?class_2.field_124[var4]:class_2.field_864[var4];
+                     ASprite var15 = (var8 & '\u8000') != 0?class_2.field_124[var4]:class_2.field_864[var4];
                      var5 = var2.field_1108;
                      if(var2.method_1086(65536)) {
                         var5 += var15.field_960 >> 1;
@@ -1260,7 +1260,7 @@ final class class_6 {
             default:
                if(var2.field_1117 && class_2.field_183 == var2) {
                   var6 = var2.field_1098;
-                  class_5 var14 = class_2.field_864[14];
+                  ASprite var14 = class_2.field_864[14];
                   boolean var17;
                   if(var14 != null && var6 > -1) {
                      var10 = var2.field_1091 + var14.method_920(var6);
@@ -1795,7 +1795,7 @@ final class class_6 {
    // $FF: renamed from: f (int, int) void
    private void method_1023(int var1, int var2) {
       int var3 = var1 & 32767;
-      class_5 var8;
+      ASprite var8;
       if((var8 = (var1 & '\u8000') != 0?class_2.field_124[var3]:class_2.field_864[var3]) != null && var2 >= 0) {
          int var4 = this.field_1087;
          int var5 = this.field_1088;
@@ -1869,7 +1869,7 @@ final class class_6 {
    // $FF: renamed from: g (int, int) void
    private void method_1024(int var1, int var2) {
       int var3 = var1 & 32767;
-      class_5 var5 = (var1 & '\u8000') != 0?class_2.field_124[var3]:class_2.field_864[var3];
+      ASprite var5 = (var1 & '\u8000') != 0?class_2.field_124[var3]:class_2.field_864[var3];
       int var4 = this.field_1108;
       if(var5 != null && var2 >= 0) {
          if(this.method_1086(65536)) {
@@ -2247,7 +2247,7 @@ final class class_6 {
       if(method_999(0, 23) > 0) {
          var0 = new class_6[1];
          method_1010(0, 23, var0, 1);
-         class_5 var4 = class_2.field_864[13];
+         ASprite var4 = class_2.field_864[13];
          class_6 var10000 = var0[0];
          var10001 = new cSoundEngine(var4, var0[0].field_1087, var0[0].field_1088);
          var10000.field_1113 = var10001;
@@ -2255,7 +2255,7 @@ final class class_6 {
       } else {
          int[] var2 = new int[]{field_1080 * 100 / class_2.field_858, field_1081 * 100 / class_2.field_858, 255};
          class_6 var1 = method_1079(23, 0, var2);
-         class_5 var3 = class_2.field_864[13];
+         ASprite var3 = class_2.field_864[13];
          var10001 = new cSoundEngine(var3, var1.field_1087, var1.field_1088);
          var1.field_1113 = var10001;
          var1.field_1113.method_1109(1, 1);
@@ -2717,7 +2717,7 @@ final class class_6 {
       if(this.field_1106 > -1 && this.field_1107 > -1) {
          var1 = this.field_1106;
          var2 = this.field_1106 & 32767;
-         class_5 var6;
+         ASprite var6;
          var2 = (var6 = (var1 & '\u8000') != 0?class_2.field_124[var2]:class_2.field_864[var2]).method_918(this.field_1107) >> 1;
          var3 = var6.method_919(this.field_1107) >> 1;
          if(this.field_1087 - var2 > cSoundEngine.method_1168(0) && this.field_1088 - var3 > cSoundEngine.method_1169(0)) {
@@ -2892,7 +2892,7 @@ final class class_6 {
          this.field_1036 = 0;
          this.field_1096 = var2.field_1133[this.field_1100][27];
          this.field_1097 = var2.field_1133[this.field_1100][28];
-         class_5 var3 = class_2.field_864[var2.field_1133[this.field_1100][31]];
+         ASprite var3 = class_2.field_864[var2.field_1133[this.field_1100][31]];
          this.field_1108 = var2.field_1133[this.field_1100][32];
          this.field_1107 = var2.field_1133[this.field_1100][33];
          this.field_1049 = (short)var2.field_1133[this.field_1100][29];
@@ -3328,7 +3328,7 @@ final class class_6 {
       if(method_999(0, 21) > 0) {
          class_6[] var4 = new class_6[1];
          method_1010(0, 21, var4, 1);
-         class_5 var5 = class_2.field_864[85];
+         ASprite var5 = class_2.field_864[85];
          class_6 var10000 = var4[0];
          var10001 = new cSoundEngine(var5, var4[0].field_1087, var4[0].field_1088);
          var10000.field_1113 = var10001;
@@ -3337,7 +3337,7 @@ final class class_6 {
       } else {
          int[] var2 = new int[]{(class_2.field_867.field_1087 + (class_1.width >> 1)) * 100 / class_2.field_858, (class_2.field_867.field_1088 + (class_1.height >> 1)) * 100 / class_2.field_858, 255};
          class_6 var1 = method_1079(21, 0, var2);
-         class_5 var3 = class_2.field_864[85];
+         ASprite var3 = class_2.field_864[85];
          var10001 = new cSoundEngine(var3, var1.field_1087, var1.field_1088);
          var1.field_1113 = var10001;
          var1.field_1113.method_1109(0, 1);
@@ -3439,7 +3439,7 @@ final class class_6 {
       var5.field_1095 = 0;
       var6.field_1086 = var7;
       var6.method_1084(8);
-      class_5 var8;
+      ASprite var8;
       int var9;
       int var11;
       cSoundEngine var10001;

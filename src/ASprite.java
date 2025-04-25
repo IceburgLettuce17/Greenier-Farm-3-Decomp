@@ -1,7 +1,20 @@
 import javax.microedition.lcdui.Graphics;
 
 // $FF: renamed from: e
-public final class class_5 {
+public final class ASprite {
+   private static final int BS_MODULES = 1 << 0;
+   private static final int BS_MODULES_IMG = 1 << 2;
+   private static final int BS_MODULE_IMAGES_TC_BMP = 1 << 3;
+   private static final int BS_MODULES_WH_SHORT = 1 << 4;
+   private static final int BS_IMAGE_SIZE_INT = 1 << 7;
+   private static final int BS_FM_OFF_SHORT = 1 << 10;
+   private static final int BS_NFM_SHORT = 1 << 11;
+   private static final int BS_SKIP_FRAME_RC = 1 << 12;
+   private static final int BS_FRAME_RECTS = 1 << 15;
+   private static final int BS_AF_OFF_SHORT = 1 << 18;
+   private static final int BS_FM_INDEX_SHORT = 1 << 20;
+   private static final int BS_MODULE_IMAGES = 1 << 24;
+   private static final int BS_MULTIPLE_IMAGES = 1 << 30;
 
    // $FF: renamed from: a int[]
    static int[] field_925;
@@ -70,7 +83,7 @@ public final class class_5 {
    // $FF: renamed from: d int[]
    private int[] field_957;
    // $FF: renamed from: g int
-   private int field_958;
+   private int _bs_flags; // BSprite format flags
    // $FF: renamed from: a int[][][]
    private int[][][] field_959;
    // $FF: renamed from: a int
@@ -142,7 +155,7 @@ public final class class_5 {
    // $FF: renamed from: n int[]
    private static int[] field_993;
    // $FF: renamed from: a e[][]
-   private static class_5[][] field_994;
+   private static ASprite[][] field_994;
    // $FF: renamed from: o int
    private static int field_995;
    // $FF: renamed from: d int
@@ -226,6 +239,7 @@ public final class class_5 {
    }
 
    // $FF: renamed from: a (byte[], int) void
+   // load sprite data (bsprite v5)
    final void method_908(byte[] var1, int var2) {
       if(var1 != null) {
          try {
@@ -233,10 +247,10 @@ public final class class_5 {
                System.gc();
             }
 
-            this.field_958 = (var1[2] & 255) + ((var1[3] & 255) << 8) + ((var1[4] & 255) << 16) + ((var1[5] & 255) << 24);
+            this._bs_flags = (var1[2] & 255) + ((var1[3] & 255) << 8) + ((var1[4] & 255) << 16) + ((var1[5] & 255) << 24);
             byte[] var4 = var1;
             byte var3 = 6;
-            class_5 var20 = this;
+            ASprite var20 = this;
             int var21 = var3 + 1;
             int var10001 = var1[6] & 255;
             ++var21;
@@ -251,7 +265,7 @@ public final class class_5 {
                var5 = 0;
                var6 = 0;
                short[][] var7 = null;
-               if((this.field_958 & 4) != 0) {
+               if((this._bs_flags & BS_MODULES_IMG) != 0) {
                   this.field_979 = new byte[this.field_927];
                }
 
@@ -266,7 +280,7 @@ public final class class_5 {
                      ++var21;
                      var8 = false;
                      var9 = true;
-                     if((var20.field_958 & 4) != 0) {
+                     if((var20._bs_flags & BS_MODULES_IMG) != 0) {
                         var20.field_979[var13] = var4[var21++];
                      }
                   } else if((var4[var21] & 255) == 255) {
@@ -353,7 +367,7 @@ public final class class_5 {
                   }
 
                   if(var9) {
-                     if((var20.field_958 & 16) == 0) {
+                     if((var20._bs_flags & BS_MODULES_WH_SHORT) == 0) {
                         var20.field_928[var13] = (short)(var4[var21++] & 255);
                         var20.field_929[var13] = (short)(var4[var21++] & 255);
                      } else {
@@ -431,7 +445,7 @@ public final class class_5 {
             var20 = this;
             short var23;
             if((var23 = (short)((var1[var21++] & 255) + ((var1[var21++] & 255) << 8))) > 0) {
-               if((this.field_958 & 1048576) != 0) {
+               if((this._bs_flags & BS_FM_INDEX_SHORT) != 0) {
                   this.field_941 = new short[var23];
                } else {
                   this.field_940 = new byte[var23];
@@ -442,13 +456,13 @@ public final class class_5 {
                this.field_942 = new byte[var23];
 
                for(var6 = 0; var6 < var23; ++var6) {
-                  if((var20.field_958 & 1048576) != 0) {
+                  if((var20._bs_flags & BS_FM_INDEX_SHORT) != 0) {
                      var20.field_941[var6] = (short)((var4[var21++] & 255) + ((var4[var21++] & 255) << 8));
                   } else {
                      var20.field_940[var6] = var4[var21++];
                   }
 
-                  if((var20.field_958 & 1024) != 0) {
+                  if((var20._bs_flags & BS_FM_OFF_SHORT) != 0) {
                      var20.field_943[var6] = (short)((var4[var21++] & 255) + ((var4[var21++] & 255) << 8));
                      var20.field_944[var6] = (short)((var4[var21++] & 255) + ((var4[var21++] & 255) << 8));
                   } else {
@@ -465,9 +479,9 @@ public final class class_5 {
             var20 = this;
             int var27;
             int var40;
-            if((this.field_958 & '\u8000') != 0) {
+            if((this._bs_flags & BS_FRAME_RECTS) != 0) {
                var23 = (short)((var1[var21++] & 255) + ((var1[var21++] & 255) << 8));
-               if((this.field_958 & 1024) == 0) {
+               if((this._bs_flags & BS_FM_OFF_SHORT) == 0) {
                   this.field_937 = new byte[var23 << 2];
                   System.arraycopy(var1, var21, this.field_937, 0, var23 << 2);
                   var21 += var23 << 2;
@@ -488,40 +502,40 @@ public final class class_5 {
 
             int var29;
             if((var23 = (short)((var1[var21++] & 255) + ((var1[var21++] & 255) << 8))) > 0) {
-               if((this.field_958 & 2048) != 0) {
+               if((this._bs_flags & BS_NFM_SHORT) != 0) {
                   this.field_933 = new short[var23];
                } else {
                   this.field_932 = new byte[var23];
                }
 
                this.field_934 = new short[var23];
-               if((this.field_958 & '\u8000') != 0) {
+               if((this._bs_flags & BS_FRAME_RECTS) != 0) {
                   this.field_939 = new short[var23 + 1];
                }
 
                short var25 = 0;
 
                for(var29 = 0; var29 < var23; ++var29) {
-                  if((var20.field_958 & 2048) != 0) {
+                  if((var20._bs_flags & BS_NFM_SHORT) != 0) {
                      var20.field_933[var29] = (short)((var4[var21++] & 255) + ((var4[var21++] & 255) << 8));
                   } else {
                      var20.field_932[var29] = var4[var21++];
                   }
 
                   var20.field_934[var29] = (short)((var4[var21++] & 255) + ((var4[var21++] & 255) << 8));
-                  if((var20.field_958 & '\u8000') != 0 && (var20.field_958 & '\u8000') != 0) {
+                  if((var20._bs_flags & BS_FRAME_RECTS) != 0 && (var20._bs_flags & BS_FRAME_RECTS) != 0) {
                      var20.field_939[var29] = var25;
                      var25 = (short)(var25 + var4[var21++]);
                   }
                }
 
-               if((var20.field_958 & '\u8000') != 0) {
+               if((var20._bs_flags & BS_FRAME_RECTS) != 0) {
                   var20.field_939[var20.field_939.length - 1] = var25;
                }
 
-               if((var20.field_958 & 4096) == 0) {
+               if((var20._bs_flags & BS_SKIP_FRAME_RC) == 0) {
                   var29 = var23 << 2;
-                  if((var20.field_958 & 1024) == 0) {
+                  if((var20._bs_flags & BS_FM_OFF_SHORT) == 0) {
                      var20.field_935 = new byte[var29];
 
                      for(var5 = 0; var5 < var29; ++var5) {
@@ -542,7 +556,7 @@ public final class class_5 {
             if((var23 = (short)((var1[var21++] & 255) + ((var1[var21++] & 255) << 8))) > 0) {
                this.field_947 = new byte[var23];
                this.field_948 = new byte[var23];
-               if((this.field_958 & 262144) != 0) {
+               if((this._bs_flags & BS_AF_OFF_SHORT) != 0) {
                   this.field_949 = new short[var23];
                   this.field_950 = new short[var23];
                } else {
@@ -555,7 +569,7 @@ public final class class_5 {
                for(var6 = 0; var6 < var23; ++var6) {
                   var20.field_947[var6] = var4[var21++];
                   var20.field_948[var6] = var4[var21++];
-                  if((var20.field_958 & 262144) != 0) {
+                  if((var20._bs_flags & BS_AF_OFF_SHORT) != 0) {
                      var20.field_949[var6] = (short)((var4[var21++] & 255) + ((var4[var21++] & 255) << 8));
                      var20.field_950[var6] = (short)((var4[var21++] & 255) + ((var4[var21++] & 255) << 8));
                   } else {
@@ -585,13 +599,13 @@ public final class class_5 {
                }
 
             } else {
-               if((this.field_958 & 16777216) != 0) {
+               if((this._bs_flags & BS_MODULE_IMAGES) != 0) {
                   var4 = var1;
                   var20 = this;
-                  if((this.field_958 & 16777216) != 0 && var21 < var1.length) {
+                  if((this._bs_flags & BS_MODULE_IMAGES) != 0 && var21 < var1.length) {
                      short var24 = (short)((var1[var21++] & 255) + ((var1[var21++] & 255) << 8));
                      byte var28 = 1;
-                     if((this.field_958 & 1073741824) != 0) {
+                     if((this._bs_flags & BS_MULTIPLE_IMAGES) != 0) {
                         var28 = (byte)var1[var21++];
                      }
 
@@ -618,7 +632,7 @@ public final class class_5 {
                         short var36 = var24;
                         byte[] var41 = var4;
                         var29 = var21;
-                        class_5 var18 = var20;
+                        ASprite var18 = var20;
 
                         for(var13 = 0; var13 < var18.field_960; ++var13) {
                            var18.field_959[var35][var13] = new int[var27];
@@ -699,7 +713,7 @@ public final class class_5 {
                         var5 = 0;
 
                         for(var27 = 0; var27 < var20.field_927; ++var27) {
-                           if((var20.field_958 & 128) != 0) {
+                           if((var20._bs_flags & BS_IMAGE_SIZE_INT) != 0) {
                               var35 = (var4[var21++] & 255) + ((var4[var21++] & 255) << 8) + ((var4[var21++] & 255) << 16) + ((var4[var21++] & 255) << 24);
                            } else {
                               var35 = (short)((var4[var21++] & 255) + ((var4[var21++] & 255) << 8));
@@ -714,7 +728,7 @@ public final class class_5 {
                         var20.field_956 = new byte[var5];
 
                         for(var5 = 0; var5 < var20.field_927; ++var5) {
-                           if((var20.field_958 & 128) != 0) {
+                           if((var20._bs_flags & BS_IMAGE_SIZE_INT) != 0) {
                               var34 = (var4[var21++] & 255) + ((var4[var21++] & 255) << 8) + ((var4[var21++] & 255) << 16) + ((var4[var21++] & 255) << 24);
                            } else {
                               var34 = (short)((var4[var21++] & 255) + ((var4[var21++] & 255) << 8));
@@ -729,12 +743,12 @@ public final class class_5 {
 
                this.field_955 = -1;
                this.field_954 = new short[16][];
-               if((this.field_958 & 4096) != 0) {
+               if((this._bs_flags & BS_SKIP_FRAME_RC) != 0) {
                   int var19;
                   if((var19 = this.method_934()) > 0) {
                      var2 = 0;
                      int[] var43;
-                     if((this.field_958 & 1024) == 0 && (this.field_965 & 4) == 0) {
+                     if((this._bs_flags & BS_FM_OFF_SHORT) == 0 && (this.field_965 & 4) == 0) {
                         this.field_935 = new byte[var19 << 2];
 
                         for(var21 = 0; var21 < var19; ++var21) {
@@ -812,17 +826,17 @@ public final class class_5 {
 
    // $FF: renamed from: k (int) int
    private int method_913(int var1) {
-      return (this.field_958 & 2048) != 0?this.field_933[var1]:this.field_932[var1] & 255;
+      return (this._bs_flags & BS_NFM_SHORT) != 0?this.field_933[var1]:this.field_932[var1] & 255;
    }
 
    // $FF: renamed from: l (int) int
    private int method_914(int var1) {
-      return (this.field_958 & 262144) != 0?this.field_949[var1]:this.field_951[var1];
+      return (this._bs_flags & BS_AF_OFF_SHORT) != 0?this.field_949[var1]:this.field_951[var1];
    }
 
    // $FF: renamed from: m (int) int
    private int method_915(int var1) {
-      return (this.field_958 & 262144) != 0?this.field_950[var1]:this.field_952[var1];
+      return (this._bs_flags & BS_AF_OFF_SHORT) != 0?this.field_950[var1]:this.field_952[var1];
    }
 
    // $FF: renamed from: b (int) int
@@ -837,28 +851,28 @@ public final class class_5 {
 
    // $FF: renamed from: d (int) int
    final int method_918(int var1) {
-      return (this.field_958 & 1024) == 0 && (this.field_965 & 4) == 0?this.field_935[(var1 << 2) + 2] & 255:this.field_936[(var1 << 2) + 2] & '\uffff';
+      return (this._bs_flags & BS_FM_OFF_SHORT) == 0 && (this.field_965 & 4) == 0?this.field_935[(var1 << 2) + 2] & 255:this.field_936[(var1 << 2) + 2] & '\uffff';
    }
 
    // $FF: renamed from: e (int) int
    final int method_919(int var1) {
-      return (this.field_958 & 1024) == 0 && (this.field_965 & 4) == 0?this.field_935[(var1 << 2) + 3] & 255:this.field_936[(var1 << 2) + 3] & '\uffff';
+      return (this._bs_flags & BS_FM_OFF_SHORT) == 0 && (this.field_965 & 4) == 0?this.field_935[(var1 << 2) + 3] & 255:this.field_936[(var1 << 2) + 3] & '\uffff';
    }
 
    // $FF: renamed from: f (int) int
    final int method_920(int var1) {
-      return (this.field_958 & 1024) == 0 && (this.field_965 & 4) == 0?this.field_935[var1 << 2]:this.field_936[var1 << 2];
+      return (this._bs_flags & BS_FM_OFF_SHORT) == 0 && (this.field_965 & 4) == 0?this.field_935[var1 << 2]:this.field_936[var1 << 2];
    }
 
    // $FF: renamed from: g (int) int
    final int method_921(int var1) {
-      return (this.field_958 & 1024) == 0 && (this.field_965 & 4) == 0?this.field_935[(var1 << 2) + 1]:this.field_936[(var1 << 2) + 1];
+      return (this._bs_flags & BS_FM_OFF_SHORT) == 0 && (this.field_965 & 4) == 0?this.field_935[(var1 << 2) + 1]:this.field_936[(var1 << 2) + 1];
    }
 
    // $FF: renamed from: n (int) int
    private int method_922(int var1) {
       int var2;
-      if((this.field_958 & 1048576) != 0) {
+      if((this._bs_flags & BS_FM_INDEX_SHORT) != 0) {
          var2 = this.field_941[var1];
       } else {
          var2 = this.field_940[var1] & 255;
@@ -1001,7 +1015,7 @@ public final class class_5 {
 
    // $FF: renamed from: b () int
    final int method_934() {
-      return (this.field_958 & 2048) != 0?(this.field_933 == null?0:this.field_933.length):(this.field_932 == null?0:this.field_932.length);
+      return (this._bs_flags & BS_NFM_SHORT) != 0?(this.field_933 == null?0:this.field_933.length):(this.field_932 == null?0:this.field_932.length);
    }
 
    // $FF: renamed from: h (int) int
@@ -1035,7 +1049,7 @@ public final class class_5 {
          short var5 = this.field_939[var1];
          if((var1 = this.field_939[var1 + 1] - var5) > 0 && var2 < var1) {
             var4 = var5 + var2 << 2;
-            if((this.field_958 & 1024) != 0) {
+            if((this._bs_flags & BS_FM_OFF_SHORT) != 0) {
                if(this.field_938 != null) {
                   var3[0] = this.field_938[var4];
                   var3[1] = this.field_938[var4 + 1];
@@ -1160,7 +1174,7 @@ public final class class_5 {
    // $FF: renamed from: a (int) void
    static void method_948(int var0) {
       field_991 = new short[var0][];
-      field_994 = new class_5[var0][];
+      field_994 = new ASprite[var0][];
       field_992 = new int[var0];
       field_993 = new int[var0];
    }
@@ -1169,7 +1183,7 @@ public final class class_5 {
    static void method_949(int var0, int var1) {
       field_993[var0] = var1;
       field_991[var0] = new short[var1];
-      field_994[var0] = new class_5[var1];
+      field_994[var0] = new ASprite[var1];
 
       for(var1 = 0; var1 < field_991[var0].length; ++var1) {
          field_991[var0][var1] = -1;
@@ -1213,7 +1227,7 @@ public final class class_5 {
          short var4;
          int var5 = (var4 = field_991[this.field_990][var3]) >> 10;
          int var6 = var4 & 1023;
-         class_5 var7;
+         ASprite var7;
          if(var4 >= 0 && (var7 = field_994[this.field_990][var3]) != null) {
             var7.field_971[var5][var6] = null;
          }
@@ -1244,7 +1258,7 @@ public final class class_5 {
          var1 = var10003;
          byte[] var9 = var10002;
          byte var3 = var2;
-         class_5 var10 = this;
+         ASprite var10 = this;
          int var6 = 0;
          var4 *= var5;
          if(field_925 == null) {
@@ -1941,7 +1955,7 @@ public final class class_5 {
 
    // $FF: renamed from: j (int) int
    final int method_973(int var1) {
-      return (this.field_958 & 1048576) != 0?this.field_933[var1]:this.field_932[var1];
+      return (this._bs_flags & BS_FM_INDEX_SHORT) != 0?this.field_933[var1]:this.field_932[var1];
    }
 
    // $FF: renamed from: a (int, int, int, int) void
@@ -1959,7 +1973,7 @@ public final class class_5 {
             var3 = this.field_927 - 1;
          }
 
-         if((this.field_958 & 16777224) != 0) {
+         if((this._bs_flags & (BS_MODULE_IMAGES_TC_BMP|BS_MODULE_IMAGES)) != 0) {
             var4 = this.field_962;
             this.field_962 = var1;
             if(field_986) {
@@ -2043,7 +2057,7 @@ public final class class_5 {
 
    // $FF: renamed from: b (int, int, int) void
    final void method_977(int var1, int var2, int var3) {
-      class_5 var10000 = this;
+      ASprite var10000 = this;
       var1 = var1;
       
       int var4 = var10000.method_934();
@@ -2061,7 +2075,7 @@ public final class class_5 {
       if(this.field_972[var1] == null) {
          int var25;
          label111: {
-            class_5 var7 = this;
+            ASprite var7 = this;
             var8 = 0;
             if(this.field_954 != null) {
                if(this.field_954.length != 16) {
@@ -2765,7 +2779,7 @@ public final class class_5 {
 
          if(var1 == null || method_978(var1, var3, var4, var12, var6)) {
             class_11 var112 = null;
-            if((this.field_958 & 16777224) != 0) {
+            if((this._bs_flags & (BS_MODULE_IMAGES_TC_BMP|BS_MODULE_IMAGES)) != 0) {
                if(this.field_971 != null && this.field_971[this.field_962] != null) {
                   var112 = this.field_971[this.field_962][var2];
                }
@@ -3073,7 +3087,7 @@ public final class class_5 {
    }
 
    // $FF: renamed from: <init> () void
-   public class_5() {
+   public ASprite() {
       super();
       this.field_990 = -1;
       this.field_1003 = false;
