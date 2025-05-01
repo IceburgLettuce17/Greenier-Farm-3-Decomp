@@ -947,13 +947,13 @@ public final class class_12 implements Runnable, CommandListener {
 
             return;
          case 2:
-            class_1.method_21("/11");
+            GLLib.method_21("/11");
             field_1312 = method_1231(field_1228, 3, true, false);
-            short[] var8 = (short[])class_1.method_32(field_1230);
+            short[] var8 = (short[])GLLib.method_32(field_1230);
             field_1312.method_955(var8);
             field_1260 = field_1312.method_958();
             field_1313 = method_1231(field_1229, 3, true, false);
-            var8 = (short[])class_1.method_32(field_1231);
+            var8 = (short[])GLLib.method_32(field_1231);
             field_1313.method_955(var8);
             if(field_1330 > 160 && field_1330 > 220) {
                if(field_1330 <= 320) {
@@ -966,10 +966,10 @@ public final class class_12 implements Runnable, CommandListener {
                }
             }
 
-            class_1.method_23();
+            GLLib.method_23();
             return;
          case 3:
-            class_1.method_21("/11");
+            GLLib.method_21("/11");
 
             for(var4 = 0; var4 < field_1232; ++var4) {
                if(var4 != field_1228 && var4 != field_1230 && var4 != field_1229 && var4 != field_1231) {
@@ -977,7 +977,7 @@ public final class class_12 implements Runnable, CommandListener {
                }
             }
 
-            class_1.method_23();
+            GLLib.method_23();
          case 4:
             return;
          case 5:
@@ -1007,7 +1007,7 @@ public final class class_12 implements Runnable, CommandListener {
 
       if(var0) {
          method_1192();
-         class_1.method_23();
+         GLLib.method_23();
          field_1289 = null;
          field_1288 = null;
          field_1324 = null;
@@ -1559,7 +1559,7 @@ public final class class_12 implements Runnable, CommandListener {
                var0.setColor(0);
                var4 = field_1329;
                var3 = field_1330;
-               class_1.method_43(var0, 0, 0, var3, var4, true);
+               GLLib.method_43(var0, 0, 0, var3, var4, true);
                var10002 = field_1330 * 3 / 4;
                var6 = field_1310;
                var5 = field_1309;
@@ -1574,37 +1574,37 @@ public final class class_12 implements Runnable, CommandListener {
                method_1229(var0, 0, 0, field_1329, field_1330);
                var8 = 16777215;
                var0.setColor(16777215);
-               class_1.method_43(var0, var7, var3, var4, 6, true);
+               GLLib.method_43(var0, var7, var3, var4, 6, true);
                var0.setColor(0);
                var10001 = var7 + 1 + 1;
                var10002 = var3 + 1 + 1;
                var8 = var4 - 2 - 1;
                var6 = var10002;
-               class_1.method_43(var0, var10001, var6, var8, 3, true);
+               GLLib.method_43(var0, var10001, var6, var8, 3, true);
                var4 = 16711680;
                var0.setColor(16711680);
-               class_1.method_43(var0, var7 + 1 + 1, var6, var5, 3, true);
+               GLLib.method_43(var0, var7 + 1 + 1, var6, var5, 3, true);
                if(field_1324 != null && !field_1324.trim().equals("")) {
                   Image var10;
                   Graphics var11;
                   (var11 = (var10 = Image.createImage(field_1330, 30)).getGraphics()).setColor(0);
                   var5 = field_1330;
-                  class_1.method_43(var11, 0, 0, 30, var5, true);
+                  GLLib.method_43(var11, 0, 0, 30, var5, true);
                   var5 = 16777215;
                   var11.setColor(16777215);
                   if(var11 == null) {
-                     class_1.field_1 = class_1.field_2;
+                     GLLib.field_1 = GLLib.field_2;
                   } else {
-                     class_1.field_1 = var11;
+                     GLLib.field_1 = var11;
                   }
 
                   Font var12 = field_1193;
-                  class_1.field_1.setFont(var12);
-                  class_1.method_47(field_1324, field_1332, 25, 33);
+                  GLLib.field_1.setFont(var12);
+                  GLLib.method_47(field_1324, field_1332, 25, 33);
                   if(var0 == null) {
-                     class_1.field_1 = class_1.field_2;
+                     GLLib.field_1 = GLLib.field_2;
                   } else {
-                     class_1.field_1 = var0;
+                     GLLib.field_1 = var0;
                   }
 
                   var0.drawRegion(var10, 0, 0, field_1329, 30, 5, field_1331 + 5 + 30, 0, 0);
@@ -1636,11 +1636,11 @@ public final class class_12 implements Runnable, CommandListener {
                var10001 = var2 - (var5 + 1);
                var8 = var5 + 1;
                var6 = var10001;
-               class_1.method_43(var1, 0, var6, var3, var8, true);
+               GLLib.method_43(var1, 0, var6, var3, var8, true);
                var4 = -220209185;
                var1.setColor(-220209185);
                var4 = var2 - var5;
-               class_1.method_43(var1, 0, var4, var3, var5, true);
+               GLLib.method_43(var1, 0, var4, var3, var5, true);
                field_1261 = 1;
                var10002 = var3 >> 1;
                var5 = var2 >> 1;
@@ -1681,7 +1681,7 @@ public final class class_12 implements Runnable, CommandListener {
 
       int var3 = 16777215;
       var0.setColor(16777215);
-      class_1.method_43(var0, 0, 0, var1, var2, true);
+      GLLib.method_43(var0, 0, 0, var1, var2, true);
       var3 = field_1295[0][0];
       var4 = field_1295[0][1];
       int var5 = field_1295[field_1233][0];
@@ -1991,7 +1991,7 @@ public final class class_12 implements Runnable, CommandListener {
       var2 = Math.max(0, 0);
       var3 = Math.min(var3, field_1329);
       var4 = Math.min(var4, field_1330);
-      class_1.method_41(var0, var1, var2, var4, var3, true);
+      GLLib.method_41(var0, var1, var2, var4, var3, true);
    }
 
    public final void run() {
@@ -2038,7 +2038,7 @@ public final class class_12 implements Runnable, CommandListener {
    private static ASprite method_1231(int var0, int var1, boolean var2, boolean var3) {
       ASprite var10000 = new ASprite();
       ASprite var4 = var10000;
-      var10000.method_908(class_1.method_27(var0), 0);
+      var10000.method_908(GLLib.method_27(var0), 0);
 
       for(var0 = 0; var1 >> var0 != 0; ++var0) {
          if((var1 >> var0 & 1) != 0) {

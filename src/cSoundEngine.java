@@ -203,7 +203,7 @@ final class cSoundEngine implements Runnable {
 
    // $FF: renamed from: b () void
    final void method_1111() {
-      this.field_1139 = class_1.method_16(0, this.method_1116());
+      this.field_1139 = GLLib.method_16(0, this.method_1116());
       this.field_1140 = 0;
    }
 
@@ -272,23 +272,23 @@ final class cSoundEngine implements Runnable {
       if(this.field_1138 >= 0) {
          if(!this.field_1143) {
             boolean var1 = false;
-            if(this.field_1144 != -1 && this.field_1144 != 100 && (class_1.field_72 & 8192) == 0) {
+            if(this.field_1144 != -1 && this.field_1144 != 100 && (GLLib.field_72 & 8192) == 0) {
                var1 = true;
-               class_1.method_92();
-               class_1.method_96(this.field_1144);
+               GLLib.method_92();
+               GLLib.method_96(this.field_1144);
             }
 
             if(this.field_1146 != -1) {
                int var2 = this.field_1137.method_972();
                this.field_1137.method_971(this.field_1146);
-               this.field_1137.method_979(class_1.field_1, this.field_1138, this.field_1139, this.field_1134, this.field_1135, this.field_1136);
+               this.field_1137.method_979(GLLib.field_1, this.field_1138, this.field_1139, this.field_1134, this.field_1135, this.field_1136);
                this.field_1137.method_971(var2);
             } else {
-               this.field_1137.method_979(class_1.field_1, this.field_1138, this.field_1139, this.field_1134, this.field_1135, this.field_1136);
+               this.field_1137.method_979(GLLib.field_1, this.field_1138, this.field_1139, this.field_1134, this.field_1135, this.field_1136);
             }
 
             if(var1) {
-               class_1.field_72 &= -1046497;
+               GLLib.field_72 &= -1046497;
             }
 
          }
@@ -459,10 +459,10 @@ final class cSoundEngine implements Runnable {
    static void method_1128(String var0, int var1, boolean var2) {
       if(field_1150) {
          if(var1 >= 0) {
-            class_1.method_21(var0);
-            byte[] var10000 = class_1.method_27(var1);
+            GLLib.method_21(var0);
+            byte[] var10000 = GLLib.method_27(var1);
             int var4 = var1;
-            var1 = class_1.field_54;
+            var1 = GLLib.field_54;
             byte[] var3 = var10000;
             if(field_1150) {
                if(var3 == null || var3.length <= 0) {
@@ -530,7 +530,7 @@ final class cSoundEngine implements Runnable {
                   return;
                }
                try {
-            	   chnPlayers[var0] = Manager.createPlayer(new ByteArrayInputStream(field_1151[var1]), class_1.method_34(field_1152[var1]));
+            	   chnPlayers[var0] = Manager.createPlayer(new ByteArrayInputStream(field_1151[var1]), GLLib.method_34(field_1152[var1]));
                } catch (IOException e) {
                } catch (MediaException e2) {}
             }
@@ -549,9 +549,9 @@ final class cSoundEngine implements Runnable {
 
    // $FF: renamed from: c (int, int, int, int, int) void
    private static void method_1134(int var0, int var1, int var2, int var3, int var4) {
-      if(!class_1.field_3) {
+      if(!GLLib.field_3) {
          method_1133(var0, var1, var2);
-         if(!class_1.field_3) {
+         if(!GLLib.field_3) {
             if(field_1156[var0] == 1 && chnPlayers[var0] != null) {
                if(var3 == 0) {
                   chnPlayers[var0].setLoopCount(-1);
@@ -854,7 +854,7 @@ final class cSoundEngine implements Runnable {
 
    // $FF: renamed from: j (int) void
    private static void method_1149(int var0) {
-      if((field_1172 += class_1.field_15) >= 0) {
+      if((field_1172 += GLLib.field_15) >= 0) {
          int var1 = field_1172;
          field_1172 = 0;
          long var2;
@@ -864,7 +864,7 @@ final class cSoundEngine implements Runnable {
 
          try {
             if(!method_1139(var0)) {
-               if(!class_1.field_3 && field_1158[var0] == 0 && field_1171[var0] < 3) {
+               if(!GLLib.field_3 && field_1158[var0] == 0 && field_1171[var0] < 3) {
                   switch(field_1171[var0]) {
                   case 0:
                      if(field_1156[var0] == 2) {
@@ -1004,10 +1004,10 @@ final class cSoundEngine implements Runnable {
                         if((var3 = field_1168[var15]) == 6 || var3 == 7) {
                            if(var16) {
                               field_1168[var15] = 6;
-                              field_1168[var15 + 8] = class_1.method_16(field_1168[var15 + 4], field_1168[var15 + 5] + 1);
+                              field_1168[var15 + 8] = GLLib.method_16(field_1168[var15 + 4], field_1168[var15 + 5] + 1);
                            } else {
                               field_1168[var15] = 7;
-                              field_1168[var15 + 8] = class_1.method_16(field_1168[var15 + 6], field_1168[var15 + 7] + 1);
+                              field_1168[var15 + 8] = GLLib.method_16(field_1168[var15 + 6], field_1168[var15 + 7] + 1);
                            }
                         }
                      }
@@ -1027,11 +1027,11 @@ final class cSoundEngine implements Runnable {
             method_1132(var0, true);
          }
 
-         if(class_1.field_3) {
+         if(GLLib.field_3) {
             method_1138();
          }
 
-         if(class_1.field_3) {
+         if(GLLib.field_3) {
             method_1138();
          }
 
@@ -1117,8 +1117,8 @@ final class cSoundEngine implements Runnable {
          field_1178[0][19] = field_1177[1];
          field_1179[0][0] = var2;
          field_1179[0][1] = var3;
-         field_1178[0][2] = class_1.method_58(var1, 0);
-         field_1178[0][3] = class_1.method_58(var1, 2);
+         field_1178[0][2] = GLLib.method_58(var1, 0);
+         field_1178[0][3] = GLLib.method_58(var1, 2);
          field_1178[0][5] = field_1178[0][2] * field_1177[2];
          field_1178[0][6] = field_1178[0][3] * field_1177[5];
          field_1184[0] = var4;
@@ -1215,10 +1215,10 @@ final class cSoundEngine implements Runnable {
             var11 = 0;
             var12 = 0;
             if(var0 != null) {
-               var9 = class_1.method_36(var0, true);
-               var10 = class_1.method_37(var0, true);
-               var11 = class_1.method_38(var0, true);
-               var12 = class_1.method_39(var0, true);
+               var9 = GLLib.method_36(var0, true);
+               var10 = GLLib.method_37(var0, true);
+               var11 = GLLib.method_38(var0, true);
+               var12 = GLLib.method_39(var0, true);
             }
 
             if(method_1155(var3, 128)) {
@@ -1428,30 +1428,30 @@ final class cSoundEngine implements Runnable {
                var14 = var8 % var6[8];
                var15 = (var7 + var4) % var6[7];
                var16 = (var8 + var5) % var6[8];
-               class_1.method_41(var0, var9, var10, var11, var12, true);
+               GLLib.method_41(var0, var9, var10, var11, var12, true);
                if(var15 > var13) {
                   if(var16 > var14) {
                      method_1162(var0, var3, var13, var14, var4, var5, var1, var2, var9, var10, var11, var12, 100);
                   } else {
                      method_1162(var0, var3, var13, var14, var4, var5 - var16, var1, var2, var9, var10, var11, var12, 100);
-                     class_1.method_41(var0, var9, var10, var11, var12, true);
+                     GLLib.method_41(var0, var9, var10, var11, var12, true);
                      method_1162(var0, var3, var13, 0, var4, var16, var1, var5 - var16 + var2, var9, var10, var11, var12, 100);
                   }
                } else if(var16 > var14) {
                   method_1162(var0, var3, var13, var14, var4 - var15, var5, var1, var2, var9, var10, var11, var12, 100);
-                  class_1.method_41(var0, var9, var10, var11, var12, true);
+                  GLLib.method_41(var0, var9, var10, var11, var12, true);
                   method_1162(var0, var3, 0, var14, var15, var5, var4 - var15 + var1, var2, var9, var10, var11, var12, 100);
                } else {
                   method_1162(var0, var3, var13, var14, var4 - var15, var5 - var16, var1, var2, var9, var10, var11, var12, 100);
-                  class_1.method_41(var0, var9, var10, var11, var12, true);
+                  GLLib.method_41(var0, var9, var10, var11, var12, true);
                   method_1162(var0, var3, var13, 0, var4 - var15, var16, var1, var5 - var16 + var2, var9, var10, var11, var12, 100);
-                  class_1.method_41(var0, var9, var10, var11, var12, true);
+                  GLLib.method_41(var0, var9, var10, var11, var12, true);
                   method_1162(var0, var3, 0, var14, var15, var5 - var16, var4 - var15 + var1, var2, var9, var10, var11, var12, 100);
-                  class_1.method_41(var0, var9, var10, var11, var12, true);
+                  GLLib.method_41(var0, var9, var10, var11, var12, true);
                   method_1162(var0, var3, 0, 0, var15, var16, var4 - var15 + var1, var5 - var16 + var2, var9, var10, var11, var12, 100);
                }
 
-               class_1.method_41(var0, var9, var10, var11, var12, true);
+               GLLib.method_41(var0, var9, var10, var11, var12, true);
             }
 
             return;
@@ -1527,8 +1527,8 @@ final class cSoundEngine implements Runnable {
    // $FF: renamed from: a (javax.microedition.lcdui.Graphics, int, int, int, int, int, int, int, int, int, int, int, int) void
    private static void method_1162(Graphics var0, int var1, int var2, int var3, int var4, int var5, int var6, int var7, int var8, int var9, int var10, int var11, int var12) {
       if(var6 <= (var8 + var10) * 100 && var7 <= (var9 + var11) * 100 && var6 + var4 >= var8 * 100 && var7 + var5 >= var9 * 100) {
-         class_1.method_40(var0, var6, var7, var4, var5, true);
-         class_1.method_48(var0, field_1180[var1][0], var3 - var7 + ASprite.field_970 - field_1178[var1][8], var6 - var2, 20, false);
+         GLLib.method_40(var0, var6, var7, var4, var5, true);
+         GLLib.method_48(var0, field_1180[var1][0], var3 - var7 + ASprite.field_970 - field_1178[var1][8], var6 - var2, 20, false);
       }
    }
 
@@ -1590,8 +1590,8 @@ final class cSoundEngine implements Runnable {
          }
 
          if(var4 < 0) {
-            var1 = class_1.height;
-            ASprite.field_969 = class_1.width;
+            var1 = GLLib.height;
+            ASprite.field_969 = GLLib.width;
             ASprite.field_970 = var1;
             return;
          }
@@ -1620,8 +1620,8 @@ final class cSoundEngine implements Runnable {
          }
 
          if(var5 < 0) {
-            var1 = class_1.height;
-            ASprite.field_969 = class_1.width;
+            var1 = GLLib.height;
+            ASprite.field_969 = GLLib.width;
             ASprite.field_970 = var1;
             return;
          }
@@ -1648,10 +1648,10 @@ final class cSoundEngine implements Runnable {
                }
 
                if(field_1185 != 100) {
-                  class_1.method_92();
+                  GLLib.method_92();
                   var23 = field_1185;
-                  class_1.field_73[13][1] = var23;
-                  class_1.method_97(true);
+                  GLLib.field_73[13][1] = var23;
+                  GLLib.method_97(true);
                }
 
                if(field_1184[var1].method_934() == 0) {
@@ -1679,8 +1679,8 @@ final class cSoundEngine implements Runnable {
                }
 
                if(field_1185 != 100) {
-                  class_1.method_97(false);
-                  class_1.method_93();
+                  GLLib.method_97(false);
+                  GLLib.method_93();
                }
             }
 
@@ -1743,8 +1743,8 @@ final class cSoundEngine implements Runnable {
          }
       }
 
-      var1 = class_1.height;
-      ASprite.field_969 = class_1.width;
+      var1 = GLLib.height;
+      ASprite.field_969 = GLLib.width;
       ASprite.field_970 = var1;
    }
 
@@ -1931,28 +1931,28 @@ final class cSoundEngine implements Runnable {
          int var10000 = 0 - method_1168(0);
          var1 = 0 - method_1169(0);
          var0 = var10000;
-         class_1.method_43(class_1.field_1, var0, var1, var2, var3, true);
+         GLLib.method_43(GLLib.field_1, var0, var1, var2, var3, true);
       }
    }
 
    // $FF: renamed from: a (int, e, int, int, int, boolean, int[]) void
    static final void method_1177(int var0, ASprite var1, int var2, int var3, int var4, boolean var5, int[] var6) {
       if(field_1185 != 100) {
-         class_1.method_92();
+         GLLib.method_92();
          var0 = field_1185;
-         class_1.field_73[13][1] = var0;
-         class_1.method_97(true);
+         GLLib.field_73[13][1] = var0;
+         GLLib.method_97(true);
       }
 
       if(method_1155(0, 4)) {
          method_1178(0, 0, var1, 0, var2, var3, var4, 0, 0, 0, var5, var6);
       } else {
-         var1.method_980(class_1.field_1, var2, var3 - method_1168(0), var4 - method_1169(0), 0);
+         var1.method_980(GLLib.field_1, var2, var3 - method_1168(0), var4 - method_1169(0), 0);
       }
 
       if(field_1185 != 100) {
-         class_1.method_97(false);
-         class_1.method_93();
+         GLLib.method_97(false);
+         GLLib.method_93();
       }
 
    }
@@ -1982,8 +1982,8 @@ final class cSoundEngine implements Runnable {
             var8 = ((ASprite)var2).method_921(var3);
             var12 = ((ASprite)var2).method_918(var3);
             var13 = ((ASprite)var2).method_919(var3);
-            if((class_1.field_72 & 8192) != 0) {
-               var14 = class_1.field_73[13][1];
+            if((GLLib.field_72 & 8192) != 0) {
+               var14 = GLLib.field_73[13][1];
                var1 = var1 * var14 / 100;
                var8 = var8 * var14 / 100;
                var12 = var12 * var14 / 100;
@@ -2040,10 +2040,10 @@ final class cSoundEngine implements Runnable {
          int var21 = field_1178[0][8];
          ASprite.field_969 = var10000;
          ASprite.field_970 = var21;
-         var21 = class_1.method_36(var20, true);
-         int var22 = class_1.method_37(var20, true);
-         int var23 = class_1.method_38(var20, true);
-         int var24 = class_1.method_39(var20, true);
+         var21 = GLLib.method_36(var20, true);
+         int var22 = GLLib.method_37(var20, true);
+         int var23 = GLLib.method_38(var20, true);
+         int var24 = GLLib.method_39(var20, true);
          int var25 = 1;
          if(!var10) {
             var25 = field_1183;
@@ -2194,11 +2194,11 @@ final class cSoundEngine implements Runnable {
             }
          }
 
-         class_1.method_41(var20, var21, var22, var23, var24, true);
+         GLLib.method_41(var20, var21, var22, var23, var24, true);
          ASprite.field_969 = var28;
          ASprite.field_970 = var29;
-         var0 = class_1.height;
-         ASprite.field_969 = class_1.width;
+         var0 = GLLib.height;
+         ASprite.field_969 = GLLib.width;
          ASprite.field_970 = var0;
       }
 
@@ -2206,7 +2206,7 @@ final class cSoundEngine implements Runnable {
 
    // $FF: renamed from: a (javax.microedition.lcdui.Graphics, java.lang.Object, int, int, int, int, int, int, int, int, int, int, int, int, int, int, int, int[], boolean) void
    private static void method_1179(Graphics var0, Object var1, int var2, int var3, int var4, int var5, int var6, int var7, int var8, int var9, int var10, int var11, int var12, int var13, int var14, int var15, int var16, int[] var17, boolean var18) {
-      class_1.method_40(var0, var4, var5, var6, var7, true);
+      GLLib.method_40(var0, var4, var5, var6, var7, true);
       if(!var18) {
          int var10001 = var17[0];
          int var10002 = var17[1];
@@ -2214,7 +2214,7 @@ final class cSoundEngine implements Runnable {
          int var20 = var17[3];
          var7 = var10003;
          var6 = var10002;
-         class_1.method_40(var0, var10001, var6, var7, var20, true);
+         GLLib.method_40(var0, var10001, var6, var7, var20, true);
       }
 
       if(var12 == 0) {
@@ -2222,19 +2222,19 @@ final class cSoundEngine implements Runnable {
       } else if(var12 == 5) {
          var2 = var8;
          var8 = ASprite.field_970 - var9 - var11;
-         class_1.method_51(var0, (int[])var1, 0, var11, var8, var2, var11, var10, true, false, var3, -1, false);
+         GLLib.method_51(var0, (int[])var1, 0, var11, var8, var2, var11, var10, true, false, var3, -1, false);
       } else if(var12 == 4) {
          class_11 var19;
-         class_1.method_48(var0, var19 = (class_11)var1, var8, var9, 20, true);
+         GLLib.method_48(var0, var19 = (class_11)var1, var8, var9, 20, true);
       } else if(var12 == 1) {
-         class_1.method_44(var0, var8, var9, var10, var11, true);
+         GLLib.method_44(var0, var8, var9, var10, var11, true);
       } else if(var12 == 2) {
-         class_1.method_43(var0, var8, var9, var10, var11, true);
+         GLLib.method_43(var0, var8, var9, var10, var11, true);
       } else if(var12 == 3) {
-         class_1.method_87(var0, var8, var9, var10, var11);
+         GLLib.method_87(var0, var8, var9, var10, var11);
       }
 
-      class_1.method_41(var0, var13, var14, var15, var16, true);
+      GLLib.method_41(var0, var13, var14, var15, var16, true);
    }
 
    // $FF: renamed from: c (int, int, int, int) void
@@ -2271,28 +2271,28 @@ final class cSoundEngine implements Runnable {
             int var10001 = var1 + var3 - var6;
             var10 = var2 + var4 - var7;
             var9 = var10001;
-            class_1.method_43(var5, 0, 0, var9, var10, true);
+            GLLib.method_43(var5, 0, 0, var9, var10, true);
             method_1165(var0, 0, 0, var1 + var3 - var6, var2 + var4 - var7);
             var8 = var7 - var2;
          }
 
          var9 = var1 + var3 - var6;
-         class_1.method_43(var5, 0, var2, var9, var8, true);
+         GLLib.method_43(var5, 0, var2, var9, var8, true);
          method_1165(var0, 0, var2, var1 + var3 - var6, var8);
          var3 = var6 - var1;
       }
 
       if(var2 + var4 > var7) {
          var10 = var2 + var4 - var7;
-         class_1.method_43(var5, var1, 0, var3, var10, true);
+         GLLib.method_43(var5, var1, 0, var3, var10, true);
          method_1165(var0, var1, 0, var3, var2 + var4 - var7);
          var4 = var7 - var2;
       }
 
-      class_1.method_43(var5, var1, var2, var3, var4, true);
+      GLLib.method_43(var5, var1, var2, var3, var4, true);
       method_1165(var0, var1, var2, var3, var4);
-      var1 = class_1.height;
-      ASprite.field_969 = class_1.width;
+      var1 = GLLib.height;
+      ASprite.field_969 = GLLib.width;
       ASprite.field_970 = var1;
    }
 

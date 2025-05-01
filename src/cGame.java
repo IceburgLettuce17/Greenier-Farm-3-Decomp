@@ -8,7 +8,7 @@ import javax.microedition.rms.RecordStore;
 import javax.microedition.rms.RecordStoreException;
 
 // $FF: renamed from: a
-public final class class_2 extends class_1 implements class_0 {
+public final class cGame extends GLLib implements class_0 {
 
    // $FF: renamed from: ae int
    private static int field_90;
@@ -1871,14 +1871,14 @@ public final class class_2 extends class_1 implements class_0 {
             label194:
             switch(field_101[field_103]) {
             case 0:
-               class_1.method_23();
+               GLLib.method_23();
                break;
             case 1:
-               class_1.method_21("/2");
+               GLLib.method_21("/2");
                field_112 = 2;
                break;
             case 2:
-               class_1.method_21("/10");
+               GLLib.method_21("/10");
             case 3:
             case 4:
             case 5:
@@ -1993,11 +1993,11 @@ public final class class_2 extends class_1 implements class_0 {
             default:
                break;
             case 6:
-               class_1.method_21("/5");
+               GLLib.method_21("/5");
                field_112 = 0;
                break;
             case 7:
-               class_1.method_21("/7");
+               GLLib.method_21("/7");
                field_112 = 1;
                break;
             case 9:
@@ -2038,14 +2038,14 @@ public final class class_2 extends class_1 implements class_0 {
                break;
             case 30:
                if(method_137() == 1 && field_860 != -1) {
-                  field_862 = field_863 = class_1.method_70();
+                  field_862 = field_863 = GLLib.method_70();
                }
 
                if(field_862 != 2 && field_862 != 0 && field_862 != 1 && field_862 != 4 && field_862 != 3 && field_862 != 5 && field_862 != 10 && field_862 != 11 && field_862 != 16 && field_862 != 15) {
                   field_862 = 0;
                }
 
-               String var7 = "/" + class_1.method_71(0);
+               String var7 = "/" + GLLib.method_71(0);
                var1 = 0;
 
                while(true) {
@@ -2053,7 +2053,7 @@ public final class class_2 extends class_1 implements class_0 {
                      break label194;
                   }
 
-                  class_1.method_73(var7, var1);
+                  GLLib.method_73(var7, var1);
                   ++var1;
                }
             case 31:
@@ -2068,7 +2068,7 @@ public final class class_2 extends class_1 implements class_0 {
                   field_865[4] = field_865[2];
                }
 
-               short[] var6 = (short[])class_1.method_32(5);
+               short[] var6 = (short[])GLLib.method_32(5);
                field_865[0].method_955(var6);
                field_865[1].method_955(var6);
                field_865[2].method_955(var6);
@@ -2081,19 +2081,19 @@ public final class class_2 extends class_1 implements class_0 {
                field_865[4].method_950(0);
                break;
             case 34:
-               class_12.method_1199(GloftGF2M.instance, class_1.field_19, class_1.width, class_1.height);
+               class_12.method_1199(GloftGF2M.instance, GLLib.field_19, GLLib.width, GLLib.height);
                break;
             case 36:
                field_158 = true;
                break;
             case 37:
-               class_1.method_15("/1");
+               GLLib.method_15("/1");
                break;
             case 38:
                method_174();
                break;
             case 39:
-               class_1.method_33("/0");
+               GLLib.method_33("/0");
                cSoundEngine.method_1127(119);
                method_163(61, 0);
                method_163(113, 0);
@@ -2426,8 +2426,8 @@ public final class class_2 extends class_1 implements class_0 {
                int[] var5 = new int[]{0, 0, 0};
                class_6.method_1079(10, 0, var5);
                if(field_867 != null && field_866 != null) {
-                  field_867.field_1087 = field_866.field_1087 - (class_1.width >> 1);
-                  field_867.field_1088 = field_866.field_1088 - (class_1.height >> 1);
+                  field_867.field_1087 = field_866.field_1087 - (GLLib.width >> 1);
+                  field_867.field_1088 = field_866.field_1088 - (GLLib.height >> 1);
                }
                break;
             case 49:
@@ -2489,10 +2489,10 @@ public final class class_2 extends class_1 implements class_0 {
    private static ASprite method_145(int var0, int var1, boolean var2, boolean var3, int var4, int var5) {
       ASprite var10000 = new ASprite();
       ASprite var6 = var10000;
-      var10000.method_908(class_1.method_27(var0), 0);
+      var10000.method_908(GLLib.method_27(var0), 0);
 
       for(int var7 = 0; var7 < field_857.length; var7 += 2) {
-         if(var0 == field_857[var7] && class_1.field_43.equals("/" + field_857[var7 + 1]) && !var6.method_944()) {
+         if(var0 == field_857[var7] && GLLib.field_43.equals("/" + field_857[var7 + 1]) && !var6.method_944()) {
             var6.method_943();
          }
       }
@@ -2537,7 +2537,7 @@ public final class class_2 extends class_1 implements class_0 {
    // $FF: renamed from: a () void
    static void method_147() {
       field_97 = false;
-      class_1.method_21("/10");
+      GLLib.method_21("/10");
       short var2 = 0;
       if(field_858 == 100) {
          var2 = 0;
@@ -2547,34 +2547,34 @@ public final class class_2 extends class_1 implements class_0 {
 
       int var0 = field_864[var2].field_928[0] & '\uffff';
       int var1 = field_864[var2].field_929[0] & '\uffff';
-      cSoundEngine.method_1151(class_1.width, class_1.height, var0, var1);
+      cSoundEngine.method_1151(GLLib.width, GLLib.height, var0, var1);
       if(field_113 == null) {
-         field_113 = class_1.method_27(0);
+         field_113 = GLLib.method_27(0);
       }
 
       cSoundEngine.method_1154();
-      cSoundEngine.method_1157(0, class_1.method_27(2), field_113, class_1.method_27(1), field_864[var2], 0, 16, 2, 2, true);
-      class_1.method_23();
+      cSoundEngine.method_1157(0, GLLib.method_27(2), field_113, GLLib.method_27(1), field_864[var2], 0, 16, 2, 2, true);
+      GLLib.method_23();
    }
 
    // $FF: renamed from: r (int) void
    private static void method_148(int var0) {
-      class_1.method_21("/10");
-      byte[] var10 = class_1.method_27(var0);
-      class_1.method_23();
+      GLLib.method_21("/10");
+      byte[] var10 = GLLib.method_27(var0);
+      GLLib.method_23();
       int var1 = 0;
       boolean var6 = false;
 
       while(var1 < var10.length && !var6) {
-         byte var2 = class_1.method_57(var10, var1);
+         byte var2 = GLLib.method_57(var10, var1);
          ++var1;
          short var7;
          if(var2 != 50) {
             if(var2 == 54) {
                ++var1;
-               var7 = class_1.method_58(var10, var1);
+               var7 = GLLib.method_58(var10, var1);
                var1 += 2;
-               short var12 = (short)class_1.method_57(var10, var1);
+               short var12 = (short)GLLib.method_57(var10, var1);
                ++var1;
                if(!(var6 = var12 > field_294[field_881 - 1][0])) {
                   for(int var13 = 0; var13 < 13; ++var13) {
@@ -2583,16 +2583,16 @@ public final class class_2 extends class_1 implements class_0 {
                }
             }
          } else {
-            var7 = class_1.method_58(var10, var1);
+            var7 = GLLib.method_58(var10, var1);
             var1 += 2;
-            short var11 = class_1.method_58(var10, var1);
+            short var11 = GLLib.method_58(var10, var1);
             var1 += 2;
-            short var3 = class_1.method_58(var10, var1);
+            short var3 = GLLib.method_58(var10, var1);
             var1 += 2;
             ++var1;
-            byte var4 = class_1.method_57(var10, var1);
+            byte var4 = GLLib.method_57(var10, var1);
             ++var1;
-            byte var5 = class_1.method_57(var10, var1);
+            byte var5 = GLLib.method_57(var10, var1);
             ++var1;
             var1 += 2;
             int[] var8 = new int[]{var11, var3, 11, 0};
@@ -2840,11 +2840,11 @@ public final class class_2 extends class_1 implements class_0 {
       int var1;
       if((var1 = method_155(var0)) > 0) {
          if(var0 == 0) {
-            if(class_1.field_43 != "/5") {
-               class_1.method_21("/5");
+            if(GLLib.field_43 != "/5") {
+               GLLib.method_21("/5");
             }
-         } else if(class_1.field_43 != "/7") {
-            class_1.method_21("/7");
+         } else if(GLLib.field_43 != "/7") {
+            GLLib.method_21("/7");
          }
 
          if(field_119 <= 0) {
@@ -2852,11 +2852,11 @@ public final class class_2 extends class_1 implements class_0 {
             method_149(var0);
             field_119 = 1000;
          } else {
-            field_119 -= class_1.field_15;
+            field_119 -= GLLib.field_15;
          }
 
          if(var1 <= 1) {
-            class_1.method_23();
+            GLLib.method_23();
          }
       }
 
@@ -2999,11 +2999,11 @@ public final class class_2 extends class_1 implements class_0 {
       if(var0 > 0) {
          String var6;
          if(var2 > 0) {
-            var5 = var5 + var2 + ((var6 = class_1.method_74(193)) == null?"":var6) + " ";
+            var5 = var5 + var2 + ((var6 = GLLib.method_74(193)) == null?"":var6) + " ";
          }
 
          if(var3 > 0) {
-            var5 = var5 + var3 + ((var6 = class_1.method_74(194)) == null?"":var6) + " ";
+            var5 = var5 + var3 + ((var6 = GLLib.method_74(194)) == null?"":var6) + " ";
          }
 
          if(var4 > 0) {
@@ -3011,7 +3011,7 @@ public final class class_2 extends class_1 implements class_0 {
                var5 = var5 + "0";
             }
 
-            var5 = var5 + var4 + ((var6 = class_1.method_74(195)) == null?"":var6) + " ";
+            var5 = var5 + var4 + ((var6 = GLLib.method_74(195)) == null?"":var6) + " ";
          }
 
          if(var1 > 0) {
@@ -3019,7 +3019,7 @@ public final class class_2 extends class_1 implements class_0 {
                var5 = var5 + "0";
             }
 
-            var5 = var5 + var1 + ((var6 = class_1.method_74(196)) == null?"":var6);
+            var5 = var5 + var1 + ((var6 = GLLib.method_74(196)) == null?"":var6);
          }
       } else {
          var5 = "-";
@@ -3086,8 +3086,8 @@ public final class class_2 extends class_1 implements class_0 {
             var1 = 0;
          }
 
-         int var7 = class_1.method_16(0, 50) - 25;
-         int var8 = class_1.method_16(0, 50) - 25;
+         int var7 = GLLib.method_16(0, 50) - 25;
+         int var8 = GLLib.method_16(0, 50) - 25;
          class_6.method_1079(47, 2, var4).method_1068(var2 + var7, var3 + var8, var0?37:36, 1000, var0, var6);
       }
 
@@ -3139,7 +3139,7 @@ public final class class_2 extends class_1 implements class_0 {
    private static void method_173() {
       byte[] var0 = new byte[11];
       int var1 = method_172();
-      class_1.method_55(var0, 0, var1);
+      GLLib.method_55(var0, 0, var1);
       var0[4] = (byte)field_862;
       var0[5] = (byte)field_863;
       var0[6] = (byte)(field_158?1:0);
@@ -3147,7 +3147,7 @@ public final class class_2 extends class_1 implements class_0 {
       var0[10] = (byte)(field_697?1:0);
 
       try {
-         class_1.method_84("RMSHeader", var0);
+         GLLib.method_84("RMSHeader", var0);
       } catch (Exception var2) {
          method_824(47, 48, 7, 0);
       }
@@ -3155,10 +3155,10 @@ public final class class_2 extends class_1 implements class_0 {
 
    // $FF: renamed from: p () boolean
    private static boolean method_174() {
-      byte[] var0 = class_1.method_82("RMSHeader");
+      byte[] var0 = GLLib.method_82("RMSHeader");
       int var1 = 0;
       if(var0 != null) {
-         var1 = class_1.method_59(var0, 0);
+         var1 = GLLib.method_59(var0, 0);
       }
 
       if(var0 != null && var0.length >= 11 && var1 == method_172()) {
@@ -3198,49 +3198,49 @@ public final class class_2 extends class_1 implements class_0 {
             int var3;
             int var8;
             if(field_182 == -1) {
-               var8 = class_1.method_53(var1 = new byte['\uc800'], 0, (byte)(!field_654?0:1));
-               var8 = class_1.method_53(var1, var8, (byte)(!field_159?0:1));
-               var8 = class_1.method_53(var1, var8, (byte)(!field_160?0:1));
-               var8 = class_1.method_53(var1, var8, (byte)(!field_656?0:1));
-               var8 = class_1.method_55(var1, var8, field_166);
-               var8 = class_1.method_53(var1, var8, (byte)field_860);
-               var8 = class_1.method_53(var1, var8, (byte)(!field_228?0:1));
-               var8 = class_1.method_53(var1, var8, (byte)(!field_229?0:1));
-               var8 = class_1.method_53(var1, var8, (byte)(!field_230?0:1));
-               var8 = class_1.method_53(var1, var8, (byte)(!field_231?0:1));
-               var8 = class_1.method_53(var1, var8, (byte)(!field_235?0:1));
-               var8 = class_1.method_53(var1, var8, (byte)(!field_236?0:1));
-               var8 = class_1.method_55(var1, var8, field_237);
+               var8 = GLLib.method_53(var1 = new byte['\uc800'], 0, (byte)(!field_654?0:1));
+               var8 = GLLib.method_53(var1, var8, (byte)(!field_159?0:1));
+               var8 = GLLib.method_53(var1, var8, (byte)(!field_160?0:1));
+               var8 = GLLib.method_53(var1, var8, (byte)(!field_656?0:1));
+               var8 = GLLib.method_55(var1, var8, field_166);
+               var8 = GLLib.method_53(var1, var8, (byte)field_860);
+               var8 = GLLib.method_53(var1, var8, (byte)(!field_228?0:1));
+               var8 = GLLib.method_53(var1, var8, (byte)(!field_229?0:1));
+               var8 = GLLib.method_53(var1, var8, (byte)(!field_230?0:1));
+               var8 = GLLib.method_53(var1, var8, (byte)(!field_231?0:1));
+               var8 = GLLib.method_53(var1, var8, (byte)(!field_235?0:1));
+               var8 = GLLib.method_53(var1, var8, (byte)(!field_236?0:1));
+               var8 = GLLib.method_55(var1, var8, field_237);
 
                int var2;
                for(var2 = 0; var2 < field_848; ++var2) {
-                  var8 = class_1.method_55(var1, var8, field_812[var2]);
-                  var8 = class_1.method_55(var1, var8, field_845[var2]);
-                  var8 = class_1.method_55(var1, var8, field_820[var2]);
-                  var8 = class_1.method_53(var1, var8, (byte)(!field_825[var2]?0:1));
-                  var8 = class_1.method_55(var1, var8, field_827[var2]);
-                  var8 = class_1.method_53(var1, var8, (byte)(!field_832[var2]?0:1));
-                  var8 = class_1.method_55(var1, var8, field_834[var2]);
-                  var8 = class_1.method_53(var1, var8, (byte)(!field_839[var2]?0:1));
+                  var8 = GLLib.method_55(var1, var8, field_812[var2]);
+                  var8 = GLLib.method_55(var1, var8, field_845[var2]);
+                  var8 = GLLib.method_55(var1, var8, field_820[var2]);
+                  var8 = GLLib.method_53(var1, var8, (byte)(!field_825[var2]?0:1));
+                  var8 = GLLib.method_55(var1, var8, field_827[var2]);
+                  var8 = GLLib.method_53(var1, var8, (byte)(!field_832[var2]?0:1));
+                  var8 = GLLib.method_55(var1, var8, field_834[var2]);
+                  var8 = GLLib.method_53(var1, var8, (byte)(!field_839[var2]?0:1));
                }
 
                for(var2 = 0; var2 < field_849; ++var2) {
-                  var8 = class_1.method_55(var1, var8, field_846[var2]);
+                  var8 = GLLib.method_55(var1, var8, field_846[var2]);
                }
 
-               var8 = class_1.method_55(var1, var8, field_350);
-               var8 = class_1.method_55(var1, var8, field_351);
-               var8 = class_1.method_56(var1, var8, field_352);
-               var8 = class_1.method_55(var1, var8, field_354);
-               var8 = class_1.method_54(var1, var8, (short)field_358);
-               var8 = class_1.method_55(var1, var8, field_361);
-               var8 = class_1.method_54(var1, var8, (short)field_366);
-               var8 = class_1.method_55(var1, var8, field_362);
-               var8 = class_1.method_55(var1, var8, field_364);
-               var8 = class_1.method_55(var1, var8, field_365);
+               var8 = GLLib.method_55(var1, var8, field_350);
+               var8 = GLLib.method_55(var1, var8, field_351);
+               var8 = GLLib.method_56(var1, var8, field_352);
+               var8 = GLLib.method_55(var1, var8, field_354);
+               var8 = GLLib.method_54(var1, var8, (short)field_358);
+               var8 = GLLib.method_55(var1, var8, field_361);
+               var8 = GLLib.method_54(var1, var8, (short)field_366);
+               var8 = GLLib.method_55(var1, var8, field_362);
+               var8 = GLLib.method_55(var1, var8, field_364);
+               var8 = GLLib.method_55(var1, var8, field_365);
 
                for(var2 = 0; var2 < 6; ++var2) {
-                  var8 = class_1.method_55(var1, var8, field_356[var2]);
+                  var8 = GLLib.method_55(var1, var8, field_356[var2]);
                }
 
                int var4;
@@ -3248,125 +3248,125 @@ public final class class_2 extends class_1 implements class_0 {
                   var3 = field_347[var2].length;
 
                   for(var4 = 0; var4 < var3; ++var4) {
-                     var8 = class_1.method_55(var1, var8, field_347[var2][var4]);
+                     var8 = GLLib.method_55(var1, var8, field_347[var2][var4]);
                   }
                }
 
                for(var2 = 0; var2 < 10; ++var2) {
                   for(var3 = 0; var3 < 6; ++var3) {
-                     var8 = class_1.method_55(var1, var8, field_294[var2][var3]);
+                     var8 = GLLib.method_55(var1, var8, field_294[var2][var3]);
                   }
                }
 
                for(var2 = 0; var2 < 10; ++var2) {
                   for(var3 = 0; var3 < 6; ++var3) {
-                     var8 = class_1.method_56(var1, var8, field_296[var2][var3]);
+                     var8 = GLLib.method_56(var1, var8, field_296[var2][var3]);
                   }
                }
 
                for(var3 = 0; var3 < 10; ++var3) {
                   for(var4 = 0; var4 < 6; ++var4) {
-                     var8 = class_1.method_55(var1, var8, field_295[var3][var4]);
+                     var8 = GLLib.method_55(var1, var8, field_295[var3][var4]);
                   }
                }
 
                for(var3 = 0; var3 < 20; ++var3) {
-                  var8 = class_1.method_55(var1, var8, field_299[var3][0]);
-                  var8 = class_1.method_55(var1, var8, field_299[var3][1]);
-                  var8 = class_1.method_55(var1, var8, field_299[var3][2]);
+                  var8 = GLLib.method_55(var1, var8, field_299[var3][0]);
+                  var8 = GLLib.method_55(var1, var8, field_299[var3][1]);
+                  var8 = GLLib.method_55(var1, var8, field_299[var3][2]);
 
                   for(var4 = 0; var4 < 3; ++var4) {
-                     var8 = class_1.method_55(var1, var8, field_298[var3][var4 << 1]);
-                     var8 = class_1.method_55(var1, var8, field_298[var3][(var4 << 1) + 1]);
+                     var8 = GLLib.method_55(var1, var8, field_298[var3][var4 << 1]);
+                     var8 = GLLib.method_55(var1, var8, field_298[var3][(var4 << 1) + 1]);
                   }
                }
 
-               var8 = class_1.method_55(var1, var8, field_883);
-               var8 = class_1.method_54(var1, var8, field_608);
+               var8 = GLLib.method_55(var1, var8, field_883);
+               var8 = GLLib.method_54(var1, var8, field_608);
 
                for(var3 = 0; var3 < 6; ++var3) {
-                  var8 = class_1.method_56(var1, var8, field_592[var3]);
+                  var8 = GLLib.method_56(var1, var8, field_592[var3]);
                }
 
-               var8 = class_1.method_53(var1, var8, (byte)field_495);
+               var8 = GLLib.method_53(var1, var8, (byte)field_495);
 
                for(var3 = 0; var3 < field_495; ++var3) {
-                  var8 = class_1.method_53(var1, var8, field_505[var3]);
-                  var8 = class_1.method_56(var1, var8, field_502[var3]);
-                  var8 = class_1.method_55(var1, var8, field_501[var3]);
-                  var8 = class_1.method_55(var1, var8, field_499[var3]);
-                  var8 = class_1.method_53(var1, var8, (byte)(!field_506[var3]?0:1));
+                  var8 = GLLib.method_53(var1, var8, field_505[var3]);
+                  var8 = GLLib.method_56(var1, var8, field_502[var3]);
+                  var8 = GLLib.method_55(var1, var8, field_501[var3]);
+                  var8 = GLLib.method_55(var1, var8, field_499[var3]);
+                  var8 = GLLib.method_53(var1, var8, (byte)(!field_506[var3]?0:1));
                }
 
-               var8 = class_1.method_53(var1, var8, (byte)field_516);
+               var8 = GLLib.method_53(var1, var8, (byte)field_516);
 
                for(var3 = 0; var3 < field_516; ++var3) {
-                  var8 = class_1.method_53(var1, var8, field_526[var3]);
-                  var8 = class_1.method_56(var1, var8, field_522[var3]);
-                  var8 = class_1.method_55(var1, var8, field_521[var3]);
-                  var8 = class_1.method_55(var1, var8, field_519[var3]);
+                  var8 = GLLib.method_53(var1, var8, field_526[var3]);
+                  var8 = GLLib.method_56(var1, var8, field_522[var3]);
+                  var8 = GLLib.method_55(var1, var8, field_521[var3]);
+                  var8 = GLLib.method_55(var1, var8, field_519[var3]);
                }
 
                for(var3 = 0; var3 < field_318; ++var3) {
-                  var8 = class_1.method_55(var1, var8, field_302[var3]);
-                  var8 = class_1.method_53(var1, var8, field_317[var3]);
-                  var8 = class_1.method_55(var1, var8, field_308[var3]);
-                  var8 = class_1.method_53(var1, var8, (byte)(!field_311[var3]?0:1));
-                  var8 = class_1.method_55(var1, var8, field_316[var3]);
+                  var8 = GLLib.method_55(var1, var8, field_302[var3]);
+                  var8 = GLLib.method_53(var1, var8, field_317[var3]);
+                  var8 = GLLib.method_55(var1, var8, field_308[var3]);
+                  var8 = GLLib.method_53(var1, var8, (byte)(!field_311[var3]?0:1));
+                  var8 = GLLib.method_55(var1, var8, field_316[var3]);
                }
 
                for(var3 = 0; var3 < 15; ++var3) {
-                  var8 = class_1.method_53(var1, var8, (byte)(!field_319[var3]?0:1));
+                  var8 = GLLib.method_53(var1, var8, (byte)(!field_319[var3]?0:1));
                }
 
                for(var3 = 0; var3 < 10; ++var3) {
-                  var8 = class_1.method_55(var1, var8, field_320[var3]);
+                  var8 = GLLib.method_55(var1, var8, field_320[var3]);
                }
 
                for(var3 = 0; var3 < 64; ++var3) {
-                  var8 = class_1.method_54(var1, var8, field_321[var3]);
+                  var8 = GLLib.method_54(var1, var8, field_321[var3]);
                }
 
                for(var3 = 0; var3 < 60; ++var3) {
-                  var8 = class_1.method_55(var1, var8, field_672[var3]);
+                  var8 = GLLib.method_55(var1, var8, field_672[var3]);
                }
 
                for(var3 = 0; var3 < 13; ++var3) {
-                  var8 = class_1.method_53(var1, var8, (byte)(!field_289[var3]?0:1));
+                  var8 = GLLib.method_53(var1, var8, (byte)(!field_289[var3]?0:1));
                }
 
                for(var3 = 0; var3 < 13; ++var3) {
-                  var8 = class_1.method_53(var1, var8, (byte)(!field_290[var3]?0:1));
+                  var8 = GLLib.method_53(var1, var8, (byte)(!field_290[var3]?0:1));
                }
 
-               var8 = class_1.method_56(var1, var8, field_790);
-               var8 = class_1.method_56(var1, var8, field_907);
+               var8 = GLLib.method_56(var1, var8, field_790);
+               var8 = GLLib.method_56(var1, var8, field_907);
                field_906 = System.currentTimeMillis() / 1000L;
-               var8 = class_1.method_56(var1, var8, field_906);
-               var8 = class_1.method_55(var1, var8, field_591);
+               var8 = GLLib.method_56(var1, var8, field_906);
+               var8 = GLLib.method_55(var1, var8, field_591);
 
                for(var3 = 0; var3 < 100; ++var3) {
-                  var8 = class_1.method_55(var1, var8, field_590[var3]);
+                  var8 = GLLib.method_55(var1, var8, field_590[var3]);
                }
 
-               var8 = class_1.method_55(var1, var8, field_267);
-               var8 = class_1.method_56(var1, var8, field_601);
-               var8 = class_1.method_56(var1, var8, field_609);
-               var8 = class_1.method_55(var1, var8, field_373);
-               var8 = class_1.method_55(var1, var8, field_374);
-               var8 = class_1.method_55(var1, var8, field_375);
-               var8 = class_1.method_55(var1, var8, field_779);
-               class_1.method_56(var1, var8, field_600);
+               var8 = GLLib.method_55(var1, var8, field_267);
+               var8 = GLLib.method_56(var1, var8, field_601);
+               var8 = GLLib.method_56(var1, var8, field_609);
+               var8 = GLLib.method_55(var1, var8, field_373);
+               var8 = GLLib.method_55(var1, var8, field_374);
+               var8 = GLLib.method_55(var1, var8, field_375);
+               var8 = GLLib.method_55(var1, var8, field_779);
+               GLLib.method_56(var1, var8, field_600);
 
                try {
-                  class_1.method_84("save_gameplay", var1);
+                  GLLib.method_84("save_gameplay", var1);
                } catch (Exception var6) {
                   method_824(47, 48, 7, 0);
                }
             }
 
             if(field_182 == -1 && field_881 == 0) {
-               var8 = class_1.method_55(var1 = new byte[102400], 0, method_172());
+               var8 = GLLib.method_55(var1 = new byte[102400], 0, method_172());
                short var9 = 0;
 
                for(var3 = 0; var3 < 13; ++var3) {
@@ -3375,104 +3375,104 @@ public final class class_2 extends class_1 implements class_0 {
                   }
                }
 
-               var8 = class_1.method_54(var1, var8, var9);
+               var8 = GLLib.method_54(var1, var8, var9);
                byte[] var10 = var1;
                class_6 var5 = field_867;
-               var3 = class_1.method_53(var1, var8, (byte)var5.field_1086);
-               var3 = class_1.method_54(var1, var3, (short)var5.field_1087);
-               var3 = class_1.method_54(var1, var3, (short)var5.field_1088);
-               var8 = class_1.method_55(var1, var3, var5.field_1089);
+               var3 = GLLib.method_53(var1, var8, (byte)var5.field_1086);
+               var3 = GLLib.method_54(var1, var3, (short)var5.field_1087);
+               var3 = GLLib.method_54(var1, var3, (short)var5.field_1088);
+               var8 = GLLib.method_55(var1, var3, var5.field_1089);
 
                for(class_6 var11 = class_6.field_1013[0]; var11 != null; var11 = var11.field_1083) {
                   switch(var11.field_1086) {
                   case 20:
-                     var3 = class_1.method_53(var10, var8, (byte)var11.field_1086);
-                     var3 = class_1.method_53(var10, var3, (byte)var11.field_1100);
-                     var3 = class_1.method_54(var10, var3, (short)var11.field_1087);
-                     var3 = class_1.method_54(var10, var3, (short)var11.field_1088);
-                     var3 = class_1.method_54(var10, var3, (short)var11.field_1089);
-                     var3 = class_1.method_55(var10, var3, var11.field_1104);
-                     var8 = class_1.method_53(var10, var3, (byte)var11.field_1105);
+                     var3 = GLLib.method_53(var10, var8, (byte)var11.field_1086);
+                     var3 = GLLib.method_53(var10, var3, (byte)var11.field_1100);
+                     var3 = GLLib.method_54(var10, var3, (short)var11.field_1087);
+                     var3 = GLLib.method_54(var10, var3, (short)var11.field_1088);
+                     var3 = GLLib.method_54(var10, var3, (short)var11.field_1089);
+                     var3 = GLLib.method_55(var10, var3, var11.field_1104);
+                     var8 = GLLib.method_53(var10, var3, (byte)var11.field_1105);
                      break;
                   case 22:
-                     var3 = class_1.method_53(var10, var8, (byte)var11.field_1086);
-                     var3 = class_1.method_53(var10, var3, (byte)var11.field_1100);
-                     var3 = class_1.method_54(var10, var3, (short)var11.field_1082);
-                     var3 = class_1.method_54(var10, var3, (short)var11.field_1087);
-                     var3 = class_1.method_54(var10, var3, (short)var11.field_1088);
-                     var3 = class_1.method_54(var10, var3, (short)var11.field_1089);
-                     var3 = class_1.method_55(var10, var3, var11.field_1104);
-                     var8 = class_1.method_53(var10, var3, (byte)var11.field_1105);
+                     var3 = GLLib.method_53(var10, var8, (byte)var11.field_1086);
+                     var3 = GLLib.method_53(var10, var3, (byte)var11.field_1100);
+                     var3 = GLLib.method_54(var10, var3, (short)var11.field_1082);
+                     var3 = GLLib.method_54(var10, var3, (short)var11.field_1087);
+                     var3 = GLLib.method_54(var10, var3, (short)var11.field_1088);
+                     var3 = GLLib.method_54(var10, var3, (short)var11.field_1089);
+                     var3 = GLLib.method_55(var10, var3, var11.field_1104);
+                     var8 = GLLib.method_53(var10, var3, (byte)var11.field_1105);
                      break;
                   case 42:
-                     var3 = class_1.method_53(var10, var8, (byte)var11.field_1086);
-                     var3 = class_1.method_53(var10, var3, (byte)var11.field_1100);
-                     var3 = class_1.method_54(var10, var3, (short)var11.field_1087);
-                     var3 = class_1.method_54(var10, var3, (short)var11.field_1088);
-                     var3 = class_1.method_54(var10, var3, (short)var11.field_1089);
-                     var8 = class_1.method_55(var10, var3, var11.field_1104);
+                     var3 = GLLib.method_53(var10, var8, (byte)var11.field_1086);
+                     var3 = GLLib.method_53(var10, var3, (byte)var11.field_1100);
+                     var3 = GLLib.method_54(var10, var3, (short)var11.field_1087);
+                     var3 = GLLib.method_54(var10, var3, (short)var11.field_1088);
+                     var3 = GLLib.method_54(var10, var3, (short)var11.field_1089);
+                     var8 = GLLib.method_55(var10, var3, var11.field_1104);
                      break;
                   case 48:
-                     var3 = class_1.method_53(var10, var8, (byte)var11.field_1086);
-                     var3 = class_1.method_53(var10, var3, (byte)var11.field_1100);
-                     var3 = class_1.method_54(var10, var3, (short)var11.field_1087);
-                     var3 = class_1.method_54(var10, var3, (short)var11.field_1088);
-                     var3 = class_1.method_54(var10, var3, (short)var11.field_1089);
-                     var3 = class_1.method_55(var10, var3, var11.field_1104);
-                     var8 = class_1.method_53(var10, var3, (byte)var11.field_1105);
+                     var3 = GLLib.method_53(var10, var8, (byte)var11.field_1086);
+                     var3 = GLLib.method_53(var10, var3, (byte)var11.field_1100);
+                     var3 = GLLib.method_54(var10, var3, (short)var11.field_1087);
+                     var3 = GLLib.method_54(var10, var3, (short)var11.field_1088);
+                     var3 = GLLib.method_54(var10, var3, (short)var11.field_1089);
+                     var3 = GLLib.method_55(var10, var3, var11.field_1104);
+                     var8 = GLLib.method_53(var10, var3, (byte)var11.field_1105);
                      break;
                   case 49:
-                     var3 = class_1.method_53(var10, var8, (byte)var11.field_1086);
-                     var3 = class_1.method_53(var10, var3, (byte)var11.field_1100);
-                     var3 = class_1.method_54(var10, var3, (short)var11.field_1087);
-                     var3 = class_1.method_54(var10, var3, (short)var11.field_1088);
-                     var3 = class_1.method_54(var10, var3, (short)var11.field_1089);
-                     var3 = class_1.method_55(var10, var3, var11.field_1104);
-                     var3 = class_1.method_53(var10, var3, (byte)var11.field_1105);
-                     var8 = class_1.method_56(var10, var3, var11.field_1026);
+                     var3 = GLLib.method_53(var10, var8, (byte)var11.field_1086);
+                     var3 = GLLib.method_53(var10, var3, (byte)var11.field_1100);
+                     var3 = GLLib.method_54(var10, var3, (short)var11.field_1087);
+                     var3 = GLLib.method_54(var10, var3, (short)var11.field_1088);
+                     var3 = GLLib.method_54(var10, var3, (short)var11.field_1089);
+                     var3 = GLLib.method_55(var10, var3, var11.field_1104);
+                     var3 = GLLib.method_53(var10, var3, (byte)var11.field_1105);
+                     var8 = GLLib.method_56(var10, var3, var11.field_1026);
                      break;
                   case 50:
-                     var3 = class_1.method_53(var10, var8, (byte)var11.field_1086);
-                     var3 = class_1.method_53(var10, var3, (byte)var11.field_1100);
-                     var3 = class_1.method_54(var10, var3, (short)var11.field_1087);
-                     var3 = class_1.method_54(var10, var3, (short)var11.field_1088);
-                     var3 = class_1.method_54(var10, var3, (short)var11.field_1089);
-                     var3 = class_1.method_55(var10, var3, var11.field_1104);
-                     var3 = class_1.method_53(var10, var3, (byte)var11.field_1105);
+                     var3 = GLLib.method_53(var10, var8, (byte)var11.field_1086);
+                     var3 = GLLib.method_53(var10, var3, (byte)var11.field_1100);
+                     var3 = GLLib.method_54(var10, var3, (short)var11.field_1087);
+                     var3 = GLLib.method_54(var10, var3, (short)var11.field_1088);
+                     var3 = GLLib.method_54(var10, var3, (short)var11.field_1089);
+                     var3 = GLLib.method_55(var10, var3, var11.field_1104);
+                     var3 = GLLib.method_53(var10, var3, (byte)var11.field_1105);
                      if(var11.field_1100 == 12 || var11.field_1100 == 11) {
-                        var3 = class_1.method_56(var10, var3, var11.field_1022);
+                        var3 = GLLib.method_56(var10, var3, var11.field_1022);
                      }
 
                      var8 = var3;
                      break;
                   case 52:
-                     var3 = class_1.method_53(var10, var8, (byte)var11.field_1086);
-                     var3 = class_1.method_53(var10, var3, (byte)var11.field_1100);
-                     var3 = class_1.method_54(var10, var3, (short)var11.field_1087);
-                     var3 = class_1.method_54(var10, var3, (short)var11.field_1088);
-                     var3 = class_1.method_54(var10, var3, (short)var11.field_1089);
-                     var3 = class_1.method_55(var10, var3, var11.field_1104);
-                     var3 = class_1.method_53(var10, var3, (byte)var11.field_1105);
-                     var8 = class_1.method_56(var10, var3, var11.field_1032);
+                     var3 = GLLib.method_53(var10, var8, (byte)var11.field_1086);
+                     var3 = GLLib.method_53(var10, var3, (byte)var11.field_1100);
+                     var3 = GLLib.method_54(var10, var3, (short)var11.field_1087);
+                     var3 = GLLib.method_54(var10, var3, (short)var11.field_1088);
+                     var3 = GLLib.method_54(var10, var3, (short)var11.field_1089);
+                     var3 = GLLib.method_55(var10, var3, var11.field_1104);
+                     var3 = GLLib.method_53(var10, var3, (byte)var11.field_1105);
+                     var8 = GLLib.method_56(var10, var3, var11.field_1032);
                      break;
                   case 54:
-                     var3 = class_1.method_53(var10, var8, (byte)var11.field_1086);
-                     var3 = class_1.method_53(var10, var3, (byte)var11.field_1100);
-                     var3 = class_1.method_54(var10, var3, (short)var11.field_1087);
-                     var3 = class_1.method_54(var10, var3, (short)var11.field_1088);
-                     var3 = class_1.method_54(var10, var3, (short)var11.field_1089);
-                     var3 = class_1.method_55(var10, var3, var11.field_1104);
-                     var3 = class_1.method_53(var10, var3, (byte)var11.field_1105);
-                     var3 = class_1.method_55(var10, var3, var11.field_1035);
-                     var3 = class_1.method_53(var10, var3, (byte)var11.field_1045);
-                     var3 = class_1.method_53(var10, var3, (byte)var11.field_1036);
-                     var3 = class_1.method_56(var10, var3, var11.field_1033);
-                     var8 = class_1.method_56(var10, var3, var11.field_1038);
+                     var3 = GLLib.method_53(var10, var8, (byte)var11.field_1086);
+                     var3 = GLLib.method_53(var10, var3, (byte)var11.field_1100);
+                     var3 = GLLib.method_54(var10, var3, (short)var11.field_1087);
+                     var3 = GLLib.method_54(var10, var3, (short)var11.field_1088);
+                     var3 = GLLib.method_54(var10, var3, (short)var11.field_1089);
+                     var3 = GLLib.method_55(var10, var3, var11.field_1104);
+                     var3 = GLLib.method_53(var10, var3, (byte)var11.field_1105);
+                     var3 = GLLib.method_55(var10, var3, var11.field_1035);
+                     var3 = GLLib.method_53(var10, var3, (byte)var11.field_1045);
+                     var3 = GLLib.method_53(var10, var3, (byte)var11.field_1036);
+                     var3 = GLLib.method_56(var10, var3, var11.field_1033);
+                     var8 = GLLib.method_56(var10, var3, var11.field_1038);
                   }
                }
 
                try {
-                  class_1.method_85("save_farm" + field_881, var1, 0, var8, (byte[])null);
+                  GLLib.method_85("save_farm" + field_881, var1, 0, var8, (byte[])null);
                   return;
                } catch (Exception var7) {
                   method_824(47, 48, 7, 0);
@@ -3502,95 +3502,95 @@ public final class class_2 extends class_1 implements class_0 {
    // $FF: renamed from: b (boolean) boolean
    private static boolean method_178(boolean var0) {
       byte[] var12;
-      if((var12 = class_1.method_82("save_gameplay")) == null) {
+      if((var12 = GLLib.method_82("save_gameplay")) == null) {
          return false;
       } else {
          byte var1 = 0;
-         field_654 = class_1.method_57(var12, 0) != 0;
+         field_654 = GLLib.method_57(var12, 0) != 0;
          int var13 = var1 + 1;
          var13 += 2;
          field_159 = true;
          field_160 = true;
-         field_656 = class_1.method_57(var12, 3) != 0;
+         field_656 = GLLib.method_57(var12, 3) != 0;
          ++var13;
-         field_166 = class_1.method_59(var12, 4);
+         field_166 = GLLib.method_59(var12, 4);
          var13 += 4;
-         field_860 = class_1.method_57(var12, 8);
+         field_860 = GLLib.method_57(var12, 8);
          ++var13;
-         field_228 = class_1.method_57(var12, 9) != 0;
+         field_228 = GLLib.method_57(var12, 9) != 0;
          ++var13;
-         field_229 = class_1.method_57(var12, 10) != 0;
+         field_229 = GLLib.method_57(var12, 10) != 0;
          ++var13;
-         field_230 = class_1.method_57(var12, 11) != 0;
+         field_230 = GLLib.method_57(var12, 11) != 0;
          ++var13;
-         field_231 = class_1.method_57(var12, 12) != 0;
+         field_231 = GLLib.method_57(var12, 12) != 0;
          ++var13;
-         field_235 = class_1.method_57(var12, 13) != 0;
+         field_235 = GLLib.method_57(var12, 13) != 0;
          ++var13;
-         field_236 = class_1.method_57(var12, 14) != 0;
+         field_236 = GLLib.method_57(var12, 14) != 0;
          ++var13;
-         field_237 = class_1.method_59(var12, 15);
+         field_237 = GLLib.method_59(var12, 15);
          var13 += 4;
 
          int var2;
          for(var2 = 0; var2 < field_848; ++var2) {
-            field_812[var2] = class_1.method_59(var12, var13);
+            field_812[var2] = GLLib.method_59(var12, var13);
             var13 += 4;
             if(field_812[var2] == 255) {
                field_812[var2] = -1;
             }
 
-            field_845[var2] = class_1.method_59(var12, var13);
+            field_845[var2] = GLLib.method_59(var12, var13);
             var13 += 4;
-            field_820[var2] = class_1.method_59(var12, var13);
+            field_820[var2] = GLLib.method_59(var12, var13);
             var13 += 4;
-            field_825[var2] = class_1.method_57(var12, var13) != 0;
+            field_825[var2] = GLLib.method_57(var12, var13) != 0;
             ++var13;
-            field_827[var2] = class_1.method_59(var12, var13);
+            field_827[var2] = GLLib.method_59(var12, var13);
             var13 += 4;
-            field_832[var2] = class_1.method_57(var12, var13) != 0;
+            field_832[var2] = GLLib.method_57(var12, var13) != 0;
             ++var13;
-            field_834[var2] = class_1.method_59(var12, var13);
+            field_834[var2] = GLLib.method_59(var12, var13);
             var13 += 4;
-            field_839[var2] = class_1.method_57(var12, var13) != 0;
+            field_839[var2] = GLLib.method_57(var12, var13) != 0;
             ++var13;
          }
 
          for(var2 = 0; var2 < field_849; ++var2) {
-            field_846[var2] = class_1.method_59(var12, var13);
+            field_846[var2] = GLLib.method_59(var12, var13);
             var13 += 4;
          }
 
-         field_350 = class_1.method_59(var12, var13);
+         field_350 = GLLib.method_59(var12, var13);
          var13 += 4;
-         field_351 = class_1.method_59(var12, var13);
+         field_351 = GLLib.method_59(var12, var13);
          var13 += 4;
-         field_352 = class_1.method_60(var12, var13);
+         field_352 = GLLib.method_60(var12, var13);
          var13 += 8;
-         field_354 = class_1.method_59(var12, var13);
+         field_354 = GLLib.method_59(var12, var13);
          var13 += 4;
          field_391 = field_350;
          field_392 = field_351;
          field_393 = field_352;
          field_394 = field_354;
-         field_358 = class_1.method_58(var12, var13);
+         field_358 = GLLib.method_58(var12, var13);
          var13 += 2;
-         field_361 = class_1.method_59(var12, var13);
+         field_361 = GLLib.method_59(var12, var13);
          var13 += 4;
-         field_366 = class_1.method_58(var12, var13);
+         field_366 = GLLib.method_58(var12, var13);
          var13 += 2;
-         field_362 = class_1.method_59(var12, var13);
+         field_362 = GLLib.method_59(var12, var13);
          var13 += 4;
-         field_364 = class_1.method_59(var12, var13);
+         field_364 = GLLib.method_59(var12, var13);
          var13 += 4;
-         field_365 = class_1.method_59(var12, var13);
+         field_365 = GLLib.method_59(var12, var13);
          var13 += 4;
          field_396 = field_361;
          field_397 = field_362;
          field_398 = field_364;
 
          for(var2 = 0; var2 < 6; ++var2) {
-            field_356[var2] = class_1.method_59(var12, var13);
+            field_356[var2] = GLLib.method_59(var12, var13);
             var13 += 4;
             field_395[var2] = field_356[var2];
          }
@@ -3601,7 +3601,7 @@ public final class class_2 extends class_1 implements class_0 {
             var3 = field_347[var2].length;
 
             for(var4 = 0; var4 < var3; ++var4) {
-               field_347[var2][var4] = class_1.method_59(var12, var13);
+               field_347[var2][var4] = GLLib.method_59(var12, var13);
                var13 += 4;
                field_400[var2][var4] = field_347[var2][var4];
             }
@@ -3609,52 +3609,52 @@ public final class class_2 extends class_1 implements class_0 {
 
          for(var2 = 0; var2 < 10; ++var2) {
             for(var3 = 0; var3 < 6; ++var3) {
-               field_294[var2][var3] = class_1.method_59(var12, var13);
+               field_294[var2][var3] = GLLib.method_59(var12, var13);
                var13 += 4;
             }
          }
 
          for(var2 = 0; var2 < 10; ++var2) {
             for(var3 = 0; var3 < 6; ++var3) {
-               field_296[var2][var3] = class_1.method_60(var12, var13);
+               field_296[var2][var3] = GLLib.method_60(var12, var13);
                var13 += 8;
             }
          }
 
          for(var3 = 0; var3 < 10; ++var3) {
             for(var4 = 0; var4 < 6; ++var4) {
-               field_295[var3][var4] = class_1.method_59(var12, var13);
+               field_295[var3][var4] = GLLib.method_59(var12, var13);
                var13 += 4;
             }
          }
 
          for(var3 = 0; var3 < 20; ++var3) {
-            field_299[var3][0] = class_1.method_59(var12, var13);
+            field_299[var3][0] = GLLib.method_59(var12, var13);
             var13 += 4;
-            field_299[var3][1] = class_1.method_59(var12, var13);
+            field_299[var3][1] = GLLib.method_59(var12, var13);
             var13 += 4;
-            field_299[var3][2] = class_1.method_59(var12, var13);
+            field_299[var3][2] = GLLib.method_59(var12, var13);
             var13 += 4;
 
             for(var4 = 0; var4 < 3; ++var4) {
-               field_298[var3][var4 << 1] = class_1.method_59(var12, var13);
+               field_298[var3][var4 << 1] = GLLib.method_59(var12, var13);
                var13 += 4;
-               field_298[var3][(var4 << 1) + 1] = class_1.method_59(var12, var13);
+               field_298[var3][(var4 << 1) + 1] = GLLib.method_59(var12, var13);
                var13 += 4;
             }
          }
 
-         field_883 = class_1.method_59(var12, var13);
+         field_883 = GLLib.method_59(var12, var13);
          var13 += 4;
-         field_608 = class_1.method_58(var12, var13);
+         field_608 = GLLib.method_58(var12, var13);
          var13 += 2;
 
          for(var3 = 0; var3 < 6; ++var3) {
-            field_592[var3] = class_1.method_60(var12, var13);
+            field_592[var3] = GLLib.method_60(var12, var13);
             var13 += 8;
          }
 
-         field_495 = class_1.method_57(var12, var13);
+         field_495 = GLLib.method_57(var12, var13);
          ++var13;
 
          int var5;
@@ -3663,15 +3663,15 @@ public final class class_2 extends class_1 implements class_0 {
          byte var14;
          cResource var18;
          for(var3 = 0; var3 < field_495; ++var3) {
-            var14 = class_1.method_57(var12, var13);
+            var14 = GLLib.method_57(var12, var13);
             ++var13;
-            var6 = class_1.method_60(var12, var13);
+            var6 = GLLib.method_60(var12, var13);
             var13 += 8;
-            var2 = class_1.method_59(var12, var13);
+            var2 = GLLib.method_59(var12, var13);
             var13 += 4;
-            var5 = class_1.method_59(var12, var13);
+            var5 = GLLib.method_59(var12, var13);
             var13 += 4;
-            boolean var8 = class_1.method_57(var12, var13) != 0;
+            boolean var8 = GLLib.method_57(var12, var13) != 0;
             ++var13;
             var4 = var5;
             var18 = cResource.resources[7];
@@ -3694,17 +3694,17 @@ public final class class_2 extends class_1 implements class_0 {
             }
          }
 
-         field_516 = class_1.method_57(var12, var13);
+         field_516 = GLLib.method_57(var12, var13);
          ++var13;
 
          for(var3 = 0; var3 < field_516; ++var3) {
-            var14 = class_1.method_57(var12, var13);
+            var14 = GLLib.method_57(var12, var13);
             ++var13;
-            var6 = class_1.method_60(var12, var13);
+            var6 = GLLib.method_60(var12, var13);
             var13 += 8;
-            var2 = class_1.method_59(var12, var13);
+            var2 = GLLib.method_59(var12, var13);
             var13 += 4;
-            var5 = class_1.method_59(var12, var13);
+            var5 = GLLib.method_59(var12, var13);
             var13 += 4;
             var4 = var5;
             cResource var17 = cResource.resources[22];
@@ -3729,35 +3729,35 @@ public final class class_2 extends class_1 implements class_0 {
          }
 
          for(var3 = 0; var3 < field_318; ++var3) {
-            field_302[var3] = class_1.method_59(var12, var13);
+            field_302[var3] = GLLib.method_59(var12, var13);
             var13 += 4;
-            field_317[var3] = class_1.method_57(var12, var13);
+            field_317[var3] = GLLib.method_57(var12, var13);
             ++var13;
-            field_308[var3] = class_1.method_59(var12, var13);
+            field_308[var3] = GLLib.method_59(var12, var13);
             var13 += 4;
-            field_311[var3] = class_1.method_57(var12, var13) != 0;
+            field_311[var3] = GLLib.method_57(var12, var13) != 0;
             ++var13;
-            field_316[var3] = class_1.method_59(var12, var13);
+            field_316[var3] = GLLib.method_59(var12, var13);
             var13 += 4;
          }
 
          for(var3 = 0; var3 < 15; ++var3) {
-            field_319[var3] = class_1.method_57(var12, var13) != 0;
+            field_319[var3] = GLLib.method_57(var12, var13) != 0;
             ++var13;
          }
 
          for(var3 = 0; var3 < 10; ++var3) {
-            field_320[var3] = class_1.method_59(var12, var13);
+            field_320[var3] = GLLib.method_59(var12, var13);
             var13 += 4;
          }
 
          for(var3 = 0; var3 < 64; ++var3) {
-            field_321[var3] = class_1.method_58(var12, var13);
+            field_321[var3] = GLLib.method_58(var12, var13);
             var13 += 2;
          }
 
          for(var3 = 0; var3 < 60; ++var3) {
-            field_672[var3] = class_1.method_59(var12, var13);
+            field_672[var3] = GLLib.method_59(var12, var13);
             var13 += 4;
          }
 
@@ -3766,7 +3766,7 @@ public final class class_2 extends class_1 implements class_0 {
          }
 
          for(var3 = 0; var3 < 13; ++var3) {
-            field_289[var3] = class_1.method_57(var12, var13) != 0;
+            field_289[var3] = GLLib.method_57(var12, var13) != 0;
             ++var13;
          }
 
@@ -3775,39 +3775,39 @@ public final class class_2 extends class_1 implements class_0 {
          }
 
          for(var3 = 0; var3 < 13; ++var3) {
-            field_290[var3] = class_1.method_57(var12, var13) != 0;
+            field_290[var3] = GLLib.method_57(var12, var13) != 0;
             ++var13;
          }
 
-         field_790 = class_1.method_60(var12, var13);
+         field_790 = GLLib.method_60(var12, var13);
          var13 += 8;
-         field_907 = class_1.method_60(var12, var13);
+         field_907 = GLLib.method_60(var12, var13);
          var13 += 8;
-         field_906 = class_1.method_60(var12, var13);
+         field_906 = GLLib.method_60(var12, var13);
          var13 += 8;
-         field_591 = class_1.method_59(var12, var13);
+         field_591 = GLLib.method_59(var12, var13);
          var13 += 4;
 
          for(var3 = 0; var3 < 100; ++var3) {
-            field_590[var3] = class_1.method_59(var12, var13);
+            field_590[var3] = GLLib.method_59(var12, var13);
             var13 += 4;
          }
 
-         field_267 = class_1.method_59(var12, var13);
+         field_267 = GLLib.method_59(var12, var13);
          var13 += 4;
-         field_601 = class_1.method_60(var12, var13);
+         field_601 = GLLib.method_60(var12, var13);
          var13 += 8;
-         field_609 = class_1.method_60(var12, var13);
+         field_609 = GLLib.method_60(var12, var13);
          var13 += 8;
-         field_373 = class_1.method_59(var12, var13);
+         field_373 = GLLib.method_59(var12, var13);
          var13 += 4;
-         field_374 = class_1.method_59(var12, var13);
+         field_374 = GLLib.method_59(var12, var13);
          var13 += 4;
-         field_375 = class_1.method_59(var12, var13);
+         field_375 = GLLib.method_59(var12, var13);
          var13 += 4;
-         field_779 = class_1.method_59(var12, var13);
+         field_779 = GLLib.method_59(var12, var13);
          var13 += 4;
-         field_600 = class_1.method_60(var12, var13);
+         field_600 = GLLib.method_60(var12, var13);
 
          for(var3 = 0; var3 < field_848; ++var3) {
             if(field_812[var3] != -1) {
@@ -3823,11 +3823,11 @@ public final class class_2 extends class_1 implements class_0 {
    // $FF: renamed from: c (boolean) boolean
    private static boolean method_179(boolean var0) {
       byte[] var4;
-      if((var4 = class_1.method_82("save_farm" + field_881)) == null) {
+      if((var4 = GLLib.method_82("save_farm" + field_881)) == null) {
          return false;
       } else {
          int var1 = var4.length;
-         short var2 = class_1.method_58(var4, 4);
+         short var2 = GLLib.method_58(var4, 4);
 
          for(int var3 = 0; var3 < 13; ++var3) {
             field_269[var3] = (var2 >> var3 & 1) != 0;
@@ -3841,7 +3841,7 @@ public final class class_2 extends class_1 implements class_0 {
    // $FF: renamed from: b (byte[], int, int) int
    private static int method_180(byte[] var0, int var1, int var2) {
       while(var1 < var2) {
-         byte var3 = class_1.method_57(var0, var1);
+         byte var3 = GLLib.method_57(var0, var1);
          ++var1;
          byte var4;
          class_6 var5;
@@ -3850,26 +3850,26 @@ public final class class_2 extends class_1 implements class_0 {
          switch(var3) {
          case 13:
             int[] var8 = new int[]{0, 0, 255};
-            (field_867 = class_6.method_1078(13, var8)).field_1087 = class_1.method_58(var0, var1);
+            (field_867 = class_6.method_1078(13, var8)).field_1087 = GLLib.method_58(var0, var1);
             var7 = var1 + 2;
-            field_867.field_1088 = class_1.method_58(var0, var7);
+            field_867.field_1088 = GLLib.method_58(var0, var7);
             var7 += 2;
-            field_867.field_1089 = class_1.method_59(var0, var7);
+            field_867.field_1089 = GLLib.method_59(var0, var7);
             var7 += 4;
             var1 = var7;
             break;
          case 20:
-            var4 = class_1.method_57(var0, var1);
+            var4 = GLLib.method_57(var0, var1);
             var7 = var1 + 1;
-            (var5 = method_586(4, var4)).field_1087 = class_1.method_58(var0, var7);
+            (var5 = method_586(4, var4)).field_1087 = GLLib.method_58(var0, var7);
             var7 += 2;
-            var5.field_1088 = class_1.method_58(var0, var7);
+            var5.field_1088 = GLLib.method_58(var0, var7);
             var7 += 2;
-            var5.field_1089 = class_1.method_58(var0, var7);
+            var5.field_1089 = GLLib.method_58(var0, var7);
             var7 += 2;
-            var5.field_1104 = class_1.method_59(var0, var7);
+            var5.field_1104 = GLLib.method_59(var0, var7);
             var7 += 4;
-            var5.field_1105 = class_1.method_57(var0, var7);
+            var5.field_1105 = GLLib.method_57(var0, var7);
             ++var7;
             if(var5.method_1086(2)) {
                method_640(var5);
@@ -3878,19 +3878,19 @@ public final class class_2 extends class_1 implements class_0 {
             var1 = var7;
             break;
          case 22:
-            var4 = class_1.method_57(var0, var1);
+            var4 = GLLib.method_57(var0, var1);
             var7 = var1 + 1;
-            (var5 = method_586(11, var4)).field_1082 = class_1.method_58(var0, var7);
+            (var5 = method_586(11, var4)).field_1082 = GLLib.method_58(var0, var7);
             var7 += 2;
-            var5.field_1087 = class_1.method_58(var0, var7);
+            var5.field_1087 = GLLib.method_58(var0, var7);
             var7 += 2;
-            var5.field_1088 = class_1.method_58(var0, var7);
+            var5.field_1088 = GLLib.method_58(var0, var7);
             var7 += 2;
-            var5.field_1089 = class_1.method_58(var0, var7);
+            var5.field_1089 = GLLib.method_58(var0, var7);
             var7 += 2;
-            var5.field_1104 = class_1.method_59(var0, var7);
+            var5.field_1104 = GLLib.method_59(var0, var7);
             var7 += 4;
-            var5.field_1105 = class_1.method_57(var0, var7);
+            var5.field_1105 = GLLib.method_57(var0, var7);
             ++var7;
             if(var5.method_1086(2)) {
                method_640(var5);
@@ -3899,7 +3899,7 @@ public final class class_2 extends class_1 implements class_0 {
             var1 = var7;
             break;
          case 42:
-            var4 = class_1.method_57(var0, var1);
+            var4 = GLLib.method_57(var0, var1);
             var7 = var1 + 1;
             if(var4 == -1) {
                int[] var9 = new int[]{0, 0, 12, 2};
@@ -3908,28 +3908,28 @@ public final class class_2 extends class_1 implements class_0 {
                var5 = method_586(8, var4);
             }
 
-            var5.field_1087 = class_1.method_58(var0, var7);
+            var5.field_1087 = GLLib.method_58(var0, var7);
             var7 += 2;
-            var5.field_1088 = class_1.method_58(var0, var7);
+            var5.field_1088 = GLLib.method_58(var0, var7);
             var7 += 2;
-            var5.field_1089 = class_1.method_58(var0, var7);
+            var5.field_1089 = GLLib.method_58(var0, var7);
             var7 += 2;
-            var5.field_1104 = class_1.method_59(var0, var7);
+            var5.field_1104 = GLLib.method_59(var0, var7);
             var7 += 4;
             var1 = var7;
             break;
          case 48:
-            var4 = class_1.method_57(var0, var1);
+            var4 = GLLib.method_57(var0, var1);
             var7 = var1 + 1;
-            (var5 = method_586(11, var4)).field_1087 = class_1.method_58(var0, var7);
+            (var5 = method_586(11, var4)).field_1087 = GLLib.method_58(var0, var7);
             var7 += 2;
-            var5.field_1088 = class_1.method_58(var0, var7);
+            var5.field_1088 = GLLib.method_58(var0, var7);
             var7 += 2;
-            var5.field_1089 = class_1.method_58(var0, var7);
+            var5.field_1089 = GLLib.method_58(var0, var7);
             var7 += 2;
-            var5.field_1104 = class_1.method_59(var0, var7);
+            var5.field_1104 = GLLib.method_59(var0, var7);
             var7 += 4;
-            var5.field_1105 = class_1.method_57(var0, var7);
+            var5.field_1105 = GLLib.method_57(var0, var7);
             ++var7;
             if(var5.method_1086(2)) {
                method_640(var5);
@@ -3938,18 +3938,18 @@ public final class class_2 extends class_1 implements class_0 {
             var1 = var7;
             break;
          case 49:
-            var4 = class_1.method_57(var0, var1);
+            var4 = GLLib.method_57(var0, var1);
             var7 = var1 + 1;
             (var5 = method_584(49, 0, false)).field_1100 = var4;
-            var5.field_1087 = class_1.method_58(var0, var7);
+            var5.field_1087 = GLLib.method_58(var0, var7);
             var7 += 2;
-            var5.field_1088 = class_1.method_58(var0, var7);
+            var5.field_1088 = GLLib.method_58(var0, var7);
             var7 += 2;
-            var5.field_1089 = class_1.method_58(var0, var7);
+            var5.field_1089 = GLLib.method_58(var0, var7);
             var7 += 2;
-            var5.field_1104 = class_1.method_59(var0, var7);
+            var5.field_1104 = GLLib.method_59(var0, var7);
             var7 += 4;
-            var6 = class_1.method_57(var0, var7);
+            var6 = GLLib.method_57(var0, var7);
             ++var7;
             var5.method_1047(var6);
             if(var4 > 0) {
@@ -3959,7 +3959,7 @@ public final class class_2 extends class_1 implements class_0 {
                var5.field_1118 = field_884[0];
             }
 
-            var5.field_1026 = class_1.method_60(var0, var7);
+            var5.field_1026 = GLLib.method_60(var0, var7);
             var7 += 8;
             if(var5.method_1086(2)) {
                method_640(var5);
@@ -3968,20 +3968,20 @@ public final class class_2 extends class_1 implements class_0 {
             var1 = var7;
             break;
          case 50:
-            var4 = class_1.method_57(var0, var1);
+            var4 = GLLib.method_57(var0, var1);
             var7 = var1 + 1;
-            (var5 = method_586(3, var4)).field_1087 = class_1.method_58(var0, var7);
+            (var5 = method_586(3, var4)).field_1087 = GLLib.method_58(var0, var7);
             var7 += 2;
-            var5.field_1088 = class_1.method_58(var0, var7);
+            var5.field_1088 = GLLib.method_58(var0, var7);
             var7 += 2;
-            var5.field_1089 = class_1.method_58(var0, var7);
+            var5.field_1089 = GLLib.method_58(var0, var7);
             var7 += 2;
-            var5.field_1104 = class_1.method_59(var0, var7);
+            var5.field_1104 = GLLib.method_59(var0, var7);
             var7 += 4;
-            var5.field_1105 = class_1.method_57(var0, var7);
+            var5.field_1105 = GLLib.method_57(var0, var7);
             ++var7;
             if(var4 == 12 || var4 == 11) {
-               var5.field_1022 = class_1.method_60(var0, var7);
+               var5.field_1022 = GLLib.method_60(var0, var7);
                var7 += 8;
             }
 
@@ -3992,21 +3992,21 @@ public final class class_2 extends class_1 implements class_0 {
             var1 = var7;
             break;
          case 52:
-            var4 = class_1.method_57(var0, var1);
+            var4 = GLLib.method_57(var0, var1);
             var7 = var1 + 1;
             (var5 = method_586(2, var4)).field_1100 = var4;
-            var5.field_1087 = class_1.method_58(var0, var7);
+            var5.field_1087 = GLLib.method_58(var0, var7);
             var7 += 2;
-            var5.field_1088 = class_1.method_58(var0, var7);
+            var5.field_1088 = GLLib.method_58(var0, var7);
             var7 += 2;
-            var5.field_1089 = class_1.method_58(var0, var7);
+            var5.field_1089 = GLLib.method_58(var0, var7);
             var7 += 2;
-            var5.field_1104 = class_1.method_59(var0, var7);
+            var5.field_1104 = GLLib.method_59(var0, var7);
             var7 += 4;
-            var6 = class_1.method_57(var0, var7);
+            var6 = GLLib.method_57(var0, var7);
             ++var7;
             var5.method_1053(var6);
-            var5.field_1032 = class_1.method_60(var0, var7);
+            var5.field_1032 = GLLib.method_60(var0, var7);
             var7 += 8;
             if(var5.method_1086(2)) {
                method_640(var5);
@@ -4015,30 +4015,30 @@ public final class class_2 extends class_1 implements class_0 {
             var1 = var7;
             break;
          case 54:
-            var4 = class_1.method_57(var0, var1);
+            var4 = GLLib.method_57(var0, var1);
             var7 = var1 + 1;
             (var5 = method_586(0, var4)).field_1100 = var4;
-            var5.field_1087 = class_1.method_58(var0, var7);
+            var5.field_1087 = GLLib.method_58(var0, var7);
             var7 += 2;
-            var5.field_1088 = class_1.method_58(var0, var7);
+            var5.field_1088 = GLLib.method_58(var0, var7);
             var7 += 2;
-            var5.field_1089 = class_1.method_58(var0, var7);
+            var5.field_1089 = GLLib.method_58(var0, var7);
             var7 += 2;
-            var5.field_1104 = class_1.method_59(var0, var7);
+            var5.field_1104 = GLLib.method_59(var0, var7);
             var7 += 4;
-            var5.field_1105 = class_1.method_57(var0, var7);
+            var5.field_1105 = GLLib.method_57(var0, var7);
             ++var7;
             var5.method_1062(var5.field_1105);
             var5.method_1057();
-            var5.field_1035 = class_1.method_59(var0, var7);
+            var5.field_1035 = GLLib.method_59(var0, var7);
             var7 += 4;
-            var5.field_1045 = class_1.method_57(var0, var7);
+            var5.field_1045 = GLLib.method_57(var0, var7);
             ++var7;
-            var5.field_1036 = class_1.method_57(var0, var7);
+            var5.field_1036 = GLLib.method_57(var0, var7);
             ++var7;
-            var5.field_1033 = class_1.method_60(var0, var7);
+            var5.field_1033 = GLLib.method_60(var0, var7);
             var7 += 8;
-            var5.field_1038 = class_1.method_60(var0, var7);
+            var5.field_1038 = GLLib.method_60(var0, var7);
             var7 += 8;
             var1 = var7;
          }
@@ -4372,10 +4372,10 @@ public final class class_2 extends class_1 implements class_0 {
          if(field_872 != null) {
             String var2;
             if(field_872.field_1086 == 54 && field_872.method_1086(32)) {
-               var2 = (var2 = class_1.method_74(464)) == null?"":var2;
+               var2 = (var2 = GLLib.method_74(464)) == null?"":var2;
                field_123[1][6] = var2;
             } else {
-               var2 = (var2 = class_1.method_74(463)) == null?"":var2;
+               var2 = (var2 = GLLib.method_74(463)) == null?"":var2;
                field_123[1][6] = var2;
             }
 
@@ -4985,10 +4985,10 @@ public final class class_2 extends class_1 implements class_0 {
       boolean var0 = false;
       if(field_710 != 2 && field_710 != 3 && field_710 != 4) {
          String var1;
-         if(field_698 == ((var1 = class_1.method_74(42)) == null?"":var1) && field_700 != "") {
+         if(field_698 == ((var1 = GLLib.method_74(42)) == null?"":var1) && field_700 != "") {
             field_698 = field_700;
             var0 = true;
-         } else if(field_698 == ((var1 = class_1.method_74(163)) == null?"":var1) && field_700 != "") {
+         } else if(field_698 == ((var1 = GLLib.method_74(163)) == null?"":var1) && field_700 != "") {
             field_698 = field_700;
             field_699 = field_701;
             field_705 = false;
@@ -5007,7 +5007,7 @@ public final class class_2 extends class_1 implements class_0 {
          byte var2;
          int var4;
          byte var6;
-         if(field_698 == ((var1 = class_1.method_74(292)) == null?"":var1)) {
+         if(field_698 == ((var1 = GLLib.method_74(292)) == null?"":var1)) {
             cResource var3 = cResource.resources[3];
             int var5 = method_169(field_883);
             var4 = var3.field_1133[var5][1];
@@ -5025,7 +5025,7 @@ public final class class_2 extends class_1 implements class_0 {
             }
 
             var0 = true;
-         } else if(field_698 == ((var1 = class_1.method_74(300)) == null?"":var1)) {
+         } else if(field_698 == ((var1 = GLLib.method_74(300)) == null?"":var1)) {
             if(field_854 != -1) {
                method_593(true, field_854, '\u0002');
             }
@@ -5126,9 +5126,9 @@ public final class class_2 extends class_1 implements class_0 {
       } else {
          method_564(56);
          if(field_824[field_847] > 0) {
-            String var0 = (var0 = class_1.method_74(381)) == null?"":var0;
-            String var1 = class_1.method_77((long)(field_824[field_847] - method_669()), field_862, " ");
-            field_699 = var0 = class_1.method_79(var0, "%d", var1);
+            String var0 = (var0 = GLLib.method_74(381)) == null?"":var0;
+            String var1 = GLLib.method_77((long)(field_824[field_847] - method_669()), field_862, " ");
+            field_699 = var0 = GLLib.method_79(var0, "%d", var1);
             field_696 = var0;
             field_695 = 19;
             field_774 = true;
@@ -5151,9 +5151,9 @@ public final class class_2 extends class_1 implements class_0 {
       } else {
          method_564(56);
          if(field_831[field_847] > 0) {
-            String var0 = (var0 = class_1.method_74(381)) == null?"":var0;
-            String var1 = class_1.method_77((long)(field_831[field_847] - method_669()), field_862, " ");
-            field_699 = var0 = class_1.method_79(var0, "%d", var1);
+            String var0 = (var0 = GLLib.method_74(381)) == null?"":var0;
+            String var1 = GLLib.method_77((long)(field_831[field_847] - method_669()), field_862, " ");
+            field_699 = var0 = GLLib.method_79(var0, "%d", var1);
             field_696 = var0;
             field_695 = 19;
             field_774 = true;
@@ -5176,9 +5176,9 @@ public final class class_2 extends class_1 implements class_0 {
       } else {
          method_564(56);
          if(field_838[field_847] > 0) {
-            String var0 = (var0 = class_1.method_74(381)) == null?"":var0;
-            String var1 = class_1.method_77((long)(field_838[field_847] - method_669()), field_862, " ");
-            field_699 = var0 = class_1.method_79(var0, "%d", var1);
+            String var0 = (var0 = GLLib.method_74(381)) == null?"":var0;
+            String var1 = GLLib.method_77((long)(field_838[field_847] - method_669()), field_862, " ");
+            field_699 = var0 = GLLib.method_79(var0, "%d", var1);
             field_696 = var0;
             field_695 = 19;
             field_774 = true;
@@ -5193,8 +5193,8 @@ public final class class_2 extends class_1 implements class_0 {
    private static void method_242() {
       field_853 = false;
       if(field_845[field_847] == 3) {
-         int var0 = field_867.field_1087 + (class_1.width >> 1);
-         int var1 = field_867.field_1088 + (class_1.height >> 1);
+         int var0 = field_867.field_1087 + (GLLib.width >> 1);
+         int var1 = field_867.field_1088 + (GLLib.height >> 1);
          if(field_858 < 100) {
             var0 *= 100 / field_858;
             var1 *= 100 / field_858;
@@ -5210,8 +5210,8 @@ public final class class_2 extends class_1 implements class_0 {
 
          if(!field_746 && method_713(field_844[field_847]) > 0) {
             int[] var2 = new int[]{0, 0, 14};
-            int var3 = class_1.method_16(0, 50) - 25;
-            int var4 = class_1.method_16(0, 50) - 25;
+            int var3 = GLLib.method_16(0, 50) - 25;
+            int var4 = GLLib.method_16(0, 50) - 25;
             class_6.method_1079(47, 2, var2).method_1068(var0 + var3, var1 + var4, 6, 1000, false, method_713(field_844[field_847]));
          }
 
@@ -5692,7 +5692,7 @@ public final class class_2 extends class_1 implements class_0 {
          }
 
          for(var9 = 0; var9 < var2; ++var9) {
-            var4[var2 + var9] = class_1.method_16(8412, 8511);
+            var4[var2 + var9] = GLLib.method_16(8412, 8511);
             var5[var2 + var9] = -1;
             var6[var2 + var9] = -1;
          }
@@ -5714,7 +5714,7 @@ public final class class_2 extends class_1 implements class_0 {
          var7 += var0;
 
          for(var9 = 0; var9 < var0; ++var9) {
-            var4[var7 + var9] = class_1.method_16(8412, 8511);
+            var4[var7 + var9] = GLLib.method_16(8412, 8511);
             var5[var7 + var9] = -1;
             var6[var7 + var9] = -1;
          }
@@ -5736,7 +5736,7 @@ public final class class_2 extends class_1 implements class_0 {
          var7 += var13;
 
          for(var9 = 0; var9 < var13; ++var9) {
-            var4[var7 + var9] = class_1.method_16(8412, 8511);
+            var4[var7 + var9] = GLLib.method_16(8412, 8511);
             var5[var7 + var9] = -1;
             var6[var7 + var9] = -1;
          }
@@ -5749,8 +5749,8 @@ public final class class_2 extends class_1 implements class_0 {
          while(var13 < var3 << 1) {
             for(var2 = 0; var2 <= field_268; ++var2) {
                method_653(var2, var12);
-               int var11 = class_1.method_16(var12[0], var12[1]);
-               var7 = class_1.method_16(var12[2], var12[3]);
+               int var11 = GLLib.method_16(var12[0], var12[1]);
+               var7 = GLLib.method_16(var12[2], var12[3]);
                var15[0] = var11;
                var15[1] = var7;
                method_639(var15, var16);
@@ -5875,9 +5875,9 @@ public final class class_2 extends class_1 implements class_0 {
       } else {
          method_564(56);
          if(field_562 > 0) {
-            String var0 = (var0 = class_1.method_74(381)) == null?"":var0;
-            String var1 = class_1.method_77((long)(field_562 - method_669()), field_862, " ");
-            field_696 = class_1.method_79(var0, "%d", var1);
+            String var0 = (var0 = GLLib.method_74(381)) == null?"":var0;
+            String var1 = GLLib.method_77((long)(field_562 - method_669()), field_862, " ");
+            field_696 = GLLib.method_79(var0, "%d", var1);
             field_695 = 19;
             field_774 = true;
             field_909 = true;
@@ -5903,9 +5903,9 @@ public final class class_2 extends class_1 implements class_0 {
       } else {
          method_564(56);
          if(field_563 > 0) {
-            String var0 = (var0 = class_1.method_74(381)) == null?"":var0;
-            String var1 = class_1.method_77((long)(field_563 - method_669()), field_862, " ");
-            field_696 = class_1.method_79(var0, "%d", var1);
+            String var0 = (var0 = GLLib.method_74(381)) == null?"":var0;
+            String var1 = GLLib.method_77((long)(field_563 - method_669()), field_862, " ");
+            field_696 = GLLib.method_79(var0, "%d", var1);
             field_695 = 19;
             field_774 = true;
             field_909 = true;
@@ -6046,9 +6046,9 @@ public final class class_2 extends class_1 implements class_0 {
       } else {
          method_564(56);
          if(field_480 > 0) {
-            String var0 = (var0 = class_1.method_74(381)) == null?"":var0;
-            String var1 = class_1.method_77((long)(field_480 - method_669()), field_862, " ");
-            field_696 = class_1.method_79(var0, "%d", var1);
+            String var0 = (var0 = GLLib.method_74(381)) == null?"":var0;
+            String var1 = GLLib.method_77((long)(field_480 - method_669()), field_862, " ");
+            field_696 = GLLib.method_79(var0, "%d", var1);
             field_695 = 19;
             field_909 = true;
             field_774 = true;
@@ -6074,9 +6074,9 @@ public final class class_2 extends class_1 implements class_0 {
       } else {
          method_564(56);
          if(field_481 > 0) {
-            String var0 = (var0 = class_1.method_74(381)) == null?"":var0;
-            String var1 = class_1.method_77((long)(field_481 - method_669()), field_862, " ");
-            field_696 = class_1.method_79(var0, "%d", var1);
+            String var0 = (var0 = GLLib.method_74(381)) == null?"":var0;
+            String var1 = GLLib.method_77((long)(field_481 - method_669()), field_862, " ");
+            field_696 = GLLib.method_79(var0, "%d", var1);
             field_695 = 19;
             field_909 = true;
             field_774 = true;
@@ -6414,9 +6414,9 @@ public final class class_2 extends class_1 implements class_0 {
       } else {
          method_564(56);
          if(field_527[var0] > 0) {
-            String var1 = (var1 = class_1.method_74(381)) == null?"":var1;
-            String var2 = class_1.method_77((long)(field_527[var0] - method_669()), field_862, " ");
-            field_696 = class_1.method_79(var1, "%d", var2);
+            String var1 = (var1 = GLLib.method_74(381)) == null?"":var1;
+            String var2 = GLLib.method_77((long)(field_527[var0] - method_669()), field_862, " ");
+            field_696 = GLLib.method_79(var1, "%d", var2);
             field_695 = 19;
             field_909 = true;
             field_774 = true;
@@ -6434,9 +6434,9 @@ public final class class_2 extends class_1 implements class_0 {
       } else {
          method_564(56);
          if(field_507[var0] > 0) {
-            String var1 = (var1 = class_1.method_74(381)) == null?"":var1;
-            String var2 = class_1.method_77((long)(field_507[var0] - method_669()), field_862, " ");
-            field_696 = class_1.method_79(var1, "%d", var2);
+            String var1 = (var1 = GLLib.method_74(381)) == null?"":var1;
+            String var2 = GLLib.method_77((long)(field_507[var0] - method_669()), field_862, " ");
+            field_696 = GLLib.method_79(var1, "%d", var2);
             field_695 = 19;
             field_909 = true;
             field_774 = true;
@@ -6584,9 +6584,9 @@ public final class class_2 extends class_1 implements class_0 {
             }
 
             method_564(56);
-            var1 = (var1 = class_1.method_74(381)) == null?"":var1;
-            var2 = class_1.method_77((long)(var0 - method_669()), field_862, " ");
-            field_696 = class_1.method_79(var1, "%d", var2);
+            var1 = (var1 = GLLib.method_74(381)) == null?"":var1;
+            var2 = GLLib.method_77((long)(var0 - method_669()), field_862, " ");
+            field_696 = GLLib.method_79(var1, "%d", var2);
             field_695 = 19;
             field_909 = true;
             field_774 = true;
@@ -6605,9 +6605,9 @@ public final class class_2 extends class_1 implements class_0 {
             }
 
             method_564(56);
-            var1 = (var1 = class_1.method_74(381)) == null?"":var1;
-            var2 = class_1.method_77((long)(var0 - method_669()), field_862, " ");
-            field_696 = class_1.method_79(var1, "%d", var2);
+            var1 = (var1 = GLLib.method_74(381)) == null?"":var1;
+            var2 = GLLib.method_77((long)(var0 - method_669()), field_862, " ");
+            field_696 = GLLib.method_79(var1, "%d", var2);
             field_695 = 19;
             field_909 = true;
             field_774 = true;
@@ -6874,7 +6874,7 @@ public final class class_2 extends class_1 implements class_0 {
          field_742 = 3 + field_766;
          method_131(42);
       } else {
-         class_1.method_113(field_769[field_766], "Cash");
+         GLLib.method_113(field_769[field_766], "Cash");
          field_138 = false;
          method_342();
       }
@@ -6887,7 +6887,7 @@ public final class class_2 extends class_1 implements class_0 {
          field_742 = 3;
          method_131(42);
       } else {
-         class_1.method_113(field_769[0], "Cash");
+         GLLib.method_113(field_769[0], "Cash");
          field_138 = false;
          method_342();
       }
@@ -6900,7 +6900,7 @@ public final class class_2 extends class_1 implements class_0 {
          field_742 = 4;
          method_131(42);
       } else {
-         class_1.method_113(field_769[1], "Cash");
+         GLLib.method_113(field_769[1], "Cash");
          field_138 = false;
          method_342();
       }
@@ -6913,7 +6913,7 @@ public final class class_2 extends class_1 implements class_0 {
          field_742 = 5;
          method_131(42);
       } else {
-         class_1.method_113(field_769[2], "Cash");
+         GLLib.method_113(field_769[2], "Cash");
          field_138 = false;
          method_342();
       }
@@ -6926,7 +6926,7 @@ public final class class_2 extends class_1 implements class_0 {
          field_742 = 6;
          method_131(42);
       } else {
-         class_1.method_113(field_769[3], "Cash");
+         GLLib.method_113(field_769[3], "Cash");
          field_138 = false;
          method_342();
       }
@@ -6939,7 +6939,7 @@ public final class class_2 extends class_1 implements class_0 {
          field_742 = 7;
          method_131(42);
       } else {
-         class_1.method_113(field_769[4], "Cash");
+         GLLib.method_113(field_769[4], "Cash");
          field_138 = false;
          method_342();
       }
@@ -6952,7 +6952,7 @@ public final class class_2 extends class_1 implements class_0 {
          field_742 = 8;
          method_131(42);
       } else {
-         class_1.method_113(field_769[5], "Cash");
+         GLLib.method_113(field_769[5], "Cash");
          field_138 = false;
          method_342();
       }
@@ -6981,7 +6981,7 @@ public final class class_2 extends class_1 implements class_0 {
       method_564(61);
       method_344();
       field_774 = true;
-      if(class_1.method_117()) {
+      if(GLLib.method_117()) {
          method_348();
          method_338();
          field_143 = 3;
@@ -7004,19 +7004,19 @@ public final class class_2 extends class_1 implements class_0 {
          method_131(34);
       }
 
-      String var1 = field_746?((var1 = class_1.method_74(381)) == null?"":var1):((var1 = class_1.method_74(852)) == null?"":var1);
-      String var2 = class_1.method_77((long)(field_751[var0] - method_669()), field_862, " ");
-      var1 = class_1.method_79(var1, "%d", var2);
-      method_825((var2 = class_1.method_74(380)) == null?"":var2, var1, 7);
+      String var1 = field_746?((var1 = GLLib.method_74(381)) == null?"":var1):((var1 = GLLib.method_74(852)) == null?"":var1);
+      String var2 = GLLib.method_77((long)(field_751[var0] - method_669()), field_862, " ");
+      var1 = GLLib.method_79(var1, "%d", var2);
+      method_825((var2 = GLLib.method_74(380)) == null?"":var2, var1, 7);
    }
 
    // $FF: renamed from: bG () void
    private static void method_311() {
       if(method_681(field_751[0])) {
          method_682(field_768[0]);
-         String var0 = class_1.method_77((long)method_669(), field_862, " ");
+         String var0 = GLLib.method_77((long)method_669(), field_862, " ");
          field_123[8][7] = var0;
-         var0 = class_1.method_77((long)method_668(), field_862, " ");
+         var0 = GLLib.method_77((long)method_668(), field_862, " ");
          field_123[8][4] = var0;
          method_564(49);
       } else {
@@ -7037,9 +7037,9 @@ public final class class_2 extends class_1 implements class_0 {
    private static void method_312() {
       if(method_681(field_751[1])) {
          method_682(field_768[1]);
-         String var0 = class_1.method_77((long)method_669(), field_862, " ");
+         String var0 = GLLib.method_77((long)method_669(), field_862, " ");
          field_123[8][7] = var0;
-         var0 = class_1.method_77((long)method_668(), field_862, " ");
+         var0 = GLLib.method_77((long)method_668(), field_862, " ");
          field_123[8][4] = var0;
       } else {
          method_564(56);
@@ -7059,9 +7059,9 @@ public final class class_2 extends class_1 implements class_0 {
    private static void method_313() {
       if(method_681(field_751[2])) {
          method_682(field_768[2]);
-         String var0 = class_1.method_77((long)method_669(), field_862, " ");
+         String var0 = GLLib.method_77((long)method_669(), field_862, " ");
          field_123[8][7] = var0;
-         var0 = class_1.method_77((long)method_668(), field_862, " ");
+         var0 = GLLib.method_77((long)method_668(), field_862, " ");
          field_123[8][4] = var0;
       } else {
          method_564(56);
@@ -7081,9 +7081,9 @@ public final class class_2 extends class_1 implements class_0 {
    private static void method_314() {
       if(method_681(field_751[3])) {
          method_682(field_768[3]);
-         String var0 = class_1.method_77((long)method_669(), field_862, " ");
+         String var0 = GLLib.method_77((long)method_669(), field_862, " ");
          field_123[8][7] = var0;
-         var0 = class_1.method_77((long)method_668(), field_862, " ");
+         var0 = GLLib.method_77((long)method_668(), field_862, " ");
          field_123[8][4] = var0;
       } else {
          method_564(56);
@@ -7103,9 +7103,9 @@ public final class class_2 extends class_1 implements class_0 {
    private static void method_315() {
       if(method_681(field_751[4])) {
          method_682(field_768[4]);
-         String var0 = class_1.method_77((long)method_669(), field_862, " ");
+         String var0 = GLLib.method_77((long)method_669(), field_862, " ");
          field_123[8][7] = var0;
-         var0 = class_1.method_77((long)method_668(), field_862, " ");
+         var0 = GLLib.method_77((long)method_668(), field_862, " ");
          field_123[8][4] = var0;
       } else {
          method_564(56);
@@ -7125,9 +7125,9 @@ public final class class_2 extends class_1 implements class_0 {
    private static void method_316() {
       if(method_681(field_751[5])) {
          method_682(field_768[5]);
-         String var0 = class_1.method_77((long)method_669(), field_862, " ");
+         String var0 = GLLib.method_77((long)method_669(), field_862, " ");
          field_123[8][7] = var0;
-         var0 = class_1.method_77((long)method_668(), field_862, " ");
+         var0 = GLLib.method_77((long)method_668(), field_862, " ");
          field_123[8][4] = var0;
       } else {
          method_564(56);
@@ -7223,14 +7223,14 @@ public final class class_2 extends class_1 implements class_0 {
             var1 *= 10;
          }
 
-         if(class_1.method_116(var0)) {
-            class_1.method_118();
-            method_684((int)class_1.method_129(200L));
+         if(GLLib.method_116(var0)) {
+            GLLib.method_118();
+            method_684((int)GLLib.method_129(200L));
             String var3 = Integer.toString(method_669());
             field_123[8][7] = var3;
             method_349();
             method_863(false);
-            class_1.method_123();
+            GLLib.method_123();
             method_350();
          } else {
             method_349();
@@ -7248,7 +7248,7 @@ public final class class_2 extends class_1 implements class_0 {
          field_742 = 2;
          method_131(42);
       } else {
-         class_1.method_114();
+         GLLib.method_114();
          method_349();
          method_345();
       }
@@ -7340,7 +7340,7 @@ public final class class_2 extends class_1 implements class_0 {
          method_543(8, 204, true);
          method_545(8, 204, true);
          method_543(8, 205, true);
-         String var0 = (var0 = class_1.method_74(field_134?45:767)) == null?"":var0;
+         String var0 = (var0 = GLLib.method_74(field_134?45:767)) == null?"":var0;
          field_123[8][205] = var0;
       } else {
          method_335();
@@ -7351,7 +7351,7 @@ public final class class_2 extends class_1 implements class_0 {
    private static void method_337() {
       if(field_134) {
          method_336();
-         String var0 = (var0 = class_1.method_74(767)) == null?"":var0;
+         String var0 = (var0 = GLLib.method_74(767)) == null?"":var0;
          field_123[8][205] = var0;
          method_543(8, 157, false);
          method_543(8, 158, false);
@@ -7372,7 +7372,7 @@ public final class class_2 extends class_1 implements class_0 {
          method_543(8, 14, false);
          method_543(8, 11, true);
          field_142 = true;
-         if(class_1.method_117()) {
+         if(GLLib.method_117()) {
             field_143 = 3;
          } else {
             field_143 = 2;
@@ -7426,11 +7426,11 @@ public final class class_2 extends class_1 implements class_0 {
                method_543(8, 16, true);
             } else {
                var1 = 0;
-               var0 = class_1.method_127("Cash");
+               var0 = GLLib.method_127("Cash");
 
                for(int var2 = 0; var2 < var0; ++var2) {
                   int var3;
-                  if((var3 = class_1.method_128(var2, "Cash")) != -1) {
+                  if((var3 = GLLib.method_128(var2, "Cash")) != -1) {
                      field_750[var1++] = var3 - 1;
                   }
                }
@@ -7882,7 +7882,7 @@ public final class class_2 extends class_1 implements class_0 {
          method_344();
          if(!field_134) {
             method_336();
-            String var0 = (var0 = class_1.method_74(45)) == null?"":var0;
+            String var0 = (var0 = GLLib.method_74(45)) == null?"":var0;
             field_123[8][205] = var0;
             method_543(8, 157, true);
             method_543(8, 158, true);
@@ -8196,9 +8196,9 @@ public final class class_2 extends class_1 implements class_0 {
       } else {
          method_564(56);
          if(field_734 > 0) {
-            String var0 = (var0 = class_1.method_74(381)) == null?"":var0;
-            String var1 = class_1.method_77((long)(field_734 - method_669()), field_862, " ");
-            field_696 = class_1.method_79(var0, "%d", var1);
+            String var0 = (var0 = GLLib.method_74(381)) == null?"":var0;
+            String var1 = GLLib.method_77((long)(field_734 - method_669()), field_862, " ");
+            field_696 = GLLib.method_79(var0, "%d", var1);
             field_695 = 19;
             field_909 = true;
             field_774 = true;
@@ -8216,9 +8216,9 @@ public final class class_2 extends class_1 implements class_0 {
       } else {
          method_564(56);
          if(field_737 > 0) {
-            String var0 = (var0 = class_1.method_74(381)) == null?"":var0;
-            String var1 = class_1.method_77((long)(field_737 - method_669()), field_862, " ");
-            field_696 = class_1.method_79(var0, "%d", var1);
+            String var0 = (var0 = GLLib.method_74(381)) == null?"":var0;
+            String var1 = GLLib.method_77((long)(field_737 - method_669()), field_862, " ");
+            field_696 = GLLib.method_79(var0, "%d", var1);
             field_695 = 19;
             field_909 = true;
             field_774 = true;
@@ -8467,9 +8467,9 @@ public final class class_2 extends class_1 implements class_0 {
          } else if(!method_677((int)method_715(field_276))) {
             method_564(56);
             field_293 = method_715(field_276);
-            String var5 = (var5 = class_1.method_74(379)) == null?"":var5;
-            String var7 = class_1.method_77(field_293 - (long)method_668(), field_862, " ");
-            field_696 = class_1.method_79(var5, "%d", var7);
+            String var5 = (var5 = GLLib.method_74(379)) == null?"":var5;
+            String var7 = GLLib.method_77(field_293 - (long)method_668(), field_862, " ");
+            field_696 = GLLib.method_79(var5, "%d", var7);
             field_695 = 18;
             field_909 = true;
             field_774 = false;
@@ -8527,9 +8527,9 @@ public final class class_2 extends class_1 implements class_0 {
       if(!method_681(method_713(field_282))) {
          method_564(56);
          field_293 = (long)method_713(field_282);
-         String var0 = (var0 = class_1.method_74(381)) == null?"":var0;
-         String var1 = class_1.method_77(field_293 - (long)method_669(), field_862, " ");
-         field_696 = class_1.method_79(var0, "%d", var1);
+         String var0 = (var0 = GLLib.method_74(381)) == null?"":var0;
+         String var1 = GLLib.method_77(field_293 - (long)method_669(), field_862, " ");
+         field_696 = GLLib.method_79(var0, "%d", var1);
          field_695 = 19;
          field_909 = true;
          field_774 = true;
@@ -8548,9 +8548,9 @@ public final class class_2 extends class_1 implements class_0 {
       if(!method_681(method_713(field_283))) {
          method_564(56);
          field_293 = (long)method_713(field_283);
-         String var0 = (var0 = class_1.method_74(381)) == null?"":var0;
-         String var1 = class_1.method_77(field_293 - (long)method_669(), field_862, " ");
-         field_696 = class_1.method_79(var0, "%d", var1);
+         String var0 = (var0 = GLLib.method_74(381)) == null?"":var0;
+         String var1 = GLLib.method_77(field_293 - (long)method_669(), field_862, " ");
+         field_696 = GLLib.method_79(var0, "%d", var1);
          field_695 = 19;
          field_909 = true;
          field_774 = true;
@@ -8771,9 +8771,9 @@ public final class class_2 extends class_1 implements class_0 {
 
          method_564(56);
          if(field_606 > 0) {
-            String var0 = (var0 = class_1.method_74(379)) == null?"":var0;
-            String var1 = class_1.method_77((long)(field_606 - method_668()), field_862, " ");
-            field_696 = class_1.method_79(var0, "%d", var1);
+            String var0 = (var0 = GLLib.method_74(379)) == null?"":var0;
+            String var1 = GLLib.method_77((long)(field_606 - method_668()), field_862, " ");
+            field_696 = GLLib.method_79(var0, "%d", var1);
             field_695 = 18;
             field_774 = false;
             field_909 = true;
@@ -8802,9 +8802,9 @@ public final class class_2 extends class_1 implements class_0 {
       } else {
          method_564(56);
          if(field_611 > 0) {
-            String var0 = (var0 = class_1.method_74(381)) == null?"":var0;
-            String var1 = class_1.method_77((long)(field_611 - method_669()), field_862, " ");
-            field_696 = class_1.method_79(var0, "%d", var1);
+            String var0 = (var0 = GLLib.method_74(381)) == null?"":var0;
+            String var1 = GLLib.method_77((long)(field_611 - method_669()), field_862, " ");
+            field_696 = GLLib.method_79(var0, "%d", var1);
             field_695 = 19;
             field_774 = true;
             field_909 = true;
@@ -8842,10 +8842,10 @@ public final class class_2 extends class_1 implements class_0 {
    // $FF: renamed from: dE () void
    private static void method_419() {
       method_571();
-      String var0 = class_1.method_122();
+      String var0 = GLLib.method_122();
 
       try {
-         class_1.method_8(var0);
+         GLLib.method_8(var0);
       } catch (Exception var1) {
          ;
       }
@@ -8871,18 +8871,18 @@ public final class class_2 extends class_1 implements class_0 {
             String var1;
             if(var0 + 11264 == 11534) {
                for(int var2 = 0; var2 < 77; ++var2) {
-                  field_668 = field_668 + ((var1 = class_1.method_74(var2 + 11547)) == null?"":var1) + '\n';
+                  field_668 = field_668 + ((var1 = GLLib.method_74(var2 + 11547)) == null?"":var1) + '\n';
                }
             }
 
             StringBuffer var10000;
             String var10001;
             if(var0 + 11264 == 11265) {
-               var10000 = (new StringBuffer()).append(field_668).append((var1 = class_1.method_74(11265)) == null?"":var1).append(" ");
+               var10000 = (new StringBuffer()).append(field_668).append((var1 = GLLib.method_74(11265)) == null?"":var1).append(" ");
                var10001 = GloftGF2M.instance.getAppProperty("MIDlet-Version");
             } else {
                var10000 = (new StringBuffer()).append(field_668);
-               var10001 = (var1 = class_1.method_74(var0 + 11264)) == null?"":var1;
+               var10001 = (var1 = GLLib.method_74(var0 + 11264)) == null?"":var1;
             }
 
             field_668 = var10000.append(var10001).append('\n').toString();
@@ -8897,7 +8897,7 @@ public final class class_2 extends class_1 implements class_0 {
          var5 = var7[0];
          ASprite var4 = var8;
          field_669 = (field_664 = var5 * var4.method_962() + (var5 - 1) * var4.method_957()) / 2;
-         field_670 = field_664 / 2 + (class_1.height >> 1);
+         field_670 = field_664 / 2 + (GLLib.height >> 1);
          field_663 = field_669;
          method_543(15, 18, true);
          method_545(15, 18, true);
@@ -8923,7 +8923,7 @@ public final class class_2 extends class_1 implements class_0 {
       String var0 = "http://www.gameloft.com/privacy-notice/";
 
       try {
-         class_1.method_8(var0);
+         GLLib.method_8(var0);
       } catch (Exception var1) {
          ;
       }
@@ -9212,9 +9212,9 @@ public final class class_2 extends class_1 implements class_0 {
 
          field_660 = 0;
          method_153(1, 107, 1, 0, 24, 0, -1);
-         class_1.method_21("/7");
+         GLLib.method_21("/7");
          method_151(1, 3);
-         class_1.method_23();
+         GLLib.method_23();
          method_482();
          method_634();
          method_541(15);
@@ -9512,7 +9512,7 @@ public final class class_2 extends class_1 implements class_0 {
       String var1 = "";
       if(var0 >= 0 && var0 < 297 && field_897[var0] != -1) {
          String var2;
-         var1 = (var2 = class_1.method_74(field_897[var0])) == null?"":var2;
+         var1 = (var2 = GLLib.method_74(field_897[var0])) == null?"":var2;
       }
 
       return var1;
@@ -9541,7 +9541,7 @@ public final class class_2 extends class_1 implements class_0 {
          if((var0 = GloftGF2M.instance.getAppProperty("URL-SUPPORT")) != null && var0.indexOf("http") != -1) {
             method_543(15, 2, true);
             method_545(15, 2, true);
-            var0 = (var0 = class_1.method_74(64)) == null?"":var0;
+            var0 = (var0 = GLLib.method_74(64)) == null?"":var0;
             field_123[15][3] = var0;
             method_543(15, 3, true);
          }
@@ -9557,7 +9557,7 @@ public final class class_2 extends class_1 implements class_0 {
             method_543(15, 148, true);
             method_545(15, 148, true);
             method_543(15, 149, true);
-            var0 = (var0 = class_1.method_74(839)) == null?"":var0;
+            var0 = (var0 = GLLib.method_74(839)) == null?"":var0;
             field_123[15][149] = var0;
          }
 
@@ -9746,9 +9746,9 @@ public final class class_2 extends class_1 implements class_0 {
    private static void method_482() {
       int var0 = 107 + field_660;
       method_153(1, var0, 1, 0, 24, 0, -1);
-      class_1.method_21("/7");
+      GLLib.method_21("/7");
       method_151(1, 3);
-      class_1.method_23();
+      GLLib.method_23();
       field_121[15][99][5] = (short)var0;
       field_121[15][100][5] = (short)var0;
       field_121[15][101][5] = (short)var0;
@@ -10017,9 +10017,9 @@ public final class class_2 extends class_1 implements class_0 {
       } else {
          method_564(56);
          if(field_808 > 0) {
-            String var0 = (var0 = class_1.method_74(381)) == null?"":var0;
-            String var1 = class_1.method_77((long)(field_808 - method_669()), field_862, " ");
-            field_696 = class_1.method_79(var0, "%d", var1);
+            String var0 = (var0 = GLLib.method_74(381)) == null?"":var0;
+            String var1 = GLLib.method_77((long)(field_808 - method_669()), field_862, " ");
+            field_696 = GLLib.method_79(var0, "%d", var1);
             field_695 = 19;
             field_774 = true;
             method_131(34);
@@ -10043,9 +10043,9 @@ public final class class_2 extends class_1 implements class_0 {
       } else {
          method_564(56);
          if(field_807 > 0) {
-            String var0 = (var0 = class_1.method_74(381)) == null?"":var0;
-            String var1 = class_1.method_77((long)(field_807 - method_669()), field_862, " ");
-            field_696 = class_1.method_79(var0, "%d", var1);
+            String var0 = (var0 = GLLib.method_74(381)) == null?"":var0;
+            String var1 = GLLib.method_77((long)(field_807 - method_669()), field_862, " ");
+            field_696 = GLLib.method_79(var0, "%d", var1);
             field_695 = 19;
             field_774 = true;
             method_131(34);
@@ -10239,7 +10239,7 @@ public final class class_2 extends class_1 implements class_0 {
       field_344 = new int[50];
       cSoundEngine var10000 = new cSoundEngine();
       field_345 = var10000;
-      class_1.method_104();
+      GLLib.method_104();
       method_634();
    }
 
@@ -10367,9 +10367,9 @@ public final class class_2 extends class_1 implements class_0 {
       }
 
       if(var1) {
-         class_1.method_21("/7");
+         GLLib.method_21("/7");
          method_151(1, 1);
-         class_1.method_23();
+         GLLib.method_23();
       }
 
       cSoundEngine[] var10000;
@@ -10579,8 +10579,8 @@ public final class class_2 extends class_1 implements class_0 {
       if(field_121[var0] != null) {
          method_527(var0);
       } else {
-         class_1.method_21("/6");
-         byte[] var7 = class_1.method_27(var0);
+         GLLib.method_21("/6");
+         byte[] var7 = GLLib.method_27(var0);
          int var2 = 0;
 
          byte var10001;
@@ -10588,7 +10588,7 @@ public final class class_2 extends class_1 implements class_0 {
          int var4;
          for(var4 = 0; var2 < var7.length; var2 += var10001) {
             ++var4;
-            var3 = class_1.method_57(var7, var2) & 255;
+            var3 = GLLib.method_57(var7, var2) & 255;
             var2 += 8;
             switch(var3) {
             case 201:
@@ -10629,7 +10629,7 @@ public final class class_2 extends class_1 implements class_0 {
          field_123[var0] = new String[var4];
 
          for(int var5 = 0; var5 < var4; ++var5) {
-            var3 = class_1.method_57(var7, var2) & 255;
+            var3 = GLLib.method_57(var7, var2) & 255;
             int var6 = 5 + method_530(var3);
             field_122[var0][var5] = new short[var6];
             short[] var8;
@@ -10637,230 +10637,230 @@ public final class class_2 extends class_1 implements class_0 {
             case 201:
                var8 = field_122[var0][var5];
                var3 = method_529(var7, var2, var8);
-               var8[5] = class_1.method_58(var7, var3);
+               var8[5] = GLLib.method_58(var7, var3);
                var3 += 2;
-               var8[6] = class_1.method_58(var7, var3);
+               var8[6] = GLLib.method_58(var7, var3);
                var3 += 2;
-               var8[7] = (short)(class_1.method_57(var7, var3) & 255);
+               var8[7] = (short)(GLLib.method_57(var7, var3) & 255);
                ++var3;
-               var8[8] = (short)(class_1.method_57(var7, var3) & 255);
+               var8[8] = (short)(GLLib.method_57(var7, var3) & 255);
                ++var3;
-               var8[9] = (short)(class_1.method_57(var7, var3) & 255);
+               var8[9] = (short)(GLLib.method_57(var7, var3) & 255);
                ++var3;
-               var8[10] = (short)(class_1.method_57(var7, var3) & 255);
+               var8[10] = (short)(GLLib.method_57(var7, var3) & 255);
                ++var3;
-               var8[11] = (short)(class_1.method_57(var7, var3) & 255);
+               var8[11] = (short)(GLLib.method_57(var7, var3) & 255);
                ++var3;
                var2 = var3;
                break;
             case 202:
                var8 = field_122[var0][var5];
                var3 = method_529(var7, var2, var8);
-               var8[5] = class_1.method_58(var7, var3);
+               var8[5] = GLLib.method_58(var7, var3);
                var3 += 2;
-               var8[6] = class_1.method_58(var7, var3);
+               var8[6] = GLLib.method_58(var7, var3);
                var3 += 2;
-               var8[7] = (short)(class_1.method_57(var7, var3) & 255);
+               var8[7] = (short)(GLLib.method_57(var7, var3) & 255);
                ++var3;
-               var8[8] = (short)(class_1.method_57(var7, var3) & 255);
+               var8[8] = (short)(GLLib.method_57(var7, var3) & 255);
                ++var3;
-               var8[9] = (short)(class_1.method_57(var7, var3) & 255);
+               var8[9] = (short)(GLLib.method_57(var7, var3) & 255);
                ++var3;
-               var8[10] = (short)(class_1.method_57(var7, var3) & 255);
+               var8[10] = (short)(GLLib.method_57(var7, var3) & 255);
                ++var3;
-               var8[11] = (short)(class_1.method_57(var7, var3) & 255);
+               var8[11] = (short)(GLLib.method_57(var7, var3) & 255);
                ++var3;
-               var8[12] = (short)(class_1.method_57(var7, var3) & 255);
+               var8[12] = (short)(GLLib.method_57(var7, var3) & 255);
                ++var3;
                var2 = var3;
                break;
             case 203:
                var8 = field_122[var0][var5];
                var3 = method_529(var7, var2, var8);
-               var8[5] = class_1.method_58(var7, var3);
+               var8[5] = GLLib.method_58(var7, var3);
                var3 += 2;
-               var8[6] = class_1.method_58(var7, var3);
+               var8[6] = GLLib.method_58(var7, var3);
                var3 += 2;
-               var8[7] = (short)(class_1.method_57(var7, var3) & 255);
+               var8[7] = (short)(GLLib.method_57(var7, var3) & 255);
                ++var3;
-               var8[8] = (short)(class_1.method_57(var7, var3) & 255);
+               var8[8] = (short)(GLLib.method_57(var7, var3) & 255);
                ++var3;
-               var8[9] = (short)(class_1.method_57(var7, var3) & 255);
+               var8[9] = (short)(GLLib.method_57(var7, var3) & 255);
                ++var3;
-               var8[10] = (short)(class_1.method_57(var7, var3) & 255);
+               var8[10] = (short)(GLLib.method_57(var7, var3) & 255);
                ++var3;
-               var8[11] = (short)(class_1.method_57(var7, var3) & 255);
+               var8[11] = (short)(GLLib.method_57(var7, var3) & 255);
                ++var3;
-               var8[12] = (short)(class_1.method_57(var7, var3) & 255);
+               var8[12] = (short)(GLLib.method_57(var7, var3) & 255);
                ++var3;
-               var8[13] = (short)(class_1.method_57(var7, var3) & 255);
+               var8[13] = (short)(GLLib.method_57(var7, var3) & 255);
                ++var3;
-               var8[14] = (short)(class_1.method_57(var7, var3) & 255);
+               var8[14] = (short)(GLLib.method_57(var7, var3) & 255);
                ++var3;
-               var8[15] = (short)(class_1.method_57(var7, var3) & 255);
+               var8[15] = (short)(GLLib.method_57(var7, var3) & 255);
                ++var3;
-               var8[16] = (short)(class_1.method_57(var7, var3) & 255);
+               var8[16] = (short)(GLLib.method_57(var7, var3) & 255);
                ++var3;
                var2 = var3;
                break;
             case 204:
                var8 = field_122[var0][var5];
                var3 = method_529(var7, var2, var8);
-               var8[5] = class_1.method_58(var7, var3);
+               var8[5] = GLLib.method_58(var7, var3);
                var3 += 2;
-               var8[6] = class_1.method_58(var7, var3);
+               var8[6] = GLLib.method_58(var7, var3);
                var3 += 2;
-               var8[7] = (short)(class_1.method_57(var7, var3) & 255);
+               var8[7] = (short)(GLLib.method_57(var7, var3) & 255);
                ++var3;
-               var8[8] = (short)(class_1.method_57(var7, var3) & 255);
+               var8[8] = (short)(GLLib.method_57(var7, var3) & 255);
                ++var3;
-               var8[9] = (short)(class_1.method_57(var7, var3) & 255);
+               var8[9] = (short)(GLLib.method_57(var7, var3) & 255);
                ++var3;
-               var8[10] = (short)(class_1.method_57(var7, var3) & 255);
+               var8[10] = (short)(GLLib.method_57(var7, var3) & 255);
                ++var3;
-               var8[11] = (short)(class_1.method_57(var7, var3) & 255);
+               var8[11] = (short)(GLLib.method_57(var7, var3) & 255);
                ++var3;
-               var8[12] = class_1.method_58(var7, var3);
+               var8[12] = GLLib.method_58(var7, var3);
                var3 += 2;
-               var8[13] = class_1.method_58(var7, var3);
+               var8[13] = GLLib.method_58(var7, var3);
                var3 += 2;
-               var8[14] = class_1.method_58(var7, var3);
+               var8[14] = GLLib.method_58(var7, var3);
                var3 += 2;
-               var8[15] = (short)(class_1.method_57(var7, var3) & 255);
+               var8[15] = (short)(GLLib.method_57(var7, var3) & 255);
                ++var3;
-               var8[16] = (short)(class_1.method_57(var7, var3) & 255);
+               var8[16] = (short)(GLLib.method_57(var7, var3) & 255);
                ++var3;
-               var8[17] = (short)(class_1.method_57(var7, var3) & 255);
+               var8[17] = (short)(GLLib.method_57(var7, var3) & 255);
                ++var3;
                var2 = var3;
                break;
             case 205:
                var8 = field_122[var0][var5];
                var3 = method_529(var7, var2, var8);
-               var8[5] = (short)(class_1.method_57(var7, var3) & 255);
+               var8[5] = (short)(GLLib.method_57(var7, var3) & 255);
                ++var3;
-               var8[6] = (short)(class_1.method_57(var7, var3) & 255);
+               var8[6] = (short)(GLLib.method_57(var7, var3) & 255);
                ++var3;
-               var8[7] = (short)(class_1.method_57(var7, var3) & 255);
+               var8[7] = (short)(GLLib.method_57(var7, var3) & 255);
                ++var3;
-               var8[8] = (short)(class_1.method_57(var7, var3) & 255);
+               var8[8] = (short)(GLLib.method_57(var7, var3) & 255);
                ++var3;
-               var8[9] = (short)(class_1.method_57(var7, var3) & 255);
+               var8[9] = (short)(GLLib.method_57(var7, var3) & 255);
                ++var3;
-               var8[10] = (short)(class_1.method_57(var7, var3) & 255);
+               var8[10] = (short)(GLLib.method_57(var7, var3) & 255);
                ++var3;
-               var8[11] = (short)(class_1.method_57(var7, var3) & 255);
+               var8[11] = (short)(GLLib.method_57(var7, var3) & 255);
                ++var3;
-               var8[12] = (short)(class_1.method_57(var7, var3) & 255);
+               var8[12] = (short)(GLLib.method_57(var7, var3) & 255);
                ++var3;
-               var8[13] = class_1.method_58(var7, var3);
+               var8[13] = GLLib.method_58(var7, var3);
                var3 += 2;
-               var8[14] = class_1.method_58(var7, var3);
+               var8[14] = GLLib.method_58(var7, var3);
                var3 += 2;
-               var8[15] = class_1.method_58(var7, var3);
+               var8[15] = GLLib.method_58(var7, var3);
                var3 += 2;
-               var8[16] = class_1.method_58(var7, var3);
+               var8[16] = GLLib.method_58(var7, var3);
                var3 += 2;
-               var8[17] = class_1.method_58(var7, var3);
+               var8[17] = GLLib.method_58(var7, var3);
                var3 += 2;
-               var8[18] = (short)(class_1.method_57(var7, var3) & 255);
+               var8[18] = (short)(GLLib.method_57(var7, var3) & 255);
                ++var3;
-               var8[19] = (short)(class_1.method_57(var7, var3) & 255);
+               var8[19] = (short)(GLLib.method_57(var7, var3) & 255);
                ++var3;
-               var8[20] = (short)(class_1.method_57(var7, var3) & 255);
+               var8[20] = (short)(GLLib.method_57(var7, var3) & 255);
                ++var3;
-               var8[21] = (short)(class_1.method_57(var7, var3) & 255);
+               var8[21] = (short)(GLLib.method_57(var7, var3) & 255);
                ++var3;
-               var8[22] = (short)(class_1.method_57(var7, var3) & 255);
+               var8[22] = (short)(GLLib.method_57(var7, var3) & 255);
                ++var3;
                var2 = var3;
                break;
             case 206:
                var8 = field_122[var0][var5];
                var3 = method_529(var7, var2, var8);
-               var8[5] = (short)(class_1.method_57(var7, var3) & 255);
+               var8[5] = (short)(GLLib.method_57(var7, var3) & 255);
                ++var3;
-               var8[6] = class_1.method_58(var7, var3);
+               var8[6] = GLLib.method_58(var7, var3);
                var3 += 2;
-               var8[7] = class_1.method_58(var7, var3);
+               var8[7] = GLLib.method_58(var7, var3);
                var3 += 2;
-               var8[8] = (short)(class_1.method_57(var7, var3) & 255);
+               var8[8] = (short)(GLLib.method_57(var7, var3) & 255);
                ++var3;
-               var8[9] = (short)(class_1.method_57(var7, var3) & 255);
+               var8[9] = (short)(GLLib.method_57(var7, var3) & 255);
                ++var3;
-               var8[10] = (short)(class_1.method_57(var7, var3) & 255);
+               var8[10] = (short)(GLLib.method_57(var7, var3) & 255);
                ++var3;
-               var8[11] = (short)(class_1.method_57(var7, var3) & 255);
+               var8[11] = (short)(GLLib.method_57(var7, var3) & 255);
                ++var3;
-               var8[12] = (short)(class_1.method_57(var7, var3) & 255);
+               var8[12] = (short)(GLLib.method_57(var7, var3) & 255);
                ++var3;
-               var8[13] = (short)(class_1.method_57(var7, var3) & 255);
+               var8[13] = (short)(GLLib.method_57(var7, var3) & 255);
                ++var3;
-               var8[14] = (short)(class_1.method_57(var7, var3) & 255);
+               var8[14] = (short)(GLLib.method_57(var7, var3) & 255);
                ++var3;
                var2 = var3;
                break;
             case 207:
                var8 = field_122[var0][var5];
                var3 = method_529(var7, var2, var8);
-               var8[5] = (short)class_1.method_57(var7, var3);
+               var8[5] = (short)GLLib.method_57(var7, var3);
                ++var3;
-               var8[6] = (short)class_1.method_57(var7, var3);
+               var8[6] = (short)GLLib.method_57(var7, var3);
                ++var3;
-               var8[7] = (short)class_1.method_57(var7, var3);
+               var8[7] = (short)GLLib.method_57(var7, var3);
                ++var3;
-               var8[8] = (short)class_1.method_57(var7, var3);
+               var8[8] = (short)GLLib.method_57(var7, var3);
                ++var3;
-               var8[9] = (short)class_1.method_57(var7, var3);
+               var8[9] = (short)GLLib.method_57(var7, var3);
                ++var3;
-               var8[10] = (short)class_1.method_57(var7, var3);
+               var8[10] = (short)GLLib.method_57(var7, var3);
                ++var3;
-               var8[11] = (short)class_1.method_57(var7, var3);
+               var8[11] = (short)GLLib.method_57(var7, var3);
                ++var3;
-               var8[12] = (short)class_1.method_57(var7, var3);
+               var8[12] = (short)GLLib.method_57(var7, var3);
                ++var3;
-               var8[13] = (short)class_1.method_57(var7, var3);
+               var8[13] = (short)GLLib.method_57(var7, var3);
                ++var3;
-               var8[14] = (short)class_1.method_57(var7, var3);
+               var8[14] = (short)GLLib.method_57(var7, var3);
                ++var3;
-               var8[15] = (short)class_1.method_57(var7, var3);
+               var8[15] = (short)GLLib.method_57(var7, var3);
                ++var3;
-               var8[16] = (short)class_1.method_57(var7, var3);
+               var8[16] = (short)GLLib.method_57(var7, var3);
                ++var3;
-               var8[17] = (short)class_1.method_57(var7, var3);
+               var8[17] = (short)GLLib.method_57(var7, var3);
                ++var3;
                var2 = var3;
                break;
             case 208:
                var8 = field_122[var0][var5];
                var3 = method_529(var7, var2, var8);
-               var8[5] = (short)(class_1.method_57(var7, var3) & 255);
+               var8[5] = (short)(GLLib.method_57(var7, var3) & 255);
                ++var3;
                var2 = var3;
                break;
             case 209:
                var8 = field_122[var0][var5];
                var3 = method_529(var7, var2, var8);
-               var8[5] = (short)(class_1.method_57(var7, var3) & 255);
+               var8[5] = (short)(GLLib.method_57(var7, var3) & 255);
                ++var3;
-               var8[6] = (short)(class_1.method_57(var7, var3) & 255);
+               var8[6] = (short)(GLLib.method_57(var7, var3) & 255);
                ++var3;
-               var8[7] = (short)(class_1.method_57(var7, var3) & 255);
+               var8[7] = (short)(GLLib.method_57(var7, var3) & 255);
                ++var3;
-               var8[8] = (short)(class_1.method_57(var7, var3) & 255);
+               var8[8] = (short)(GLLib.method_57(var7, var3) & 255);
                ++var3;
-               var8[9] = (short)(class_1.method_57(var7, var3) & 255);
+               var8[9] = (short)(GLLib.method_57(var7, var3) & 255);
                ++var3;
-               var8[10] = (short)(class_1.method_57(var7, var3) & 255);
+               var8[10] = (short)(GLLib.method_57(var7, var3) & 255);
                ++var3;
-               var8[11] = (short)(class_1.method_57(var7, var3) & 255);
+               var8[11] = (short)(GLLib.method_57(var7, var3) & 255);
                ++var3;
                var2 = var3;
             }
          }
 
          method_527(var0);
-         class_1.method_23();
+         GLLib.method_23();
       }
    }
 
@@ -10887,15 +10887,15 @@ public final class class_2 extends class_1 implements class_0 {
 
    // $FF: renamed from: a (byte[], int, short[]) int
    private static int method_529(byte[] var0, int var1, short[] var2) {
-      var2[0] = (short)(class_1.method_57(var0, var1) & 255);
+      var2[0] = (short)(GLLib.method_57(var0, var1) & 255);
       ++var1;
-      var2[1] = class_1.method_58(var0, var1);
+      var2[1] = GLLib.method_58(var0, var1);
       var1 += 2;
-      var2[2] = class_1.method_58(var0, var1);
+      var2[2] = GLLib.method_58(var0, var1);
       var1 += 2;
-      var2[3] = class_1.method_58(var0, var1);
+      var2[3] = GLLib.method_58(var0, var1);
       var1 += 2;
-      var2[4] = (short)(class_1.method_57(var0, var1) & 255);
+      var2[4] = (short)(GLLib.method_57(var0, var1) & 255);
       ++var1;
       return var1;
    }
@@ -10950,8 +10950,8 @@ public final class class_2 extends class_1 implements class_0 {
                   var9 = var3[8] & 255;
                   var10 = var3[9] & 255;
                   var7 = var8 << 16 | var9 << 8 | var10;
-                  class_1.field_1.setColor(var7);
-                  class_1.method_44(class_1.field_1, var11, var4, var5, var6, true);
+                  GLLib.field_1.setColor(var7);
+                  GLLib.method_44(GLLib.field_1, var11, var4, var5, var6, true);
                }
                break;
             case 202:
@@ -10966,11 +10966,11 @@ public final class class_2 extends class_1 implements class_0 {
                   var7 = (var10 = var3[7] & 255) << 24 | var7 << 16 | var8 << 8 | var9;
                   if(var10 != 0) {
                      if(var10 == 255) {
-                        class_1.field_1.setColor(var7);
-                        class_1.method_43(class_1.field_1, var11, var4, var5, var6, true);
+                        GLLib.field_1.setColor(var7);
+                        GLLib.method_43(GLLib.field_1, var11, var4, var5, var6, true);
                      } else {
-                        class_1.method_86(var7);
-                        class_1.method_87(class_1.field_1, var11, var4, var5, var6);
+                        GLLib.method_86(var7);
+                        GLLib.method_87(GLLib.field_1, var11, var4, var5, var6);
                      }
                   }
                }
@@ -11018,16 +11018,16 @@ public final class class_2 extends class_1 implements class_0 {
                var8 = var10002;
                var16 = var17;
                int var15 = var10000;
-               class_1.method_41(class_1.field_1, var15, var16, var8, var9, true);
+               GLLib.method_41(GLLib.field_1, var15, var16, var8, var9, true);
                var6 = true;
             }
          }
 
          method_533(var0, var11[2] + var2 + var13, var11[3] + var12, var11[5], var11[6], var11[10], var5, var11[7], var11[8], false, false);
          if(var6) {
-            var1 = class_1.height;
-            int var10 = class_1.width;
-            class_1.method_41(class_1.field_1, 0, 0, var10, var1, true);
+            var1 = GLLib.height;
+            int var10 = GLLib.width;
+            GLLib.method_41(GLLib.field_1, 0, 0, var10, var1, true);
          }
       }
 
@@ -11081,10 +11081,10 @@ public final class class_2 extends class_1 implements class_0 {
             if(var9) {
                short[] var13 = field_117[2][var7].method_965(var0, var3, false);
                ASprite var10000 = field_117[2][var7];
-               Graphics var10002 = class_1.field_1;
-               var10000.method_966(class_1.field_1, var0, var13, var11, var12, 0, -1, var14, -1, false);
+               Graphics var10002 = GLLib.field_1;
+               var10000.method_966(GLLib.field_1, var0, var13, var11, var12, 0, -1, var14, -1, false);
             } else {
-               field_117[2][var7].method_968(class_1.field_1, var0, var11, var12, var14);
+               field_117[2][var7].method_968(GLLib.field_1, var0, var11, var12, var14);
                field_117[2][var7].method_971(var1);
             }
          }
@@ -11113,16 +11113,16 @@ public final class class_2 extends class_1 implements class_0 {
                var6 = var10002;
                var13 = var14;
                var2 = var10000;
-               class_1.method_41(class_1.field_1, var2, var13, var6, var7, true);
+               GLLib.method_41(GLLib.field_1, var2, var13, var6, var7, true);
                var10 = true;
             }
          }
 
          method_533(var0, var9[2], var9[3] + var3, var9[5], var9[6], var9[10], var12, var9[7], var9[8], true, false);
          if(var10) {
-            var1 = class_1.height;
-            int var8 = class_1.width;
-            class_1.method_41(class_1.field_1, 0, 0, var8, var1, true);
+            var1 = GLLib.height;
+            int var8 = GLLib.width;
+            GLLib.method_41(GLLib.field_1, 0, 0, var8, var1, true);
          }
       }
 
@@ -11180,7 +11180,7 @@ public final class class_2 extends class_1 implements class_0 {
                      var13 = var10002;
                      var12 = var10001;
                      int var24 = var10000;
-                     class_1.method_41(class_1.field_1, var24, var12, var13, var26, true);
+                     GLLib.method_41(GLLib.field_1, var24, var12, var13, var26, true);
                      var10 = true;
                   }
                }
@@ -11188,7 +11188,7 @@ public final class class_2 extends class_1 implements class_0 {
                if(var20 < 0) {
                   if(var6 > -1 && var6 < 255) {
                      if(var0 == 1 && var4 >= 65 && var4 <= 70) {
-                        if((var13 = (class_1.width >> 1) - var1[2]) < 0) {
+                        if((var13 = (GLLib.width >> 1) - var1[2]) < 0) {
                            var12 = var13 + 100;
                         } else {
                            var12 = 100 - var13;
@@ -11198,19 +11198,19 @@ public final class class_2 extends class_1 implements class_0 {
                            var12 = 50;
                         }
 
-                        var23.method_982(class_1.field_1, var6, var1[2], var1[3], var12);
+                        var23.method_982(GLLib.field_1, var6, var1[2], var1[3], var12);
                      } else if(var5 == 1 && var6 == 56) {
-                        var23.method_980(class_1.field_1, var6, var1[2], var1[3], 0);
+                        var23.method_980(GLLib.field_1, var6, var1[2], var1[3], 0);
                         if(field_358 > 0) {
-                           var12 = class_1.field_1.getColor();
+                           var12 = GLLib.field_1.getColor();
                            var0 = -1201919;
-                           class_1.field_1.setColor(var0);
+                           GLLib.field_1.setColor(var0);
                            var10001 = var1[2] + -38;
                            var10002 = var1[3] + -38;
                            var3 = 360 * field_358 / field_359;
                            var2 = var10002;
-                           class_1.method_45(class_1.field_1, var10001, var2, 76, 76, 90, var3, true);
-                           class_1.field_1.setColor(var12);
+                           GLLib.method_45(GLLib.field_1, var10001, var2, 76, 76, 90, var3, true);
+                           GLLib.field_1.setColor(var12);
                         }
                      } else {
                         boolean var25 = false;
@@ -11226,7 +11226,7 @@ public final class class_2 extends class_1 implements class_0 {
                            if(var1[21] != 0) {
                               method_538(var1, var1[2] + var4, var1[3] + var0, 94);
                            } else {
-                              var23.method_982(class_1.field_1, var6, var1[2] + var4, var1[3] + var0, 94);
+                              var23.method_982(GLLib.field_1, var6, var1[2] + var4, var1[3] + var0, 94);
                            }
                         } else if(var1[21] != 0) {
                            method_538(var1, var1[2], var1[3], 100);
@@ -11254,23 +11254,23 @@ public final class class_2 extends class_1 implements class_0 {
                                  var19 = 90;
                               }
 
-                              var22.method_982(class_1.field_1, var5, var17, var20, var19);
+                              var22.method_982(GLLib.field_1, var5, var17, var20, var19);
                            } else if((var4 = Math.max(var22.method_918(var5), var22.method_919(var5))) < var16) {
                               if(!var25) {
-                                 var22.method_980(class_1.field_1, var5, var17, var20, 0);
+                                 var22.method_980(GLLib.field_1, var5, var17, var20, 0);
                               } else {
-                                 var22.method_982(class_1.field_1, var5, var17, var20, 94);
+                                 var22.method_982(GLLib.field_1, var5, var17, var20, 94);
                               }
                            } else {
                               var0 = var16 * 100 / var4;
                               if(!var25) {
-                                 var22.method_982(class_1.field_1, var5, var17, var20, var0);
+                                 var22.method_982(GLLib.field_1, var5, var17, var20, var0);
                               } else {
-                                 var22.method_982(class_1.field_1, var5, var17, var20, var0 * 94 / 100);
+                                 var22.method_982(GLLib.field_1, var5, var17, var20, var0 * 94 / 100);
                               }
                            }
                         } else {
-                           var23.method_980(class_1.field_1, var6, var1[2], var1[3], 0);
+                           var23.method_980(GLLib.field_1, var6, var1[2], var1[3], 0);
                         }
                      }
                   }
@@ -11294,9 +11294,9 @@ public final class class_2 extends class_1 implements class_0 {
                }
 
                if(var10) {
-                  int var18 = class_1.height;
-                  var0 = class_1.width;
-                  class_1.method_41(class_1.field_1, 0, 0, var0, var18, true);
+                  int var18 = GLLib.height;
+                  var0 = GLLib.width;
+                  GLLib.method_41(GLLib.field_1, 0, 0, var0, var18, true);
                }
 
             }
@@ -11481,14 +11481,14 @@ public final class class_2 extends class_1 implements class_0 {
       if(field_125[var5] != null) {
          field_126[var5] = (byte)(field_126[var5] | 1);
          if(var3 != 100) {
-            class_1.method_92();
-            class_1.method_96(var3);
-            class_1.method_48(class_1.field_1, field_125[var5], class_1.height - var2 - method_537(var4, var5), var1, 20, false);
-            class_1.method_93();
+            GLLib.method_92();
+            GLLib.method_96(var3);
+            GLLib.method_48(GLLib.field_1, field_125[var5], GLLib.height - var2 - method_537(var4, var5), var1, 20, false);
+            GLLib.method_93();
             return;
          }
 
-         class_1.method_48(class_1.field_1, field_125[var5], class_1.height - var2 - method_537(var4, var5), var1, 20, false);
+         GLLib.method_48(GLLib.field_1, field_125[var5], GLLib.height - var2 - method_537(var4, var5), var1, 20, false);
       }
 
    }
@@ -11789,9 +11789,9 @@ public final class class_2 extends class_1 implements class_0 {
                   if(!method_681(var0)) {
                      method_564(56);
                      if(var0 > 0) {
-                        var1 = (var1 = class_1.method_74(381)) == null?"":var1;
-                        var3 = class_1.method_77((long)(var0 - method_669()), field_862, " ");
-                        field_696 = class_1.method_79(var1, "%d", var3);
+                        var1 = (var1 = GLLib.method_74(381)) == null?"":var1;
+                        var3 = GLLib.method_77((long)(var0 - method_669()), field_862, " ");
+                        field_696 = GLLib.method_79(var1, "%d", var3);
                         field_695 = 19;
                         field_774 = true;
                         field_909 = true;
@@ -12005,16 +12005,16 @@ public final class class_2 extends class_1 implements class_0 {
                         method_193(false);
                         field_695 = -1;
                         if(field_371 > 0) {
-                           var3 = (var3 = class_1.method_74(379)) == null?"":var3;
-                           var1 = class_1.method_77((long)(field_371 - method_668()), field_862, " ");
-                           field_696 = class_1.method_79(var3, "%d", var1);
+                           var3 = (var3 = GLLib.method_74(379)) == null?"":var3;
+                           var1 = GLLib.method_77((long)(field_371 - method_668()), field_862, " ");
+                           field_696 = GLLib.method_79(var3, "%d", var1);
                            field_695 = 18;
                            field_774 = false;
                            field_909 = true;
                         } else if(field_372 > 0) {
-                           var3 = (var3 = class_1.method_74(381)) == null?"":var3;
-                           var1 = class_1.method_77((long)(field_372 - method_669()), field_862, " ");
-                           field_696 = class_1.method_79(var3, "%d", var1);
+                           var3 = (var3 = GLLib.method_74(381)) == null?"":var3;
+                           var1 = GLLib.method_77((long)(field_372 - method_669()), field_862, " ");
+                           field_696 = GLLib.method_79(var3, "%d", var1);
                            field_695 = 19;
                            field_774 = true;
                            field_909 = true;
@@ -12036,16 +12036,16 @@ public final class class_2 extends class_1 implements class_0 {
                         method_193(false);
                         field_695 = -1;
                         if(field_371 > 0) {
-                           var3 = (var3 = class_1.method_74(379)) == null?"":var3;
-                           var1 = class_1.method_77((long)(field_371 - method_668()), field_862, " ");
-                           field_696 = class_1.method_79(var3, "%d", var1);
+                           var3 = (var3 = GLLib.method_74(379)) == null?"":var3;
+                           var1 = GLLib.method_77((long)(field_371 - method_668()), field_862, " ");
+                           field_696 = GLLib.method_79(var3, "%d", var1);
                            field_695 = 18;
                            field_774 = false;
                            field_909 = true;
                         } else if(field_372 > 0) {
-                           var3 = (var1 = class_1.method_74(381)) == null?"":var1;
-                           var1 = class_1.method_77((long)(field_372 - method_669()), field_862, " ");
-                           field_696 = class_1.method_79(var3, "%d", var1);
+                           var3 = (var1 = GLLib.method_74(381)) == null?"":var1;
+                           var1 = GLLib.method_77((long)(field_372 - method_669()), field_862, " ");
+                           field_696 = GLLib.method_79(var3, "%d", var1);
                            field_695 = 19;
                            field_774 = true;
                            field_909 = true;
@@ -12207,8 +12207,8 @@ public final class class_2 extends class_1 implements class_0 {
             if(field_183.field_1100 == 0 && var0 <= field_878[22]) {
                method_824(485, 486, 7, 0);
             } else {
-               String var10000 = (var1 = class_1.method_74(441)) == null?"":var1;
-               String var10001 = (var3 = class_1.method_74(442)) == null?"":var3;
+               String var10000 = (var1 = GLLib.method_74(441)) == null?"":var1;
+               String var10001 = (var3 = GLLib.method_74(442)) == null?"":var3;
                class_6 var4 = field_183;
                String var2 = var10001;
                var1 = var10000;
@@ -12220,7 +12220,7 @@ public final class class_2 extends class_1 implements class_0 {
                method_821(7, 0, 10);
                field_698 = var1;
                field_699 = var2;
-               field_709 = class_1.method_77((long)field_708.method_1089(), field_862, " ");
+               field_709 = GLLib.method_77((long)field_708.method_1089(), field_862, " ");
                method_543(4, 13, true);
                method_543(4, 15, true);
                method_543(4, 16, true);
@@ -13693,7 +13693,7 @@ public final class class_2 extends class_1 implements class_0 {
          for(; var2 <= var3; ++var2) {
             field_121[var1][var2][2] = (short)(field_122[var1][var2][2] + field_132[var0][8]);
             int var6 = field_121[var1][var2][2] - var4;
-            int var7 = class_1.method_18(field_132[var0][4] * field_132[var0][4] - var6 * var6);
+            int var7 = GLLib.method_18(field_132[var0][4] * field_132[var0][4] - var6 * var6);
             field_121[var1][var2][3] = (short)(var5 - var7);
             if(field_121[var1][var2][0] == 205 && field_121[var1][var2][18] == 1 && field_121[var1][var2][5] > -1) {
                short var8 = field_121[var1][var2][5];
@@ -14053,7 +14053,7 @@ public final class class_2 extends class_1 implements class_0 {
                   int[] var6 = field_172;
 
                   for(int var1 = field_172.length - 1; var1 >= 0; --var1) {
-                     var7 = class_1.method_16(0, var6.length);
+                     var7 = GLLib.method_16(0, var6.length);
                      int var3 = var6[var7];
                      var6[var7] = var6[var1];
                      var6[var1] = var3;
@@ -14093,8 +14093,8 @@ public final class class_2 extends class_1 implements class_0 {
                   }
 
                   if(var2 > 10000L && var2 < 20000L) {
-                     var7 = class_1.method_16(63, 66);
-                     if(class_1.method_16(0, 100) < 80 && var0 - field_179 > 5000L) {
+                     var7 = GLLib.method_16(63, 66);
+                     if(GLLib.method_16(0, 100) < 80 && var0 - field_179 > 5000L) {
                         if(field_180 != -1 && field_180 == var7) {
                            ++var7;
                            if(var7 > 65) {
@@ -14159,10 +14159,10 @@ public final class class_2 extends class_1 implements class_0 {
    // $FF: renamed from: r () boolean
    private static boolean method_573() {
       boolean var0 = false;
-      if(class_1.method_107()) {
+      if(GLLib.method_107()) {
          if(field_183 == field_868) {
-            field_187 = class_1.field_82;
-            field_188 = class_1.field_83;
+            field_187 = GLLib.field_82;
+            field_188 = GLLib.field_83;
             if(field_183 != null) {
                field_185 = true;
                field_191 = true;
@@ -14176,15 +14176,15 @@ public final class class_2 extends class_1 implements class_0 {
                method_194();
             }
          }
-      } else if(class_1.method_108()) {
+      } else if(GLLib.method_108()) {
          if(field_185) {
             field_867.method_1033();
             var0 = true;
             method_634();
             method_540(1);
          }
-      } else if(class_1.method_106()) {
-         if(class_1.field_82 >= field_187 - 20 && class_1.field_82 <= field_187 + 20 && class_1.field_83 >= field_188 - 20 && class_1.field_83 <= field_188 + 20) {
+      } else if(GLLib.method_106()) {
+         if(GLLib.field_82 >= field_187 - 20 && GLLib.field_82 <= field_187 + 20 && GLLib.field_83 >= field_188 - 20 && GLLib.field_83 <= field_188 + 20) {
             label188: {
                if(field_185 && field_183 != null && field_191) {
                   field_191 = false;
@@ -14208,34 +14208,34 @@ public final class class_2 extends class_1 implements class_0 {
                            String var3;
                            if(field_183.field_1100 == 0) {
                               if(field_371 > 0) {
-                                 var3 = (var3 = class_1.method_74(379)) == null?"":var3;
-                                 var2 = class_1.method_77((long)(field_371 - method_668()), field_862, " ");
-                                 field_696 = class_1.method_79(var3, "%d", var2);
+                                 var3 = (var3 = GLLib.method_74(379)) == null?"":var3;
+                                 var2 = GLLib.method_77((long)(field_371 - method_668()), field_862, " ");
+                                 field_696 = GLLib.method_79(var3, "%d", var2);
                                  field_695 = 18;
                                  field_774 = false;
                                  field_909 = true;
                                  method_131(34);
                               } else if(field_372 > 0) {
-                                 var3 = (var3 = class_1.method_74(381)) == null?"":var3;
-                                 var2 = class_1.method_77((long)(field_372 - method_669()), field_862, " ");
-                                 field_696 = class_1.method_79(var3, "%d", var2);
+                                 var3 = (var3 = GLLib.method_74(381)) == null?"":var3;
+                                 var2 = GLLib.method_77((long)(field_372 - method_669()), field_862, " ");
+                                 field_696 = GLLib.method_79(var3, "%d", var2);
                                  field_695 = 19;
                                  field_774 = true;
                                  field_909 = true;
                                  method_131(34);
                               }
                            } else if(field_198 > 0) {
-                              var3 = (var3 = class_1.method_74(379)) == null?"":var3;
-                              var2 = class_1.method_77((long)(field_198 - method_668()), field_862, " ");
-                              field_696 = class_1.method_79(var3, "%d", var2);
+                              var3 = (var3 = GLLib.method_74(379)) == null?"":var3;
+                              var2 = GLLib.method_77((long)(field_198 - method_668()), field_862, " ");
+                              field_696 = GLLib.method_79(var3, "%d", var2);
                               field_695 = 18;
                               field_774 = false;
                               field_909 = true;
                               method_131(34);
                            } else if(field_199 > 0) {
-                              var3 = (var3 = class_1.method_74(381)) == null?"":var3;
-                              var2 = class_1.method_77((long)(field_199 - method_669()), field_862, " ");
-                              field_696 = class_1.method_79(var3, "%d", var2);
+                              var3 = (var3 = GLLib.method_74(381)) == null?"":var3;
+                              var2 = GLLib.method_77((long)(field_199 - method_669()), field_862, " ");
+                              field_696 = GLLib.method_79(var3, "%d", var2);
                               field_695 = 19;
                               field_774 = true;
                               field_909 = true;
@@ -14297,8 +14297,8 @@ public final class class_2 extends class_1 implements class_0 {
       if(var0 && field_860 != 15 && field_860 != 51) {
          int[] var5 = new int[2];
          int[] var4;
-         (var4 = new int[2])[0] = class_1.field_82;
-         var4[1] = class_1.field_83;
+         (var4 = new int[2])[0] = GLLib.field_82;
+         var4[1] = GLLib.field_83;
          method_587(var4, var5);
          method_638(var5, var4);
          if(method_651(var4[0], var4[1]) < 0) {
@@ -14690,7 +14690,7 @@ public final class class_2 extends class_1 implements class_0 {
          field_205.method_1105(field_183.field_1091, field_183.field_1092);
          field_205.method_1121(field_858);
          field_205.method_1119();
-         class_1.method_97(false);
+         GLLib.method_97(false);
       }
 
    }
@@ -14758,7 +14758,7 @@ public final class class_2 extends class_1 implements class_0 {
          method_578();
          method_531(1);
          if(field_223) {
-            field_124[field_224].method_980(class_1.field_1, field_225, field_226, field_227, 0);
+            field_124[field_224].method_980(GLLib.field_1, field_225, field_226, field_227, 0);
          }
       }
 
@@ -14767,7 +14767,7 @@ public final class class_2 extends class_1 implements class_0 {
    // $FF: renamed from: fM () void
    private static void method_583() {
       if(field_760 == 0) {
-         if(class_1.method_117()) {
+         if(GLLib.method_117()) {
             field_760 = 1;
          } else {
             field_760 = 2;
@@ -14816,8 +14816,8 @@ public final class class_2 extends class_1 implements class_0 {
       }
 
       if(field_223) {
-         field_226 = class_1.field_82;
-         field_227 = class_1.field_83;
+         field_226 = GLLib.field_82;
+         field_227 = GLLib.field_83;
          if(field_224 == 30) {
             field_227 -= 50;
          }
@@ -14858,7 +14858,7 @@ public final class class_2 extends class_1 implements class_0 {
 
       method_592();
       if(field_205 != null) {
-         field_205.method_1120(class_1.field_15);
+         field_205.method_1120(GLLib.field_15);
          if(field_183 != null) {
             int[] var14 = new int[2];
             int[] var15 = new int[2];
@@ -14915,7 +14915,7 @@ public final class class_2 extends class_1 implements class_0 {
                method_815(false, -1);
             }
          } else if(field_687 == 2) {
-            if(field_121[1][87][2] > class_1.width) {
+            if(field_121[1][87][2] > GLLib.width) {
                method_816();
             }
 
@@ -14947,8 +14947,8 @@ public final class class_2 extends class_1 implements class_0 {
    private static class_6 method_584(int var0, int var1, boolean var2) {
       int[] var3 = new int[2];
       int[] var4;
-      (var4 = new int[2])[0] = class_1.width >> 1;
-      var4[1] = class_1.height >> 1;
+      (var4 = new int[2])[0] = GLLib.width >> 1;
+      var4[1] = GLLib.height >> 1;
       method_587(var4, var3);
       method_638(var3, var4);
       method_639(var4, var3);
@@ -14980,8 +14980,8 @@ public final class class_2 extends class_1 implements class_0 {
       class_6 var2 = null;
       int[] var3 = new int[2];
       int[] var4;
-      (var4 = new int[2])[0] = class_1.width >> 1;
-      var4[1] = class_1.height >> 1;
+      (var4 = new int[2])[0] = GLLib.width >> 1;
+      var4[1] = GLLib.height >> 1;
       method_587(var4, var3);
       method_638(var3, var4);
       method_639(var4, var3);
@@ -15162,7 +15162,7 @@ public final class class_2 extends class_1 implements class_0 {
    // $FF: renamed from: n (boolean) void
    private static void method_590(boolean var0) {
       if(method_544(1, 12)) {
-         method_532(class_1.method_77((long)method_668(), field_862, " "), 1, 13, 0, 0);
+         method_532(GLLib.method_77((long)method_668(), field_862, " "), 1, 13, 0, 0);
       }
 
       if(method_544(1, 21)) {
@@ -15170,7 +15170,7 @@ public final class class_2 extends class_1 implements class_0 {
             method_532("" + 0, 1, 23, 0, 0);
          } else {
             if(method_670() < 50) {
-               method_532(class_1.method_77((long)method_671(), field_862, " ") + " / " + class_1.method_77((long)method_689(), field_862, " "), 1, 22, 0, 0);
+               method_532(GLLib.method_77((long)method_671(), field_862, " ") + " / " + GLLib.method_77((long)method_689(), field_862, " "), 1, 22, 0, 0);
             }
 
             method_532("" + method_670(), 1, 23, 0, 0);
@@ -15178,12 +15178,12 @@ public final class class_2 extends class_1 implements class_0 {
       }
 
       if(method_544(1, 15)) {
-         method_532(class_1.method_77((long)method_669(), field_862, " "), 1, 16, 0, 0);
+         method_532(GLLib.method_77((long)method_669(), field_862, " "), 1, 16, 0, 0);
       }
 
       if(method_544(1, 87)) {
          String var2;
-         method_534((var2 = class_1.method_74(458)) == null?"":var2, 1, 88, 0, 0);
+         method_534((var2 = GLLib.method_74(458)) == null?"":var2, 1, 88, 0, 0);
       } else {
          if(method_544(1, 78)) {
             for(int var1 = 0; var1 < 4; ++var1) {
@@ -15203,19 +15203,19 @@ public final class class_2 extends class_1 implements class_0 {
       if(field_220) {
          String var0;
          if(method_544(1, 47)) {
-            method_532((var0 = class_1.method_74(152)) == null?"":var0, 1, 51, 0, 0);
+            method_532((var0 = GLLib.method_74(152)) == null?"":var0, 1, 51, 0, 0);
          }
 
          if(method_544(1, 48)) {
-            method_532((var0 = class_1.method_74(152)) == null?"":var0, 1, 52, 0, 0);
+            method_532((var0 = GLLib.method_74(152)) == null?"":var0, 1, 52, 0, 0);
          }
 
          if(method_544(1, 49)) {
-            method_532((var0 = class_1.method_74(152)) == null?"":var0, 1, 53, 0, 0);
+            method_532((var0 = GLLib.method_74(152)) == null?"":var0, 1, 53, 0, 0);
          }
 
          if(method_544(1, 50)) {
-            method_532((var0 = class_1.method_74(152)) == null?"":var0, 1, 54, 0, 0);
+            method_532((var0 = GLLib.method_74(152)) == null?"":var0, 1, 54, 0, 0);
          }
       }
 
@@ -15232,7 +15232,7 @@ public final class class_2 extends class_1 implements class_0 {
          }
 
          var2 = (int)((field_215 - var0) / 5L % 255L);
-         var2 = 10 + class_1.method_17(class_1.field_39 - var2) / 20;
+         var2 = 10 + GLLib.method_17(GLLib.field_39 - var2) / 20;
          field_217 = (short)((field_216 = (short)(field_121[1][44][2] + 80 + var2)) + 15);
          field_121[1][45][2] = field_216;
          field_121[1][46][2] = field_217;
@@ -15240,7 +15240,7 @@ public final class class_2 extends class_1 implements class_0 {
 
       if(field_220) {
          var2 = (int)(System.currentTimeMillis() / 5L % 255L);
-         var2 = 10 + class_1.method_17(class_1.field_39 - var2) / 20;
+         var2 = 10 + GLLib.method_17(GLLib.field_39 - var2) / 20;
          field_217 = (short)((field_216 = (short)(field_121[1][44][2] + 80 + var2)) + 15);
          field_121[1][47][2] = field_216;
          field_121[1][48][2] = field_216;
@@ -15282,9 +15282,9 @@ public final class class_2 extends class_1 implements class_0 {
             field_847 = var1;
             String var4;
             if(var2 == 1) {
-               field_214 = (var4 = class_1.method_74(152)) == null?"":var4;
+               field_214 = (var4 = GLLib.method_74(152)) == null?"":var4;
             } else if(var2 == 2) {
-               field_214 = (var4 = class_1.method_74(153)) == null?"":var4;
+               field_214 = (var4 = GLLib.method_74(153)) == null?"":var4;
             } else {
                field_214 = "%Task%";
             }
@@ -15382,7 +15382,7 @@ public final class class_2 extends class_1 implements class_0 {
       case 162:
          if(!field_243) {
             field_243 = true;
-            method_822((var1 = class_1.method_74(19)) == null?"":var1, 15, 0);
+            method_822((var1 = GLLib.method_74(19)) == null?"":var1, 15, 0);
          }
 
          if(field_244) {
@@ -15433,7 +15433,7 @@ public final class class_2 extends class_1 implements class_0 {
       case 167:
          if(!field_243) {
             field_243 = true;
-            method_822((var1 = class_1.method_74(25)) == null?"":var1, 7, 0);
+            method_822((var1 = GLLib.method_74(25)) == null?"":var1, 7, 0);
             var0 = new class_6[1];
             class_6.method_1011(0, 50, 15, var0, 1);
             if(var0[0] != null) {
@@ -15668,7 +15668,7 @@ public final class class_2 extends class_1 implements class_0 {
             field_243 = true;
             field_244 = false;
             method_599(field_860);
-            method_822((var4 = class_1.method_74(4)) == null?"":var4, 7, 0);
+            method_822((var4 = GLLib.method_74(4)) == null?"":var4, 7, 0);
          }
 
          if(field_244) {
@@ -15731,7 +15731,7 @@ public final class class_2 extends class_1 implements class_0 {
       case 6:
          if(!field_243) {
             field_243 = true;
-            method_822((var4 = class_1.method_74(6)) == null?"":var4, 7, 0);
+            method_822((var4 = GLLib.method_74(6)) == null?"":var4, 7, 0);
          }
 
          if(field_244) {
@@ -15917,7 +15917,7 @@ public final class class_2 extends class_1 implements class_0 {
       case 16:
          if(!field_243) {
             field_243 = true;
-            method_822((var4 = class_1.method_74(5)) == null?"":var4, 7, 0);
+            method_822((var4 = GLLib.method_74(5)) == null?"":var4, 7, 0);
          }
 
          if(field_244) {
@@ -15974,7 +15974,7 @@ public final class class_2 extends class_1 implements class_0 {
       case 19:
          if(!field_243) {
             field_243 = true;
-            method_822((var4 = class_1.method_74(16)) == null?"":var4, 7, 0);
+            method_822((var4 = GLLib.method_74(16)) == null?"":var4, 7, 0);
          }
 
          if(field_244) {
@@ -15986,7 +15986,7 @@ public final class class_2 extends class_1 implements class_0 {
       case 20:
          if(!field_243) {
             field_243 = true;
-            method_822((var4 = class_1.method_74(20)) == null?"":var4, 7, 0);
+            method_822((var4 = GLLib.method_74(20)) == null?"":var4, 7, 0);
          }
 
          if(field_244) {
@@ -16015,7 +16015,7 @@ public final class class_2 extends class_1 implements class_0 {
       case 22:
          if(!field_243) {
             field_243 = true;
-            method_822((var4 = class_1.method_74(22)) == null?"":var4, 7, 0);
+            method_822((var4 = GLLib.method_74(22)) == null?"":var4, 7, 0);
          }
 
          if(method_546(1, 44)) {
@@ -16218,7 +16218,7 @@ public final class class_2 extends class_1 implements class_0 {
          if(!field_243) {
             field_243 = true;
             method_605();
-            method_822((var4 = class_1.method_74(23)) == null?"":var4, 7, 0);
+            method_822((var4 = GLLib.method_74(23)) == null?"":var4, 7, 0);
          }
 
          if(field_244) {
@@ -16288,7 +16288,7 @@ public final class class_2 extends class_1 implements class_0 {
                var0[var2].method_1094();
             }
 
-            method_822((var4 = class_1.method_74(12)) == null?"":var4, 7, 0);
+            method_822((var4 = GLLib.method_74(12)) == null?"":var4, 7, 0);
          }
 
          if(field_244) {
@@ -16338,7 +16338,7 @@ public final class class_2 extends class_1 implements class_0 {
             field_243 = true;
             method_599(field_860);
             field_382 &= -2;
-            method_822((var4 = class_1.method_74(13)) == null?"":var4, 7, 0);
+            method_822((var4 = GLLib.method_74(13)) == null?"":var4, 7, 0);
          }
 
          if(field_244) {
@@ -16446,7 +16446,7 @@ public final class class_2 extends class_1 implements class_0 {
          if(!field_243) {
             field_243 = true;
             method_599(field_860);
-            method_822((var4 = class_1.method_74(15)) == null?"":var4, 7, 0);
+            method_822((var4 = GLLib.method_74(15)) == null?"":var4, 7, 0);
          }
 
          if(field_244) {
@@ -16539,7 +16539,7 @@ public final class class_2 extends class_1 implements class_0 {
          if(!field_243) {
             field_244 = false;
             field_243 = true;
-            method_822((var4 = class_1.method_74(11)) == null?"":var4, 7, 0);
+            method_822((var4 = GLLib.method_74(11)) == null?"":var4, 7, 0);
          }
 
          if(field_244) {
@@ -16626,7 +16626,7 @@ public final class class_2 extends class_1 implements class_0 {
       case 53:
          if(!field_243) {
             field_243 = true;
-            method_822((var4 = class_1.method_74(8)) == null?"":var4, 7, 0);
+            method_822((var4 = GLLib.method_74(8)) == null?"":var4, 7, 0);
          }
 
          if(field_244) {
@@ -17249,9 +17249,9 @@ public final class class_2 extends class_1 implements class_0 {
          int var0 = field_287[field_268].field_1091;
          int var1 = field_287[field_268].field_1092;
          if(field_858 == 100) {
-            field_864[143].method_980(class_1.field_1, 0, var0, var1, 0);
+            field_864[143].method_980(GLLib.field_1, 0, var0, var1, 0);
          } else {
-            field_864[143].method_982(class_1.field_1, 0, var0, var1, field_858);
+            field_864[143].method_982(GLLib.field_1, 0, var0, var1, field_858);
          }
       }
 
@@ -17450,7 +17450,7 @@ public final class class_2 extends class_1 implements class_0 {
                   field_295[var18][var9 * 3 + 2] = 0;
                }
 
-               var9 = class_1.method_16(0, 100);
+               var9 = GLLib.method_16(0, 100);
                var10 = 0;
 
                for(var11 = 0; var11 < 2 && var10 < var8.field_1133[method_670() - 1][11]; ++var11) {
@@ -17476,8 +17476,8 @@ public final class class_2 extends class_1 implements class_0 {
                      var17 = 0;
                      if(var15 > 0) {
                         field_295[var10][var11 * 3] = 1;
-                        field_295[var10][var11 * 3 + 1] = var16[class_1.method_16(0, var15)];
-                        field_295[var10][var11 * 3 + 2] = class_1.method_16(1, var13 / var14.field_1133[field_295[var10][var11 * 3 + 1]][5] < 5?var13 / var14.field_1133[field_295[var10][var11 * 3 + 1]][5]:5);
+                        field_295[var10][var11 * 3 + 1] = var16[GLLib.method_16(0, var15)];
+                        field_295[var10][var11 * 3 + 2] = GLLib.method_16(1, var13 / var14.field_1133[field_295[var10][var11 * 3 + 1]][5] < 5?var13 / var14.field_1133[field_295[var10][var11 * 3 + 1]][5]:5);
                         var17 = field_295[var10][var11 * 3 + 2] * var14.field_1133[field_295[var10][var11 * 3 + 1]][5];
                      }
 
@@ -17499,9 +17499,9 @@ public final class class_2 extends class_1 implements class_0 {
                      var17 = 0;
                      if(var15 > 0) {
                         field_295[var10][var11 * 3] = 2;
-                        field_295[var10][var11 * 3 + 1] = var16[class_1.method_16(0, var15)];
+                        field_295[var10][var11 * 3 + 1] = var16[GLLib.method_16(0, var15)];
                         var15 = method_595(var14.field_1133[field_295[var10][var11 * 3 + 1]][6], var14.field_1133[field_295[var10][var11 * 3 + 1]][7]);
-                        field_295[var10][var11 * 3 + 2] = class_1.method_16(1, var13 / var15 < 5?var13 / var15:5);
+                        field_295[var10][var11 * 3 + 2] = GLLib.method_16(1, var13 / var15 < 5?var13 / var15:5);
                         var17 = field_295[var10][var11 * 3 + 2] * var15;
                      }
 
@@ -17524,8 +17524,8 @@ public final class class_2 extends class_1 implements class_0 {
                      var17 = 0;
                      if(var15 > 0) {
                         field_295[var10][var11 * 3] = 3;
-                        var15 = var16[class_1.method_16(0, var15)];
-                        field_295[var10][var11 * 3 + 1] = (var15 << 2) + class_1.method_16(0, 3);
+                        var15 = var16[GLLib.method_16(0, var15)];
+                        field_295[var10][var11 * 3 + 1] = (var15 << 2) + GLLib.method_16(0, 3);
                         var13 = var14.field_1133[var15][5];
                         field_295[var10][var11 * 3 + 2] = 1;
                         var17 = field_295[var10][var11 * 3 + 2] * var13;
@@ -17538,7 +17538,7 @@ public final class class_2 extends class_1 implements class_0 {
          }
 
          if(field_296[var6][5] > 0L && var0 - field_296[var6][5] >= 86400L) {
-            if(var2.field_1133[var6][10] <= field_294[var6][1] && class_1.method_16(0, 100) < var2.field_1133[var6][9]) {
+            if(var2.field_1133[var6][10] <= field_294[var6][1] && GLLib.method_16(0, 100) < var2.field_1133[var6][9]) {
                for(var10 = var3.field_1132 - 1; var10 > 0 && var3.field_1133[var10][12] > field_294[var6][1]; --var10) {
                   ;
                }
@@ -17559,7 +17559,7 @@ public final class class_2 extends class_1 implements class_0 {
                }
 
                if(var11 > 0) {
-                  field_294[var6][3] = var23[class_1.method_16(0, var11)];
+                  field_294[var6][3] = var23[GLLib.method_16(0, var11)];
                   var10000 = field_889[0] + var6;
                   byte var24 = 31;
                   byte var22 = 1;
@@ -17658,11 +17658,11 @@ public final class class_2 extends class_1 implements class_0 {
             field_298[var0][1] = 6;
             field_299[var0][0] = method_712(200);
             field_299[var0][1] = method_712(10);
-            field_299[var0][2] = class_1.method_16(409, 438);
+            field_299[var0][2] = GLLib.method_16(409, 438);
             return;
          }
 
-         int var2 = class_1.method_16(var1.field_1133[method_670() - 1][1], var1.field_1133[method_670() - 1][2]);
+         int var2 = GLLib.method_16(var1.field_1133[method_670() - 1][1], var1.field_1133[method_670() - 1][2]);
          int var3 = 0;
 
          for(int var4 = 0; var4 < 3 && var3 < var2; ++var4) {
@@ -17685,9 +17685,9 @@ public final class class_2 extends class_1 implements class_0 {
 
             var11 = 0;
             if(var9 > 0) {
-               field_298[var0][var4 << 1] = var10[class_1.method_16(0, var9)];
+               field_298[var0][var4 << 1] = var10[GLLib.method_16(0, var9)];
                var6 /= var8.field_1133[field_298[var0][var4 << 1]][5];
-               field_298[var0][(var4 << 1) + 1] = class_1.method_16(1, var6 < var7?var6:var7);
+               field_298[var0][(var4 << 1) + 1] = GLLib.method_16(1, var6 < var7?var6:var7);
                var11 = field_298[var0][(var4 << 1) + 1] * var8.field_1133[field_298[var0][var4 << 1]][5];
             }
 
@@ -17696,7 +17696,7 @@ public final class class_2 extends class_1 implements class_0 {
 
          field_299[var0][0] = method_712(var3);
          field_299[var0][1] = method_712(var1.field_1133[method_670() - 1][5]);
-         field_299[var0][2] = class_1.method_16(409, 438);
+         field_299[var0][2] = GLLib.method_16(409, 438);
       }
 
    }
@@ -17803,8 +17803,8 @@ public final class class_2 extends class_1 implements class_0 {
          String var2;
          if(field_302[var1] == -1) {
             field_302[var1] = var0.field_1133[var1][1];
-            field_303[var1] = (var2 = class_1.method_74(var0.field_1133[var1][3])) == null?"":var2;
-            field_304[var1] = (var2 = class_1.method_74(var0.field_1133[var1][6])) == null?"":var2;
+            field_303[var1] = (var2 = GLLib.method_74(var0.field_1133[var1][3])) == null?"":var2;
+            field_304[var1] = (var2 = GLLib.method_74(var0.field_1133[var1][6])) == null?"":var2;
             field_305[var1] = var0.field_1133[var1][4];
             field_306[var1] = var0.field_1133[var1][5];
             field_307[var1] = var0.field_1133[var1][7];
@@ -17817,8 +17817,8 @@ public final class class_2 extends class_1 implements class_0 {
             field_314[var1] = var0.field_1133[var1][12];
             field_315[var1] = var0.field_1133[var1][13];
          } else if(field_302[var1] == var0.field_1133[var1][1]) {
-            field_303[var1] = (var2 = class_1.method_74(var0.field_1133[var1][3])) == null?"":var2;
-            field_304[var1] = (var2 = class_1.method_74(var0.field_1133[var1][6])) == null?"":var2;
+            field_303[var1] = (var2 = GLLib.method_74(var0.field_1133[var1][3])) == null?"":var2;
+            field_304[var1] = (var2 = GLLib.method_74(var0.field_1133[var1][6])) == null?"":var2;
             field_305[var1] = var0.field_1133[var1][4];
             field_306[var1] = var0.field_1133[var1][5];
             field_307[var1] = var0.field_1133[var1][7];
@@ -18059,16 +18059,16 @@ public final class class_2 extends class_1 implements class_0 {
       }
 
       super.pointerPressed(var1, var2);
-      field_323 = class_1.field_82;
-      field_324 = class_1.field_83;
-      field_327 = class_1.field_82;
-      field_328 = class_1.field_83;
-      field_325 = class_1.field_82;
-      field_326 = class_1.field_83;
-      field_332 = class_1.field_82;
-      field_333 = class_1.field_83;
-      field_329 = class_1.field_82;
-      field_330 = class_1.field_83;
+      field_323 = GLLib.field_82;
+      field_324 = GLLib.field_83;
+      field_327 = GLLib.field_82;
+      field_328 = GLLib.field_83;
+      field_325 = GLLib.field_82;
+      field_326 = GLLib.field_83;
+      field_332 = GLLib.field_82;
+      field_333 = GLLib.field_83;
+      field_329 = GLLib.field_82;
+      field_330 = GLLib.field_83;
       field_331 = 0;
       field_322 = 0;
    }
@@ -18080,26 +18080,26 @@ public final class class_2 extends class_1 implements class_0 {
 
       field_325 = var2;
       field_326 = 480 - var1;
-      int var3 = class_1.field_82;
-      int var4 = class_1.field_83;
+      int var3 = GLLib.field_82;
+      int var4 = GLLib.field_83;
       super.pointerDragged(var1, var2);
-      if((class_1.field_82 - field_329 < 0?-(class_1.field_82 - field_329):class_1.field_82 - field_329) < (var3 - field_329 < 0?-(var3 - field_329):var3 - field_329)) {
+      if((GLLib.field_82 - field_329 < 0?-(GLLib.field_82 - field_329):GLLib.field_82 - field_329) < (var3 - field_329 < 0?-(var3 - field_329):var3 - field_329)) {
          field_329 = var3;
          field_331 = 0;
       }
 
-      if((class_1.field_83 - field_330 < 0?-(class_1.field_83 - field_330):class_1.field_83 - field_330) < (var4 - field_330 < 0?-(var4 - field_330):var4 - field_330)) {
+      if((GLLib.field_83 - field_330 < 0?-(GLLib.field_83 - field_330):GLLib.field_83 - field_330) < (var4 - field_330 < 0?-(var4 - field_330):var4 - field_330)) {
          field_330 = var4;
          field_331 = 0;
       }
 
-      field_322 += class_1.field_15;
-      field_331 += class_1.field_15;
+      field_322 += GLLib.field_15;
+      field_331 += GLLib.field_15;
    }
 
    // $FF: renamed from: b () int
    static int method_632() {
-      return (class_1.field_82 - field_332 < 0?-(class_1.field_82 - field_332):class_1.field_82 - field_332) + (class_1.field_83 - field_333 < 0?-(class_1.field_83 - field_333):class_1.field_83 - field_333);
+      return (GLLib.field_82 - field_332 < 0?-(GLLib.field_82 - field_332):GLLib.field_82 - field_332) + (GLLib.field_83 - field_333 < 0?-(GLLib.field_83 - field_333):GLLib.field_83 - field_333);
    }
 
    // $FF: renamed from: a (int, int, int, int, int, int) boolean
@@ -18367,8 +18367,8 @@ public final class class_2 extends class_1 implements class_0 {
    private static boolean method_649(class_6 var0, int[] var1) {
       int[] var2 = new int[2];
       int[] var3 = new int[2];
-      var2[0] = class_1.width >> 1;
-      var2[1] = class_1.height >> 1;
+      var2[0] = GLLib.width >> 1;
+      var2[1] = GLLib.height >> 1;
       method_587(var2, var3);
       method_638(var3, var2);
       method_639(var2, var3);
@@ -19068,8 +19068,8 @@ public final class class_2 extends class_1 implements class_0 {
             short var7 = field_370[method_670() - 1];
             int[] var8 = new int[2];
             int[] var4;
-            (var4 = new int[2])[0] = class_1.width >> 1;
-            var4[1] = class_1.height >> 1;
+            (var4 = new int[2])[0] = GLLib.width >> 1;
+            var4[1] = GLLib.height >> 1;
             method_587(var4, var8);
             var4 = new int[]{0, 0, 14};
             if(var6 > 0) {
@@ -19309,8 +19309,8 @@ public final class class_2 extends class_1 implements class_0 {
                         field_349 = true;
                         method_186(false, 1, field_194);
                         if(method_659(5) < method_662()) {
-                           var8 = class_1.method_79((var8 = class_1.method_74(476)) == null?"":var8, "%slots", "" + class_1.method_77((long)var0, field_862, " "));
-                           method_829((var3 = class_1.method_74(475)) == null?"":var3, var8, 7, 0);
+                           var8 = GLLib.method_79((var8 = GLLib.method_74(476)) == null?"":var8, "%slots", "" + GLLib.method_77((long)var0, field_862, " "));
+                           method_829((var3 = GLLib.method_74(475)) == null?"":var3, var8, 7, 0);
                         } else {
                            method_828(471, 477);
                         }
@@ -19324,8 +19324,8 @@ public final class class_2 extends class_1 implements class_0 {
                         field_349 = true;
                         method_186(false, 1, field_194);
                         if(method_659(5) < method_662()) {
-                           var8 = class_1.method_79((var8 = class_1.method_74(476)) == null?"":var8, "%slots", "" + class_1.method_77((long)var0, field_862, " "));
-                           method_829((var3 = class_1.method_74(475)) == null?"":var3, var8, 7, 0);
+                           var8 = GLLib.method_79((var8 = GLLib.method_74(476)) == null?"":var8, "%slots", "" + GLLib.method_77((long)var0, field_862, " "));
+                           method_829((var3 = GLLib.method_74(475)) == null?"":var3, var8, 7, 0);
                         } else {
                            method_828(471, 477);
                         }
@@ -19372,8 +19372,8 @@ public final class class_2 extends class_1 implements class_0 {
 
                   if((field_881 != 0 || method_659(5) + var0 + var1 > method_662()) && field_881 == 0) {
                      if(method_659(5) < method_662()) {
-                        String var2 = class_1.method_79((var2 = class_1.method_74(476)) == null?"":var2, "%slots", "" + class_1.method_77((long)(var0 + var1), field_862, " "));
-                        method_829((var3 = class_1.method_74(475)) == null?"":var3, var2, 7, 0);
+                        String var2 = GLLib.method_79((var2 = GLLib.method_74(476)) == null?"":var2, "%slots", "" + GLLib.method_77((long)(var0 + var1), field_862, " "));
+                        method_829((var3 = GLLib.method_74(475)) == null?"":var3, var2, 7, 0);
                      } else {
                         method_828(471, 477);
                      }
@@ -19551,7 +19551,7 @@ public final class class_2 extends class_1 implements class_0 {
             break;
          case 110:
             String var4;
-            method_822((var4 = class_1.method_74(field_388[field_383][var0 * 6])) == null?"":var4, field_388[field_383][var0 * 6 + 1], field_388[field_383][var0 * 6 + 2]);
+            method_822((var4 = GLLib.method_74(field_388[field_383][var0 * 6])) == null?"":var4, field_388[field_383][var0 * 6 + 1], field_388[field_383][var0 * 6 + 2]);
             break;
          case 111:
             method_709(class_6.method_1009(0, field_388[field_383][var0 * 6]), field_388[field_383][var0 * 6 + 1], field_388[field_383][var0 * 6 + 2]);
@@ -19652,7 +19652,7 @@ public final class class_2 extends class_1 implements class_0 {
                   ++var0;
                   break;
                case 12:
-                  if(field_867.field_1087 + (class_1.width >> 1) == field_867.field_1102 && field_867.field_1088 + (class_1.height >> 1) == field_867.field_1103) {
+                  if(field_867.field_1087 + (GLLib.width >> 1) == field_867.field_1102 && field_867.field_1088 + (GLLib.height >> 1) == field_867.field_1103) {
                      ++var0;
                   }
                   break;
@@ -19667,7 +19667,7 @@ public final class class_2 extends class_1 implements class_0 {
                   class_6.method_1011(0, field_388[field_383][var1 * 6], field_388[field_383][var1 * 6 + 1], var3, 1);
                   switch(var3[0].field_1086) {
                   case 13:
-                     if(var3[0].field_1087 + (class_1.width >> 1) == var3[0].field_1102 && var3[0].field_1088 + (class_1.height >> 1) == var3[0].field_1103) {
+                     if(var3[0].field_1087 + (GLLib.width >> 1) == var3[0].field_1102 && var3[0].field_1088 + (GLLib.height >> 1) == var3[0].field_1103) {
                         ++var0;
                      }
                      continue;
@@ -19744,19 +19744,19 @@ public final class class_2 extends class_1 implements class_0 {
    // $FF: renamed from: q (boolean) void
    private static void method_716(boolean var0) {
       cResource.resources = new cResource[34];
-      class_1.method_21("/9");
+      GLLib.method_21("/9");
 
       int var1;
       for(var1 = 0; var1 < 34; ++var1) {
          cResource[] var10000 = cResource.resources;
          cResource var10002 = new cResource();
          var10000[var1] = var10002;
-         byte[] var2 = class_1.method_27(var1);
+         byte[] var2 = GLLib.method_27(var1);
          (new StringBuffer()).append("Open File ").append(var1);
          byte var3 = 0;
-         cResource.resources[var1].field_1132 = class_1.method_59(var2, 0);
+         cResource.resources[var1].field_1132 = GLLib.method_59(var2, 0);
          int var11 = var3 + 4;
-         cResource.resources[var1].field_1131 = class_1.method_59(var2, 4);
+         cResource.resources[var1].field_1131 = GLLib.method_59(var2, 4);
          var11 += 4;
          if(cResource.resources[var1].field_1132 > 0 && cResource.resources[var1].field_1131 > 0) {
             byte[] var4 = new byte[cResource.resources[var1].field_1131];
@@ -19776,12 +19776,12 @@ public final class class_2 extends class_1 implements class_0 {
                      cResource.resources[var1].field_1133[var5][var6] = var2[var11];
                      break;
                   case 2:
-                     cResource.resources[var1].field_1133[var5][var6] = class_1.method_58(var2, var11);
+                     cResource.resources[var1].field_1133[var5][var6] = GLLib.method_58(var2, var11);
                   case 3:
                   default:
                      break;
                   case 4:
-                     cResource.resources[var1].field_1133[var5][var6] = class_1.method_59(var2, var11);
+                     cResource.resources[var1].field_1133[var5][var6] = GLLib.method_59(var2, var11);
                   }
 
                   var11 += var4[var6];
@@ -19841,7 +19841,7 @@ public final class class_2 extends class_1 implements class_0 {
          }
       }
 
-      class_1.method_23();
+      GLLib.method_23();
       field_588 = 0;
       field_206 = 0;
       field_207 = null;
@@ -19919,7 +19919,7 @@ public final class class_2 extends class_1 implements class_0 {
          field_879[var1] = var10.field_1133[var1][2];
       }
 
-      class_1.field_61 = "UTF-8";
+      GLLib.field_61 = "UTF-8";
       field_860 = 0;
       field_858 = 100;
       field_880 = true;
@@ -20084,7 +20084,7 @@ public final class class_2 extends class_1 implements class_0 {
          field_416 = null;
          field_417 = null;
          field_418 = null;
-         var1 = (var1 = class_1.method_74(121)) == null?"":var1;
+         var1 = (var1 = GLLib.method_74(121)) == null?"":var1;
          field_123[2][1] = var1;
       }
 
@@ -20135,9 +20135,9 @@ public final class class_2 extends class_1 implements class_0 {
 
       int var6;
       if(var0 == 2) {
-         if((var6 = class_1.method_14()) == 19 || var6 == 11) {
+         if((var6 = GLLib.method_14()) == 19 || var6 == 11) {
             if(field_860 > 0) {
-               method_900("Show_Toast_" + ((var1 = class_1.method_74(498)) == null?"":var1));
+               method_900("Show_Toast_" + ((var1 = GLLib.method_74(498)) == null?"":var1));
             } else {
                method_196();
             }
@@ -20158,8 +20158,8 @@ public final class class_2 extends class_1 implements class_0 {
 
       if(var0 == 3) {
          method_531(2);
-         method_532(class_1.method_77((long)method_668(), field_862, " "), 2, 5, 0, 0);
-         method_532(class_1.method_77((long)method_669(), field_862, " "), 2, 9, 0, 0);
+         method_532(GLLib.method_77((long)method_668(), field_862, " "), 2, 5, 0, 0);
+         method_532(GLLib.method_77((long)method_669(), field_862, " "), 2, 9, 0, 0);
          int[] var7 = new int[4];
          field_124[field_121[2][26][5]].method_938(field_121[2][26][6], 0, var7, 0);
          int var10000 = field_121[2][26][2] + var7[0];
@@ -20169,30 +20169,30 @@ public final class class_2 extends class_1 implements class_0 {
          int var2 = var10002;
          var6 = var10001;
          var0 = var10000;
-         class_1.method_41(class_1.field_1, var0, var6, var2, var3, true);
+         GLLib.method_41(GLLib.field_1, var0, var6, var2, var3, true);
          var0 = field_405 - field_420 >= 6?6:field_405 - field_420;
 
          for(var6 = 0; var6 < var0; ++var6) {
             String var8;
-            method_534((var8 = class_1.method_74(field_406[var6 + field_420])) == null?"":var8, 2, 29 + var6 * 14, 0, 0);
+            method_534((var8 = GLLib.method_74(field_406[var6 + field_420])) == null?"":var8, 2, 29 + var6 * 14, 0, 0);
             if(field_421 != 0 || field_422 != -1 || field_423 == 4 && field_421 == 0 && field_422 == -1) {
                if(method_544(2, 33 + var6 * 14)) {
                   var2 = var6 + field_420;
                   if(field_411[var2] > 0) {
-                     method_532(class_1.method_77((long)field_411[var2], field_862, " "), 2, 32 + var6 * 14, 0, 0);
+                     method_532(GLLib.method_77((long)field_411[var2], field_862, " "), 2, 32 + var6 * 14, 0, 0);
                   } else if(field_412[var2] > 0) {
-                     method_532(class_1.method_77((long)field_412[var2], field_862, " "), 2, 32 + var6 * 14, 0, 0);
+                     method_532(GLLib.method_77((long)field_412[var2], field_862, " "), 2, 32 + var6 * 14, 0, 0);
                   }
                }
 
                if(method_544(2, 40 + var6 * 14)) {
-                  method_532(((var8 = class_1.method_74(447)) == null?"":var8) + Integer.toString(field_417[var6 + field_420]), 2, 32 + var6 * 14, 0, 0);
+                  method_532(((var8 = GLLib.method_74(447)) == null?"":var8) + Integer.toString(field_417[var6 + field_420]), 2, 32 + var6 * 14, 0, 0);
                }
             }
          }
 
          if(field_419 >= 0 && field_419 < 6) {
-            method_532(class_1.method_77((long)field_410[field_419 + field_420], field_862, " "), 2, 39 + 14 * field_419, 0, 0);
+            method_532(GLLib.method_77((long)field_410[field_419 + field_420], field_862, " "), 2, 39 + 14 * field_419, 0, 0);
             var2 = (var0 = field_409[field_419 + field_420]) / 86400;
             var3 = (var6 = var0 % 86400) / 3600;
             int var4 = (var6 %= 3600) / 60;
@@ -20233,16 +20233,16 @@ public final class class_2 extends class_1 implements class_0 {
             }
 
             method_532(var5, 2, 37 + 14 * field_419, 0, 0);
-            method_532(class_1.method_77((long)field_408[field_419 + field_420], field_862, " "), 2, 35 + 14 * field_419, 0, 0);
+            method_532(GLLib.method_77((long)field_408[field_419 + field_420], field_862, " "), 2, 35 + 14 * field_419, 0, 0);
          }
 
          if(field_419 != 0 && field_421 == 2 && field_420 == 0) {
             method_532(Integer.toString(field_360) + "/" + method_695(), 2, 27, 0, 0);
          }
 
-         var6 = class_1.height;
-         var0 = class_1.width;
-         class_1.method_41(class_1.field_1, 0, 0, var0, var6, true);
+         var6 = GLLib.height;
+         var0 = GLLib.width;
+         GLLib.method_41(GLLib.field_1, 0, 0, var0, var6, true);
       }
 
       return false;
@@ -20696,18 +20696,18 @@ public final class class_2 extends class_1 implements class_0 {
          String var9;
          if(var1) {
             if(field_412[var0] > 0) {
-               var9 = (var9 = class_1.method_74(381)) == null?"":var9;
-               var2 = class_1.method_77((long)(field_412[var0] - method_669()), field_862, " ");
-               field_696 = class_1.method_79(var9, "%d", var2);
+               var9 = (var9 = GLLib.method_74(381)) == null?"":var9;
+               var2 = GLLib.method_77((long)(field_412[var0] - method_669()), field_862, " ");
+               field_696 = GLLib.method_79(var9, "%d", var2);
                field_695 = 19;
                field_909 = true;
                field_774 = true;
                method_131(34);
             }
          } else if(field_411[var0] > 0) {
-            var9 = (var9 = class_1.method_74(379)) == null?"":var9;
-            var2 = class_1.method_77((long)(field_411[var0] - method_668()), field_862, " ");
-            field_696 = class_1.method_79(var9, "%d", var2);
+            var9 = (var9 = GLLib.method_74(379)) == null?"":var9;
+            var2 = GLLib.method_77((long)(field_411[var0] - method_668()), field_862, " ");
+            field_696 = GLLib.method_79(var9, "%d", var2);
             field_695 = 18;
             field_909 = true;
             field_774 = false;
@@ -20792,7 +20792,7 @@ public final class class_2 extends class_1 implements class_0 {
          field_121[3][187][6] = 12;
          field_121[3][191][5] = 1138;
          field_121[3][191][6] = 12;
-         var1 = (var1 = class_1.method_74(460)) == null?"":var1;
+         var1 = (var1 = GLLib.method_74(460)) == null?"":var1;
          field_123[3][197] = var1;
       }
 
@@ -20822,9 +20822,9 @@ public final class class_2 extends class_1 implements class_0 {
       }
 
       if(var0 == 2) {
-         if(class_1.method_14() == 19) {
+         if(GLLib.method_14() == 19) {
             if(field_860 > 0) {
-               method_900("Show_Toast_" + ((var1 = class_1.method_74(498)) == null?"":var1));
+               method_900("Show_Toast_" + ((var1 = GLLib.method_74(498)) == null?"":var1));
             } else {
                method_211();
             }
@@ -20865,10 +20865,10 @@ public final class class_2 extends class_1 implements class_0 {
       if(var0 == 3) {
          method_531(3);
          String var4;
-         method_532((var4 = class_1.method_74(404)) == null?"":var4, 3, 8, 0, 0);
+         method_532((var4 = GLLib.method_74(404)) == null?"":var4, 3, 8, 0, 0);
          if(field_447) {
-            method_532((var4 = class_1.method_74(38)) == null?"":var4, 3, 200, 0, 0);
-            method_532((var4 = class_1.method_74(field_299[field_440][2])) == null?"":var4, 3, 176, 0, 0);
+            method_532((var4 = GLLib.method_74(38)) == null?"":var4, 3, 200, 0, 0);
+            method_532((var4 = GLLib.method_74(field_299[field_440][2])) == null?"":var4, 3, 176, 0, 0);
 
             for(var5 = 0; var5 < 3; ++var5) {
                if(field_298[field_440] != null && field_298[field_440][var5 << 1] > -1) {
@@ -20876,10 +20876,10 @@ public final class class_2 extends class_1 implements class_0 {
                }
             }
          } else if(field_438 > 0) {
-            method_532((var4 = class_1.method_74(field_425[field_440])) == null?"":var4, 3, 189, 0, 0);
-            method_532(class_1.method_77((long)field_428[field_440], field_862, " "), 3, 192, 0, 0);
+            method_532((var4 = GLLib.method_74(field_425[field_440])) == null?"":var4, 3, 189, 0, 0);
+            method_532(GLLib.method_77((long)field_428[field_440], field_862, " "), 3, 192, 0, 0);
             method_532("" + field_432[field_440], 3, 194, 0, 0);
-            method_532(class_1.method_77((long)method_733(), field_862, " "), 3, 200, 0, 0);
+            method_532(GLLib.method_77((long)method_733(), field_862, " "), 3, 200, 0, 0);
          }
       }
 
@@ -20928,11 +20928,11 @@ public final class class_2 extends class_1 implements class_0 {
             method_543(3, 178, true);
             method_543(3, 182, true);
             method_543(3, 186, true);
-            var10000 = class_1.method_77((long)method_713(field_443[field_439 + var0]), field_862, " ");
+            var10000 = GLLib.method_77((long)method_713(field_443[field_439 + var0]), field_862, " ");
             int var3 = var2 + 13;
             String var6 = var10000;
             field_123[3][var3] = var6;
-            var10000 = class_1.method_77((long)method_713(field_444[field_439 + var0]), field_862, " ");
+            var10000 = GLLib.method_77((long)method_713(field_444[field_439 + var0]), field_862, " ");
             var5 = var2 + 11;
             var4 = var10000;
             field_123[3][var5] = var4;
@@ -20947,7 +20947,7 @@ public final class class_2 extends class_1 implements class_0 {
          method_545(3, var2 + 10, false);
          method_543(3, var2 + 20, false);
          method_543(3, var2 + 16, true);
-         var10000 = (var4 = class_1.method_74(197)) == null?"":var4;
+         var10000 = (var4 = GLLib.method_74(197)) == null?"":var4;
          var5 = var2 + 16;
          var4 = var10000;
          field_123[3][var5] = var4;
@@ -21558,7 +21558,7 @@ public final class class_2 extends class_1 implements class_0 {
       int var14;
       String var15;
       if(var0 == 2) {
-         if((var11 = class_1.method_14()) == 19 || var11 == 11) {
+         if((var11 = GLLib.method_14()) == 19 || var11 == 11) {
             method_262();
          }
 
@@ -21579,7 +21579,7 @@ public final class class_2 extends class_1 implements class_0 {
          String var10000;
          for(var14 = 0; var14 < var11; ++var14) {
             if(field_498 + var14 < field_497 && var14 < 5) {
-               var10000 = (var15 = class_1.method_74(field_500[var14 + field_498])) == null?"":var15;
+               var10000 = (var15 = GLLib.method_74(field_500[var14 + field_498])) == null?"":var15;
                var4 = 13 + var14 * 15;
                var15 = var10000;
                field_123[22][var4] = var15;
@@ -21594,7 +21594,7 @@ public final class class_2 extends class_1 implements class_0 {
                      method_543(22, 12 + var14 * 15, true);
                   }
 
-                  var10000 = (var15 = class_1.method_74(field_500[var14 + field_498])) == null?"":var15;
+                  var10000 = (var15 = GLLib.method_74(field_500[var14 + field_498])) == null?"":var15;
                   var4 = 12 + var14 * 15;
                   var15 = var10000;
                   field_123[22][var4] = var15;
@@ -21607,7 +21607,7 @@ public final class class_2 extends class_1 implements class_0 {
                   }
                }
             } else if(!field_460 && var14 + field_498 < field_496) {
-               var10000 = (var15 = class_1.method_74(field_500[var14 + field_498])) == null?"":var15;
+               var10000 = (var15 = GLLib.method_74(field_500[var14 + field_498])) == null?"":var15;
                var4 = 12 + var14 * 15;
                var15 = var10000;
                field_123[22][var4] = var15;
@@ -21645,7 +21645,7 @@ public final class class_2 extends class_1 implements class_0 {
                method_751(false, var14);
                method_752(true, var14);
                String var16;
-               field_508[var3] = (var16 = class_1.method_74(189)) == null?"":var16;
+               field_508[var3] = (var16 = GLLib.method_74(189)) == null?"":var16;
                field_507[var3] = field_503[var3];
                field_505[var3] = 2;
                field_502[var3] = var17;
@@ -21665,7 +21665,7 @@ public final class class_2 extends class_1 implements class_0 {
             ++field_511;
             field_121[22][24 + field_512 * 15][2] = (short)(field_121[22][25 + field_512 * 15][2] + 4 * field_511);
             field_121[22][24 + field_512 * 15][3] = (short)(field_121[22][25 + field_512 * 15][3] + field_511 * field_511 + 30);
-            if(field_121[22][24 + field_512 * 15][3] > class_1.height) {
+            if(field_121[22][24 + field_512 * 15][3] > GLLib.height) {
                field_510 = false;
                field_511 = 0;
                method_748(field_512 + field_498);
@@ -21719,8 +21719,8 @@ public final class class_2 extends class_1 implements class_0 {
       if(var0 == 3) {
          method_531(22);
          String var8;
-         method_532((var8 = class_1.method_74(180)) == null?"":var8, 22, 1, 0, 0);
-         method_532(class_1.method_77((long)method_669(), field_862, " "), 22, 9, 0, 0);
+         method_532((var8 = GLLib.method_74(180)) == null?"":var8, 22, 1, 0, 0);
+         method_532(GLLib.method_77((long)method_669(), field_862, " "), 22, 9, 0, 0);
          short var13 = field_121[22][92][2];
          short var9 = field_121[22][92][3];
          method_533("+" + Integer.toString(field_515), var13 + 40, var9 + 10, 0, 0, 0, 0, 2, 0, false, false);
@@ -21733,12 +21733,12 @@ public final class class_2 extends class_1 implements class_0 {
          var3 = var10002;
          var14 = var10001;
          var11 = var18;
-         class_1.method_41(class_1.field_1, var11, var14, var3, var4, true);
+         GLLib.method_41(GLLib.field_1, var11, var14, var3, var4, true);
          method_743();
-         var14 = class_1.height;
-         var11 = class_1.width;
-         class_1.method_41(class_1.field_1, 0, 0, var11, var14, true);
-         method_532((var12 = class_1.method_74(200)) == null?"":var12, 22, 94, 0, 0);
+         var14 = GLLib.height;
+         var11 = GLLib.width;
+         GLLib.method_41(GLLib.field_1, 0, 0, var11, var14, true);
+         method_532((var12 = GLLib.method_74(200)) == null?"":var12, 22, 94, 0, 0);
          field_124[field_121[22][95][5]].method_938(field_121[22][95][6], 0, var10, 0);
          var18 = field_121[22][95][2] + var10[0];
          var10001 = field_121[22][95][3] + var10[1];
@@ -21747,22 +21747,22 @@ public final class class_2 extends class_1 implements class_0 {
          var14 = var10002;
          var11 = var10001;
          var0 = var18;
-         class_1.method_41(class_1.field_1, var0, var11, var14, var3, true);
+         GLLib.method_41(GLLib.field_1, var0, var11, var14, var3, true);
          var0 = field_448[field_450] - field_449[field_450] >= 6?6:field_448[field_450] - field_449[field_450];
 
          for(var11 = 0; var11 < var0; ++var11) {
             var14 = var11 + field_449[field_450];
-            method_534((var15 = class_1.method_74(field_452[field_450][var14])) == null?"":var15, 22, 97 + var11 * 9, 0, 0);
+            method_534((var15 = GLLib.method_74(field_452[field_450][var14])) == null?"":var15, 22, 97 + var11 * 9, 0, 0);
             if(method_670() < field_459[field_450][var14]) {
-               method_532(((var15 = class_1.method_74(447)) == null?"":var15) + Integer.toString(field_459[field_450][var14]), 22, 101 + var11 * 9, 0, 0);
+               method_532(((var15 = GLLib.method_74(447)) == null?"":var15) + Integer.toString(field_459[field_450][var14]), 22, 101 + var11 * 9, 0, 0);
             } else {
                method_532(method_167(field_456[field_450][var14]), 22, 100 + var11 * 9, 0, 0);
             }
          }
 
-         var11 = class_1.height;
-         var0 = class_1.width;
-         class_1.method_41(class_1.field_1, 0, 0, var0, var11, true);
+         var11 = GLLib.height;
+         var0 = GLLib.width;
+         GLLib.method_41(GLLib.field_1, 0, 0, var0, var11, true);
       }
 
       return false;
@@ -21776,7 +21776,7 @@ public final class class_2 extends class_1 implements class_0 {
          if(field_498 + var1 < field_497 && var1 < 5 && field_506[var1 + field_498]) {
             int var2 = field_121[22][25 + var1 * 15][2] - 100;
             int var3 = field_121[22][25 + var1 * 15][3] - 50;
-            field_864[138].method_980(class_1.field_1, 11, var2, var3, 0);
+            field_864[138].method_980(GLLib.field_1, 11, var2, var3, 0);
          }
       }
 
@@ -21840,7 +21840,7 @@ public final class class_2 extends class_1 implements class_0 {
          method_545(22, 20 + var0 * 15, false);
          method_543(22, 21 + var0 * 15, false);
          method_543(22, 13 + var0 * 15, var1);
-         var10000 = (var5 = class_1.method_74(field_500[var0 + field_498])) == null?"":var5;
+         var10000 = (var5 = GLLib.method_74(field_500[var0 + field_498])) == null?"":var5;
          var3 = 13 + var0 * 15;
          var5 = var10000;
          field_123[22][var3] = var5;
@@ -21870,7 +21870,7 @@ public final class class_2 extends class_1 implements class_0 {
                method_543(22, 12 + var0 * 15, true);
             }
 
-            var10000 = (var5 = class_1.method_74(field_500[var0 + field_498])) == null?"":var5;
+            var10000 = (var5 = GLLib.method_74(field_500[var0 + field_498])) == null?"":var5;
             var3 = 12 + var0 * 15;
             var5 = var10000;
             field_123[22][var3] = var5;
@@ -22204,11 +22204,11 @@ public final class class_2 extends class_1 implements class_0 {
 
       String var10;
       if(var0 == 2) {
-         if((var1 = class_1.method_14()) == 19 || var1 == 11) {
+         if((var1 = GLLib.method_14()) == 19 || var1 == 11) {
             if((field_237 == 0 || field_237 == 160) && field_860 == -1) {
                method_262();
             } else {
-               method_900("Show_Toast_" + ((var10 = class_1.method_74(498)) == null?"":var10));
+               method_900("Show_Toast_" + ((var10 = GLLib.method_74(498)) == null?"":var10));
             }
          }
 
@@ -22272,8 +22272,8 @@ public final class class_2 extends class_1 implements class_0 {
       if(var0 == 3) {
          method_531(22);
          String var7;
-         method_532((var7 = class_1.method_74(388)) == null?"":var7, 22, 1, 0, 0);
-         method_532(class_1.method_77((long)method_669(), field_862, " "), 22, 9, 0, 0);
+         method_532((var7 = GLLib.method_74(388)) == null?"":var7, 22, 1, 0, 0);
+         method_532(GLLib.method_77((long)method_669(), field_862, " "), 22, 9, 0, 0);
          short var11 = field_121[22][92][2];
          short var8 = field_121[22][92][3];
          method_533("+" + Integer.toString(field_545), var11 + 40, var8 + 10, 0, 0, 0, 0, 2, 0, false, false);
@@ -22286,11 +22286,11 @@ public final class class_2 extends class_1 implements class_0 {
          int var13 = var10002;
          int var12 = var10001;
          var1 = var10000;
-         class_1.method_41(class_1.field_1, var1, var12, var13, var4, true);
-         var12 = class_1.height;
-         var1 = class_1.width;
-         class_1.method_41(class_1.field_1, 0, 0, var1, var12, true);
-         method_532((var10 = class_1.method_74(468)) == null?"":var10, 22, 94, 0, 0);
+         GLLib.method_41(GLLib.field_1, var1, var12, var13, var4, true);
+         var12 = GLLib.height;
+         var1 = GLLib.width;
+         GLLib.method_41(GLLib.field_1, 0, 0, var1, var12, true);
+         method_532((var10 = GLLib.method_74(468)) == null?"":var10, 22, 94, 0, 0);
          field_124[field_121[22][95][5]].method_938(field_121[22][95][6], 0, var9, 0);
          var10000 = field_121[22][95][2] + var9[0];
          var10001 = field_121[22][95][3] + var9[1];
@@ -22299,22 +22299,22 @@ public final class class_2 extends class_1 implements class_0 {
          var12 = var10002;
          var1 = var10001;
          var0 = var10000;
-         class_1.method_41(class_1.field_1, var0, var1, var12, var13, true);
+         GLLib.method_41(GLLib.field_1, var0, var1, var12, var13, true);
          var0 = field_530 - field_531 >= 6?6:field_530 - field_531;
 
          for(var1 = 0; var1 < var0; ++var1) {
             String var14;
-            method_534((var14 = class_1.method_74(field_532[var1 + field_531])) == null?"":var14, 22, 97 + var1 * 9, 0, 0);
+            method_534((var14 = GLLib.method_74(field_532[var1 + field_531])) == null?"":var14, 22, 97 + var1 * 9, 0, 0);
             if(method_670() < field_539[var1 + field_531]) {
-               method_532(((var14 = class_1.method_74(447)) == null?"":var14) + Integer.toString(field_539[var1 + field_531]), 22, 101 + var1 * 9, 0, 0);
+               method_532(((var14 = GLLib.method_74(447)) == null?"":var14) + Integer.toString(field_539[var1 + field_531]), 22, 101 + var1 * 9, 0, 0);
             } else {
                method_532(method_167(field_536[var1 + field_531]), 22, 100 + var1 * 9, 0, 0);
             }
          }
 
-         var1 = class_1.height;
-         var0 = class_1.width;
-         class_1.method_41(class_1.field_1, 0, 0, var0, var1, true);
+         var1 = GLLib.height;
+         var0 = GLLib.width;
+         GLLib.method_41(GLLib.field_1, 0, 0, var0, var1, true);
       }
 
       return false;
@@ -22347,7 +22347,7 @@ public final class class_2 extends class_1 implements class_0 {
             }
          } else if(!field_540 && var1 + field_518 < field_496) {
             method_543(22, 12 + var1 * 15, true);
-            var10000 = (var2 = class_1.method_74(field_520[var1 + field_518])) == null?"":var2;
+            var10000 = (var2 = GLLib.method_74(field_520[var1 + field_518])) == null?"":var2;
             var3 = 12 + var1 * 15;
             var2 = var10000;
             field_123[22][var3] = var2;
@@ -22384,7 +22384,7 @@ public final class class_2 extends class_1 implements class_0 {
             method_763(false, var1);
             method_764(true, var1);
             String var6;
-            field_528[var8] = (var6 = class_1.method_74(189)) == null?"":var6;
+            field_528[var8] = (var6 = GLLib.method_74(189)) == null?"":var6;
             field_527[var8] = field_523[var8];
             field_526[var8] = 2;
             field_522[var8] = var9;
@@ -22404,7 +22404,7 @@ public final class class_2 extends class_1 implements class_0 {
          ++field_511;
          field_121[22][24 + field_512 * 15][2] = (short)(field_121[22][25 + field_512 * 15][2] + 4 * field_511);
          field_121[22][24 + field_512 * 15][3] = (short)(field_121[22][25 + field_512 * 15][3] + field_511 * field_511);
-         if(field_121[22][24 + field_512 * 15][3] > class_1.height) {
+         if(field_121[22][24 + field_512 * 15][3] > GLLib.height) {
             method_543(22, 24 + field_512 * 15, false);
             field_510 = false;
             field_511 = 0;
@@ -22476,7 +22476,7 @@ public final class class_2 extends class_1 implements class_0 {
          method_545(22, 20 + var0 * 15, false);
          method_543(22, 21 + var0 * 15, false);
          method_543(22, 13 + var0 * 15, var1);
-         var10000 = (var5 = class_1.method_74(field_520[var0 + field_518])) == null?"":var5;
+         var10000 = (var5 = GLLib.method_74(field_520[var0 + field_518])) == null?"":var5;
          var3 = 13 + var0 * 15;
          var5 = var10000;
          field_123[22][var3] = var5;
@@ -22498,7 +22498,7 @@ public final class class_2 extends class_1 implements class_0 {
          field_526[field_518 + var0] = 1;
          if(!field_540 && var0 + field_518 < field_496 && var0 + field_518 < field_516) {
             method_543(22, 12 + var0 * 15, var1);
-            var10000 = (var5 = class_1.method_74(field_520[var0 + field_518])) == null?"":var5;
+            var10000 = (var5 = GLLib.method_74(field_520[var0 + field_518])) == null?"":var5;
             var3 = 12 + var0 * 15;
             var5 = var10000;
             field_123[22][var3] = var5;
@@ -23014,9 +23014,9 @@ public final class class_2 extends class_1 implements class_0 {
 
       String var9;
       if(var0 == 2) {
-         if((var1 = class_1.method_14()) == 19 || var1 == 11) {
+         if((var1 = GLLib.method_14()) == 19 || var1 == 11) {
             if(field_860 > 0) {
-               method_900("Show_Toast_" + ((var9 = class_1.method_74(498)) == null?"":var9));
+               method_900("Show_Toast_" + ((var9 = GLLib.method_74(498)) == null?"":var9));
             } else {
                method_382();
             }
@@ -23045,11 +23045,11 @@ public final class class_2 extends class_1 implements class_0 {
       if(var0 == 3 && !field_589) {
          method_531(10);
          String var5;
-         method_532((var5 = class_1.method_74(456)) == null?"":var5, 10, 1, 0, 0);
-         method_532((var5 = class_1.method_74(483)) == null?"":var5, 10, 65, 0, 0);
+         method_532((var5 = GLLib.method_74(456)) == null?"":var5, 10, 1, 0, 0);
+         method_532((var5 = GLLib.method_74(483)) == null?"":var5, 10, 65, 0, 0);
          method_535(10, 60);
          if(method_546(10, 63)) {
-            method_532((var5 = class_1.method_74(484)) == null?"":var5, 10, 64, 0, 0);
+            method_532((var5 = GLLib.method_74(484)) == null?"":var5, 10, 64, 0, 0);
          }
 
          method_532("" + field_570 + " / " + method_713(field_571), 10, 2, 0, 0);
@@ -23062,23 +23062,23 @@ public final class class_2 extends class_1 implements class_0 {
          var6 = var10002;
          var1 = var10001;
          var0 = var10000;
-         class_1.method_41(class_1.field_1, var0, var1, var6, var3, true);
+         GLLib.method_41(GLLib.field_1, var0, var1, var6, var3, true);
          var1 = field_573 - field_574 >= 6?6:field_573 - field_574;
 
          for(var3 = 0; var3 < var1; ++var3) {
-            method_534((var5 = class_1.method_74(field_576[field_574 + var3])) == null?"":var5, 10, 14 + var3 * 7, 0, 0);
+            method_534((var5 = GLLib.method_74(field_576[field_574 + var3])) == null?"":var5, 10, 14 + var3 * 7, 0, 0);
             var6 = 16 + var3 * 7;
             method_532("x" + field_581[field_574 + var3], 10, var6, 0, 0);
          }
 
          for(var0 = var3; var0 < 6; ++var0) {
             var6 = 15 + var0 * 7;
-            method_532((var9 = class_1.method_74(197)) == null?"":var9, 10, var6, 0, 0);
+            method_532((var9 = GLLib.method_74(197)) == null?"":var9, 10, var6, 0, 0);
          }
 
-         var1 = class_1.height;
-         var0 = class_1.width;
-         class_1.method_41(class_1.field_1, 0, 0, var0, var1, true);
+         var1 = GLLib.height;
+         var0 = GLLib.width;
+         GLLib.method_41(GLLib.field_1, 0, 0, var0, var1, true);
       }
 
       return false;
@@ -23513,7 +23513,7 @@ public final class class_2 extends class_1 implements class_0 {
       }
 
       if(var0 == 2) {
-         if(class_1.method_14() == 19) {
+         if(GLLib.method_14() == 19) {
             method_401();
          }
 
@@ -23528,7 +23528,7 @@ public final class class_2 extends class_1 implements class_0 {
             var13 = field_337 & '\uffff';
             if((field_337 >> 16 & '\uffff') == 13 && var13 == 2 + field_883 && !field_130.method_1118()) {
                field_594 = true;
-            } else if(!class_1.method_110() && field_594) {
+            } else if(!GLLib.method_110() && field_594) {
                field_594 = false;
             }
 
@@ -23539,7 +23539,7 @@ public final class class_2 extends class_1 implements class_0 {
             }
 
             if(field_130 != null) {
-               field_130.method_1120(class_1.field_15);
+               field_130.method_1120(GLLib.field_15);
             }
          } else if(field_608 == 2) {
             field_121[13][2 + field_883][6] = 8;
@@ -23553,7 +23553,7 @@ public final class class_2 extends class_1 implements class_0 {
                field_130.method_1108(5, -1, true);
                field_130.method_1105(var10, var2);
                if(field_130 != null) {
-                  field_130.method_1120(class_1.field_15);
+                  field_130.method_1120(GLLib.field_15);
                }
             }
          } else if(field_608 == 1 && field_605) {
@@ -23568,12 +23568,12 @@ public final class class_2 extends class_1 implements class_0 {
             var12 = field_337 & '\uffff';
             if((field_337 >> 16 & '\uffff') == 13 && var12 == 2 + field_883 && !field_130.method_1118()) {
                field_594 = true;
-            } else if(!class_1.method_110() && field_594) {
+            } else if(!GLLib.method_110() && field_594) {
                field_594 = false;
             }
 
             if(field_130 != null) {
-               field_130.method_1120(class_1.field_15);
+               field_130.method_1120(GLLib.field_15);
             }
          }
 
@@ -23598,7 +23598,7 @@ public final class class_2 extends class_1 implements class_0 {
                   var7 = field_337 & '\uffff';
                   if((field_337 >> 16 & '\uffff') == 13 && var7 == var13 + 5 && !field_129[var13].method_1118()) {
                      field_595[var13] = true;
-                  } else if(!class_1.method_110() && field_595[var13]) {
+                  } else if(!GLLib.method_110() && field_595[var13]) {
                      field_595[var13] = false;
                   }
                } else {
@@ -23608,7 +23608,7 @@ public final class class_2 extends class_1 implements class_0 {
             }
 
             if(field_129[var13] != null) {
-               field_129[var13].method_1120(class_1.field_15);
+               field_129[var13].method_1120(GLLib.field_15);
             }
          }
 
@@ -23640,7 +23640,7 @@ public final class class_2 extends class_1 implements class_0 {
                      field_121[13][4][6] = 0;
                   }
                }
-            } else if(!class_1.method_110()) {
+            } else if(!GLLib.method_110()) {
                if(var13 == 0 && field_883 >= 1 && field_597 && field_596[var13]) {
                   field_596[var13] = false;
                } else if(var13 == 1 && field_883 >= 2 && field_598 && field_596[var13]) {
@@ -23651,7 +23651,7 @@ public final class class_2 extends class_1 implements class_0 {
             }
 
             if(field_131[var13] != null) {
-               field_131[var13].method_1120(class_1.field_15);
+               field_131[var13].method_1120(GLLib.field_15);
             }
          }
 
@@ -23706,16 +23706,16 @@ public final class class_2 extends class_1 implements class_0 {
          }
 
          String var5;
-         method_532((var5 = class_1.method_74(301)) == null?"":var5, 13, 1, 0, 0);
-         method_532((var5 = class_1.method_74(302)) == null?"":var5, 13, 21, 0, 0);
-         method_532((var5 = class_1.method_74(303)) == null?"":var5, 13, 23, 0, 0);
-         method_532((var5 = class_1.method_74(304)) == null?"":var5, 13, 25, 0, 0);
-         method_532((var5 = class_1.method_74(305)) == null?"":var5, 13, 27, 0, 0);
-         method_532((var5 = class_1.method_74(306)) == null?"":var5, 13, 29, 0, 0);
-         method_532((var5 = class_1.method_74(307)) == null?"":var5, 13, 31, 0, 0);
-         method_532((var5 = class_1.method_74(308)) == null?"":var5, 13, 33, 0, 0);
-         method_532((var5 = class_1.method_74(309)) == null?"":var5, 13, 35, 0, 0);
-         method_532((var5 = class_1.method_74(310)) == null?"":var5, 13, 37, 0, 0);
+         method_532((var5 = GLLib.method_74(301)) == null?"":var5, 13, 1, 0, 0);
+         method_532((var5 = GLLib.method_74(302)) == null?"":var5, 13, 21, 0, 0);
+         method_532((var5 = GLLib.method_74(303)) == null?"":var5, 13, 23, 0, 0);
+         method_532((var5 = GLLib.method_74(304)) == null?"":var5, 13, 25, 0, 0);
+         method_532((var5 = GLLib.method_74(305)) == null?"":var5, 13, 27, 0, 0);
+         method_532((var5 = GLLib.method_74(306)) == null?"":var5, 13, 29, 0, 0);
+         method_532((var5 = GLLib.method_74(307)) == null?"":var5, 13, 31, 0, 0);
+         method_532((var5 = GLLib.method_74(308)) == null?"":var5, 13, 33, 0, 0);
+         method_532((var5 = GLLib.method_74(309)) == null?"":var5, 13, 35, 0, 0);
+         method_532((var5 = GLLib.method_74(310)) == null?"":var5, 13, 37, 0, 0);
 
          for(var13 = 0; var13 < 6; ++var13) {
             if(field_121[13][var13 + 45][10] == 1) {
@@ -23869,15 +23869,15 @@ public final class class_2 extends class_1 implements class_0 {
                }
             }
 
-            var8 = class_1.method_16(0, var4 - 1);
+            var8 = GLLib.method_16(0, var4 - 1);
             int var14 = var5.field_1133[var7[var8]][3];
             var4 = var5.field_1133[var7[var8]][1] - 4000;
             int var11 = var5.field_1133[var7[var8]][17];
             var4 |= var11 << 16;
             method_153(1, var14, 1, 0, 24, 0, -1);
-            class_1.method_21("/7");
+            GLLib.method_21("/7");
             method_151(1, 3);
-            class_1.method_23();
+            GLLib.method_23();
          }
 
          field_593[var0] = class_6.method_1079(47, 2, var6);
@@ -23939,7 +23939,7 @@ public final class class_2 extends class_1 implements class_0 {
       field_604 = var1.field_1133[var2][2];
       var0 = var1.field_1133[var2][34];
       String var3;
-      field_619 = (var3 = class_1.method_74(268 + field_883)) == null?"":var3;
+      field_619 = (var3 = GLLib.method_74(268 + field_883)) == null?"":var3;
       return field_269[var0];
    }
 
@@ -24177,7 +24177,7 @@ public final class class_2 extends class_1 implements class_0 {
          method_543(10, 61, false);
          method_543(10, 62, false);
          method_543(10, 63, false);
-         String var1 = (var1 = class_1.method_74(175)) == null?"":var1;
+         String var1 = (var1 = GLLib.method_74(175)) == null?"":var1;
          field_123[10][66] = var1;
          method_634();
          method_541(10);
@@ -24229,7 +24229,7 @@ public final class class_2 extends class_1 implements class_0 {
 
       int var5;
       if(var0 == 2) {
-         if((var5 = class_1.method_14()) == 19 || var5 == 11) {
+         if((var5 = GLLib.method_14()) == 19 || var5 == 11) {
             method_382();
          }
 
@@ -24247,7 +24247,7 @@ public final class class_2 extends class_1 implements class_0 {
       if(var0 == 3) {
          method_531(10);
          String var4;
-         method_532((var4 = class_1.method_74(171)) == null?"":var4, 10, 1, 0, 0);
+         method_532((var4 = GLLib.method_74(171)) == null?"":var4, 10, 1, 0, 0);
          int[] var6 = new int[4];
          field_124[field_121[10][12][5]].method_938(field_121[10][12][6], 0, var6, 0);
          int var10000 = field_121[10][12][2] + var6[0];
@@ -24257,18 +24257,18 @@ public final class class_2 extends class_1 implements class_0 {
          int var2 = var10002;
          var5 = var10001;
          var0 = var10000;
-         class_1.method_41(class_1.field_1, var0, var5, var2, var3, true);
+         GLLib.method_41(GLLib.field_1, var0, var5, var2, var3, true);
          var0 = field_634 - field_623 >= 6?6:field_634 - field_623;
 
          for(var5 = 0; var5 < var0; ++var5) {
             String var7;
-            method_534((var7 = class_1.method_74(field_624[field_623 + var5])) == null?"":var7, 10, 14 + var5 * 7, 0, 0);
+            method_534((var7 = GLLib.method_74(field_624[field_623 + var5])) == null?"":var7, 10, 14 + var5 * 7, 0, 0);
             method_532("x" + field_630[field_623 + var5], 10, 16 + var5 * 7, 0, 0);
          }
 
-         var5 = class_1.height;
-         var0 = class_1.width;
-         class_1.method_41(class_1.field_1, 0, 0, var0, var5, true);
+         var5 = GLLib.height;
+         var0 = GLLib.width;
+         GLLib.method_41(GLLib.field_1, 0, 0, var0, var5, true);
       }
 
       return false;
@@ -24472,7 +24472,7 @@ public final class class_2 extends class_1 implements class_0 {
 
       int var5;
       if(var0 == 2) {
-         if((var5 = class_1.method_14()) == 19 || var5 == 11) {
+         if((var5 = GLLib.method_14()) == 19 || var5 == 11) {
             method_382();
          }
 
@@ -24490,7 +24490,7 @@ public final class class_2 extends class_1 implements class_0 {
       if(var0 == 3) {
          method_531(10);
          String var4;
-         method_532((var4 = class_1.method_74(162)) == null?"":var4, 10, 1, 0, 0);
+         method_532((var4 = GLLib.method_74(162)) == null?"":var4, 10, 1, 0, 0);
          int[] var6 = new int[4];
          field_124[field_121[10][12][5]].method_938(field_121[10][12][6], 0, var6, 0);
          int var10000 = field_121[10][12][2] + var6[0];
@@ -24500,17 +24500,17 @@ public final class class_2 extends class_1 implements class_0 {
          int var2 = var10002;
          var5 = var10001;
          var0 = var10000;
-         class_1.method_41(class_1.field_1, var0, var5, var2, var3, true);
+         GLLib.method_41(GLLib.field_1, var0, var5, var2, var3, true);
          var0 = field_643 - field_635 >= 6?6:field_643 - field_635;
 
          for(var5 = 0; var5 < var0; ++var5) {
             String var7;
-            method_534((var7 = class_1.method_74(field_636[field_635 + var5])) == null?"":var7, 10, 14 + var5 * 7, 0, 0);
+            method_534((var7 = GLLib.method_74(field_636[field_635 + var5])) == null?"":var7, 10, 14 + var5 * 7, 0, 0);
          }
 
-         var5 = class_1.height;
-         var0 = class_1.width;
-         class_1.method_41(class_1.field_1, 0, 0, var0, var5, true);
+         var5 = GLLib.height;
+         var0 = GLLib.width;
+         GLLib.method_41(GLLib.field_1, 0, 0, var0, var5, true);
       }
 
       return false;
@@ -24597,7 +24597,7 @@ public final class class_2 extends class_1 implements class_0 {
    // $FF: renamed from: aC (int) void
    private static void method_795(int var0) {
       method_564(48);
-      if(field_719[field_728] * field_294[field_728][1] / field_878[24] >= class_1.method_16(0, 100)) {
+      if(field_719[field_728] * field_294[field_728][1] / field_878[24] >= GLLib.method_16(0, 100)) {
          switch(field_638[var0 + field_635]) {
          case 0:
             field_294[field_728][4] = field_637[var0 + field_635];
@@ -24706,21 +24706,21 @@ public final class class_2 extends class_1 implements class_0 {
 
       String var13;
       if(var0 == 2) {
-         if((var12 = class_1.method_14()) == 19 || var12 == 11) {
+         if((var12 = GLLib.method_14()) == 19 || var12 == 11) {
             if(field_860 == -1) {
                method_398();
             } else {
-               method_900("Show_Toast_" + ((var13 = class_1.method_74(498)) == null?"":var13));
+               method_900("Show_Toast_" + ((var13 = GLLib.method_74(498)) == null?"":var13));
             }
          }
 
          method_160(1);
          field_645.method_1072();
          if(field_645.field_1113 != null) {
-            field_645.field_1113.method_1120(class_1.field_15);
+            field_645.field_1113.method_1120(GLLib.field_15);
          }
 
-         field_646 += class_1.field_15;
+         field_646 += GLLib.field_15;
          if(field_132[0] != null && !method_554(0, 1)) {
             if(field_132[0][8] < -field_647 && field_648 < field_652 - 6) {
                method_797(1);
@@ -24733,16 +24733,16 @@ public final class class_2 extends class_1 implements class_0 {
       if(var0 == 3) {
          method_531(12);
          String var11;
-         var13 = ((var11 = class_1.method_74(518)) == null?"":var11) + " " + method_670() + ((var11 = class_1.method_74(517)) == null?"":var11);
+         var13 = ((var11 = GLLib.method_74(518)) == null?"":var11) + " " + method_670() + ((var11 = GLLib.method_74(517)) == null?"":var11);
          if(field_862 == 11) {
-            var13 = method_670() + ((var11 = class_1.method_74(518)) == null?"":var11) + ((var11 = class_1.method_74(517)) == null?"":var11);
+            var13 = method_670() + ((var11 = GLLib.method_74(518)) == null?"":var11) + ((var11 = GLLib.method_74(517)) == null?"":var11);
          }
 
          method_532(var13, 12, 23, 0, 0);
-         method_534((var11 = class_1.method_74(519)) == null?"":var11, 12, 24, 0, 0);
-         method_534((var11 = class_1.method_74(522)) == null?"":var11, 12, 26, 0, 0);
-         method_534((var11 = class_1.method_74(516)) == null?"":var11, 12, 25, 0, 0);
-         method_534((var11 = class_1.method_74(523 + (method_670() - 2))) == null?"":var11, 12, 27, 0, 0);
+         method_534((var11 = GLLib.method_74(519)) == null?"":var11, 12, 24, 0, 0);
+         method_534((var11 = GLLib.method_74(522)) == null?"":var11, 12, 26, 0, 0);
+         method_534((var11 = GLLib.method_74(516)) == null?"":var11, 12, 25, 0, 0);
+         method_534((var11 = GLLib.method_74(523 + (method_670() - 2))) == null?"":var11, 12, 27, 0, 0);
          if(field_648 == 0 && field_653 > 0) {
             int[] var14 = new int[4];
             field_124[field_121[12][8][5]].method_938(field_121[12][8][6], 0, var14, 0);
@@ -24753,11 +24753,11 @@ public final class class_2 extends class_1 implements class_0 {
             var2 = var10002;
             var12 = var10001;
             var0 = var10000;
-            class_1.method_41(class_1.field_1, var0, var12, var2, var3, true);
+            GLLib.method_41(GLLib.field_1, var0, var12, var2, var3, true);
             method_532("+" + field_653, 12, 9, 0, 0);
-            var12 = class_1.height;
-            var0 = class_1.width;
-            class_1.method_41(class_1.field_1, 0, 0, var0, var12, true);
+            var12 = GLLib.height;
+            var0 = GLLib.width;
+            GLLib.method_41(GLLib.field_1, 0, 0, var0, var12, true);
          }
 
          field_645.method_1071();
@@ -24840,9 +24840,9 @@ public final class class_2 extends class_1 implements class_0 {
       short var4;
       int var9;
       if(var0 == 8 && !field_153 && field_152) {
-         if(class_1.method_109() || class_1.method_108() || field_661) {
-            var9 = class_1.field_82;
-            var2 = class_1.field_83;
+         if(GLLib.method_109() || GLLib.method_108() || field_661) {
+            var9 = GLLib.field_82;
+            var2 = GLLib.field_83;
             var3 = field_121[15][59][2];
             var4 = field_121[15][59][3];
             short var5 = field_121[15][59][5];
@@ -24867,13 +24867,13 @@ public final class class_2 extends class_1 implements class_0 {
             }
          }
 
-         if(class_1.method_106()) {
+         if(GLLib.method_106()) {
             field_661 = false;
          }
       }
 
       if(var0 == 2) {
-         if((var9 = class_1.method_14()) == 19) {
+         if((var9 = GLLib.method_14()) == 19) {
             if(field_151) {
                method_424();
             } else if(field_152) {
@@ -24890,7 +24890,7 @@ public final class class_2 extends class_1 implements class_0 {
          }
 
          if(field_151) {
-            if(!class_1.method_110()) {
+            if(!GLLib.method_110()) {
                --field_663;
             }
 
@@ -24927,13 +24927,13 @@ public final class class_2 extends class_1 implements class_0 {
          String var8;
          if(field_150) {
             String var15;
-            method_532((var15 = class_1.method_74(63)) == null?"":var15, 15, 1, 0, 0);
+            method_532((var15 = GLLib.method_74(63)) == null?"":var15, 15, 1, 0, 0);
             String var16;
-            method_534((var16 = class_1.method_74(65)) == null?"":var16, 15, 5, 0, 0);
+            method_534((var16 = GLLib.method_74(65)) == null?"":var16, 15, 5, 0, 0);
             String var14;
-            method_534((var14 = class_1.method_74(68)) == null?"":var14, 15, 8, 0, 0);
-            method_534((var8 = class_1.method_74(67)) == null?"":var8, 15, 10, 0, 0);
-            method_534((var8 = class_1.method_74(72)) == null?"":var8, 15, 14, 0, 0);
+            method_534((var14 = GLLib.method_74(68)) == null?"":var14, 15, 8, 0, 0);
+            method_534((var8 = GLLib.method_74(67)) == null?"":var8, 15, 10, 0, 0);
+            method_534((var8 = GLLib.method_74(72)) == null?"":var8, 15, 14, 0, 0);
          }
 
          short var11;
@@ -24949,11 +24949,11 @@ public final class class_2 extends class_1 implements class_0 {
                var2 = 10273;
             }
 
-            method_534((var8 = class_1.method_74(80)) == null?"":var8, 15, 50, 0, 0);
-            method_534((var8 = class_1.method_74(35)) == null?"":var8, 15, 49, 0, 0);
-            method_534((var8 = class_1.method_74(var9)) == null?"":var8, 15, 56, 0, 0);
-            method_534((var8 = class_1.method_74(454)) == null?"":var8, 15, 57, 0, 0);
-            method_534((var8 = class_1.method_74(455)) == null?"":var8, 15, 58, 0, 0);
+            method_534((var8 = GLLib.method_74(80)) == null?"":var8, 15, 50, 0, 0);
+            method_534((var8 = GLLib.method_74(35)) == null?"":var8, 15, 49, 0, 0);
+            method_534((var8 = GLLib.method_74(var9)) == null?"":var8, 15, 56, 0, 0);
+            method_534((var8 = GLLib.method_74(454)) == null?"":var8, 15, 57, 0, 0);
+            method_534((var8 = GLLib.method_74(455)) == null?"":var8, 15, 58, 0, 0);
             var10000 = field_121[15][59][2];
             var10001 = field_121[15][59][3];
             short var10002 = field_121[15][59][5];
@@ -24961,15 +24961,15 @@ public final class class_2 extends class_1 implements class_0 {
             var3 = var10002;
             var13 = var10001;
             var11 = var10000;
-            class_1.method_41(class_1.field_1, var11, var13, var3, var4, true);
-            method_534((var8 = class_1.method_74(var2)) == null?"":var8, 15, 59, 0, field_666);
-            var9 = class_1.height;
-            var0 = class_1.width;
-            class_1.method_41(class_1.field_1, 0, 0, var0, var9, true);
+            GLLib.method_41(GLLib.field_1, var11, var13, var3, var4, true);
+            method_534((var8 = GLLib.method_74(var2)) == null?"":var8, 15, 59, 0, field_666);
+            var9 = GLLib.height;
+            var0 = GLLib.width;
+            GLLib.method_41(GLLib.field_1, 0, 0, var0, var9, true);
          }
 
          if(field_151) {
-            method_534((var8 = class_1.method_74(75)) == null?"":var8, 15, 19, 0, 0);
+            method_534((var8 = GLLib.method_74(75)) == null?"":var8, 15, 19, 0, 0);
             var10000 = field_121[15][20][2];
             var10001 = field_121[15][20][3];
             int var17 = field_121[15][21][5] + 50;
@@ -24977,28 +24977,28 @@ public final class class_2 extends class_1 implements class_0 {
             var2 = var17;
             var13 = var10001;
             var11 = var10000;
-            class_1.method_41(class_1.field_1, var11, var13, var2, var3, true);
+            GLLib.method_41(GLLib.field_1, var11, var13, var2, var3, true);
             method_534(field_668, 15, 21, 0, field_663);
-            var9 = class_1.height;
-            var0 = class_1.width;
-            class_1.method_41(class_1.field_1, 0, 0, var0, var9, true);
+            var9 = GLLib.height;
+            var0 = GLLib.width;
+            GLLib.method_41(GLLib.field_1, 0, 0, var0, var9, true);
          }
 
          if(field_154) {
-            method_534((var8 = class_1.method_74(65)) == null?"":var8, 15, 23, 0, 0);
-            method_534((var8 = class_1.method_74(75)) == null?"":var8, 15, 35, 0, 0);
-            method_534((var8 = class_1.method_74(66)) == null?"":var8, 15, 25, 0, 0);
-            method_534((var8 = class_1.method_74(80)) == null?"":var8, 15, 27, 0, 0);
-            method_534((var8 = class_1.method_74(76)) == null?"":var8, 15, 29, 0, 0);
+            method_534((var8 = GLLib.method_74(65)) == null?"":var8, 15, 23, 0, 0);
+            method_534((var8 = GLLib.method_74(75)) == null?"":var8, 15, 35, 0, 0);
+            method_534((var8 = GLLib.method_74(66)) == null?"":var8, 15, 25, 0, 0);
+            method_534((var8 = GLLib.method_74(80)) == null?"":var8, 15, 27, 0, 0);
+            method_534((var8 = GLLib.method_74(76)) == null?"":var8, 15, 29, 0, 0);
          }
 
          if(field_153) {
-            method_534((var8 = class_1.method_74(66)) == null?"":var8, 15, 39, 0, 0);
-            method_534((var8 = class_1.method_74(75)) == null?"":var8, 15, 47, 0, 0);
-            method_532((var8 = class_1.method_74(78)) == null?"":var8, 15, 41, 0, 0);
-            method_532((var8 = class_1.method_74(79)) == null?"":var8, 15, 44, 0, 0);
-            method_532(field_160?((var8 = class_1.method_74(82)) == null?"":var8):((var8 = class_1.method_74(83)) == null?"":var8), 15, 42, 0, 0);
-            method_532(field_159?((var8 = class_1.method_74(82)) == null?"":var8):((var8 = class_1.method_74(83)) == null?"":var8), 15, 45, 0, 0);
+            method_534((var8 = GLLib.method_74(66)) == null?"":var8, 15, 39, 0, 0);
+            method_534((var8 = GLLib.method_74(75)) == null?"":var8, 15, 47, 0, 0);
+            method_532((var8 = GLLib.method_74(78)) == null?"":var8, 15, 41, 0, 0);
+            method_532((var8 = GLLib.method_74(79)) == null?"":var8, 15, 44, 0, 0);
+            method_532(field_160?((var8 = GLLib.method_74(82)) == null?"":var8):((var8 = GLLib.method_74(83)) == null?"":var8), 15, 42, 0, 0);
+            method_532(field_159?((var8 = GLLib.method_74(82)) == null?"":var8):((var8 = GLLib.method_74(83)) == null?"":var8), 15, 45, 0, 0);
          }
 
          if(field_155) {
@@ -25037,7 +25037,7 @@ public final class class_2 extends class_1 implements class_0 {
          var0 = 10273;
       }
 
-      String var3 = (var3 = class_1.method_74(var0)) == null?"":var3;
+      String var3 = (var3 = GLLib.method_74(var0)) == null?"":var3;
       short var1 = field_121[15][59][5];
       short var2 = field_121[15][59][7];
       short[] var4 = field_865[method_558(var2)].method_965(var3, var1, false);
@@ -25109,7 +25109,7 @@ public final class class_2 extends class_1 implements class_0 {
       }
 
       if(var0 == 2) {
-         if(class_1.method_14() == 19) {
+         if(GLLib.method_14() == 19) {
             method_483();
          }
 
@@ -25126,7 +25126,7 @@ public final class class_2 extends class_1 implements class_0 {
       if(var0 == 3) {
          method_531(16);
          String var4;
-         method_532((var4 = class_1.method_74(219)) == null?"":var4, 16, 90, 0, 0);
+         method_532((var4 = GLLib.method_74(219)) == null?"":var4, 16, 90, 0, 0);
          int[] var7 = new int[4];
          field_124[field_121[16][1][5]].method_938(field_121[16][1][6], 0, var7, 0);
          int var10000 = field_121[16][1][2] + var7[0];
@@ -25136,7 +25136,7 @@ public final class class_2 extends class_1 implements class_0 {
          int var8 = var10002;
          var1 = var10001;
          var0 = var10000;
-         class_1.method_41(class_1.field_1, var0, var1, var8, var3, true);
+         GLLib.method_41(GLLib.field_1, var0, var1, var8, var3, true);
 
          for(var1 = 0; var1 < 5; ++var1) {
             short var5;
@@ -25146,19 +25146,19 @@ public final class class_2 extends class_1 implements class_0 {
                var5 = 227;
             }
 
-            method_532((var4 = class_1.method_74(var5)) == null?"":var4, 16, 58 + var1 * 6, 0, 0);
-            method_532(class_1.method_77((long)field_675[field_679 + var1], field_862, " "), 16, 59 + var1 * 6, 0, 0);
-            method_532(class_1.method_77((long)field_676[field_679 + var1], field_862, " "), 16, 61 + var1 * 6, 0, 0);
-            method_532((var4 = class_1.method_74(8512 + field_679 + var1)) == null?"":var4, 16, 3 + var1 * 3, 0, 0);
+            method_532((var4 = GLLib.method_74(var5)) == null?"":var4, 16, 58 + var1 * 6, 0, 0);
+            method_532(GLLib.method_77((long)field_675[field_679 + var1], field_862, " "), 16, 59 + var1 * 6, 0, 0);
+            method_532(GLLib.method_77((long)field_676[field_679 + var1], field_862, " "), 16, 61 + var1 * 6, 0, 0);
+            method_532((var4 = GLLib.method_74(8512 + field_679 + var1)) == null?"":var4, 16, 3 + var1 * 3, 0, 0);
          }
 
          for(var1 = 0; var1 < 20; ++var1) {
             method_532("" + method_713(field_672[(field_679 << 2) + var1]), 16, 18 + (var1 << 1), 0, 0);
          }
 
-         var1 = class_1.height;
-         var0 = class_1.width;
-         class_1.method_41(class_1.field_1, 0, 0, var0, var1, true);
+         var1 = GLLib.height;
+         var0 = GLLib.width;
+         GLLib.method_41(GLLib.field_1, 0, 0, var0, var1, true);
       }
 
       return false;
@@ -25259,7 +25259,7 @@ public final class class_2 extends class_1 implements class_0 {
          method_634();
          method_540(1);
          method_555(65614, 65622, field_121[1][78][2], 0, 0, 0, 500);
-         short var3 = (short)class_1.width;
+         short var3 = (short)GLLib.width;
          field_121[1][78][2] = var3;
          field_121[1][80][2] = var3;
          field_121[1][82][2] = var3;
@@ -25405,7 +25405,7 @@ public final class class_2 extends class_1 implements class_0 {
       int var3 = 0;
       var2 <<= 2;
       if(var1 > 0) {
-         var1 = class_1.method_16(0, var1);
+         var1 = GLLib.method_16(0, var1);
 
          for(int var4 = 0; var4 < var2; ++var4) {
             var3 += field_677[var4];
@@ -25453,7 +25453,7 @@ public final class class_2 extends class_1 implements class_0 {
 
    // $FF: renamed from: gI () void
    private static void method_811() {
-      class_1.method_21("/7");
+      GLLib.method_21("/7");
 
       int var0;
       for(var0 = 0; var0 < 15 && field_674[var0] <= method_670(); ++var0) {
@@ -25465,7 +25465,7 @@ public final class class_2 extends class_1 implements class_0 {
          method_151(1, 3);
       }
 
-      class_1.method_23();
+      GLLib.method_23();
    }
 
    // $FF: renamed from: B (int) boolean
@@ -25539,7 +25539,7 @@ public final class class_2 extends class_1 implements class_0 {
 
       int var3;
       if(var0 == 2) {
-         if((var1 = class_1.method_14()) == 19 || var1 == 11) {
+         if((var1 = GLLib.method_14()) == 19 || var1 == 11) {
             method_511();
          }
 
@@ -25552,7 +25552,7 @@ public final class class_2 extends class_1 implements class_0 {
             }
          }
 
-         String var4 = (var4 = class_1.method_74(457)) == null?"":var4;
+         String var4 = (var4 = GLLib.method_74(457)) == null?"":var4;
          field_123[19][75] = var4;
 
          for(var1 = 0; var1 < 5; ++var1) {
@@ -25576,21 +25576,21 @@ public final class class_2 extends class_1 implements class_0 {
             }
 
             if(field_315[field_686 + var1] > 0) {
-               var10000 = class_1.method_77((long)field_315[field_686 + var1], field_862, " ");
+               var10000 = GLLib.method_77((long)field_315[field_686 + var1], field_862, " ");
                var3 = 5 + var1 * 14;
                var2 = var10000;
                field_123[19][var3] = var2;
             }
 
             if(field_314[field_686 + var1] > 0) {
-               var10000 = class_1.method_77((long)field_314[field_686 + var1], field_862, " ");
+               var10000 = GLLib.method_77((long)field_314[field_686 + var1], field_862, " ");
                var3 = 6 + var1 * 14;
                var2 = var10000;
                field_123[19][var3] = var2;
             }
 
             if(field_313[field_686 + var1] > 0) {
-               var10000 = class_1.method_77((long)field_313[field_686 + var1], field_862, " ");
+               var10000 = GLLib.method_77((long)field_313[field_686 + var1], field_862, " ");
                var3 = 7 + var1 * 14;
                var2 = var10000;
                field_123[19][var3] = var2;
@@ -25609,10 +25609,10 @@ public final class class_2 extends class_1 implements class_0 {
          int var5 = var10002;
          var1 = var10001;
          var0 = var7;
-         class_1.method_41(class_1.field_1, var0, var1, var5, var3, true);
-         var1 = class_1.height;
-         var0 = class_1.width;
-         class_1.method_41(class_1.field_1, 0, 0, var0, var1, true);
+         GLLib.method_41(GLLib.field_1, var0, var1, var5, var3, true);
+         var1 = GLLib.height;
+         var0 = GLLib.width;
+         GLLib.method_41(GLLib.field_1, 0, 0, var0, var1, true);
       }
 
       return false;
@@ -25700,7 +25700,7 @@ public final class class_2 extends class_1 implements class_0 {
             method_634();
             method_541(1);
             method_555(65623, 65625, field_121[1][87][2], 0, 0, 0, 1000);
-            short var2 = (short)class_1.width;
+            short var2 = (short)GLLib.width;
             field_121[1][87][2] = var2;
             field_121[1][89][2] = var2;
             field_121[1][88][2] = var2;
@@ -25760,7 +25760,7 @@ public final class class_2 extends class_1 implements class_0 {
 
       if(var0 == 2) {
          int var1;
-         if((var1 = class_1.method_14()) == 19 || var1 == 11) {
+         if((var1 = GLLib.method_14()) == 19 || var1 == 11) {
             method_499();
          }
 
@@ -25774,24 +25774,24 @@ public final class class_2 extends class_1 implements class_0 {
       if(var0 == 3) {
          method_531(23);
          String var3;
-         method_532((var3 = class_1.method_74(482)) == null?"":var3, 23, 1, 0, 0);
-         method_532((var3 = class_1.method_74(483)) == null?"":var3, 23, 39, 0, 0);
+         method_532((var3 = GLLib.method_74(482)) == null?"":var3, 23, 1, 0, 0);
+         method_532((var3 = GLLib.method_74(483)) == null?"":var3, 23, 39, 0, 0);
          method_535(23, 32);
-         method_532((var3 = class_1.method_74(484)) == null?"":var3, 23, 38, 0, 0);
+         method_532((var3 = GLLib.method_74(484)) == null?"":var3, 23, 38, 0, 0);
          method_532(Integer.toString(method_690()) + "/" + method_713(field_692), 23, 35, 0, 0);
-         method_532((var3 = class_1.method_74(459)) == null?"":var3, 23, 36, 0, 0);
+         method_532((var3 = GLLib.method_74(459)) == null?"":var3, 23, 36, 0, 0);
          method_532(Integer.toString(field_363) + "/" + method_699(), 23, 37, 0, 0);
-         method_534((var3 = class_1.method_74(8263)) == null?"":var3, 23, 4, 0, 0);
+         method_534((var3 = GLLib.method_74(8263)) == null?"":var3, 23, 4, 0, 0);
          method_532(Integer.toString(method_692(0)), 23, 5, 0, 0);
-         method_534((var3 = class_1.method_74(8264)) == null?"":var3, 23, 8, 0, 0);
+         method_534((var3 = GLLib.method_74(8264)) == null?"":var3, 23, 8, 0, 0);
          method_532(Integer.toString(method_692(1)), 23, 9, 0, 0);
-         method_534((var3 = class_1.method_74(8265)) == null?"":var3, 23, 12, 0, 0);
+         method_534((var3 = GLLib.method_74(8265)) == null?"":var3, 23, 12, 0, 0);
          method_532(Integer.toString(method_692(2)), 23, 13, 0, 0);
-         method_534((var3 = class_1.method_74(8266)) == null?"":var3, 23, 16, 0, 0);
+         method_534((var3 = GLLib.method_74(8266)) == null?"":var3, 23, 16, 0, 0);
          method_532(Integer.toString(method_692(3)), 23, 17, 0, 0);
-         method_534((var3 = class_1.method_74(8267)) == null?"":var3, 23, 20, 0, 0);
+         method_534((var3 = GLLib.method_74(8267)) == null?"":var3, 23, 20, 0, 0);
          method_532(Integer.toString(method_692(4)), 23, 21, 0, 0);
-         method_534((var3 = class_1.method_74(8268)) == null?"":var3, 23, 24, 0, 0);
+         method_534((var3 = GLLib.method_74(8268)) == null?"":var3, 23, 24, 0, 0);
          method_532(Integer.toString(method_692(5)), 23, 25, 0, 0);
       }
 
@@ -25982,7 +25982,7 @@ public final class class_2 extends class_1 implements class_0 {
 
       String var13;
       if(var0 == 8) {
-         if(class_1.method_106()) {
+         if(GLLib.method_106()) {
             if(field_872 != null && field_860 != 35 && field_860 != 18) {
                method_188(false, (class_6)null);
             }
@@ -25994,8 +25994,8 @@ public final class class_2 extends class_1 implements class_0 {
             if(field_182 == 0 || field_182 == 1) {
                int[] var9 = new int[2];
                int[] var11;
-               (var11 = new int[2])[0] = class_1.field_82;
-               var11[1] = class_1.field_83;
+               (var11 = new int[2])[0] = GLLib.field_82;
+               var11[1] = GLLib.field_83;
                method_587(var11, var9);
                method_638(var9, var11);
                if(field_183 != null && method_651(var11[0], var11[1]) > -1) {
@@ -26034,10 +26034,10 @@ public final class class_2 extends class_1 implements class_0 {
          String var7;
          class_6 var10;
          String var17;
-         if(field_338 == -1 && field_339 == -1 && field_182 == -1 && (class_1.method_107() || class_1.method_108() || class_1.method_106() || class_1.method_109()) && (var10 = class_6.method_1006(0, 22)) != null) {
+         if(field_338 == -1 && field_339 == -1 && field_182 == -1 && (GLLib.method_107() || GLLib.method_108() || GLLib.method_106() || GLLib.method_109()) && (var10 = class_6.method_1006(0, 22)) != null) {
             if(var10.field_1105 == 1) {
-               var17 = var10.field_1082 == -1?"%RETRIEVE ITEM NAME ERROR%" + var10.field_1082:((var7 = class_1.method_74(var10.field_1082)) == null?"":var7);
-               var13 = ((var7 = class_1.method_74(154)) == null?"":var7) + var17;
+               var17 = var10.field_1082 == -1?"%RETRIEVE ITEM NAME ERROR%" + var10.field_1082:((var7 = GLLib.method_74(var10.field_1082)) == null?"":var7);
+               var13 = ((var7 = GLLib.method_74(154)) == null?"":var7) + var17;
                field_712 = var10;
                method_822(var13, 7, 0);
             }
@@ -26045,7 +26045,7 @@ public final class class_2 extends class_1 implements class_0 {
             return true;
          }
 
-         if(field_192 > -1 && class_1.method_106() && field_339 == -1 && (field_870 == null || field_870.field_1086 != 49 && field_870.field_1086 != 52) && method_632() < 50) {
+         if(field_192 > -1 && GLLib.method_106() && field_339 == -1 && (field_870 == null || field_870.field_1086 != 49 && field_870.field_1086 != 52) && method_632() < 50) {
             method_579(-1);
          }
 
@@ -26162,8 +26162,8 @@ public final class class_2 extends class_1 implements class_0 {
                      }
                   } else if(field_870.field_1100 == 17 && field_870.method_1086(512)) {
                      field_870.method_1093();
-                     String var18 = (var7 = class_1.method_74(627)) == null?"":var7;
-                     var17 = (var7 = class_1.method_74(628)) == null?"":var7;
+                     String var18 = (var7 = GLLib.method_74(627)) == null?"":var7;
+                     var17 = (var7 = GLLib.method_74(628)) == null?"":var7;
                      var13 = var18;
                      field_710 = 6;
                      method_543(4, 5, true);
@@ -26193,8 +26193,8 @@ public final class class_2 extends class_1 implements class_0 {
                   var3 = 1 + var1 / 3;
                   if(method_659(5) + class_6.method_1019(2) + var3 > method_662()) {
                      if(method_659(5) < method_662()) {
-                        String var14 = class_1.method_79((var7 = class_1.method_74(476)) == null?"":var7, "%slots", "" + var3);
-                        method_829((var7 = class_1.method_74(475)) == null?"":var7, var14, 7, 0);
+                        String var14 = GLLib.method_79((var7 = GLLib.method_74(476)) == null?"":var7, "%slots", "" + var3);
+                        method_829((var7 = GLLib.method_74(475)) == null?"":var7, var14, 7, 0);
                      } else {
                         method_828(471, 477);
                      }
@@ -26209,7 +26209,7 @@ public final class class_2 extends class_1 implements class_0 {
                   byte var6 = 7;
                   byte var5 = 1;
                   method_888(var10000, var5, var6, false);
-                  var1 = 1 + class_1.method_16(0, 2) * (var1 / 3) << 16;
+                  var1 = 1 + GLLib.method_16(0, 2) * (var1 / 3) << 16;
                   var16.method_1068(field_870.field_1087, field_870.field_1088, 59, 1000, true, var12 | var1);
                   field_870.field_1023 = false;
                   field_870.field_1022 = System.currentTimeMillis() / 1000L;
@@ -26243,15 +26243,15 @@ public final class class_2 extends class_1 implements class_0 {
       }
 
       if(var0 == 2) {
-         if((var1 = class_1.method_14()) == 19 || var1 == 24 || var1 == 11) {
+         if((var1 = GLLib.method_14()) == 19 || var1 == 24 || var1 == 11) {
             if(method_546(1, 37) && method_544(1, 37)) {
                method_181();
             } else if(var1 != 19 && var1 != 11) {
                if(var1 == 24) {
-                  method_900("Show_Toast_" + ((var13 = class_1.method_74(499)) == null?"":var13));
+                  method_900("Show_Toast_" + ((var13 = GLLib.method_74(499)) == null?"":var13));
                }
             } else {
-               method_900("Show_Toast_" + ((var13 = class_1.method_74(498)) == null?"":var13));
+               method_900("Show_Toast_" + ((var13 = GLLib.method_74(498)) == null?"":var13));
             }
          }
 
@@ -26308,9 +26308,9 @@ public final class class_2 extends class_1 implements class_0 {
          if(field_121[4][var1][5] > -1 && field_124[field_121[4][var1][5]] == null) {
             short var3 = field_121[4][var1][5];
             method_153(1, var3, 1, 0, 24, 0, -1);
-            class_1.method_21("/7");
+            GLLib.method_21("/7");
             method_151(1, 3);
-            class_1.method_23();
+            GLLib.method_23();
          }
 
          switch(field_710) {
@@ -26372,12 +26372,12 @@ public final class class_2 extends class_1 implements class_0 {
          field_710 = 0;
       }
 
-      if(var0 == 8 && field_710 != 2 && field_710 != 4 && field_710 != 5 && field_706 > 700 && class_1.method_106()) {
+      if(var0 == 8 && field_710 != 2 && field_710 != 4 && field_710 != 5 && field_706 > 700 && GLLib.method_106()) {
          method_237();
       }
 
       if(var0 == 2) {
-         if((var4 = class_1.method_14()) == 19 || var4 == 11) {
+         if((var4 = GLLib.method_14()) == 19 || var4 == 11) {
             if(field_860 == -1) {
                switch(field_710) {
                case 0:
@@ -26393,11 +26393,11 @@ public final class class_2 extends class_1 implements class_0 {
                }
             } else {
                String var5;
-               method_900("Show_Toast_" + ((var5 = class_1.method_74(498)) == null?"":var5));
+               method_900("Show_Toast_" + ((var5 = GLLib.method_74(498)) == null?"":var5));
             }
          }
 
-         field_706 += class_1.field_15;
+         field_706 += GLLib.field_15;
          method_160(1);
       }
 
@@ -26418,17 +26418,17 @@ public final class class_2 extends class_1 implements class_0 {
          if(field_121[4][15][10] == 1) {
             switch(field_710) {
             case 2:
-               method_532((var2 = class_1.method_74(45)) == null?"":var2, 4, 17, 0, 0);
-               method_532((var2 = class_1.method_74(40)) == null?"":var2, 4, 18, 0, 0);
+               method_532((var2 = GLLib.method_74(45)) == null?"":var2, 4, 17, 0, 0);
+               method_532((var2 = GLLib.method_74(40)) == null?"":var2, 4, 18, 0, 0);
                break;
             case 3:
-               method_532((var2 = class_1.method_74(32)) == null?"":var2, 4, 17, 0, 0);
-               method_532((var2 = class_1.method_74(33)) == null?"":var2, 4, 18, 0, 0);
+               method_532((var2 = GLLib.method_74(32)) == null?"":var2, 4, 17, 0, 0);
+               method_532((var2 = GLLib.method_74(33)) == null?"":var2, 4, 18, 0, 0);
             }
          }
 
          if(field_121[4][30][10] == 1) {
-            method_532((var2 = class_1.method_74(481)) == null?"":var2, 4, 31, 0, 0);
+            method_532((var2 = GLLib.method_74(481)) == null?"":var2, 4, 31, 0, 0);
          }
       }
 
@@ -26438,7 +26438,7 @@ public final class class_2 extends class_1 implements class_0 {
    // $FF: renamed from: a (int, int, int) void
    static void method_820(int var0, int var1, int var2) {
       String var3;
-      method_822((var3 = class_1.method_74(var0)) == null?"":var3, var1, var2);
+      method_822((var3 = GLLib.method_74(var0)) == null?"":var3, var1, var2);
    }
 
    // $FF: renamed from: f (int, int, int) void
@@ -26520,8 +26520,8 @@ public final class class_2 extends class_1 implements class_0 {
    // $FF: renamed from: a (int, int, int, int, int) void
    static void method_823(int var0, int var1, int var2, int var3, int var4) {
       String var5;
-      String var10000 = (var5 = class_1.method_74(var0)) == null?"":var5;
-      String var6 = (var5 = class_1.method_74(var1)) == null?"":var5;
+      String var10000 = (var5 = GLLib.method_74(var0)) == null?"":var5;
+      String var6 = (var5 = GLLib.method_74(var1)) == null?"":var5;
       var5 = var10000;
       field_705 = true;
       method_826(var5, var6, var2, 0, field_705);
@@ -26530,7 +26530,7 @@ public final class class_2 extends class_1 implements class_0 {
    // $FF: renamed from: e (int, int, int, int) void
    private static void method_824(int var0, int var1, int var2, int var3) {
       String var4;
-      method_826((var4 = class_1.method_74(var0)) == null?"":var4, (var4 = class_1.method_74(var1)) == null?"":var4, var2, 0, false);
+      method_826((var4 = GLLib.method_74(var0)) == null?"":var4, (var4 = GLLib.method_74(var1)) == null?"":var4, var2, 0, false);
    }
 
    // $FF: renamed from: a (java.lang.String, java.lang.String, int) void
@@ -26562,7 +26562,7 @@ public final class class_2 extends class_1 implements class_0 {
    // $FF: renamed from: b (int, int) void
    static void method_828(int var0, int var1) {
       String var2;
-      method_829((var2 = class_1.method_74(var0)) == null?"":var2, (var2 = class_1.method_74(var1)) == null?"":var2, 7, 0);
+      method_829((var2 = GLLib.method_74(var0)) == null?"":var2, (var2 = GLLib.method_74(var1)) == null?"":var2, 7, 0);
    }
 
    // $FF: renamed from: a (java.lang.String, java.lang.String, int, int) void
@@ -26659,7 +26659,7 @@ public final class class_2 extends class_1 implements class_0 {
 
       if(var0 == 8) {
          if(field_881 > 0 && field_881 <= 10) {
-            if(field_192 > -1 && class_1.method_106() && field_339 == -1 && (field_870 == null || field_870.field_1086 != 49 && field_870.field_1086 != 52) && method_632() < 50) {
+            if(field_192 > -1 && GLLib.method_106() && field_339 == -1 && (field_870 == null || field_870.field_1086 != 49 && field_870.field_1086 != 52) && method_632() < 50) {
                method_579(-1);
             }
 
@@ -26714,15 +26714,15 @@ public final class class_2 extends class_1 implements class_0 {
 
       if(var0 == 2) {
          int var4;
-         if((var4 = class_1.method_14()) == 19 || var4 == 24 || var4 == 11) {
+         if((var4 = GLLib.method_14()) == 19 || var4 == 24 || var4 == 11) {
             if(method_546(1, 37) && method_544(1, 37)) {
                method_181();
             } else {
                String var5;
                if(var4 == 19) {
-                  method_900("Show_Toast_" + ((var5 = class_1.method_74(498)) == null?"":var5));
+                  method_900("Show_Toast_" + ((var5 = GLLib.method_74(498)) == null?"":var5));
                } else if(var4 == 24) {
-                  method_900("Show_Toast_" + ((var5 = class_1.method_74(499)) == null?"":var5));
+                  method_900("Show_Toast_" + ((var5 = GLLib.method_74(499)) == null?"":var5));
                }
             }
          }
@@ -26973,7 +26973,7 @@ public final class class_2 extends class_1 implements class_0 {
       }
 
       if(var0 == 2) {
-         if((var5 = class_1.method_14()) == 19 || var5 == 11) {
+         if((var5 = GLLib.method_14()) == 19 || var5 == 11) {
             method_355();
          }
 
@@ -26994,7 +26994,7 @@ public final class class_2 extends class_1 implements class_0 {
                ++field_722;
                field_121[9][67][2] = (short)(field_121[9][field_723][2] + 4 * field_722);
                field_121[9][67][3] = (short)(field_121[9][field_723][3] + field_722 * (field_722 >> 2));
-               if(field_121[9][67][3] > class_1.height) {
+               if(field_121[9][67][3] > GLLib.height) {
                   field_721 = false;
                   field_722 = 0;
                   method_553(0);
@@ -27007,7 +27007,7 @@ public final class class_2 extends class_1 implements class_0 {
          method_531(9);
          if(field_147) {
             String var4;
-            method_532((var4 = class_1.method_74(157)) == null?"":var4, 9, 1, 0, 0);
+            method_532((var4 = GLLib.method_74(157)) == null?"":var4, 9, 1, 0, 0);
             int[] var6 = new int[4];
             field_124[field_121[9][11][5]].method_938(field_121[9][11][6], 0, var6, 0);
             int var10000 = field_121[9][11][2] + var6[0];
@@ -27017,20 +27017,20 @@ public final class class_2 extends class_1 implements class_0 {
             var2 = var10002;
             var5 = var10001;
             var0 = var10000;
-            class_1.method_41(class_1.field_1, var0, var5, var2, var3, true);
+            GLLib.method_41(GLLib.field_1, var0, var5, var2, var3, true);
 
             for(var0 = 0; var0 < field_720 && var0 < 5; ++var0) {
                var5 = var0 * 11;
                String var7;
-               method_532((var7 = class_1.method_74(field_715[var0 + field_713])) == null?"":var7, 9, var5 + 13, 0, 0);
+               method_532((var7 = GLLib.method_74(field_715[var0 + field_713])) == null?"":var7, 9, var5 + 13, 0, 0);
                if(method_670() < field_716[var0 + field_713]) {
-                  method_532(((var7 = class_1.method_74(447)) == null?"":var7) + Integer.toString(field_716[var0 + field_713]), 9, var5 + 22, 0, 0);
+                  method_532(((var7 = GLLib.method_74(447)) == null?"":var7) + Integer.toString(field_716[var0 + field_713]), 9, var5 + 22, 0, 0);
                }
             }
 
-            var5 = class_1.height;
-            var0 = class_1.width;
-            class_1.method_41(class_1.field_1, 0, 0, var0, var5, true);
+            var5 = GLLib.height;
+            var0 = GLLib.width;
+            GLLib.method_41(GLLib.field_1, 0, 0, var0, var5, true);
          }
       }
 
@@ -27213,7 +27213,7 @@ public final class class_2 extends class_1 implements class_0 {
 
       if(var0 == 2) {
          method_848();
-         if((var1 = class_1.method_14()) == 19 || var1 == 11) {
+         if((var1 = GLLib.method_14()) == 19 || var1 == 11) {
             method_374();
          }
 
@@ -27223,15 +27223,15 @@ public final class class_2 extends class_1 implements class_0 {
       if(var0 == 3) {
          method_531(17);
          String var2;
-         method_532((var2 = class_1.method_74(157)) == null?"":var2, 17, 2, 0, 0);
-         method_532((var2 = class_1.method_74(field_715[field_728])) == null?"":var2, 17, 11, 0, 0);
+         method_532((var2 = GLLib.method_74(157)) == null?"":var2, 17, 2, 0, 0);
+         method_532((var2 = GLLib.method_74(field_715[field_728])) == null?"":var2, 17, 11, 0, 0);
          var0 = field_728;
          if(field_295[var0][0] != 0) {
-            method_534((var2 = class_1.method_74(746 + field_728)) == null?"":var2, 17, 17, 0, 0);
+            method_534((var2 = GLLib.method_74(746 + field_728)) == null?"":var2, 17, 17, 0, 0);
             method_532(Integer.toString(field_730), 17, 18, 0, 0);
             method_532(Integer.toString(field_731), 17, 20, 0, 0);
             if(field_295[field_728][0] != 0) {
-               method_532(((var2 = class_1.method_74(field_732)) == null?"":var2) + " x" + field_295[field_728][2], 17, 24, 0, 0);
+               method_532(((var2 = GLLib.method_74(field_732)) == null?"":var2) + " x" + field_295[field_728][2], 17, 24, 0, 0);
                method_532(Integer.toString(field_733) + "/" + field_295[field_728][2], 17, 25, 0, 0);
                if(field_121[17][27][10] >= 1) {
                   method_532(Integer.toString(field_734), 17, 28, 0, 0);
@@ -27239,18 +27239,18 @@ public final class class_2 extends class_1 implements class_0 {
             }
 
             if(field_295[field_728][3] != 0) {
-               method_532(((var2 = class_1.method_74(field_735)) == null?"":var2) + " x" + field_295[field_728][5], 17, 30, 0, 0);
+               method_532(((var2 = GLLib.method_74(field_735)) == null?"":var2) + " x" + field_295[field_728][5], 17, 30, 0, 0);
                method_532(Integer.toString(field_736) + "/" + field_295[field_728][5], 17, 31, 0, 0);
                if(field_121[17][33][10] >= 1) {
                   method_532(Integer.toString(field_737), 17, 34, 0, 0);
                }
             }
 
-            method_532((var2 = class_1.method_74(173)) == null?"":var2, 17, 46, 0, 0);
-            method_532((var2 = class_1.method_74(161)) == null?"":var2, 17, 47, 0, 0);
+            method_532((var2 = GLLib.method_74(173)) == null?"":var2, 17, 46, 0, 0);
+            method_532((var2 = GLLib.method_74(161)) == null?"":var2, 17, 47, 0, 0);
          } else {
-            method_534((var2 = class_1.method_74(field_729)) == null?"":var2, 17, 17, 0, 0);
-            method_534((var2 = class_1.method_74(159)) == null?"":var2, 17, 42, 0, 0);
+            method_534((var2 = GLLib.method_74(field_729)) == null?"":var2, 17, 17, 0, 0);
+            method_534((var2 = GLLib.method_74(159)) == null?"":var2, 17, 42, 0, 0);
          }
       }
 
@@ -27495,9 +27495,9 @@ public final class class_2 extends class_1 implements class_0 {
          }
 
          class_6.method_1037(100);
-         class_1.method_21("/5");
+         GLLib.method_21("/5");
          method_151(0, 3);
-         class_1.method_23();
+         GLLib.method_23();
          switch(field_389) {
          case 0:
          case 15:
@@ -27529,23 +27529,23 @@ public final class class_2 extends class_1 implements class_0 {
          case 18:
          }
 
-         class_1.method_21("/5");
+         GLLib.method_21("/5");
          method_151(0, 3);
-         class_1.method_23();
-         class_1.method_21("/10");
-         byte[] var1 = class_1.method_27(field_389);
-         class_1.method_23();
+         GLLib.method_23();
+         GLLib.method_21("/10");
+         byte[] var1 = GLLib.method_27(field_389);
+         GLLib.method_23();
          var2 = 0;
-         byte var3 = class_1.method_57(var1, 0);
+         byte var3 = GLLib.method_57(var1, 0);
          int var20 = var2 + 1;
 
          for(int var4 = 0; var4 < var3; ++var4) {
             var20 += 2;
-            byte var5 = class_1.method_57(var1, var20);
+            byte var5 = GLLib.method_57(var1, var20);
             ++var20;
 
             for(int var6 = 0; var6 < var5; ++var6) {
-               byte var7 = class_1.method_57(var1, var20);
+               byte var7 = GLLib.method_57(var1, var20);
                ++var20;
                short var8 = 0;
                switch(var7) {
@@ -27555,11 +27555,11 @@ public final class class_2 extends class_1 implements class_0 {
                   break;
                case 2:
                   ++var20;
-                  var8 = class_1.method_58(var1, var20);
+                  var8 = GLLib.method_58(var1, var20);
                   var20 += 2;
                }
 
-               field_390 = class_1.method_58(var1, var20);
+               field_390 = GLLib.method_58(var1, var20);
                var20 += 2;
                if(var6 == 0) {
                   field_387 = new short[field_390][];
@@ -27573,7 +27573,7 @@ public final class class_2 extends class_1 implements class_0 {
                   int var22;
                   int var25;
                   label199: {
-                     var10 = class_1.method_58(var1, var20);
+                     var10 = GLLib.method_58(var1, var20);
                      var20 += 2;
                      short var11 = var10;
                      if(var10 != 0) {
@@ -27619,7 +27619,7 @@ public final class class_2 extends class_1 implements class_0 {
                      field_385 = (short)(field_386[var22] + 1);
                   }
 
-                  byte var23 = class_1.method_57(var1, var20);
+                  byte var23 = GLLib.method_57(var1, var20);
                   ++var20;
                   if(field_387[var22] == null) {
                      field_387[var22] = new short[var23];
@@ -27641,39 +27641,39 @@ public final class class_2 extends class_1 implements class_0 {
                   }
 
                   for(int var24 = (var25 = field_387[var22].length) - var23; var24 < var25; ++var24) {
-                     byte var26 = class_1.method_57(var1, var20);
+                     byte var26 = GLLib.method_57(var1, var20);
                      ++var20;
                      field_387[var22][var24] = (short)var26;
                      switch(var26) {
                      case 11:
-                        field_388[var22][var24 * 6] = class_1.method_58(var1, var20);
+                        field_388[var22][var24 * 6] = GLLib.method_58(var1, var20);
                         var20 += 2;
-                        field_388[var22][var24 * 6 + 1] = class_1.method_58(var1, var20);
+                        field_388[var22][var24 * 6 + 1] = GLLib.method_58(var1, var20);
                         var20 += 2;
                         break;
                      case 12:
-                        field_388[var22][var24 * 6] = class_1.method_58(var1, var20);
+                        field_388[var22][var24 * 6] = GLLib.method_58(var1, var20);
                         var20 += 2;
-                        field_388[var22][var24 * 6 + 1] = class_1.method_58(var1, var20);
+                        field_388[var22][var24 * 6 + 1] = GLLib.method_58(var1, var20);
                         var20 += 2;
                         break;
                      case 21:
                         field_388[var22][var24 * 6] = var8;
-                        field_388[var22][var24 * 6 + 1] = class_1.method_58(var1, var20);
+                        field_388[var22][var24 * 6 + 1] = GLLib.method_58(var1, var20);
                         var20 += 2;
-                        field_388[var22][var24 * 6 + 2] = class_1.method_58(var1, var20);
+                        field_388[var22][var24 * 6 + 2] = GLLib.method_58(var1, var20);
                         var20 += 2;
                         break;
                      case 22:
                         field_388[var22][var24 * 6] = var8;
-                        field_388[var22][var24 * 6 + 1] = class_1.method_57(var1, var20);
+                        field_388[var22][var24 * 6 + 1] = GLLib.method_57(var1, var20);
                         ++var20;
-                        field_388[var22][var24 * 6 + 2] = class_1.method_57(var1, var20);
+                        field_388[var22][var24 * 6 + 2] = GLLib.method_57(var1, var20);
                         ++var20;
                         break;
                      case 102:
                      case 107:
-                        field_388[var22][var24 * 6] = class_1.method_58(var1, var20);
+                        field_388[var22][var24 * 6] = GLLib.method_58(var1, var20);
                         var20 += 2;
                         break;
                      case 103:
@@ -27681,41 +27681,41 @@ public final class class_2 extends class_1 implements class_0 {
                      case 105:
                      case 108:
                      case 109:
-                        field_388[var22][var24 * 6] = class_1.method_58(var1, var20);
+                        field_388[var22][var24 * 6] = GLLib.method_58(var1, var20);
                         var20 += 2;
-                        field_388[var22][var24 * 6 + 1] = class_1.method_58(var1, var20);
+                        field_388[var22][var24 * 6 + 1] = GLLib.method_58(var1, var20);
                         var20 += 2;
-                        field_388[var22][var24 * 6 + 2] = class_1.method_58(var1, var20);
+                        field_388[var22][var24 * 6 + 2] = GLLib.method_58(var1, var20);
                         var20 += 2;
-                        field_388[var22][var24 * 6 + 3] = class_1.method_58(var1, var20);
+                        field_388[var22][var24 * 6 + 3] = GLLib.method_58(var1, var20);
                         var20 += 2;
                         break;
                      case 106:
-                        field_388[var22][var24 * 6] = class_1.method_58(var1, var20);
+                        field_388[var22][var24 * 6] = GLLib.method_58(var1, var20);
                         var20 += 2;
-                        field_388[var22][var24 * 6 + 1] = class_1.method_58(var1, var20);
+                        field_388[var22][var24 * 6 + 1] = GLLib.method_58(var1, var20);
                         var20 += 2;
                         break;
                      case 110:
-                        field_388[var22][var24 * 6] = class_1.method_58(var1, var20);
+                        field_388[var22][var24 * 6] = GLLib.method_58(var1, var20);
                         var20 += 2;
-                        field_388[var22][var24 * 6 + 1] = class_1.method_58(var1, var20);
+                        field_388[var22][var24 * 6 + 1] = GLLib.method_58(var1, var20);
                         var20 += 2;
-                        field_388[var22][var24 * 6 + 2] = class_1.method_58(var1, var20);
+                        field_388[var22][var24 * 6 + 2] = GLLib.method_58(var1, var20);
                         var20 += 2;
                         break;
                      case 111:
                         field_388[var22][var24 * 6] = var8;
-                        field_388[var22][var24 * 6 + 1] = class_1.method_58(var1, var20);
+                        field_388[var22][var24 * 6 + 1] = GLLib.method_58(var1, var20);
                         var20 += 2;
-                        field_388[var22][var24 * 6 + 2] = class_1.method_58(var1, var20);
+                        field_388[var22][var24 * 6 + 2] = GLLib.method_58(var1, var20);
                         var20 += 2;
                         break;
                      case 112:
                         field_388[var22][var24 * 6] = var8;
-                        field_388[var22][var24 * 6 + 1] = class_1.method_58(var1, var20);
+                        field_388[var22][var24 * 6 + 1] = GLLib.method_58(var1, var20);
                         var20 += 2;
-                        field_388[var22][var24 * 6 + 2] = class_1.method_58(var1, var20);
+                        field_388[var22][var24 * 6 + 2] = GLLib.method_58(var1, var20);
                         var20 += 2;
                         break;
                      case 113:
@@ -27723,16 +27723,16 @@ public final class class_2 extends class_1 implements class_0 {
                         break;
                      case 114:
                         field_388[var22][var24 * 6] = var8;
-                        field_388[var22][var24 * 6 + 1] = class_1.method_58(var1, var20);
+                        field_388[var22][var24 * 6 + 1] = GLLib.method_58(var1, var20);
                         var20 += 2;
-                        field_388[var22][var24 * 6 + 2] = class_1.method_58(var1, var20);
+                        field_388[var22][var24 * 6 + 2] = GLLib.method_58(var1, var20);
                         var20 += 2;
                         break;
                      case 115:
                         field_388[var22][var24 * 6] = var8;
-                        field_388[var22][var24 * 6 + 1] = class_1.method_58(var1, var20);
+                        field_388[var22][var24 * 6 + 1] = GLLib.method_58(var1, var20);
                         var20 += 2;
-                        field_388[var22][var24 * 6 + 2] = class_1.method_58(var1, var20);
+                        field_388[var22][var24 * 6 + 2] = GLLib.method_58(var1, var20);
                         var20 += 2;
                         break;
                      case 116:
@@ -27745,16 +27745,16 @@ public final class class_2 extends class_1 implements class_0 {
 
          field_390 = field_386.length;
          method_148(field_389 + 1);
-         class_1.method_21("/5");
+         GLLib.method_21("/5");
          if(field_862 != 7) {
             field_864[81] = method_145(81, 1, true, false, 0, -1);
          }
 
-         class_1.method_23();
+         GLLib.method_23();
          method_708();
       }
 
-      if(var0 == 8 && class_1.method_106() && field_389 != 17) {
+      if(var0 == 8 && GLLib.method_106() && field_389 != 17) {
          while(field_383 < field_390) {
             for(int var18 = 0; var18 < field_387[field_383].length; ++var18) {
                class_6 var29;
@@ -27764,8 +27764,8 @@ public final class class_2 extends class_1 implements class_0 {
                   field_867.field_1088 = field_388[field_383][var18 * 6 + 1];
                   break;
                case 12:
-                  field_867.field_1087 = field_867.field_1102 - (class_1.width >> 1);
-                  field_867.field_1088 = field_867.field_1103 - (class_1.height >> 1);
+                  field_867.field_1087 = field_867.field_1102 - (GLLib.width >> 1);
+                  field_867.field_1088 = field_867.field_1103 - (GLLib.height >> 1);
                case 21:
                case 22:
                case 102:
@@ -27785,7 +27785,7 @@ public final class class_2 extends class_1 implements class_0 {
                   class_6.method_1011(0, field_388[field_383][var18 * 6], field_388[field_383][var18 * 6 + 1], var31, 1);
                   switch(var31[0].field_1086) {
                   case 13:
-                     var31[0].method_1035(var31[0].field_1102 - (class_1.width >> 1), var31[0].field_1103 - (class_1.height >> 1));
+                     var31[0].method_1035(var31[0].field_1102 - (GLLib.width >> 1), var31[0].field_1103 - (GLLib.height >> 1));
                      continue;
                   default:
                      var31[0].field_1087 = var31[0].field_1102;
@@ -27809,9 +27809,9 @@ public final class class_2 extends class_1 implements class_0 {
       }
 
       if(var0 == 2) {
-         if(class_1.method_14() == 19) {
+         if(GLLib.method_14() == 19) {
             String var19;
-            method_900("Show_Toast_" + ((var19 = class_1.method_74(498)) == null?"":var19));
+            method_900("Show_Toast_" + ((var19 = GLLib.method_74(498)) == null?"":var19));
          }
 
          method_583();
@@ -27845,7 +27845,7 @@ public final class class_2 extends class_1 implements class_0 {
       for(int var2 = 0; var2 < field_739.length; ++var2) {
          if(field_739[var2][1] == var0) {
             int var1 = field_739[var2][0];
-            if(class_1.field_43.equals("/" + var1)) {
+            if(GLLib.field_43.equals("/" + var1)) {
                return field_739[var2][2];
             }
          }
@@ -27884,7 +27884,7 @@ public final class class_2 extends class_1 implements class_0 {
                int var7 = field_740[var2 + 4];
                int var8 = field_740[var2 + 5];
                var2 += 6;
-               if(class_1.field_43.equals("/" + var4)) {
+               if(GLLib.field_43.equals("/" + var4)) {
                   var0.method_977(var7, var5, var6);
                   if(var8 != 0) {
                      var0.method_910();
@@ -27915,18 +27915,18 @@ public final class class_2 extends class_1 implements class_0 {
 
    // $FF: renamed from: g (int) java.lang.String
    private static String method_853(int var0) {
-      String var1 = (var1 = class_1.method_74(field_765 == 3?797:(field_765 == 4?800:(field_765 == 10?841:(field_765 == 11?846:(field_765 == 2?798:(field_765 == 6?856:(field_765 != 0?799:796)))))))) == null?"":var1;
+      String var1 = (var1 = GLLib.method_74(field_765 == 3?797:(field_765 == 4?800:(field_765 == 10?841:(field_765 == 11?846:(field_765 == 2?798:(field_765 == 6?856:(field_765 != 0?799:796)))))))) == null?"":var1;
       if(field_765 == 3) {
-         var1 = class_1.method_79(var1, "%num", field_748[var0]);
+         var1 = GLLib.method_79(var1, "%num", field_748[var0]);
       } else {
          if(field_765 != 10) {
             if(field_765 == 11) {
-               var1 = class_1.method_79(var1, "%amount", class_1.method_77(field_767[var0], field_862, " "));
+               var1 = GLLib.method_79(var1, "%amount", GLLib.method_77(field_767[var0], field_862, " "));
             } else {
                if(field_765 == 6) {
                   int var2;
                   if(field_770[var0] == -1) {
-                     var2 = class_1.method_126(var0, "Cash");
+                     var2 = GLLib.method_126(var0, "Cash");
                      field_770[var0] = var2;
                   } else {
                      var2 = field_770[var0];
@@ -27934,9 +27934,9 @@ public final class class_2 extends class_1 implements class_0 {
 
                   String var3;
                   if(var2 == 1) {
-                     var1 = class_1.method_79(var1, "%price", method_860(field_748[var0])) + " " + ((var3 = class_1.method_74(853)) == null?"":var3);
+                     var1 = GLLib.method_79(var1, "%price", method_860(field_748[var0])) + " " + ((var3 = GLLib.method_74(853)) == null?"":var3);
                   } else {
-                     var1 = class_1.method_79(var1, "%price", method_860(field_748[var0])) + " " + ((var3 = class_1.method_74(785)) == null?"":var3);
+                     var1 = GLLib.method_79(var1, "%price", method_860(field_748[var0])) + " " + ((var3 = GLLib.method_74(785)) == null?"":var3);
                   }
 
                   return var1;
@@ -27947,12 +27947,12 @@ public final class class_2 extends class_1 implements class_0 {
                }
 
                if(field_765 == 2) {
-                  var1 = class_1.method_79(var1, "%num", "1");
+                  var1 = GLLib.method_79(var1, "%num", "1");
                }
             }
          }
 
-         var1 = class_1.method_79(var1, "%price", method_860(field_748[var0]));
+         var1 = GLLib.method_79(var1, "%price", method_860(field_748[var0]));
       }
 
       return var1;
@@ -27976,14 +27976,14 @@ public final class class_2 extends class_1 implements class_0 {
             case 0:
             case 19:
             default:
-               field_743 = (var4 = class_1.method_74(446)) == null?"":var4;
+               field_743 = (var4 = GLLib.method_74(446)) == null?"":var4;
                break;
             case 1:
-               field_743 = (var6 = class_1.method_74(74)) == null?"":var6;
+               field_743 = (var6 = GLLib.method_74(74)) == null?"":var6;
                var3 = true;
                break;
             case 2:
-               field_743 = (var6 = class_1.method_74(777)) == null?"":var6;
+               field_743 = (var6 = GLLib.method_74(777)) == null?"":var6;
                var3 = true;
                break;
             case 3:
@@ -28017,28 +28017,28 @@ public final class class_2 extends class_1 implements class_0 {
                field_745 = true;
                break;
             case 9:
-               field_743 = (var5 = class_1.method_74(772)) == null?"":var5;
+               field_743 = (var5 = GLLib.method_74(772)) == null?"":var5;
                var1 = false;
                var2 = true;
                var3 = true;
                break;
             case 10:
-               field_743 = (var5 = class_1.method_74(773)) == null?"":var5;
+               field_743 = (var5 = GLLib.method_74(773)) == null?"":var5;
                var1 = false;
                var2 = true;
                var3 = true;
                break;
             case 11:
-               field_743 = (var6 = class_1.method_74(795)) == null?"":var6;
+               field_743 = (var6 = GLLib.method_74(795)) == null?"":var6;
                var3 = true;
                break;
             case 12:
-               field_743 = (var6 = class_1.method_74(444)) == null?"":var6;
+               field_743 = (var6 = GLLib.method_74(444)) == null?"":var6;
                var3 = true;
                break;
             case 13:
                if(method_137() == 4) {
-                  field_743 = (var4 = class_1.method_74(514)) == null?"":var4;
+                  field_743 = (var4 = GLLib.method_74(514)) == null?"":var4;
                } else {
                   var1 = false;
                   var2 = true;
@@ -28046,35 +28046,35 @@ public final class class_2 extends class_1 implements class_0 {
                }
                break;
             case 14:
-               field_743 = (var6 = class_1.method_74(513)) == null?"":var6;
+               field_743 = (var6 = GLLib.method_74(513)) == null?"":var6;
                var3 = true;
                break;
             case 15:
-               field_743 = class_1.method_79((var5 = class_1.method_74(508)) == null?"":var5, "%d", "" + 0);
+               field_743 = GLLib.method_79((var5 = GLLib.method_74(508)) == null?"":var5, "%d", "" + 0);
                var1 = false;
                var2 = true;
                var3 = true;
                break;
             case 16:
-               field_743 = class_1.method_79((var5 = class_1.method_74(507)) == null?"":var5, "%d", "" + 0);
+               field_743 = GLLib.method_79((var5 = GLLib.method_74(507)) == null?"":var5, "%d", "" + 0);
                var1 = false;
                var2 = true;
                var3 = true;
                break;
             case 17:
-               field_743 = (var5 = class_1.method_74(509)) == null?"":var5;
+               field_743 = (var5 = GLLib.method_74(509)) == null?"":var5;
                var1 = false;
                var2 = true;
                var3 = true;
                break;
             case 18:
-               field_743 = (var5 = class_1.method_74(510)) == null?"":var5;
+               field_743 = (var5 = GLLib.method_74(510)) == null?"":var5;
                var1 = false;
                var2 = true;
                var3 = true;
                break;
             case 20:
-               field_743 = (var5 = class_1.method_74(802)) == null?"":var5;
+               field_743 = (var5 = GLLib.method_74(802)) == null?"":var5;
                var1 = true;
                var2 = false;
                var3 = true;
@@ -28093,7 +28093,7 @@ public final class class_2 extends class_1 implements class_0 {
                method_545(27, 16, true);
                if(field_765 != 11) {
                   method_543(27, 17, true);
-                  var6 = (var6 = class_1.method_74(851)) == null?"":var6;
+                  var6 = (var6 = GLLib.method_74(851)) == null?"":var6;
                   field_123[27][17] = var6;
                }
 
@@ -28101,7 +28101,7 @@ public final class class_2 extends class_1 implements class_0 {
                   method_543(27, 12, true);
                   method_545(27, 12, true);
                   method_543(27, 13, true);
-                  var5 = (var5 = class_1.method_74(838)) == null?"":var5;
+                  var5 = (var5 = GLLib.method_74(838)) == null?"":var5;
                   field_123[27][13] = var5;
                   var1 = false;
                   var2 = false;
@@ -28109,12 +28109,12 @@ public final class class_2 extends class_1 implements class_0 {
                   method_543(27, 12, true);
                   method_545(27, 12, true);
                   method_543(27, 13, true);
-                  var5 = (var5 = class_1.method_74(127)) == null?"":var5;
+                  var5 = (var5 = GLLib.method_74(127)) == null?"":var5;
                   field_123[27][13] = var5;
                   method_543(27, 14, true);
                   method_545(27, 14, true);
                   method_543(27, 15, true);
-                  var5 = (var5 = class_1.method_74(767)) == null?"":var5;
+                  var5 = (var5 = GLLib.method_74(767)) == null?"":var5;
                   field_123[27][15] = var5;
                   var1 = false;
                   var2 = false;
@@ -28146,31 +28146,31 @@ public final class class_2 extends class_1 implements class_0 {
                case 7:
                case 8:
                   if(field_765 == 11) {
-                     var5 = (var5 = class_1.method_74(848)) == null?"":var5;
+                     var5 = (var5 = GLLib.method_74(848)) == null?"":var5;
                      field_123[27][7] = var5;
-                     var5 = (var5 = class_1.method_74(847)) == null?"":var5;
+                     var5 = (var5 = GLLib.method_74(847)) == null?"":var5;
                      field_123[27][9] = var5;
                   } else if(field_765 == 10) {
-                     var5 = (var5 = class_1.method_74(843)) == null?"":var5;
+                     var5 = (var5 = GLLib.method_74(843)) == null?"":var5;
                      field_123[27][7] = var5;
-                     var5 = (var5 = class_1.method_74(842)) == null?"":var5;
+                     var5 = (var5 = GLLib.method_74(842)) == null?"":var5;
                      field_123[27][9] = var5;
                   } else if(field_765 == 6) {
-                     var5 = (var5 = class_1.method_74(845)) == null?"":var5;
+                     var5 = (var5 = GLLib.method_74(845)) == null?"":var5;
                      field_123[27][7] = var5;
-                     var5 = (var5 = class_1.method_74(844)) == null?"":var5;
+                     var5 = (var5 = GLLib.method_74(844)) == null?"":var5;
                      field_123[27][9] = var5;
                   } else {
-                     var5 = (var5 = class_1.method_74(850)) == null?"":var5;
+                     var5 = (var5 = GLLib.method_74(850)) == null?"":var5;
                      field_123[27][7] = var5;
-                     var5 = (var5 = class_1.method_74(849)) == null?"":var5;
+                     var5 = (var5 = GLLib.method_74(849)) == null?"":var5;
                      field_123[27][9] = var5;
                   }
                   break;
                default:
-                  var5 = (var5 = class_1.method_74(31)) == null?"":var5;
+                  var5 = (var5 = GLLib.method_74(31)) == null?"":var5;
                   field_123[27][7] = var5;
-                  var5 = (var5 = class_1.method_74(30)) == null?"":var5;
+                  var5 = (var5 = GLLib.method_74(30)) == null?"":var5;
                   field_123[27][9] = var5;
                }
 
@@ -28184,7 +28184,7 @@ public final class class_2 extends class_1 implements class_0 {
                method_545(27, 10, false);
                method_543(27, 11, false);
             } else if(var2) {
-               var5 = (var5 = class_1.method_74(45)) == null?"":var5;
+               var5 = (var5 = GLLib.method_74(45)) == null?"":var5;
                field_123[27][11] = var5;
                method_543(27, 6, false);
                method_545(27, 6, false);
@@ -28205,7 +28205,7 @@ public final class class_2 extends class_1 implements class_0 {
       }
 
       int var7;
-      if(var0 == 2 && ((var7 = class_1.method_14()) == 19 || var7 == 11)) {
+      if(var0 == 2 && ((var7 = GLLib.method_14()) == 19 || var7 == 11)) {
          if(method_544(27, 16)) {
             method_520();
          } else if(method_544(27, 6)) {
@@ -28227,49 +28227,49 @@ public final class class_2 extends class_1 implements class_0 {
       field_743 = "";
       switch(field_742) {
       case 1:
-         class_1.field_4 = -1;
+         GLLib.field_4 = -1;
          return;
       case 2:
          field_91 = 1;
          method_634();
-         class_1.method_114();
+         GLLib.method_114();
          method_349();
          method_345();
          return;
       case 3:
          field_91 = 1;
          method_634();
-         class_1.method_113(field_769[0], "Cash");
+         GLLib.method_113(field_769[0], "Cash");
          field_138 = false;
          return;
       case 4:
          field_91 = 1;
          method_634();
-         class_1.method_113(field_769[1], "Cash");
+         GLLib.method_113(field_769[1], "Cash");
          field_138 = false;
          return;
       case 5:
          field_91 = 1;
          method_634();
-         class_1.method_113(field_769[2], "Cash");
+         GLLib.method_113(field_769[2], "Cash");
          field_138 = false;
          return;
       case 6:
          field_91 = 1;
          method_634();
-         class_1.method_113(field_769[3], "Cash");
+         GLLib.method_113(field_769[3], "Cash");
          field_138 = false;
          return;
       case 7:
          field_91 = 1;
          method_634();
-         class_1.method_113(field_769[4], "Cash");
+         GLLib.method_113(field_769[4], "Cash");
          field_138 = false;
          return;
       case 8:
          field_91 = 1;
          method_634();
-         class_1.method_113(field_769[5], "Cash");
+         GLLib.method_113(field_769[5], "Cash");
          field_138 = false;
          return;
       case 11:
@@ -28402,7 +28402,7 @@ public final class class_2 extends class_1 implements class_0 {
          field_113 = null;
          field_101 = field_98;
          method_143();
-         class_1.field_14 = 1;
+         GLLib.field_14 = 1;
          method_132(17);
          method_176(true);
          field_693 = true;
@@ -28424,7 +28424,7 @@ public final class class_2 extends class_1 implements class_0 {
       case 14:
          return;
       case 20:
-         class_1.method_123();
+         GLLib.method_123();
          method_864();
          method_342();
          method_337();
@@ -28526,7 +28526,7 @@ public final class class_2 extends class_1 implements class_0 {
 
    // $FF: renamed from: gR () void
    private static void method_858() {
-      field_757 = class_1.method_121();
+      field_757 = GLLib.method_121();
       short var0 = field_121[8][156][5];
       short var1 = field_121[8][156][6];
       short var2 = field_121[8][156][7];
@@ -28551,7 +28551,7 @@ public final class class_2 extends class_1 implements class_0 {
       int var9;
       if(var0 == 0) {
          if(!field_746 && field_695 == 19) {
-            var1 = (var1 = class_1.method_74(852)) == null?"":var1;
+            var1 = (var1 = GLLib.method_74(852)) == null?"":var1;
             String var2 = field_696;
             var3 = 0;
 
@@ -28566,8 +28566,8 @@ public final class class_2 extends class_1 implements class_0 {
                }
             }
 
-            var1 = class_1.method_79(var1, "%d", class_1.method_77((long)var3, field_862, " "));
-            method_825((var2 = class_1.method_74(380)) == null?"":var2, var1, 7);
+            var1 = GLLib.method_79(var1, "%d", GLLib.method_77((long)var3, field_862, " "));
+            method_825((var2 = GLLib.method_74(380)) == null?"":var2, var1, 7);
             field_695 = -1;
             field_774 = false;
          }
@@ -28602,11 +28602,11 @@ public final class class_2 extends class_1 implements class_0 {
 
          method_863(false);
          method_353();
-         var1 = (var1 = class_1.method_74(766)) == null?"":var1;
+         var1 = (var1 = GLLib.method_74(766)) == null?"":var1;
          field_123[8][1] = var1;
-         var1 = class_1.method_77((long)method_669(), field_862, " ");
+         var1 = GLLib.method_77((long)method_669(), field_862, " ");
          field_123[8][7] = var1;
-         var1 = class_1.method_77((long)method_668(), field_862, " ");
+         var1 = GLLib.method_77((long)method_668(), field_862, " ");
          field_123[8][4] = var1;
          var1 = "0";
          field_123[8][185] = var1;
@@ -28632,27 +28632,27 @@ public final class class_2 extends class_1 implements class_0 {
          field_123[8][187] = var1;
          var1 = "<";
          field_123[8][189] = var1;
-         var1 = (var1 = class_1.method_74(776)) == null?"":var1;
+         var1 = (var1 = GLLib.method_74(776)) == null?"":var1;
          field_123[8][191] = var1;
-         var1 = (var1 = class_1.method_74(775)) == null?"":var1;
+         var1 = (var1 = GLLib.method_74(775)) == null?"":var1;
          field_123[8][193] = var1;
-         var1 = (var1 = class_1.method_74(70)) == null?"":var1;
+         var1 = (var1 = GLLib.method_74(70)) == null?"":var1;
          field_123[8][195] = var1;
-         var1 = (var1 = class_1.method_74(774)) == null?"":var1;
+         var1 = (var1 = GLLib.method_74(774)) == null?"":var1;
          field_123[8][197] = var1;
-         var1 = (var1 = class_1.method_74(768)) == null?"":var1;
+         var1 = (var1 = GLLib.method_74(768)) == null?"":var1;
          field_123[8][163] = var1;
-         var1 = (var1 = class_1.method_74(769)) == null?"":var1;
+         var1 = (var1 = GLLib.method_74(769)) == null?"":var1;
          field_123[8][165] = var1;
-         var1 = (var1 = class_1.method_74(813)) == null?"":var1;
+         var1 = (var1 = GLLib.method_74(813)) == null?"":var1;
          field_123[8][161] = var1;
-         var1 = (var1 = class_1.method_74(45)) == null?"":var1;
+         var1 = (var1 = GLLib.method_74(45)) == null?"":var1;
          field_123[8][200] = var1;
-         var1 = (var1 = class_1.method_74(809)) == null?"":var1;
+         var1 = (var1 = GLLib.method_74(809)) == null?"":var1;
          field_123[8][198] = var1;
-         var1 = (var1 = class_1.method_74(807)) == null?"":var1;
+         var1 = (var1 = GLLib.method_74(807)) == null?"":var1;
          field_123[8][207] = var1;
-         var1 = (var1 = class_1.method_74(788)) == null?"":var1;
+         var1 = (var1 = GLLib.method_74(788)) == null?"":var1;
          field_123[8][16] = var1;
          method_543(8, 16, false);
          field_766 = -1;
@@ -28670,7 +28670,7 @@ public final class class_2 extends class_1 implements class_0 {
             method_339();
             field_146 = false;
             method_343();
-         } else if(class_1.method_117()) {
+         } else if(GLLib.method_117()) {
             method_342();
             method_337();
             method_346();
@@ -28706,11 +28706,11 @@ public final class class_2 extends class_1 implements class_0 {
          method_634();
          method_541(8);
          if(field_746 && field_695 == 19) {
-            method_825((var1 = class_1.method_74(380)) == null?"":var1, field_696, 7);
+            method_825((var1 = GLLib.method_74(380)) == null?"":var1, field_696, 7);
             field_695 = -1;
             field_774 = true;
          } else if(field_695 == 18) {
-            method_825((var1 = class_1.method_74(378)) == null?"":var1, field_696, 7);
+            method_825((var1 = GLLib.method_74(378)) == null?"":var1, field_696, 7);
             field_695 = -1;
             field_774 = false;
          }
@@ -28729,13 +28729,13 @@ public final class class_2 extends class_1 implements class_0 {
       }
 
       if(var0 == 2) {
-         if(class_1.method_14() == 19) {
+         if(GLLib.method_14() == 19) {
             if(field_134) {
                method_300();
             } else if(!field_136) {
                method_299();
             } else {
-               method_900("Show_Toast_" + ((var1 = class_1.method_74(498)) == null?"":var1));
+               method_900("Show_Toast_" + ((var1 = GLLib.method_74(498)) == null?"":var1));
             }
          }
 
@@ -28747,7 +28747,7 @@ public final class class_2 extends class_1 implements class_0 {
                      field_754[var9] = 1000;
                      field_756[var9] = 0;
                   } else {
-                     field_756[var9] += class_1.field_15;
+                     field_756[var9] += GLLib.field_15;
                      var3 = field_756[var9] * field_752[var9] / field_755[var9];
                      field_753[var9] = var3 < 0?0:(var3 > field_752[var9]?field_752[var9]:var3);
                      if(field_753[var9] >= field_752[var9]) {
@@ -28756,7 +28756,7 @@ public final class class_2 extends class_1 implements class_0 {
                      }
                   }
                } else {
-                  field_754[var9] -= class_1.field_15;
+                  field_754[var9] -= GLLib.field_15;
                }
             }
          }
@@ -28764,7 +28764,7 @@ public final class class_2 extends class_1 implements class_0 {
          if(field_746) {
             var9 = field_759;
             if(!field_763) {
-               field_759 = class_1.method_115();
+               field_759 = GLLib.method_115();
             }
 
             if(var9 != field_759) {
@@ -28789,7 +28789,7 @@ public final class class_2 extends class_1 implements class_0 {
                switch(field_759) {
                case 0:
                   if(!field_141) {
-                     class_1.method_112(class_1.method_71(field_862));
+                     GLLib.method_112(GLLib.method_71(field_862));
                   }
                case 1:
                case 2:
@@ -28808,20 +28808,20 @@ public final class class_2 extends class_1 implements class_0 {
                      method_862();
                      method_863(false);
                      field_747 = true;
-                     field_765 = class_1.method_125();
+                     field_765 = GLLib.method_125();
                      field_764 = true;
                      field_135 = false;
                      method_340();
-                     class_1.method_129(200L);
+                     GLLib.method_129(200L);
                   } else if(field_747) {
                      ;
                   }
                   break;
                case 7:
-                  method_684((int)class_1.method_129(200L));
+                  method_684((int)GLLib.method_129(200L));
                   String var12 = Integer.toString(method_669());
                   field_123[8][7] = var12;
-                  class_1.method_123();
+                  GLLib.method_123();
                   method_350();
                }
             }
@@ -28829,9 +28829,9 @@ public final class class_2 extends class_1 implements class_0 {
       }
 
       if(var0 == 8 && field_134) {
-         if(class_1.method_109() || class_1.method_108() || field_661) {
-            var7 = class_1.field_82;
-            var9 = class_1.field_83;
+         if(GLLib.method_109() || GLLib.method_108() || field_661) {
+            var7 = GLLib.field_82;
+            var9 = GLLib.field_83;
             short var10 = field_121[8][156][2];
             short var11 = field_121[8][156][3];
             short var13 = field_121[8][156][5];
@@ -28852,11 +28852,11 @@ public final class class_2 extends class_1 implements class_0 {
             }
          }
 
-         if(class_1.field_83 < field_121[8][156][3] || class_1.field_83 > field_121[8][156][3] + field_121[8][156][6]) {
+         if(GLLib.field_83 < field_121[8][156][3] || GLLib.field_83 > field_121[8][156][3] + field_121[8][156][6]) {
             field_778 = false;
          }
 
-         if(class_1.method_106()) {
+         if(GLLib.method_106()) {
             field_778 = false;
          }
       }
@@ -28879,7 +28879,7 @@ public final class class_2 extends class_1 implements class_0 {
    private static String method_860(String var0) {
       int var1;
       String var2;
-      return var0 == null?"":((var1 = var0.indexOf(43)) >= 0?var0.substring(0, var1).trim():(var0.toLowerCase().startsWith("bs ") && (var1 = (var2 = var0.substring(3).trim()).indexOf(32)) >= 0?var0.substring(0, 3) + var2.substring(0, var1) + " " + ((var0 = class_1.method_74(770)) == null?"":var0):var0.trim()));
+      return var0 == null?"":((var1 = var0.indexOf(43)) >= 0?var0.substring(0, var1).trim():(var0.toLowerCase().startsWith("bs ") && (var1 = (var2 = var0.substring(3).trim()).indexOf(32)) >= 0?var0.substring(0, 3) + var2.substring(0, var1) + " " + ((var0 = GLLib.method_74(770)) == null?"":var0):var0.trim()));
    }
 
    // $FF: renamed from: h (int) java.lang.String
@@ -28888,7 +28888,7 @@ public final class class_2 extends class_1 implements class_0 {
       String var2 = "SMS";
       String var3;
       if(var1.toLowerCase().indexOf(var2.toLowerCase()) >= 0) {
-         var1 = class_1.method_79(var1, var2, (var3 = class_1.method_74(792)) == null?"":var3);
+         var1 = GLLib.method_79(var1, var2, (var3 = GLLib.method_74(792)) == null?"":var3);
       } else {
          StringBuffer var10000 = (new StringBuffer()).append(method_860(var1));
          var1 = "Cash";
@@ -28897,25 +28897,25 @@ public final class class_2 extends class_1 implements class_0 {
             if(field_765 == 6) {
                int var4;
                if(field_770[var0] == -1) {
-                  var4 = class_1.method_126(var0, var1);
+                  var4 = GLLib.method_126(var0, var1);
                   field_770[var0] = var4;
                } else {
                   var4 = field_770[var0];
                }
 
-               var10001 = var4 == 1?" + 2 " + ((var3 = class_1.method_74(792)) == null?"":var3):" + 1 " + ((var3 = class_1.method_74(792)) == null?"":var3);
+               var10001 = var4 == 1?" + 2 " + ((var3 = GLLib.method_74(792)) == null?"":var3):" + 1 " + ((var3 = GLLib.method_74(792)) == null?"":var3);
             } else {
-               var10001 = field_765 != 9 && field_765 != 1?"":" " + ((var3 = class_1.method_74(771)) == null?"":var3);
+               var10001 = field_765 != 9 && field_765 != 1?"":" " + ((var3 = GLLib.method_74(771)) == null?"":var3);
             }
          } else {
-            var10001 = field_862 != 1 && field_765 != 4?" " + ((var3 = class_1.method_74(785)) == null?"":var3):" " + ((var3 = class_1.method_74(784)) == null?"":var3);
+            var10001 = field_862 != 1 && field_765 != 4?" " + ((var3 = GLLib.method_74(785)) == null?"":var3):" " + ((var3 = GLLib.method_74(784)) == null?"":var3);
          }
 
          var1 = var10000.append(var10001).toString();
       }
 
       if(var1.trim().equals("")) {
-         var1 = (var3 = class_1.method_74(127)) == null?"":var3;
+         var1 = (var3 = GLLib.method_74(127)) == null?"":var3;
       }
 
       return var1;
@@ -28924,12 +28924,12 @@ public final class class_2 extends class_1 implements class_0 {
    // $FF: renamed from: gS () void
    private static void method_862() {
       field_761 = 0;
-      field_765 = class_1.method_125();
+      field_765 = GLLib.method_125();
 
-      for(int var3 = 0; var3 < class_1.method_127("Cash"); ++var3) {
-         field_749[var3] = class_1.method_120(var3, "Cash");
+      for(int var3 = 0; var3 < GLLib.method_127("Cash"); ++var3) {
+         field_749[var3] = GLLib.method_120(var3, "Cash");
          String var0 = method_861(var3);
-         long var1 = class_1.method_124(200L, var3, "Cash");
+         long var1 = GLLib.method_124(200L, var3, "Cash");
          if(var0 != null && !var0.trim().equals("")) {
             field_769[var3] = var3;
             field_748[var3] = var0;
@@ -29010,7 +29010,7 @@ public final class class_2 extends class_1 implements class_0 {
             return;
          case 3:
          case 11:
-            field_773 = var5 = class_1.method_119();
+            field_773 = var5 = GLLib.method_119();
             method_346();
             method_349();
             method_342();
@@ -29030,11 +29030,11 @@ public final class class_2 extends class_1 implements class_0 {
                   var2 = var10002;
                   var1 = var10001;
                   var0 = var10000;
-                  class_1.method_41(class_1.field_1, var0, var1, var2, var3, true);
+                  GLLib.method_41(GLLib.field_1, var0, var1, var2, var3, true);
                   method_534(field_757, 8, 156, 0, field_775);
-                  var6 = class_1.height;
-                  var5 = class_1.width;
-                  class_1.method_41(class_1.field_1, 0, 0, var5, var6, true);
+                  var6 = GLLib.height;
+                  var5 = GLLib.width;
+                  GLLib.method_41(GLLib.field_1, 0, 0, var5, var6, true);
                   return;
                }
             } else if(!field_140) {
@@ -29042,7 +29042,7 @@ public final class class_2 extends class_1 implements class_0 {
                if(field_142) {
                   if(field_761 > 0 && field_135) {
                      if(field_761 > 0) {
-                        method_532(class_1.method_77(field_767[0], field_862, " "), 8, 22, 0, 0);
+                        method_532(GLLib.method_77(field_767[0], field_862, " "), 8, 22, 0, 0);
                         var10000 = field_121[8][27][2];
                         var10001 = field_121[8][27][3];
                         var10002 = field_121[8][27][5];
@@ -29050,15 +29050,15 @@ public final class class_2 extends class_1 implements class_0 {
                         var2 = var10002;
                         var1 = var10001;
                         var0 = var10000;
-                        class_1.method_41(class_1.field_1, var0, var1, var2, var3, true);
+                        GLLib.method_41(GLLib.field_1, var0, var1, var2, var3, true);
                         method_532(field_748[0], 8, 27, -field_753[0], 0);
-                        var6 = class_1.height;
-                        var5 = class_1.width;
-                        class_1.method_41(class_1.field_1, 0, 0, var5, var6, true);
+                        var6 = GLLib.height;
+                        var5 = GLLib.width;
+                        GLLib.method_41(GLLib.field_1, 0, 0, var5, var6, true);
                      }
 
                      if(1 < field_761) {
-                        method_532(class_1.method_77(field_767[1], field_862, " "), 8, 37, 0, 0);
+                        method_532(GLLib.method_77(field_767[1], field_862, " "), 8, 37, 0, 0);
                         var10000 = field_121[8][42][2];
                         var10001 = field_121[8][42][3];
                         var10002 = field_121[8][42][5];
@@ -29066,16 +29066,16 @@ public final class class_2 extends class_1 implements class_0 {
                         var2 = var10002;
                         var1 = var10001;
                         var0 = var10000;
-                        class_1.method_41(class_1.field_1, var0, var1, var2, var3, true);
+                        GLLib.method_41(GLLib.field_1, var0, var1, var2, var3, true);
                         method_532(field_748[1], 8, 42, -field_753[1], 0);
-                        var6 = class_1.height;
-                        var5 = class_1.width;
-                        class_1.method_41(class_1.field_1, 0, 0, var5, var6, true);
+                        var6 = GLLib.height;
+                        var5 = GLLib.width;
+                        GLLib.method_41(GLLib.field_1, 0, 0, var5, var6, true);
                      }
 
                      if(2 < field_761) {
                         if(field_748[2] != null) {
-                           method_532(class_1.method_77(field_767[2], field_862, " "), 8, 52, 0, 0);
+                           method_532(GLLib.method_77(field_767[2], field_862, " "), 8, 52, 0, 0);
                            var10000 = field_121[8][57][2];
                            var10001 = field_121[8][57][3];
                            var10002 = field_121[8][57][5];
@@ -29083,15 +29083,15 @@ public final class class_2 extends class_1 implements class_0 {
                            var2 = var10002;
                            var1 = var10001;
                            var0 = var10000;
-                           class_1.method_41(class_1.field_1, var0, var1, var2, var3, true);
+                           GLLib.method_41(GLLib.field_1, var0, var1, var2, var3, true);
                            method_532(field_748[2], 8, 57, -field_753[2], 0);
-                           var6 = class_1.height;
-                           var5 = class_1.width;
-                           class_1.method_41(class_1.field_1, 0, 0, var5, var6, true);
+                           var6 = GLLib.height;
+                           var5 = GLLib.width;
+                           GLLib.method_41(GLLib.field_1, 0, 0, var5, var6, true);
                         }
 
                         if(3 < field_761) {
-                           method_532(class_1.method_77(field_767[3], field_862, " "), 8, 67, 0, 0);
+                           method_532(GLLib.method_77(field_767[3], field_862, " "), 8, 67, 0, 0);
                            var10000 = field_121[8][72][2];
                            var10001 = field_121[8][72][3];
                            var10002 = field_121[8][72][5];
@@ -29099,17 +29099,17 @@ public final class class_2 extends class_1 implements class_0 {
                            var0 = var10002;
                            var3 = var10001;
                            var2 = var10000;
-                           class_1.method_41(class_1.field_1, var2, var3, var0, var1, true);
+                           GLLib.method_41(GLLib.field_1, var2, var3, var0, var1, true);
                            method_532(field_748[3], 8, 72, -field_753[3], 0);
-                           var6 = class_1.height;
-                           var5 = class_1.width;
-                           class_1.method_41(class_1.field_1, 0, 0, var5, var6, true);
+                           var6 = GLLib.height;
+                           var5 = GLLib.width;
+                           GLLib.method_41(GLLib.field_1, 0, 0, var5, var6, true);
                         }
                      }
 
                      if(4 < field_761) {
                         if(field_748[4] != null) {
-                           method_532(class_1.method_77(field_767[4], field_862, " "), 8, 82, 0, 0);
+                           method_532(GLLib.method_77(field_767[4], field_862, " "), 8, 82, 0, 0);
                            var10000 = field_121[8][87][2];
                            var10001 = field_121[8][87][3];
                            var10002 = field_121[8][87][5];
@@ -29117,15 +29117,15 @@ public final class class_2 extends class_1 implements class_0 {
                            var0 = var10002;
                            var3 = var10001;
                            var2 = var10000;
-                           class_1.method_41(class_1.field_1, var2, var3, var0, var1, true);
+                           GLLib.method_41(GLLib.field_1, var2, var3, var0, var1, true);
                            method_532(field_748[4], 8, 87, -field_753[4], 0);
-                           var6 = class_1.height;
-                           var5 = class_1.width;
-                           class_1.method_41(class_1.field_1, 0, 0, var5, var6, true);
+                           var6 = GLLib.height;
+                           var5 = GLLib.width;
+                           GLLib.method_41(GLLib.field_1, 0, 0, var5, var6, true);
                         }
 
                         if(5 < field_761) {
-                           method_532(class_1.method_77(field_767[5], field_862, " "), 8, 97, 0, 0);
+                           method_532(GLLib.method_77(field_767[5], field_862, " "), 8, 97, 0, 0);
                            var10000 = field_121[8][102][2];
                            var10001 = field_121[8][102][3];
                            var10002 = field_121[8][102][5];
@@ -29133,16 +29133,16 @@ public final class class_2 extends class_1 implements class_0 {
                            var0 = var10002;
                            var3 = var10001;
                            var2 = var10000;
-                           class_1.method_41(class_1.field_1, var2, var3, var0, var1, true);
+                           GLLib.method_41(GLLib.field_1, var2, var3, var0, var1, true);
                            method_532(field_748[5], 8, 102, -field_753[5], 0);
-                           var6 = class_1.height;
-                           var5 = class_1.width;
-                           class_1.method_41(class_1.field_1, 0, 0, var5, var6, true);
+                           var6 = GLLib.height;
+                           var5 = GLLib.width;
+                           GLLib.method_41(GLLib.field_1, 0, 0, var5, var6, true);
                            return;
                         }
                      }
                   } else {
-                     method_534((var4 = class_1.method_74(827)) == null?"":var4, 8, 201, 0, 0);
+                     method_534((var4 = GLLib.method_74(827)) == null?"":var4, 8, 201, 0, 0);
                   }
                }
             }
@@ -29156,7 +29156,7 @@ public final class class_2 extends class_1 implements class_0 {
          default:
             return;
          case 8:
-            field_773 = class_1.method_119();
+            field_773 = GLLib.method_119();
             method_346();
             method_349();
             method_342();
@@ -29174,7 +29174,7 @@ public final class class_2 extends class_1 implements class_0 {
                method_543(8, 164, true);
                method_545(8, 164, true);
                method_543(8, 165, true);
-               var4 = (var4 = class_1.method_74(813)) == null?"":var4;
+               var4 = (var4 = GLLib.method_74(813)) == null?"":var4;
                field_123[8][161] = var4;
                method_543(8, 161, true);
                method_634();
@@ -29246,7 +29246,7 @@ public final class class_2 extends class_1 implements class_0 {
          if(field_146) {
             method_343();
             if(field_146) {
-               method_532(class_1.method_77((long)field_768[0], field_862, " "), 8, 116, 0, 0);
+               method_532(GLLib.method_77((long)field_768[0], field_862, " "), 8, 116, 0, 0);
                var10000 = field_121[8][119][2];
                var10001 = field_121[8][119][3];
                var10002 = field_121[8][119][5];
@@ -29254,12 +29254,12 @@ public final class class_2 extends class_1 implements class_0 {
                var2 = var10002;
                var1 = var10001;
                var0 = var10000;
-               class_1.method_41(class_1.field_1, var0, var1, var2, var3, true);
-               method_532(class_1.method_77((long)field_751[0], field_862, " ") + " " + ((var4 = class_1.method_74(812)) == null?"":var4), 8, 119, -field_753[0], 0);
-               var6 = class_1.height;
-               var5 = class_1.width;
-               class_1.method_41(class_1.field_1, 0, 0, var5, var6, true);
-               method_532(class_1.method_77((long)field_768[1], field_862, " "), 8, 122, 0, 0);
+               GLLib.method_41(GLLib.field_1, var0, var1, var2, var3, true);
+               method_532(GLLib.method_77((long)field_751[0], field_862, " ") + " " + ((var4 = GLLib.method_74(812)) == null?"":var4), 8, 119, -field_753[0], 0);
+               var6 = GLLib.height;
+               var5 = GLLib.width;
+               GLLib.method_41(GLLib.field_1, 0, 0, var5, var6, true);
+               method_532(GLLib.method_77((long)field_768[1], field_862, " "), 8, 122, 0, 0);
                var10000 = field_121[8][125][2];
                var10001 = field_121[8][125][3];
                var10002 = field_121[8][125][5];
@@ -29267,13 +29267,13 @@ public final class class_2 extends class_1 implements class_0 {
                var2 = var10002;
                var1 = var10001;
                var0 = var10000;
-               class_1.method_41(class_1.field_1, var0, var1, var2, var3, true);
-               method_532(class_1.method_77((long)field_751[1], field_862, " ") + " " + ((var4 = class_1.method_74(812)) == null?"":var4), 8, 125, -field_753[1], 0);
-               var6 = class_1.height;
-               var5 = class_1.width;
-               class_1.method_41(class_1.field_1, 0, 0, var5, var6, true);
+               GLLib.method_41(GLLib.field_1, var0, var1, var2, var3, true);
+               method_532(GLLib.method_77((long)field_751[1], field_862, " ") + " " + ((var4 = GLLib.method_74(812)) == null?"":var4), 8, 125, -field_753[1], 0);
+               var6 = GLLib.height;
+               var5 = GLLib.width;
+               GLLib.method_41(GLLib.field_1, 0, 0, var5, var6, true);
                if(field_762 > 2) {
-                  method_532(class_1.method_77((long)field_768[2], field_862, " "), 8, 128, 0, 0);
+                  method_532(GLLib.method_77((long)field_768[2], field_862, " "), 8, 128, 0, 0);
                   var10000 = field_121[8][131][2];
                   var10001 = field_121[8][131][3];
                   var10002 = field_121[8][131][5];
@@ -29281,12 +29281,12 @@ public final class class_2 extends class_1 implements class_0 {
                   var2 = var10002;
                   var1 = var10001;
                   var0 = var10000;
-                  class_1.method_41(class_1.field_1, var0, var1, var2, var3, true);
-                  method_532(class_1.method_77((long)field_751[2], field_862, " ") + " " + ((var4 = class_1.method_74(812)) == null?"":var4), 8, 131, -field_753[2], 0);
-                  var6 = class_1.height;
-                  var5 = class_1.width;
-                  class_1.method_41(class_1.field_1, 0, 0, var5, var6, true);
-                  method_532(class_1.method_77((long)field_768[3], field_862, " "), 8, 134, 0, 0);
+                  GLLib.method_41(GLLib.field_1, var0, var1, var2, var3, true);
+                  method_532(GLLib.method_77((long)field_751[2], field_862, " ") + " " + ((var4 = GLLib.method_74(812)) == null?"":var4), 8, 131, -field_753[2], 0);
+                  var6 = GLLib.height;
+                  var5 = GLLib.width;
+                  GLLib.method_41(GLLib.field_1, 0, 0, var5, var6, true);
+                  method_532(GLLib.method_77((long)field_768[3], field_862, " "), 8, 134, 0, 0);
                   var10000 = field_121[8][137][2];
                   var10001 = field_121[8][137][3];
                   var10002 = field_121[8][137][5];
@@ -29294,15 +29294,15 @@ public final class class_2 extends class_1 implements class_0 {
                   var2 = var10002;
                   var1 = var10001;
                   var0 = var10000;
-                  class_1.method_41(class_1.field_1, var0, var1, var2, var3, true);
-                  method_532(class_1.method_77((long)field_751[3], field_862, " ") + " " + ((var4 = class_1.method_74(812)) == null?"":var4), 8, 137, -field_753[3], 0);
-                  var6 = class_1.height;
-                  var5 = class_1.width;
-                  class_1.method_41(class_1.field_1, 0, 0, var5, var6, true);
+                  GLLib.method_41(GLLib.field_1, var0, var1, var2, var3, true);
+                  method_532(GLLib.method_77((long)field_751[3], field_862, " ") + " " + ((var4 = GLLib.method_74(812)) == null?"":var4), 8, 137, -field_753[3], 0);
+                  var6 = GLLib.height;
+                  var5 = GLLib.width;
+                  GLLib.method_41(GLLib.field_1, 0, 0, var5, var6, true);
                }
 
                if(field_762 > 4) {
-                  method_532(class_1.method_77((long)field_768[4], field_862, " "), 8, 140, 0, 0);
+                  method_532(GLLib.method_77((long)field_768[4], field_862, " "), 8, 140, 0, 0);
                   var10000 = field_121[8][143][2];
                   var10001 = field_121[8][143][3];
                   var10002 = field_121[8][143][5];
@@ -29310,12 +29310,12 @@ public final class class_2 extends class_1 implements class_0 {
                   var2 = var10002;
                   var1 = var10001;
                   var0 = var10000;
-                  class_1.method_41(class_1.field_1, var0, var1, var2, var3, true);
-                  method_532(class_1.method_77((long)field_751[4], field_862, " ") + " " + ((var4 = class_1.method_74(812)) == null?"":var4), 8, 143, -field_753[4], 0);
-                  var6 = class_1.height;
-                  var5 = class_1.width;
-                  class_1.method_41(class_1.field_1, 0, 0, var5, var6, true);
-                  method_532(class_1.method_77((long)field_768[5], field_862, " "), 8, 146, 0, 0);
+                  GLLib.method_41(GLLib.field_1, var0, var1, var2, var3, true);
+                  method_532(GLLib.method_77((long)field_751[4], field_862, " ") + " " + ((var4 = GLLib.method_74(812)) == null?"":var4), 8, 143, -field_753[4], 0);
+                  var6 = GLLib.height;
+                  var5 = GLLib.width;
+                  GLLib.method_41(GLLib.field_1, 0, 0, var5, var6, true);
+                  method_532(GLLib.method_77((long)field_768[5], field_862, " "), 8, 146, 0, 0);
                   var10000 = field_121[8][149][2];
                   var10001 = field_121[8][149][3];
                   var10002 = field_121[8][149][5];
@@ -29323,11 +29323,11 @@ public final class class_2 extends class_1 implements class_0 {
                   var2 = var10002;
                   var1 = var10001;
                   var0 = var10000;
-                  class_1.method_41(class_1.field_1, var0, var1, var2, var3, true);
-                  method_532(class_1.method_77((long)field_751[5], field_862, " ") + " " + ((var4 = class_1.method_74(812)) == null?"":var4), 8, 149, -field_753[5], 0);
-                  var6 = class_1.height;
-                  var5 = class_1.width;
-                  class_1.method_41(class_1.field_1, 0, 0, var5, var6, true);
+                  GLLib.method_41(GLLib.field_1, var0, var1, var2, var3, true);
+                  method_532(GLLib.method_77((long)field_751[5], field_862, " ") + " " + ((var4 = GLLib.method_74(812)) == null?"":var4), 8, 149, -field_753[5], 0);
+                  var6 = GLLib.height;
+                  var5 = GLLib.width;
+                  GLLib.method_41(GLLib.field_1, 0, 0, var5, var6, true);
                }
             }
          }
@@ -29339,7 +29339,7 @@ public final class class_2 extends class_1 implements class_0 {
    private static void method_867() {
       if((System.currentTimeMillis() & 512L) != 0L) {
          String var0;
-         method_534((var0 = class_1.method_74(791)) == null?"":var0, 8, 159, 0, 0);
+         method_534((var0 = GLLib.method_74(791)) == null?"":var0, 8, 159, 0, 0);
       }
 
    }
@@ -29347,7 +29347,7 @@ public final class class_2 extends class_1 implements class_0 {
    // $FF: renamed from: gW () void
    private static void method_868() {
       String var0;
-      method_534((var0 = class_1.method_74(794)) == null?"":var0, 8, 160, 0, 0);
+      method_534((var0 = GLLib.method_74(794)) == null?"":var0, 8, 160, 0, 0);
    }
 
    // $FF: renamed from: aQ (int) void
@@ -29355,11 +29355,11 @@ public final class class_2 extends class_1 implements class_0 {
       field_773 = var0;
       String var1;
       if(var0 < 0 && var0 >= -10) {
-         method_534((var1 = class_1.method_74(field_772[-var0])) == null?"":var1, 8, 201, 0, 0);
+         method_534((var1 = GLLib.method_74(field_772[-var0])) == null?"":var1, 8, 201, 0, 0);
       } else if(var0 > 10 && var0 < 12) {
-         method_534((var1 = class_1.method_74(field_772[var0])) == null?"":var1, 8, 201, 0, 0);
+         method_534((var1 = GLLib.method_74(field_772[var0])) == null?"":var1, 8, 201, 0, 0);
       } else {
-         method_534((var1 = class_1.method_74(field_772[12])) == null?"":var1, 8, 201, 0, 0);
+         method_534((var1 = GLLib.method_74(field_772[12])) == null?"":var1, 8, 201, 0, 0);
       }
    }
 
@@ -29370,7 +29370,7 @@ public final class class_2 extends class_1 implements class_0 {
       if(var0) {
          var1 = 27;
          var2 = 15;
-         field_765 = class_1.method_125();
+         field_765 = GLLib.method_125();
       }
 
       int var3 = method_558(field_121[8][var1][7]);
@@ -29384,7 +29384,7 @@ public final class class_2 extends class_1 implements class_0 {
                var5 = "";
             }
          } else {
-            var5 = field_751[var4] + " " + ((var5 = class_1.method_74(812)) == null?"":var5);
+            var5 = field_751[var4] + " " + ((var5 = GLLib.method_74(812)) == null?"":var5);
          }
 
          field_748[var4] = var5;
@@ -29450,9 +29450,9 @@ public final class class_2 extends class_1 implements class_0 {
 
       int var2;
       int var3;
-      if(var0 == 8 && field_904 == 1 && class_1.method_106()) {
-         var9 = class_1.field_82;
-         var2 = class_1.field_83;
+      if(var0 == 8 && field_904 == 1 && GLLib.method_106()) {
+         var9 = GLLib.field_82;
+         var2 = GLLib.field_83;
 
          for(var3 = 0; var3 < field_783; ++var3) {
             if(field_128[var3].method_1110() == 0 && field_784 < 5 && var9 > field_786[var3] - 65 && var9 < field_786[var3] + 65 && var2 > field_787[var3] - 30 && var2 < field_787[var3] + 30 && !field_810 && field_809 == -1) {
@@ -29500,14 +29500,14 @@ public final class class_2 extends class_1 implements class_0 {
             method_565(10, true);
          }
 
-         var9 = class_1.method_14();
+         var9 = GLLib.method_14();
          if(field_904 == 0) {
             if(var9 == 19) {
                method_507();
             }
 
             for(var2 = 0; var2 < 3; ++var2) {
-               field_128[var2].method_1120(class_1.field_15);
+               field_128[var2].method_1120(GLLib.field_15);
             }
 
             if((field_789 = System.currentTimeMillis()) > field_790) {
@@ -29525,7 +29525,7 @@ public final class class_2 extends class_1 implements class_0 {
          } else if(field_904 == 1) {
             if(var9 == 19) {
                String var10;
-               method_900("Show_Toast_" + ((var10 = class_1.method_74(498)) == null?"":var10));
+               method_900("Show_Toast_" + ((var10 = GLLib.method_74(498)) == null?"":var10));
             }
 
             if(field_783 < 7 && --field_782 < 0) {
@@ -29572,7 +29572,7 @@ public final class class_2 extends class_1 implements class_0 {
 
             for(var3 = 0; var3 < 7; ++var3) {
                if(field_128[var3].method_1110() == 0 || field_128[var3].method_1110() == 2) {
-                  field_128[var3].method_1120(class_1.field_15);
+                  field_128[var3].method_1120(GLLib.field_15);
                }
 
                if(field_128[var3].method_1110() == 2 || field_128[var3].method_1110() == 1) {
@@ -29580,7 +29580,7 @@ public final class class_2 extends class_1 implements class_0 {
                      method_564(38);
                      method_877();
                   } else {
-                     field_128[var3].method_1120(class_1.field_15);
+                     field_128[var3].method_1120(GLLib.field_15);
                   }
                }
             }
@@ -29601,7 +29601,7 @@ public final class class_2 extends class_1 implements class_0 {
             }
 
             String var8;
-            method_532((var8 = class_1.method_74(397)) == null?"":var8, 24, 20, 0, 0);
+            method_532((var8 = GLLib.method_74(397)) == null?"":var8, 24, 20, 0, 0);
             method_532(Integer.toString(field_808), 24, 22, 0, 0);
             method_532(Integer.toString(field_807), 24, 24, 0, 0);
             if(method_544(24, 28)) {
@@ -29736,8 +29736,8 @@ public final class class_2 extends class_1 implements class_0 {
          method_545(4, 11, true);
          method_821(7, 0, 10);
          String var5;
-         field_698 = (var5 = class_1.method_74(401)) == null?"":var5;
-         field_699 = (var5 = class_1.method_74(402)) == null?"":var5;
+         field_698 = (var5 = GLLib.method_74(401)) == null?"":var5;
+         field_699 = (var5 = GLLib.method_74(402)) == null?"":var5;
          method_133(19);
          return false;
       } else {
@@ -29858,8 +29858,8 @@ public final class class_2 extends class_1 implements class_0 {
    // $FF: renamed from: gY () void
    private static void method_874() {
       for(field_783 = 0; field_783 < 7; ++field_783) {
-         field_786[field_783] = class_1.method_16(240, 600);
-         field_787[field_783] = class_1.method_16(160, 300);
+         field_786[field_783] = GLLib.method_16(240, 600);
+         field_787[field_783] = GLLib.method_16(160, 300);
          field_128[field_783].method_1108(0, -1, true);
          field_128[field_783].method_1105(field_786[field_783], field_787[field_783]);
          field_128[field_783].method_1111();
@@ -29871,7 +29871,7 @@ public final class class_2 extends class_1 implements class_0 {
    // $FF: renamed from: aR (int) void
    private static void method_875(int var0) {
       String var1 = "";
-      int var2 = class_1.method_16(0, field_796);
+      int var2 = GLLib.method_16(0, field_796);
       int var3 = 0;
 
       int var4;
@@ -29922,7 +29922,7 @@ public final class class_2 extends class_1 implements class_0 {
                if(var6.field_1133[var7][1] == field_793[var4]) {
                   var2 = var6.field_1133[var7][3];
                   var3 = var6.field_1133[var7][4];
-                  var1 = (var1 = class_1.method_74(var6.field_1133[var7][2])) == null?"":var1;
+                  var1 = (var1 = GLLib.method_74(var6.field_1133[var7][2])) == null?"":var1;
                   if(var7 == 110) {
                      method_686(field_794[var4]);
                      method_627(field_793[var4], field_794[var4], 34);
@@ -29945,21 +29945,21 @@ public final class class_2 extends class_1 implements class_0 {
          case 2:
             var2 = 1;
             var3 = 36;
-            var1 = (var1 = class_1.method_74(385)) == null?"":var1;
+            var1 = (var1 = GLLib.method_74(385)) == null?"":var1;
             method_682(field_794[var4]);
             field_805 += field_794[var4];
             break;
          case 3:
             var2 = 1;
             var3 = 37;
-            var1 = (var1 = class_1.method_74(386)) == null?"":var1;
+            var1 = (var1 = GLLib.method_74(386)) == null?"":var1;
             method_688(field_794[var4]);
             field_806 += field_794[var4];
             break;
          case 4:
             var2 = 1;
             var3 = 6;
-            var1 = (var1 = class_1.method_74(256)) == null?"":var1;
+            var1 = (var1 = GLLib.method_74(256)) == null?"":var1;
             method_684(field_794[var4]);
             field_804 += field_794[var4];
             break;
@@ -29975,7 +29975,7 @@ public final class class_2 extends class_1 implements class_0 {
                if(var6.field_1133[var7][1] == field_793[var4]) {
                   var2 = var6.field_1133[var7][3];
                   var3 = var6.field_1133[var7][4];
-                  var1 = (var1 = class_1.method_74(var6.field_1133[var7][2])) == null?"":var1;
+                  var1 = (var1 = GLLib.method_74(var6.field_1133[var7][2])) == null?"":var1;
                   method_657(2, var7, field_794[var4]);
                }
 
@@ -29994,7 +29994,7 @@ public final class class_2 extends class_1 implements class_0 {
                   var2 = var6.field_1133[var7][3];
                   var3 = var6.field_1133[var7][4];
                   var5 = var6.field_1133[var7][32];
-                  var1 = (var1 = class_1.method_74(var6.field_1133[var7][2])) == null?"":var1;
+                  var1 = (var1 = GLLib.method_74(var6.field_1133[var7][2])) == null?"":var1;
                   method_660(method_586(0, var7));
                }
 
@@ -30007,7 +30007,7 @@ public final class class_2 extends class_1 implements class_0 {
                if(var6.field_1133[var7][1] == field_793[var4]) {
                   var2 = var6.field_1133[var7][3];
                   var3 = var6.field_1133[var7][4];
-                  var1 = (var1 = class_1.method_74(var6.field_1133[var7][2])) == null?"":var1;
+                  var1 = (var1 = GLLib.method_74(var6.field_1133[var7][2])) == null?"":var1;
                   method_657(4, var7, field_794[var4]);
                }
             }
@@ -30034,18 +30034,18 @@ public final class class_2 extends class_1 implements class_0 {
 
    // $FF: renamed from: gZ () void
    private static void method_876() {
-      String var0 = (var0 = class_1.method_74(403)) == null?"":var0;
+      String var0 = (var0 = GLLib.method_74(403)) == null?"":var0;
       method_531(20);
       String var1;
-      method_532((var1 = class_1.method_74(399)) == null?"":var1, 20, 5, 0, 0);
+      method_532((var1 = GLLib.method_74(399)) == null?"":var1, 20, 5, 0, 0);
       method_534(var0, 20, 7, 0, 0);
       if(method_544(20, 4)) {
-         method_532((var0 = class_1.method_74(398)) == null?"":var0, 20, 6, 0, 0);
+         method_532((var0 = GLLib.method_74(398)) == null?"":var0, 20, 6, 0, 0);
       }
 
       for(int var2 = 0; var2 < field_788; ++var2) {
          if(field_802[var2] > 0) {
-            method_532(class_1.method_77((long)field_802[var2], field_862, " "), 20, var2 + 13, 0, 0);
+            method_532(GLLib.method_77((long)field_802[var2], field_862, " "), 20, var2 + 13, 0, 0);
          }
       }
 
@@ -30088,7 +30088,7 @@ public final class class_2 extends class_1 implements class_0 {
       }
 
       int var1;
-      if(var0 == 2 && ((var1 = class_1.method_14()) == 19 || var1 == 11)) {
+      if(var0 == 2 && ((var1 = GLLib.method_14()) == 19 || var1 == 11)) {
          if(field_845[field_847] == 3) {
             method_242();
          } else {
@@ -30106,12 +30106,12 @@ public final class class_2 extends class_1 implements class_0 {
          case 2:
             method_531(5);
             if(method_544(5, 0)) {
-               method_532((var2 = class_1.method_74(145)) == null?"":var2, 5, 1, 0, 0);
+               method_532((var2 = GLLib.method_74(145)) == null?"":var2, 5, 1, 0, 0);
                method_532(field_814[field_847], 5, 3, 0, 0);
                method_534(field_816[field_847], 5, 4, 0, 0);
                if(field_819[field_847] != "") {
                   method_534(field_819[field_847], 5, 7, 0, 0);
-                  method_532("" + class_1.method_77((long)method_713(field_820[field_847]), field_862, " ") + "/" + class_1.method_77((long)method_713(field_821[field_847]), field_862, " "), 5, 8, 0, 0);
+                  method_532("" + GLLib.method_77((long)method_713(field_820[field_847]), field_862, " ") + "/" + GLLib.method_77((long)method_713(field_821[field_847]), field_862, " "), 5, 8, 0, 0);
                   if(field_121[5][10][10] == 1) {
                      method_532("" + field_824[field_847], 5, 12, 0, 0);
                   }
@@ -30119,7 +30119,7 @@ public final class class_2 extends class_1 implements class_0 {
 
                if(field_826[field_847] != "") {
                   method_534(field_826[field_847], 5, 15, 0, 0);
-                  method_532("" + class_1.method_77((long)method_713(field_827[field_847]), field_862, " ") + "/" + class_1.method_77((long)method_713(field_828[field_847]), field_862, " "), 5, 16, 0, 0);
+                  method_532("" + GLLib.method_77((long)method_713(field_827[field_847]), field_862, " ") + "/" + GLLib.method_77((long)method_713(field_828[field_847]), field_862, " "), 5, 16, 0, 0);
                   if(method_544(5, 18)) {
                      method_532("" + field_831[field_847], 5, 20, 0, 0);
                   }
@@ -30127,7 +30127,7 @@ public final class class_2 extends class_1 implements class_0 {
 
                if(field_833[field_847] != "") {
                   method_534(field_833[field_847], 5, 23, 0, 0);
-                  method_532("" + class_1.method_77((long)method_713(field_834[field_847]), field_862, " ") + "/" + class_1.method_77((long)method_713(field_835[field_847]), field_862, " "), 5, 24, 0, 0);
+                  method_532("" + GLLib.method_77((long)method_713(field_834[field_847]), field_862, " ") + "/" + GLLib.method_77((long)method_713(field_835[field_847]), field_862, " "), 5, 24, 0, 0);
                   if(method_544(5, 26)) {
                      method_532("" + field_838[field_847], 5, 28, 0, 0);
                   }
@@ -30136,20 +30136,20 @@ public final class class_2 extends class_1 implements class_0 {
             break;
          case 3:
             method_531(5);
-            method_532((var2 = class_1.method_74(155)) == null?"":var2, 5, 30, 0, 0);
+            method_532((var2 = GLLib.method_74(155)) == null?"":var2, 5, 30, 0, 0);
             method_532(field_814[field_847], 5, 33, 0, 0);
             method_534(field_841[field_847], 5, 34, 0, 0);
-            method_532((var2 = class_1.method_74(156)) == null?"":var2, 5, 35, 0, 0);
-            method_532(class_1.method_77((long)method_713(field_842[field_847]), field_862, " "), 5, 46, 0, 0);
+            method_532((var2 = GLLib.method_74(156)) == null?"":var2, 5, 35, 0, 0);
+            method_532(GLLib.method_77((long)method_713(field_842[field_847]), field_862, " "), 5, 46, 0, 0);
             if(method_713(field_843[field_847]) > 0) {
-               method_532(class_1.method_77((long)method_713(field_843[field_847]), field_862, " "), 5, 50, 0, 0);
+               method_532(GLLib.method_77((long)method_713(field_843[field_847]), field_862, " "), 5, 50, 0, 0);
             }
 
             if(method_713(field_844[field_847]) > 0 && !field_746) {
-               method_532(class_1.method_77((long)method_713(field_844[field_847]), field_862, " "), 5, 48, 0, 0);
+               method_532(GLLib.method_77((long)method_713(field_844[field_847]), field_862, " "), 5, 48, 0, 0);
             }
 
-            method_532((var2 = class_1.method_74(45)) == null?"":var2, 5, 54, 0, 0);
+            method_532((var2 = GLLib.method_74(45)) == null?"":var2, 5, 54, 0, 0);
          }
       }
 
@@ -30246,9 +30246,9 @@ public final class class_2 extends class_1 implements class_0 {
          }
 
          method_153(1, var4, 1, 0, 24, 0, -1);
-         class_1.method_21("/7");
+         GLLib.method_21("/7");
          method_151(1, 3);
-         class_1.method_23();
+         GLLib.method_23();
       }
 
       if(field_845[field_847] == 1) {
@@ -30770,7 +30770,7 @@ public final class class_2 extends class_1 implements class_0 {
       } else {
          var10000 = field_814;
          var10001 = var1;
-         var10002 = (var5 = class_1.method_74(var4)) == null?"":var5;
+         var10002 = (var5 = GLLib.method_74(var4)) == null?"":var5;
       }
 
       var10000[var10001] = var10002;
@@ -30781,7 +30781,7 @@ public final class class_2 extends class_1 implements class_0 {
       } else {
          var10000 = field_815;
          var10001 = var1;
-         var10002 = (var5 = class_1.method_74(var4)) == null?"":var5;
+         var10002 = (var5 = GLLib.method_74(var4)) == null?"":var5;
       }
 
       var10000[var10001] = var10002;
@@ -30792,7 +30792,7 @@ public final class class_2 extends class_1 implements class_0 {
       } else {
          var10000 = field_816;
          var10001 = var1;
-         var10002 = (var5 = class_1.method_74(var4)) == null?"":var5;
+         var10002 = (var5 = GLLib.method_74(var4)) == null?"":var5;
       }
 
       var10000[var10001] = var10002;
@@ -30805,7 +30805,7 @@ public final class class_2 extends class_1 implements class_0 {
       } else {
          var10000 = field_819;
          var10001 = var1;
-         var10002 = (var5 = class_1.method_74(var4)) == null?"":var5;
+         var10002 = (var5 = GLLib.method_74(var4)) == null?"":var5;
       }
 
       var10000[var10001] = var10002;
@@ -30820,7 +30820,7 @@ public final class class_2 extends class_1 implements class_0 {
       } else {
          var10000 = field_826;
          var10001 = var1;
-         var10002 = (var5 = class_1.method_74(var4)) == null?"":var5;
+         var10002 = (var5 = GLLib.method_74(var4)) == null?"":var5;
       }
 
       var10000[var10001] = var10002;
@@ -30835,7 +30835,7 @@ public final class class_2 extends class_1 implements class_0 {
       } else {
          var10000 = field_833;
          var10001 = var1;
-         var10002 = (var5 = class_1.method_74(var4)) == null?"":var5;
+         var10002 = (var5 = GLLib.method_74(var4)) == null?"":var5;
       }
 
       var10000[var10001] = var10002;
@@ -30858,7 +30858,7 @@ public final class class_2 extends class_1 implements class_0 {
       } else {
          var10000 = field_841;
          var10001 = var1;
-         var10002 = (var5 = class_1.method_74(var4)) == null?"":var5;
+         var10002 = (var5 = GLLib.method_74(var4)) == null?"":var5;
       }
 
       var10000[var10001] = var10002;
@@ -31182,13 +31182,13 @@ public final class class_2 extends class_1 implements class_0 {
    }
 
    // $FF: renamed from: <init> (java.lang.Object, java.lang.Object) void
-   class_2(Object var1, Object var2) {
+   cGame(Object var1, Object var2) {
       super(var1, var2);
-      class_1.method_10(false, 50, 8);
-      class_1.method_10(false, 52, 10);
-      class_1.method_10(false, 54, 12);
-      class_1.method_10(false, 56, 14);
-      class_1.method_10(false, 53, 11);
+      GLLib.method_10(false, 50, 8);
+      GLLib.method_10(false, 52, 10);
+      GLLib.method_10(false, 54, 12);
+      GLLib.method_10(false, 56, 14);
+      GLLib.method_10(false, 53, 11);
       field_92 = -1;
       field_91 = -1;
       field_90 = -1;
@@ -31209,11 +31209,11 @@ public final class class_2 extends class_1 implements class_0 {
       field_870 = null;
       field_871 = null;
       field_873 = 0;
-      long var3 = class_1.field_5 * (long)class_1.field_17;
-      if(class_1.field_33 == null) {
-         class_1.field_33 = new Random(var3);
+      long var3 = GLLib.field_5 * (long)GLLib.field_17;
+      if(GLLib.field_33 == null) {
+         GLLib.field_33 = new Random(var3);
       } else {
-         class_1.field_33.setSeed(var3);
+         GLLib.field_33.setSeed(var3);
       }
    }
 
@@ -31254,7 +31254,7 @@ public final class class_2 extends class_1 implements class_0 {
                         var10 = field_336[var5][1];
                         var12 = field_336[var5][2];
                         var13 = field_336[var5][3];
-                        if(method_633(class_1.field_82, class_1.field_83, var9, var10, var12, var13)) {
+                        if(method_633(GLLib.field_82, GLLib.field_83, var9, var10, var12, var13)) {
                            var10000 = field_336[var5][5];
                            break label481;
                         }
@@ -31266,11 +31266,11 @@ public final class class_2 extends class_1 implements class_0 {
             }
 
             var14 = var10000;
-            if(class_1.field_81 == 1 && var14 > -1) {
+            if(GLLib.field_81 == 1 && var14 > -1) {
                field_337 = var14;
                field_338 = var14;
                field_341 = var14;
-            } else if(class_1.field_81 == 2) {
+            } else if(GLLib.field_81 == 2) {
                field_339 = var14;
                if(field_338 == var14 && method_632() < 50) {
                   field_340 = var14;
@@ -31298,7 +31298,7 @@ public final class class_2 extends class_1 implements class_0 {
                   }
 
                   if(var29) {
-                     if((field_343 += class_1.field_15) > 600 && field_343 > 900) {
+                     if((field_343 += GLLib.field_15) > 600 && field_343 > 900) {
                         field_340 = field_338;
                         field_343 -= 300;
                      }
@@ -31319,7 +31319,7 @@ public final class class_2 extends class_1 implements class_0 {
          }
 
          if(field_345 != null) {
-            field_345.method_1120(class_1.field_15);
+            field_345.method_1120(GLLib.field_15);
          }
 
          short var6;
@@ -31432,7 +31432,7 @@ public final class class_2 extends class_1 implements class_0 {
 
             var16 = field_341 & '\uffff';
             var7 = field_341 >> 16 & '\uffff';
-            if(class_1.method_108() && var7 == 1 && var16 == 71) {
+            if(GLLib.method_108() && var7 == 1 && var16 == 71) {
                class_6[] var30;
                label404: {
                   class_6[] var19;
@@ -31481,21 +31481,21 @@ public final class class_2 extends class_1 implements class_0 {
                   method_140();
                }
             }
-         } else if(field_338 == -1 && field_339 == -1 && (class_1.method_107() || class_1.method_108() || class_1.method_106() || class_1.method_109())) {
+         } else if(field_338 == -1 && field_339 == -1 && (GLLib.method_107() || GLLib.method_108() || GLLib.method_106() || GLLib.method_109())) {
             class_6 var17;
             if((var17 = class_6.method_1008()) != null) {
-               if(class_1.method_107()) {
+               if(GLLib.method_107()) {
                   field_868 = var17;
                   field_871 = var17;
                   field_873 = 0;
-               } else if(class_1.method_108()) {
+               } else if(GLLib.method_108()) {
                   field_869 = var17;
                   field_873 = 0;
-               } else if(class_1.method_106()) {
+               } else if(GLLib.method_106()) {
                   if(var17 == field_871) {
                      field_870 = var17;
                   }
-               } else if(field_860 == -1 && class_1.method_109() && var17 == field_871 && var17.method_1086(1)) {
+               } else if(field_860 == -1 && GLLib.method_109() && var17 == field_871 && var17.method_1086(1)) {
                   ++field_873;
                }
             }
@@ -31503,11 +31503,11 @@ public final class class_2 extends class_1 implements class_0 {
             method_140();
          }
 
-         if(class_1.method_106() || method_632() > 50) {
+         if(GLLib.method_106() || method_632() > 50) {
             field_871 = null;
          }
 
-         if(class_1.method_106()) {
+         if(GLLib.method_106()) {
             if(field_867 != null) {
                field_867.field_1018 = false;
             }
@@ -31522,7 +31522,7 @@ public final class class_2 extends class_1 implements class_0 {
       if(field_133 != null) {
          for(var14 = 0; var14 < 10; ++var14) {
             if(field_133[var14] != null) {
-               field_133[var14][7] += class_1.field_15;
+               field_133[var14][7] += GLLib.field_15;
                var16 = field_133[var14][0] >> 16 & '\uffff';
                var7 = field_133[var14][0] & '\uffff';
                var8 = field_133[var14][1] & '\uffff';
@@ -31575,14 +31575,14 @@ public final class class_2 extends class_1 implements class_0 {
 
       for(var14 = 0; var14 < 30; ++var14) {
          if(field_127[var14] != null) {
-            field_127[var14].method_1120(class_1.field_15);
+            field_127[var14].method_1120(GLLib.field_15);
          }
       }
 
       method_139(2, field_92);
       ++field_95;
-      field_96 += class_1.field_15;
-      (new StringBuffer()).append("G_DT : ").append(class_1.field_15).append(" ms");
+      field_96 += GLLib.field_15;
+      (new StringBuffer()).append("G_DT : ").append(GLLib.field_15).append(" ms");
       (new StringBuffer()).append("G_Update : ").append(System.currentTimeMillis() - var3).append(" ms");
       method_142();
       (new StringBuffer()).append("G_Paint : ").append(System.currentTimeMillis() - var1).append(" ms");
@@ -31615,10 +31615,10 @@ public final class class_2 extends class_1 implements class_0 {
       super.collectGarbage();
       field_864 = null;
       field_865 = null;
-      class_1.field_9 = null;
-      class_1.field_19 = null;
-      class_1.method_75();
-      class_1.method_23();
+      GLLib.field_9 = null;
+      GLLib.field_19 = null;
+      GLLib.method_75();
+      GLLib.method_23();
       ASprite.field_925 = null;
 
       try {
@@ -31753,7 +31753,7 @@ public final class class_2 extends class_1 implements class_0 {
 
       if(var3) {
          try {
-            var0 = class_1.method_79(var0, "|", "");
+            var0 = GLLib.method_79(var0, "|", "");
             GloftGF2M.instance.platformRequest(var0);
          } catch (Exception var4) {
             var4.printStackTrace();
@@ -31778,7 +31778,7 @@ public final class class_2 extends class_1 implements class_0 {
    }
 
    // $FF: renamed from: <clinit> () void
-   public class_2() {
+   public cGame() {
 	  super();
       field_97 = false;
       int[] var10000 = new int[]{22, 21, 20};

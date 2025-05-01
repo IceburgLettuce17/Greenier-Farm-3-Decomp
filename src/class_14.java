@@ -200,8 +200,8 @@ public final class class_14 {
    // $FF: renamed from: a (java.lang.String) void
    public static void method_1244(String var0) {
       field_1362 = var0;
-      MIDlet var1 = class_1.field_11;
-      field_1358 = class_1.field_11;
+      MIDlet var1 = GLLib.field_11;
+      field_1358 = GLLib.field_11;
       field_1410 = 0;
       if(field_1373 == null) {
          field_1373 = new Vector();
@@ -281,7 +281,7 @@ public final class class_14 {
          var4 = false;
          field_1410 = -10;
       } else {
-         field_1358 = class_1.field_11;
+         field_1358 = GLLib.field_11;
          if((field_1396 = method_1276("IAP-OverrideFromJad")).equals("1")) {
             if((field_1402 = method_1276("IAP-BillingType").toUpperCase()).equals("HTTP")) {
                if((field_1401 = method_1276("IAP-BillingURL")).equals("")) {
@@ -1018,7 +1018,7 @@ public final class class_14 {
          String var4 = var2 + var1;
          (new StringBuffer()).append("PaySMS.sendRequest CREDIT CARD: ").append(var4);
          if(var4 != null) {
-            class_1.method_8(var4);
+            GLLib.method_8(var4);
          }
 
          rmsSave(field_1390[0], "1");
@@ -2048,15 +2048,15 @@ public final class class_14 {
    public static String method_1299() {
       try {
          String var0;
-         if((var0 = class_1.field_11.getAppProperty("URL-SUPPORT")) == null) {
+         if((var0 = GLLib.field_11.getAppProperty("URL-SUPPORT")) == null) {
             return null;
          } else {
             String var1;
             if((var1 = method_1284(field_1390[7])) != null && !var1.equals("")) {
                String var2 = var1.substring(0, var1.indexOf(95));
                var1 = var1.substring(var1.indexOf(95) + 1);
-               byte[] var4 = class_1.method_69(var2.getBytes(), "a8bc1a23a89", true);
-               return var0 + "&extra_1=" + class_1.method_67(var4) + "&extra_2=" + var1;
+               byte[] var4 = GLLib.method_69(var2.getBytes(), "a8bc1a23a89", true);
+               return var0 + "&extra_1=" + GLLib.method_67(var4) + "&extra_2=" + var1;
             } else {
                return var0;
             }
