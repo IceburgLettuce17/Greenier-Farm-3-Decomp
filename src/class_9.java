@@ -8,8 +8,8 @@ final class class_9 implements Runnable {
    }
 
    public final void run() {
-      while(class_1.field_20) {
-         class_1.method_9();
+      while(GLLib.field_20) {
+         GLLib.method_9();
 
          try {
             Thread.sleep(1000L);

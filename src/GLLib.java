@@ -13,7 +13,7 @@ import javax.microedition.rms.RecordStore;
 import javax.microedition.rms.RecordStoreException;
 
 // $FF: renamed from: g
-public abstract class class_1 extends Canvas implements Runnable {
+public abstract class GLLib extends Canvas implements Runnable {
 
    // $FF: renamed from: a javax.microedition.lcdui.Graphics
    public static Graphics field_1;
@@ -52,7 +52,7 @@ public abstract class class_1 extends Canvas implements Runnable {
    // $FF: renamed from: b int
    private static int field_18;
    // $FF: renamed from: a g
-   static class_1 field_19;
+   static GLLib field_19;
    // $FF: renamed from: p boolean
    static boolean field_20;
    // $FF: renamed from: a java.lang.String
@@ -199,7 +199,7 @@ public abstract class class_1 extends Canvas implements Runnable {
    abstract void method_1();
 
    // $FF: renamed from: <init> (java.lang.Object, java.lang.Object) void
-   public class_1(Object var1, Object var2) {
+   public GLLib(Object var1, Object var2) {
       super();
       field_19 = this;
       field_11 = (MIDlet)var1;
@@ -2643,7 +2643,7 @@ public abstract class class_1 extends Canvas implements Runnable {
    }
 
    // $FF: renamed from: <clinit> () void
-   public class_1() {
+   public GLLib() {
       field_1 = null;
       field_2 = null;
       width = 800;

@@ -307,7 +307,7 @@ final class class_6 {
          for(class_6 var1 = field_1013[var0]; var1 != null; var1 = var2) {
             var2 = var1.field_1083;
             if(var1.field_1113 != null) {
-               var1.field_1113.method_1120(class_1.field_15);
+               var1.field_1113.method_1120(GLLib.field_15);
             }
 
             int var6;
@@ -383,8 +383,8 @@ final class class_6 {
                   var1.field_1113.method_1109(1, 1);
                   var6 = var1.field_1113.method_1106().method_918(0);
                   var18 = var1.field_1113.method_1106().method_919(0);
-                  var1.field_1087 = field_1080 + class_1.method_16(-var6, var6);
-                  var1.field_1088 = field_1081 + class_1.method_16(-var18, var18);
+                  var1.field_1087 = field_1080 + GLLib.method_16(-var6, var6);
+                  var1.field_1088 = field_1081 + GLLib.method_16(-var18, var18);
                   if(field_1078 > -1) {
                      ++field_1078;
                   }
@@ -397,7 +397,7 @@ final class class_6 {
                   class_6[] var34 = new class_6[1];
                   method_1010(0, 42, var34, 1);
                   var34[0].method_1027(3);
-                  class_2.method_564(34);
+                  cGame.method_564(34);
                   method_1073(3);
                }
                break;
@@ -422,8 +422,8 @@ final class class_6 {
                }
 
                if(!var1.field_1060 && var1.method_1097() && var1.field_1100 == 2) {
-                  if(class_2.field_163) {
-                     class_2.method_564(22);
+                  if(cGame.field_163) {
+                     cGame.method_564(22);
                   }
 
                   var1.field_1060 = true;
@@ -448,14 +448,14 @@ final class class_6 {
                   var6 = var1.field_1113.method_1110();
                   if(var1.field_1113.method_1118() || var6 == 2) {
                      var1.method_1027(0);
-                     class_2.field_381 = 3;
+                     cGame.field_381 = 3;
                   }
                   break label831;
                case 3:
                   if(var1.field_1113.method_1118()) {
                      var1.method_1027(0);
-                     class_2.method_823(292, 293, 15, 0, 1);
-                     class_2.field_238 = 0;
+                     cGame.method_823(292, 293, 15, 0, 1);
+                     cGame.field_238 = 0;
                   }
                default:
                   break label831;
@@ -465,37 +465,37 @@ final class class_6 {
                break;
             case 49:
                if(var1.field_1116 != null) {
-                  var1.field_1116.method_1120(class_1.field_15);
+                  var1.field_1116.method_1120(GLLib.field_15);
                }
 
                if(var1.field_1105 == 3) {
-                  if((var28 = (System.currentTimeMillis() - var1.field_1026) / 1000L) >= (long)(var1.field_1027 / 2) && class_2.field_860 != 8 && class_2.field_860 != 45) {
+                  if((var28 = (System.currentTimeMillis() - var1.field_1026) / 1000L) >= (long)(var1.field_1027 / 2) && cGame.field_860 != 8 && cGame.field_860 != 45) {
                      var1.method_1047(4);
                   }
 
-                  if(class_2.field_872 == var1 && var1.field_1027 != 0) {
-                     class_2.method_168((int)var28, var1.field_1027);
-                     var1.field_1119 = class_2.method_171((int)((long)var1.field_1027 - var28));
+                  if(cGame.field_872 == var1 && var1.field_1027 != 0) {
+                     cGame.method_168((int)var28, var1.field_1027);
+                     var1.field_1119 = cGame.method_171((int)((long)var1.field_1027 - var28));
                   }
                } else if(var1.field_1105 == 4) {
-                  if((var28 = (System.currentTimeMillis() - var1.field_1026) / 1000L) >= (long)var1.field_1027 && (class_2.field_860 < 46 || class_2.field_860 > 57) && class_2.field_860 != 8 && class_2.field_860 != 45) {
+                  if((var28 = (System.currentTimeMillis() - var1.field_1026) / 1000L) >= (long)var1.field_1027 && (cGame.field_860 < 46 || cGame.field_860 > 57) && cGame.field_860 != 8 && cGame.field_860 != 45) {
                      var1.method_1047(5);
                   }
 
-                  if(class_2.field_872 == var1 && var1.field_1027 != 0) {
-                     class_2.method_168((int)var28, var1.field_1027);
-                     var1.field_1119 = class_2.method_171((int)((long)var1.field_1027 - var28));
+                  if(cGame.field_872 == var1 && var1.field_1027 != 0) {
+                     cGame.method_168((int)var28, var1.field_1027);
+                     var1.field_1119 = cGame.method_171((int)((long)var1.field_1027 - var28));
                   }
-               } else if(class_2.field_872 == var1) {
-                  class_2.method_188(false, (class_6)null);
+               } else if(cGame.field_872 == var1) {
+                  cGame.method_188(false, (class_6)null);
                }
 
-               if((var1.field_1116 == null || var1.field_1116.method_1106() != class_2.field_864[16]) && var1.field_1105 == 5) {
-                  var10001 = new cSoundEngine(class_2.field_864[16], var1.field_1091, var1.field_1092);
+               if((var1.field_1116 == null || var1.field_1116.method_1106() != cGame.field_864[16]) && var1.field_1105 == 5) {
+                  var10001 = new cSoundEngine(cGame.field_864[16], var1.field_1091, var1.field_1092);
                   var1.field_1116 = var10001;
                   var1.field_1116.method_1109(0, -1);
                   var1.field_1116.method_1114(0);
-               } else if(var1.field_1116 != null && var1.field_1105 != 5 && var1.field_1116.method_1106() == class_2.field_864[16]) {
+               } else if(var1.field_1116 != null && var1.field_1105 != 5 && var1.field_1116.method_1106() == cGame.field_864[16]) {
                   var1.field_1116 = null;
                }
 
@@ -512,10 +512,10 @@ final class class_6 {
                break;
             case 50:
                if(var1.field_1100 != 18) {
-                  if((var1.field_1100 == 12 || var1.field_1100 == 11) && class_2.field_881 == 0 && var1.method_1086(512)) {
-                     if((var28 = System.currentTimeMillis() / 1000L - var1.field_1022) < 86400L && class_2.field_872 == var1) {
-                        class_2.method_168((int)var28, 86400);
-                        var1.field_1119 = class_2.method_171((int)(86400L - var28));
+                  if((var1.field_1100 == 12 || var1.field_1100 == 11) && cGame.field_881 == 0 && var1.method_1086(512)) {
+                     if((var28 = System.currentTimeMillis() / 1000L - var1.field_1022) < 86400L && cGame.field_872 == var1) {
+                        cGame.method_168((int)var28, 86400);
+                        var1.field_1119 = cGame.method_171((int)(86400L - var28));
                      }
 
                      if(!var1.field_1023 && var28 >= 86400L) {
@@ -523,25 +523,25 @@ final class class_6 {
                         var1.method_1084(16);
                         int[] var32 = new int[]{var1.field_1087, var1.field_1088, 150, 10, 13, -63, -117, 0, 1};
                         var1.method_1092(method_1079(33, 0, var32));
-                        if(class_2.method_189()) {
-                           class_2.method_188(false, (class_6)null);
+                        if(cGame.method_189()) {
+                           cGame.method_188(false, (class_6)null);
                         }
                      }
                   } else if(var1.field_1100 == 15) {
                      cSoundEngine var21 = var1.field_1113;
-                     if(class_2.method_616()) {
+                     if(cGame.method_616()) {
                         if(var1.field_1024 >= 0) {
-                           var1.field_1024 -= class_1.field_15;
+                           var1.field_1024 -= GLLib.field_15;
                            if(var1.field_1024 < 0) {
-                              var10001 = new cSoundEngine(class_2.field_864[var1.field_1106], var1.field_1091, var1.field_1092);
+                              var10001 = new cSoundEngine(cGame.field_864[var1.field_1106], var1.field_1091, var1.field_1092);
                               var1.field_1113 = var10001;
                               var1.field_1113.method_1109(0, 1);
                            }
                         } else if(var1.field_1113 != null) {
-                           var1.field_1113.method_1120(class_1.field_15);
+                           var1.field_1113.method_1120(GLLib.field_15);
                            if(var1.field_1113.method_1118()) {
                               var1.field_1113 = null;
-                              var1.field_1024 = class_1.method_16(1000, 4000);
+                              var1.field_1024 = GLLib.method_16(1000, 4000);
                            }
                         }
                      } else if(var1.field_1113 != null) {
@@ -552,24 +552,24 @@ final class class_6 {
                         var1.method_1094();
                      }
                   } else if(var1.field_1100 == 9) {
-                     if(class_2.field_881 == 0 && class_2.method_624()) {
-                        if(!var1.field_1025 && class_2.method_894(class_2.field_896[0]) && class_2.method_894(class_2.field_896[1])) {
+                     if(cGame.field_881 == 0 && cGame.method_624()) {
+                        if(!var1.field_1025 && cGame.method_894(cGame.field_896[0]) && cGame.method_894(cGame.field_896[1])) {
                            var1.field_1025 = true;
                            var33 = new int[]{var1.field_1087, var1.field_1088, 150, 10, 13, -63, -117, 0, 1};
                            var1.method_1092(method_1079(33, 0, var33));
                         }
 
                         if(var1.field_1024 >= 0) {
-                           var1.field_1024 -= class_1.field_15;
+                           var1.field_1024 -= GLLib.field_15;
                            if(var1.field_1024 < 0) {
-                              var10001 = new cSoundEngine(class_2.field_864[var1.field_1106], var1.field_1091, var1.field_1092);
+                              var10001 = new cSoundEngine(cGame.field_864[var1.field_1106], var1.field_1091, var1.field_1092);
                               var1.field_1113 = var10001;
                               var1.field_1113.method_1109(0, 1);
                            }
                         } else if(var1.field_1113 != null) {
-                           var1.field_1113.method_1120(class_1.field_15);
+                           var1.field_1113.method_1120(GLLib.field_15);
                            if(var1.field_1113.method_1118()) {
-                              var1.field_1024 = class_1.method_16(10000, 30000);
+                              var1.field_1024 = GLLib.method_16(10000, 30000);
                               var1.field_1113 = null;
                            }
                         }
@@ -589,25 +589,25 @@ final class class_6 {
                         var1.method_1094();
                      }
                   } else if(var1.field_1100 == 2) {
-                     if(class_2.method_754()) {
+                     if(cGame.method_754()) {
                         if(var1.field_1116 == null) {
                            ASprite var23;
-                           short var36 = (var23 = class_2.field_864[var1.field_1106]).field_934[1];
+                           short var36 = (var23 = cGame.field_864[var1.field_1106]).field_934[1];
                            var1.field_1114 = var23.method_916(var36);
                            var1.field_1115 = var23.method_917(var36);
-                           var10001 = new cSoundEngine(class_2.field_864[147], var1.field_1091, var1.field_1092);
+                           var10001 = new cSoundEngine(cGame.field_864[147], var1.field_1091, var1.field_1092);
                            var1.field_1116 = var10001;
                         }
 
                         if(var1.field_1024 >= 0) {
-                           var1.field_1024 -= class_1.field_15;
+                           var1.field_1024 -= GLLib.field_15;
                            if(var1.field_1024 < 0) {
                               var1.field_1116.method_1109(0, 1);
                            }
                         } else {
-                           var1.field_1116.method_1120(class_1.field_15);
+                           var1.field_1116.method_1120(GLLib.field_15);
                            if(var1.field_1116.method_1118()) {
-                              var1.field_1024 = class_1.method_16(3000, 4000);
+                              var1.field_1024 = GLLib.method_16(3000, 4000);
                            }
                         }
                      } else if(var1.field_1116 != null) {
@@ -620,7 +620,7 @@ final class class_6 {
                   } else {
                      int[] var26;
                      if(var1.field_1100 == 14) {
-                        if(!var1.field_1023 && class_2.method_769()) {
+                        if(!var1.field_1023 && cGame.method_769()) {
                            var1.field_1023 = true;
                            var1.method_1084(16);
                            var26 = new int[]{var1.field_1087, var1.field_1088, 150, 10, 13, -63, -117, 0, 1};
@@ -630,47 +630,47 @@ final class class_6 {
                         var20 = System.currentTimeMillis() / 1000L;
                         boolean var30 = false;
 
-                        for(var22 = 0; !var30 && var22 < class_2.field_516; ++var22) {
-                           var30 = class_2.field_522[var22] > 0L && var20 < class_2.field_522[var22] + (long)class_2.field_521[var22];
+                        for(var22 = 0; !var30 && var22 < cGame.field_516; ++var22) {
+                           var30 = cGame.field_522[var22] > 0L && var20 < cGame.field_522[var22] + (long)cGame.field_521[var22];
                         }
 
                         if(var30) {
                            if(var1.field_1113 == null) {
-                              var10001 = new cSoundEngine(class_2.field_864[var1.field_1106], var1.field_1091, var1.field_1092);
+                              var10001 = new cSoundEngine(cGame.field_864[var1.field_1106], var1.field_1091, var1.field_1092);
                               var1.field_1113 = var10001;
                               var1.field_1113.method_1109(1, -1);
-                              class_2.method_564(37);
+                              cGame.method_564(37);
                            } else {
-                              var1.field_1113.method_1120(class_1.field_15);
+                              var1.field_1113.method_1120(GLLib.field_15);
                            }
                         } else if(var1.field_1113 != null) {
                            var1.field_1113 = null;
                         }
                      } else if(var1.field_1100 == 17) {
                         if(var1.field_1024 >= 0) {
-                           var1.field_1024 -= class_1.field_15;
+                           var1.field_1024 -= GLLib.field_15;
                            if(var1.field_1024 < 0) {
-                              var10001 = new cSoundEngine(class_2.field_864[var1.field_1106], var1.field_1091, var1.field_1092);
+                              var10001 = new cSoundEngine(cGame.field_864[var1.field_1106], var1.field_1091, var1.field_1092);
                               var1.field_1113 = var10001;
                               var1.field_1113.method_1109(0, 1);
                               if(var1.method_1097()) {
-                                 class_2.method_564(30);
+                                 cGame.method_564(30);
                               }
                            }
                         } else if(var1.field_1113 != null) {
-                           var1.field_1113.method_1120(class_1.field_15);
+                           var1.field_1113.method_1120(GLLib.field_15);
                            if(var1.field_1113.method_1118()) {
                               var1.field_1113 = null;
-                              var1.field_1024 = class_1.method_16(10000, 30000);
+                              var1.field_1024 = GLLib.method_16(10000, 30000);
                            }
                         }
 
-                        if(class_2.field_881 == 0) {
-                           class_2.field_789 = System.currentTimeMillis();
-                           if(var1.method_1086(512) && (var1.field_1112 == null || var1.field_1112.field_1086 == -1) && class_2.field_789 > class_2.field_790) {
+                        if(cGame.field_881 == 0) {
+                           cGame.field_789 = System.currentTimeMillis();
+                           if(var1.method_1086(512) && (var1.field_1112 == null || var1.field_1112.field_1086 == -1) && cGame.field_789 > cGame.field_790) {
                               var26 = new int[]{var1.field_1087, var1.field_1088, 150, 10, 13, -63, -117, 0, 1};
                               var1.method_1092(method_1079(33, 0, var26));
-                           } else if(var1.method_1086(512) && var1.field_1112 != null && var1.field_1112.field_1086 != -1 && class_2.field_789 <= class_2.field_790) {
+                           } else if(var1.method_1086(512) && var1.field_1112 != null && var1.field_1112.field_1086 != -1 && cGame.field_789 <= cGame.field_790) {
                               var1.method_1093();
                            }
                         }
@@ -703,12 +703,12 @@ final class class_6 {
                      var1.method_1053(3);
                   }
 
-                  if(class_2.field_872 == var1 && var1.field_1129 != 0) {
-                     class_2.method_168((int)var28, var1.field_1129);
-                     var1.field_1119 = class_2.method_171((int)((long)var1.field_1129 - var28));
+                  if(cGame.field_872 == var1 && var1.field_1129 != 0) {
+                     cGame.method_168((int)var28, var1.field_1129);
+                     var1.field_1119 = cGame.method_171((int)((long)var1.field_1129 - var28));
                   }
-               } else if(class_2.field_872 == var1) {
-                  class_2.method_188(false, (class_6)null);
+               } else if(cGame.field_872 == var1) {
+                  cGame.method_188(false, (class_6)null);
                }
                break;
             case 54:
@@ -721,7 +721,7 @@ final class class_6 {
                            var7 = cResource.resources[0];
                            var1.field_1050 = (short)var7.field_1133[var1.field_1100][30];
                            ASprite var8;
-                           short var9 = (var8 = class_2.field_864[var7.field_1133[var1.field_1100][31]]).field_934[var1.field_1050];
+                           short var9 = (var8 = cGame.field_864[var7.field_1133[var1.field_1100][31]]).field_934[var1.field_1050];
                            var1.field_1053 = var8.method_916(var9);
                            var1.field_1054 = var8.method_917(var9);
                            var1.field_1114 = var1.field_1053;
@@ -731,24 +731,24 @@ final class class_6 {
                         var1.field_1116.method_1105(var1.field_1091, var1.field_1092 + -50);
                      }
 
-                     var1.field_1116.method_1121(class_2.field_858);
+                     var1.field_1116.method_1121(cGame.field_858);
                      if(var1.field_1116.method_1118()) {
-                        if(var6 == 1 && class_2.field_860 == 18) {
-                           class_2.field_244 = true;
+                        if(var6 == 1 && cGame.field_860 == 18) {
+                           cGame.field_244 = true;
                         }
 
                         var1.field_1116 = null;
                      } else {
-                        var1.field_1116.method_1120(class_1.field_15);
+                        var1.field_1116.method_1120(GLLib.field_15);
                      }
                   }
 
-                  if((var1.field_1116 == null || var1.field_1116.method_1106() != class_2.field_864[16]) && var1.field_1044) {
-                     var10001 = new cSoundEngine(class_2.field_864[16], var1.field_1091, var1.field_1092);
+                  if((var1.field_1116 == null || var1.field_1116.method_1106() != cGame.field_864[16]) && var1.field_1044) {
+                     var10001 = new cSoundEngine(cGame.field_864[16], var1.field_1091, var1.field_1092);
                      var1.field_1116 = var10001;
                      var1.field_1116.method_1109(0, -1);
                      var1.field_1116.method_1114(1);
-                  } else if(var1.field_1116 != null && !var1.field_1044 && var1.field_1116.method_1106() == class_2.field_864[16]) {
+                  } else if(var1.field_1116 != null && !var1.field_1044 && var1.field_1116.method_1106() == cGame.field_864[16]) {
                      var1.field_1116 = null;
                   }
 
@@ -758,9 +758,9 @@ final class class_6 {
                      }
                   } else {
                      if(var1.method_1097()) {
-                        if(!var1.field_1047 && class_2.field_183 != null && class_2.field_183 != var1 && var1.field_1087 > class_2.field_902 + 150 && var1.field_1087 < class_2.field_902 + 530 && var1.field_1088 > class_2.field_903 + 340 && var1.field_1088 < class_2.field_903 + 570) {
+                        if(!var1.field_1047 && cGame.field_183 != null && cGame.field_183 != var1 && var1.field_1087 > cGame.field_902 + 150 && var1.field_1087 < cGame.field_902 + 530 && var1.field_1088 > cGame.field_903 + 340 && var1.field_1088 < cGame.field_903 + 570) {
                            var1.field_1047 = true;
-                           var1.method_1055(class_2.field_902 + 150, class_2.field_903 + 446);
+                           var1.method_1055(cGame.field_902 + 150, cGame.field_903 + 446);
                         }
 
                         if(var1.field_1047 && var1.field_1087 == var1.field_1102 && var1.field_1088 == var1.field_1103) {
@@ -773,7 +773,7 @@ final class class_6 {
                            var16[var18] = null;
                         }
 
-                        method_1016(0, 50, class_2.field_888[10], var16, 10);
+                        method_1016(0, 50, cGame.field_888[10], var16, 10);
 
                         for(var18 = 0; var18 < 10; ++var18) {
                            if(var16[var18] != null && var3.field_1087 > var16[var18].field_1087 - 100 && var3.field_1087 < var16[var18].field_1087 + 100 && var3.field_1088 > var16[var18].field_1088 - 100 && var3.field_1088 < var16[var18].field_1088 + 100 && !var3.field_1048) {
@@ -795,19 +795,19 @@ final class class_6 {
                      switch(var3.field_1105) {
                      case 0:
                         if(var3.field_1113.method_1118()) {
-                           if(class_2.field_182 != 0 && class_2.field_182 != 1 && class_2.field_182 != 3 && (!class_2.method_189() || class_2.field_872 != var3) && var3.method_1097() && !class_2.field_905 && class_1.method_16(0, 100) >= 50) {
-                              class_2.field_905 = true;
-                              int var15 = class_1.method_16(-4, 4);
-                              var6 = class_1.method_16(-4, 4);
+                           if(cGame.field_182 != 0 && cGame.field_182 != 1 && cGame.field_182 != 3 && (!cGame.method_189() || cGame.field_872 != var3) && var3.method_1097() && !cGame.field_905 && GLLib.method_16(0, 100) >= 50) {
+                              cGame.field_905 = true;
+                              int var15 = GLLib.method_16(-4, 4);
+                              var6 = GLLib.method_16(-4, 4);
                               var33 = new int[2];
                               var24 = new int[2];
                               var33[0] = var3.field_1087;
                               var33[1] = var3.field_1088;
-                              class_2.method_638(var33, var24);
+                              cGame.method_638(var33, var24);
                               var24[0] += var15;
                               var24[1] += var6;
-                              if(class_2.field_860 == -1 && !class_2.method_644(var24[0], var24[1], var3.field_1096 << 1, var3.field_1097 << 1)) {
-                                 class_2.method_639(var24, var33);
+                              if(cGame.field_860 == -1 && !cGame.method_644(var24[0], var24[1], var3.field_1096 << 1, var3.field_1097 << 1)) {
+                                 cGame.method_639(var24, var33);
                                  var3.method_1096(var33[0], var33[1]);
                               } else {
                                  var3.method_1062(0);
@@ -818,7 +818,7 @@ final class class_6 {
                         }
                         break;
                      case 1:
-                        if(class_2.field_860 == 15) {
+                        if(cGame.field_860 == 15) {
                            var3.method_1062(0);
                         }
 
@@ -830,14 +830,14 @@ final class class_6 {
                            int[] var27 = new int[2];
                            var24[0] = var3.field_1087;
                            var24[1] = var3.field_1088;
-                           class_2.method_638(var24, var27);
-                           if(class_2.method_189() && class_2.field_872 == var3) {
+                           cGame.method_638(var24, var27);
+                           if(cGame.method_189() && cGame.field_872 == var3) {
                               var3.field_1087 = var6;
                               var3.field_1088 = var18;
                               var3.method_1062(0);
                            }
 
-                           if(!class_2.method_647(var27[0], var27[1])) {
+                           if(!cGame.method_647(var27[0], var27[1])) {
                               var3.field_1087 = var6;
                               var3.field_1088 = var18;
                               var3.method_1062(0);
@@ -857,11 +857,11 @@ final class class_6 {
                         break;
                      case 3:
                         if(var3.field_1113.method_1118()) {
-                           if(!class_2.field_230 && class_2.method_136() == 18) {
-                              class_2.field_230 = true;
-                              class_2.field_244 = false;
-                              class_2.field_243 = false;
-                              class_2.field_860 = 33;
+                           if(!cGame.field_230 && cGame.method_136() == 18) {
+                              cGame.field_230 = true;
+                              cGame.field_244 = false;
+                              cGame.field_243 = false;
+                              cGame.field_860 = 33;
                            }
 
                            var3.method_1062(0);
@@ -892,15 +892,15 @@ final class class_6 {
                            var3.field_1044 = false;
                         }
 
-                        if(class_2.field_881 == 0 || class_2.method_659(5) < class_2.method_662() && class_1.method_16(0, 100) < class_2.field_878[20]) {
-                           int var13 = class_1.method_16(0, 100);
+                        if(cGame.field_881 == 0 || cGame.method_659(5) < cGame.method_662() && GLLib.method_16(0, 100) < cGame.field_878[20]) {
+                           int var13 = GLLib.method_16(0, 100);
                            int var14 = 0;
                            class_6 var17;
                            if(var13 < var22) {
                               var3.field_1111 = var6;
                               var14 = var19 << 16;
                               var17 = method_1079(47, 2, var5);
-                              if(class_2.field_881 != 0) {
+                              if(cGame.field_881 != 0) {
                                  var14 = 1;
                               }
 
@@ -909,7 +909,7 @@ final class class_6 {
                            }
 
                            if(var13 < var12) {
-                              if(class_2.field_881 == 0) {
+                              if(cGame.field_881 == 0) {
                                  var3.field_1111 = var11;
                                  var17 = method_1079(47, 2, var5);
                                  var18 = var10 << 16;
@@ -928,7 +928,7 @@ final class class_6 {
                         }
 
                         if(var25) {
-                           class_2.method_888(var3.field_1118, 1, 41, var3.method_1086(2048));
+                           cGame.method_888(var3.field_1118, 1, 41, var3.method_1086(2048));
                         }
 
                         var3.method_1057();
@@ -949,9 +949,9 @@ final class class_6 {
                            var3.field_1037 = (int)((long)(var4.field_1133[var3.field_1100][13] * 60) + var35 / 1000L);
                         }
 
-                        if(var3.field_1037 > 0 && class_2.field_872 == var3) {
-                           class_2.method_168((int)var31, var3.field_1037);
-                           var3.field_1119 = class_2.method_171((int)((long)var3.field_1037 - var31));
+                        if(var3.field_1037 > 0 && cGame.field_872 == var3) {
+                           cGame.method_168((int)var31, var3.field_1037);
+                           var3.field_1119 = cGame.method_171((int)((long)var3.field_1037 - var31));
                         }
 
                         if(var31 >= (long)var3.field_1037) {
@@ -959,27 +959,27 @@ final class class_6 {
                         }
                      } else if(!var3.method_1086(4) && !var3.method_1086(16)) {
                         var20 = System.currentTimeMillis();
-                        if(class_2.field_860 == 33) {
+                        if(cGame.field_860 == 33) {
                            var3.field_1033 = var20;
                         }
 
                         var28 = (var20 - var3.field_1033) / 1000L;
-                        if(!var3.method_1086(256) && (class_2.method_895(20) || class_2.method_894(class_2.field_896[20]))) {
+                        if(!var3.method_1086(256) && (cGame.method_895(20) || cGame.method_894(cGame.field_896[20]))) {
                            if(var28 > (long)(var3.field_1034 * 3 / 4) && var3.field_1033 > 0L && !var3.field_1041) {
                               var3.field_1041 = true;
-                              if(!var3.field_1040 && class_1.method_16(0, 100) < 35) {
+                              if(!var3.field_1040 && GLLib.method_16(0, 100) < 35) {
                                  var3.method_1063(256);
                                  var3.field_1040 = true;
                               }
                            } else if(var28 > (long)(var3.field_1034 >> 1) && var3.field_1033 > 0L && !var3.field_1042) {
                               var3.field_1042 = true;
-                              if(!var3.field_1040 && class_1.method_16(0, 100) < 35) {
+                              if(!var3.field_1040 && GLLib.method_16(0, 100) < 35) {
                                  var3.method_1063(256);
                                  var3.field_1040 = true;
                               }
                            } else if(var28 > (long)(var3.field_1034 >> 2) && var3.field_1033 > 0L && !var3.field_1043) {
                               var3.field_1043 = true;
-                              if(!var3.field_1040 && class_1.method_16(0, 100) < 35) {
+                              if(!var3.field_1040 && GLLib.method_16(0, 100) < 35) {
                                  var3.method_1063(256);
                                  var3.field_1040 = true;
                               }
@@ -987,19 +987,19 @@ final class class_6 {
                         }
 
                         if(var28 >= (long)var3.field_1034 && var3.field_1033 != 0L) {
-                           if(class_2.field_860 == 35) {
-                              class_2.field_244 = true;
+                           if(cGame.field_860 == 35) {
+                              cGame.field_244 = true;
                            }
 
-                           if(class_2.field_860 != 34) {
+                           if(cGame.field_860 != 34) {
                               var3.method_1063(16);
-                              class_2.method_188(false, (class_6)null);
+                              cGame.method_188(false, (class_6)null);
                            }
                         }
 
-                        if(class_2.field_872 == var3 && var3.field_1034 != 0) {
-                           class_2.method_168((int)var28, var3.field_1034);
-                           var3.field_1119 = class_2.method_171((int)((long)var3.field_1034 - var28));
+                        if(cGame.field_872 == var3 && var3.field_1034 != 0) {
+                           cGame.method_168((int)var28, var3.field_1034);
+                           var3.field_1119 = cGame.method_171((int)((long)var3.field_1034 - var28));
                         }
                      }
 
@@ -1009,16 +1009,16 @@ final class class_6 {
                         var3.method_1063(16);
                      } else if(var3.method_1086(256) && (var3.field_1112 == null || var3.field_1112.field_1086 == -1)) {
                         var3.method_1063(256);
-                     } else if(!class_2.field_162 && !class_2.method_570(0)) {
-                        if((class_2.field_183 == null || class_2.field_183 != var3) && var3.method_1097() && class_1.method_16(0, 100) < 10) {
-                           class_2.method_567(var3.field_1120);
-                           class_2.field_162 = true;
-                           class_2.field_165 = 0;
+                     } else if(!cGame.field_162 && !cGame.method_570(0)) {
+                        if((cGame.field_183 == null || cGame.field_183 != var3) && var3.method_1097() && GLLib.method_16(0, 100) < 10) {
+                           cGame.method_567(var3.field_1120);
+                           cGame.field_162 = true;
+                           cGame.field_165 = 0;
                         }
-                     } else if(class_2.field_162 && class_2.field_165 >= class_2.field_176) {
-                        class_2.field_162 = false;
-                     } else if(class_2.field_162 && class_2.field_165 < class_2.field_176) {
-                        ++class_2.field_165;
+                     } else if(cGame.field_162 && cGame.field_165 >= cGame.field_176) {
+                        cGame.field_162 = false;
+                     } else if(cGame.field_162 && cGame.field_165 < cGame.field_176) {
+                        ++cGame.field_165;
                      }
                   }
                }
@@ -1052,74 +1052,74 @@ final class class_6 {
          int var8;
          for(var2 = field_1013[var0]; var2 != null; var2 = var2.field_1083) {
             if(var2.field_1086 == 10) {
-               if(class_2.field_867.field_1088 < 576) {
+               if(cGame.field_867.field_1088 < 576) {
                   var4 = 138;
-                  if(class_2.field_858 != 100) {
-                     class_1.method_92();
-                     class_1.method_96(class_2.field_858);
-                     var4 = 138 * class_2.field_858 / 100;
+                  if(cGame.field_858 != 100) {
+                     GLLib.method_92();
+                     GLLib.method_96(cGame.field_858);
+                     var4 = 138 * cGame.field_858 / 100;
                   }
 
                   var5 = -15682062;
                   cSoundEngine.field_1181[0][0].setColor(var5);
-                  cSoundEngine.method_1176(0, 0, cSoundEngine.method_1170(), var4, class_2.field_880);
+                  cSoundEngine.method_1176(0, 0, cSoundEngine.method_1170(), var4, cGame.field_880);
                   var5 = cSoundEngine.method_1170();
                   var6 = 800;
                   var4 = 321;
-                  if(class_2.field_858 != 100) {
-                     var6 = 800 * class_2.field_858 / 100;
-                     var4 = 321 * class_2.field_858 / 100;
+                  if(cGame.field_858 != 100) {
+                     var6 = 800 * cGame.field_858 / 100;
+                     var4 = 321 * cGame.field_858 / 100;
                   }
 
                   for(var7 = 0; var7 < var5; var7 += var6) {
-                     if(class_2.field_858 < 100 && class_2.method_852(79)) {
-                        class_1.method_93();
-                        var8 = class_2.field_864[79].method_934() / 2;
-                        cSoundEngine.method_1177(0, class_2.field_864[79], var8, var7, var4, class_2.field_880, (int[])null);
-                        class_1.method_92();
+                     if(cGame.field_858 < 100 && cGame.method_852(79)) {
+                        GLLib.method_93();
+                        var8 = cGame.field_864[79].method_934() / 2;
+                        cSoundEngine.method_1177(0, cGame.field_864[79], var8, var7, var4, cGame.field_880, (int[])null);
+                        GLLib.method_92();
                      } else {
-                        cSoundEngine.method_1177(0, class_2.field_864[79], 0, var7, var4, class_2.field_880, (int[])null);
+                        cSoundEngine.method_1177(0, cGame.field_864[79], 0, var7, var4, cGame.field_880, (int[])null);
                      }
                   }
 
                   var6 = 240;
                   var4 = 536;
-                  if(class_2.field_858 != 100) {
-                     var6 = 240 * class_2.field_858 / 100;
-                     var4 = 536 * class_2.field_858 / 100;
+                  if(cGame.field_858 != 100) {
+                     var6 = 240 * cGame.field_858 / 100;
+                     var4 = 536 * cGame.field_858 / 100;
                   }
 
                   for(var7 = 0; var7 < var5; var7 += var6) {
-                     if(class_2.field_858 < 100 && class_2.method_852(78)) {
-                        class_1.method_93();
-                        var8 = class_2.field_864[78].method_934() / 2;
-                        cSoundEngine.method_1177(0, class_2.field_864[78], var8, var7, var4, class_2.field_880, (int[])null);
-                        class_1.method_92();
+                     if(cGame.field_858 < 100 && cGame.method_852(78)) {
+                        GLLib.method_93();
+                        var8 = cGame.field_864[78].method_934() / 2;
+                        cSoundEngine.method_1177(0, cGame.field_864[78], var8, var7, var4, cGame.field_880, (int[])null);
+                        GLLib.method_92();
                      } else {
-                        cSoundEngine.method_1177(0, class_2.field_864[78], 0, var7, var4, class_2.field_880, (int[])null);
+                        cSoundEngine.method_1177(0, cGame.field_864[78], 0, var7, var4, cGame.field_880, (int[])null);
                      }
                   }
 
                   var6 = 400;
                   var4 = 576;
-                  if(class_2.field_858 != 100) {
-                     var6 = 400 * class_2.field_858 / 100;
-                     var4 = 576 * class_2.field_858 / 100;
+                  if(cGame.field_858 != 100) {
+                     var6 = 400 * cGame.field_858 / 100;
+                     var4 = 576 * cGame.field_858 / 100;
                   }
 
                   for(var7 = 0; var7 < var5; var7 += var6) {
-                     if(class_2.field_858 < 100 && class_2.method_852(77)) {
-                        class_1.method_93();
-                        var8 = class_2.field_864[77].method_934() / 2;
-                        cSoundEngine.method_1177(0, class_2.field_864[77], var8, var7, var4, class_2.field_880, (int[])null);
-                        class_1.method_92();
+                     if(cGame.field_858 < 100 && cGame.method_852(77)) {
+                        GLLib.method_93();
+                        var8 = cGame.field_864[77].method_934() / 2;
+                        cSoundEngine.method_1177(0, cGame.field_864[77], var8, var7, var4, cGame.field_880, (int[])null);
+                        GLLib.method_92();
                      } else {
-                        cSoundEngine.method_1177(0, class_2.field_864[77], 0, var7, var4, class_2.field_880, (int[])null);
+                        cSoundEngine.method_1177(0, cGame.field_864[77], 0, var7, var4, cGame.field_880, (int[])null);
                      }
                   }
 
-                  if(class_2.field_858 != 100) {
-                     class_1.method_93();
+                  if(cGame.field_858 != 100) {
+                     GLLib.method_93();
                   }
                }
             } else if(var2.method_1086(16777224) && var2.field_1106 > -1 && var2.field_1107 > -1) {
@@ -1132,14 +1132,14 @@ final class class_6 {
          while(var2 != null) {
             int var10;
             if(var2.field_1086 == 10) {
-               cSoundEngine.method_1160(class_1.field_1, 0, 0, 0);
+               cSoundEngine.method_1160(GLLib.field_1, 0, 0, 0);
             } else if(var2.method_1086(8)) {
                ASprite var11;
                if(var2.method_1086(16777216) && var2.field_1113 == null) {
                   if(var2.field_1106 > -1 && var2.field_1107 > -1) {
                      var8 = var2.field_1106;
                      var4 = var2.field_1106 & 32767;
-                     ASprite var15 = (var8 & '\u8000') != 0?class_2.field_124[var4]:class_2.field_864[var4];
+                     ASprite var15 = (var8 & '\u8000') != 0?cGame.field_124[var4]:cGame.field_864[var4];
                      var5 = var2.field_1108;
                      if(var2.method_1086(65536)) {
                         var5 += var15.field_960 >> 1;
@@ -1149,11 +1149,11 @@ final class class_6 {
                      var11 = var15;
                      class_6 var16 = var2;
                      var15.method_931(field_1126, var2.field_1107, var2.field_1087, var2.field_1088);
-                     if(class_2.field_858 != 100) {
-                        field_1126[0] = field_1126[0] * class_2.field_858 / 100;
-                        field_1126[1] = field_1126[1] * class_2.field_858 / 100;
-                        field_1126[2] = field_1126[2] * class_2.field_858 / 100;
-                        field_1126[3] = field_1126[3] * class_2.field_858 / 100;
+                     if(cGame.field_858 != 100) {
+                        field_1126[0] = field_1126[0] * cGame.field_858 / 100;
+                        field_1126[1] = field_1126[1] * cGame.field_858 / 100;
+                        field_1126[2] = field_1126[2] * cGame.field_858 / 100;
+                        field_1126[3] = field_1126[3] * cGame.field_858 / 100;
                      }
 
                      for(var6 = 0; var6 < field_1128; ++var6) {
@@ -1162,8 +1162,8 @@ final class class_6 {
                            int[] var13 = new int[2];
                            var12[0] = field_1127[var6][2];
                            var12[1] = field_1127[var6][3];
-                           class_2.method_588(var12, var13);
-                           class_2.method_588(field_1127[var6], var12);
+                           cGame.method_588(var12, var13);
+                           cGame.method_588(field_1127[var6], var12);
                            int var10000 = var12[0];
                            int var10001 = var12[1];
                            int var10002 = var13[0] - var12[0];
@@ -1171,19 +1171,19 @@ final class class_6 {
                            var10 = var10002;
                            int var9 = var10001;
                            var8 = var10000;
-                           class_1.method_41(class_1.field_1, var8, var9, var10, var7, true);
-                           if(class_2.field_858 == 100) {
-                              var11.method_980(class_1.field_1, var16.field_1107, var16.field_1091, var16.field_1092, 0);
-                           } else if(class_2.method_852(var16.field_1106)) {
+                           GLLib.method_41(GLLib.field_1, var8, var9, var10, var7, true);
+                           if(cGame.field_858 == 100) {
+                              var11.method_980(GLLib.field_1, var16.field_1107, var16.field_1091, var16.field_1092, 0);
+                           } else if(cGame.method_852(var16.field_1106)) {
                               var7 = var11.method_934() / 2 + var16.field_1107;
-                              var11.method_980(class_1.field_1, var7, var16.field_1091, var16.field_1092, 0);
+                              var11.method_980(GLLib.field_1, var7, var16.field_1091, var16.field_1092, 0);
                            } else {
-                              var11.method_982(class_1.field_1, var16.field_1107, var16.field_1091, var16.field_1092, class_2.field_858);
+                              var11.method_982(GLLib.field_1, var16.field_1107, var16.field_1091, var16.field_1092, cGame.field_858);
                            }
 
-                           var8 = class_1.height;
-                           var7 = class_1.width;
-                           class_1.method_41(class_1.field_1, 0, 0, var7, var8, true);
+                           var8 = GLLib.height;
+                           var7 = GLLib.width;
+                           GLLib.method_41(GLLib.field_1, 0, 0, var7, var8, true);
                         }
                      }
                   }
@@ -1194,24 +1194,24 @@ final class class_6 {
                         var4 += var2.field_1113.method_1106().field_960 >> 1;
                      }
 
-                     if(class_2.field_858 < 100 && class_2.method_852(var2.field_1106)) {
+                     if(cGame.field_858 < 100 && cGame.method_852(var2.field_1106)) {
                         (var11 = var2.field_1113.method_1106()).method_971(var4);
                         var4 = var11.method_933() / 2 + var2.field_1113.method_1110();
-                        var11.method_979(class_1.field_1, var4, var2.field_1113.method_1112(), var2.field_1091, var2.field_1092, 0);
+                        var11.method_979(GLLib.field_1, var4, var2.field_1113.method_1112(), var2.field_1091, var2.field_1092, 0);
                      } else {
                         var2.field_1113.method_1106().method_971(var4);
                         var2.field_1113.method_1105(var2.field_1091, var2.field_1092);
-                        var2.field_1113.method_1121(class_2.field_858);
+                        var2.field_1113.method_1121(cGame.field_858);
                         var2.field_1113.method_1119();
                      }
 
                      if(var2.method_1086(33554432)) {
-                        class_2.field_864[var2.field_1106].method_932(field_1126, var2.field_1113.method_1110(), var2.field_1113.method_1112(), var2.field_1087, var2.field_1088, var2.field_1113.field_1136);
-                        if(class_2.field_858 != 100) {
-                           field_1126[0] = field_1126[0] * class_2.field_858 / 100;
-                           field_1126[1] = field_1126[1] * class_2.field_858 / 100;
-                           field_1126[2] = field_1126[2] * class_2.field_858 / 100;
-                           field_1126[3] = field_1126[3] * class_2.field_858 / 100;
+                        cGame.field_864[var2.field_1106].method_932(field_1126, var2.field_1113.method_1110(), var2.field_1113.method_1112(), var2.field_1087, var2.field_1088, var2.field_1113.field_1136);
+                        if(cGame.field_858 != 100) {
+                           field_1126[0] = field_1126[0] * cGame.field_858 / 100;
+                           field_1126[1] = field_1126[1] * cGame.field_858 / 100;
+                           field_1126[2] = field_1126[2] * cGame.field_858 / 100;
+                           field_1126[3] = field_1126[3] * cGame.field_858 / 100;
                         }
 
                         method_992(field_1126[0], field_1126[1], field_1126[2], field_1126[3]);
@@ -1235,50 +1235,50 @@ final class class_6 {
             switch(var2.field_1086) {
             case 54:
                if(var2.method_1086(8)) {
-                  if(((var5 = var2.field_1113.method_1110()) == 1 || var5 == 6 || var5 == 2 || var5 == 7) && class_2.field_124[1] != null) {
+                  if(((var5 = var2.field_1113.method_1110()) == 1 || var5 == 6 || var5 == 2 || var5 == 7) && cGame.field_124[1] != null) {
                      var6 = var2.field_1091 + var2.field_1051;
                      var7 = var2.field_1092 + var2.field_1052;
-                     if(class_2.field_858 == 100) {
-                        class_2.field_124[1].method_980(class_1.field_1, 34, var6, var7, 0);
+                     if(cGame.field_858 == 100) {
+                        cGame.field_124[1].method_980(GLLib.field_1, 34, var6, var7, 0);
                      } else {
                         var6 += 10;
-                        class_2.field_124[1].method_982(class_1.field_1, 34, var6, var7, class_2.field_858);
+                        cGame.field_124[1].method_982(GLLib.field_1, 34, var6, var7, cGame.field_858);
                      }
                   }
 
                   if(var2.method_1086(2048)) {
                      var6 = var2.field_1091 + 5;
                      var7 = var2.field_1092 + -80;
-                     if(class_2.field_858 == 100) {
-                        class_2.field_124[1].method_980(class_1.field_1, 64, var6, var7, 0);
+                     if(cGame.field_858 == 100) {
+                        cGame.field_124[1].method_980(GLLib.field_1, 64, var6, var7, 0);
                      } else {
                         var7 += 40;
-                        class_2.field_124[1].method_982(class_1.field_1, 64, var6, var7, class_2.field_858);
+                        cGame.field_124[1].method_982(GLLib.field_1, 64, var6, var7, cGame.field_858);
                      }
                   }
                }
             default:
-               if(var2.field_1117 && class_2.field_183 == var2) {
+               if(var2.field_1117 && cGame.field_183 == var2) {
                   var6 = var2.field_1098;
-                  ASprite var14 = class_2.field_864[14];
+                  ASprite var14 = cGame.field_864[14];
                   boolean var17;
                   if(var14 != null && var6 > -1) {
                      var10 = var2.field_1091 + var14.method_920(var6);
                      var7 = var2.field_1092 + var14.method_921(var6);
                      var5 = var10 + var14.method_918(var6);
                      var6 = var7 + var14.method_919(var6);
-                     var8 = 0 + class_1.width;
-                     var4 = 0 + class_1.height;
+                     var8 = 0 + GLLib.width;
+                     var4 = 0 + GLLib.height;
                      var17 = var5 > 0 && var10 < var8 && var6 > 0 && var7 < var4;
                   } else {
                      var17 = false;
                   }
 
-                  if(var17 && class_2.method_642(var2)) {
-                     if(class_2.field_858 == 100) {
-                        class_2.field_864[14].method_980(class_1.field_1, var2.field_1098, var2.field_1091, var2.field_1092, 0);
+                  if(var17 && cGame.method_642(var2)) {
+                     if(cGame.field_858 == 100) {
+                        cGame.field_864[14].method_980(GLLib.field_1, var2.field_1098, var2.field_1091, var2.field_1092, 0);
                      } else {
-                        class_2.field_864[14].method_982(class_1.field_1, var2.field_1098, var2.field_1091, var2.field_1092, class_2.field_858);
+                        cGame.field_864[14].method_982(GLLib.field_1, var2.field_1098, var2.field_1091, var2.field_1092, cGame.field_858);
                      }
                   }
                }
@@ -1290,13 +1290,13 @@ final class class_6 {
          for(var2 = field_1013[var0]; var2 != null; var2 = var2.field_1083) {
             if(var2.field_1116 != null) {
                var2.field_1116.method_1105(var2.field_1091 + var2.field_1114, var2.field_1092 + var2.field_1115);
-               var2.field_1116.method_1121(class_2.field_858);
+               var2.field_1116.method_1121(cGame.field_858);
                var2.field_1116.method_1119();
             }
          }
       }
 
-      class_2.field_880 = false;
+      cGame.field_880 = false;
       field_1128 = 0;
    }
 
@@ -1330,20 +1330,20 @@ final class class_6 {
       for(class_6 var0 = field_1013[2]; var0 != null; var0 = var0.field_1083) {
          if(var0.field_1086 == 47) {
             if(var0 != null && var0.field_1061 == 37) {
-               class_2.method_688(var0.field_1066);
+               cGame.method_688(var0.field_1066);
             } else if(var0.field_1061 == 36) {
-               class_2.method_682(var0.field_1066);
+               cGame.method_682(var0.field_1066);
             } else if(var0.field_1061 == 6) {
-               class_2.method_684(var0.field_1066);
+               cGame.method_684(var0.field_1066);
             } else if(var0.field_1061 == 59) {
                int var1 = var0.field_1066 & '\uffff';
                int var2 = var0.field_1066 >> 16;
                if(var1 == 110) {
-                  class_2.method_686(var2);
+                  cGame.method_686(var2);
                } else if(var1 == 5) {
-                  class_2.method_685(var2);
+                  cGame.method_685(var2);
                } else if((var1 < 111 || var1 > 116) && var1 >= 1 && var1 <= 26) {
-                  class_2.method_657(0, var1, var2);
+                  cGame.method_657(0, var1, var2);
                }
             }
          }
@@ -1585,20 +1585,20 @@ final class class_6 {
          }
       }
 
-      if(class_2.field_182 != -1 && class_2.field_183 != null) {
-         if(class_2.field_183 == var2) {
+      if(cGame.field_182 != -1 && cGame.field_183 != null) {
+         if(cGame.field_183 == var2) {
             return var2;
          }
 
-         if(class_2.field_183 == var0) {
+         if(cGame.field_183 == var0) {
             return var0;
          }
 
-         if(class_2.field_183 == var1) {
+         if(cGame.field_183 == var1) {
             return var1;
          }
 
-         if(class_2.field_183 == var3) {
+         if(cGame.field_183 == var3) {
             return var3;
          }
       }
@@ -1680,7 +1680,7 @@ final class class_6 {
       class_6 var4 = field_1013[0];
 
       for(var1 = 0; var4 != null && var1 < 50; var4 = var4.field_1083) {
-         if(var4.field_1086 == 54 && var4.method_1086(512) && class_2.method_643(var4, var3)) {
+         if(var4.field_1086 == 54 && var4.method_1086(512) && cGame.method_643(var4, var3)) {
             var2[var1++] = var4;
          }
       }
@@ -1711,7 +1711,7 @@ final class class_6 {
       for(int[] var9 = new int[2]; var10 != null && var7 < 100; var10 = var10.field_1083) {
          var8[0] = var10.field_1087;
          var8[1] = var10.field_1088;
-         class_2.method_638(var8, var9);
+         cGame.method_638(var8, var9);
          if((var1 == -1 || var1 == var10.field_1086) && var10.field_1086 != -1 && var9[0] >= var2 && var9[0] < var3 && var9[1] >= var4 && var9[1] < var5) {
             var6[var7++] = var10;
          }
@@ -1727,8 +1727,8 @@ final class class_6 {
          int[] var2 = new int[2];
          var1[0] = var3.field_1087;
          var1[1] = var3.field_1088;
-         class_2.method_638(var1, var2);
-         if(class_2.method_652(class_2.method_651(var2[0], var2[1]))) {
+         cGame.method_638(var1, var2);
+         if(cGame.method_652(cGame.method_651(var2[0], var2[1]))) {
             var3.method_1084(512);
          } else {
             var3.method_1085(512);
@@ -1796,14 +1796,14 @@ final class class_6 {
    private void method_1023(int var1, int var2) {
       int var3 = var1 & 32767;
       ASprite var8;
-      if((var8 = (var1 & '\u8000') != 0?class_2.field_124[var3]:class_2.field_864[var3]) != null && var2 >= 0) {
+      if((var8 = (var1 & '\u8000') != 0?cGame.field_124[var3]:cGame.field_864[var3]) != null && var2 >= 0) {
          int var4 = this.field_1087;
          int var5 = this.field_1088;
-         if(class_2.field_858 != 100) {
-            class_1.method_92();
-            class_1.method_96(class_2.field_858);
-            var4 = var4 * class_2.field_858 / 100;
-            var5 = var5 * class_2.field_858 / 100;
+         if(cGame.field_858 != 100) {
+            GLLib.method_92();
+            GLLib.method_96(cGame.field_858);
+            var4 = var4 * cGame.field_858 / 100;
+            var5 = var5 * cGame.field_858 / 100;
          }
 
          int var6 = this.field_1108;
@@ -1812,33 +1812,33 @@ final class class_6 {
          }
 
          var8.method_971(var6);
-         if(class_2.field_858 < 100 && class_2.method_852(var1)) {
-            class_1.method_93();
+         if(cGame.field_858 < 100 && cGame.method_852(var1)) {
+            GLLib.method_93();
             var6 = var8.method_934() / 2 + var2;
-            cSoundEngine.method_1177(0, var8, var6, var4, var5, class_2.field_880, (int[])null);
-            class_1.method_92();
+            cSoundEngine.method_1177(0, var8, var6, var4, var5, cGame.field_880, (int[])null);
+            GLLib.method_92();
          } else {
-            cSoundEngine.method_1177(0, var8, var2, var4, var5, class_2.field_880, (int[])null);
+            cSoundEngine.method_1177(0, var8, var2, var4, var5, cGame.field_880, (int[])null);
          }
 
          var1 = var1;
          if(var2 > -1) {
             var3 = var1 & 32767;
-            (var8 = (var1 & '\u8000') != 0?class_2.field_124[var3]:class_2.field_864[var3]).method_931(field_1126, var2, this.field_1087, this.field_1088);
-            if(class_2.field_858 != 100) {
-               field_1126[0] = field_1126[0] * class_2.field_858 / 100;
-               field_1126[1] = field_1126[1] * class_2.field_858 / 100;
-               field_1126[2] = field_1126[2] * class_2.field_858 / 100;
-               field_1126[3] = field_1126[3] * class_2.field_858 / 100;
+            (var8 = (var1 & '\u8000') != 0?cGame.field_124[var3]:cGame.field_864[var3]).method_931(field_1126, var2, this.field_1087, this.field_1088);
+            if(cGame.field_858 != 100) {
+               field_1126[0] = field_1126[0] * cGame.field_858 / 100;
+               field_1126[1] = field_1126[1] * cGame.field_858 / 100;
+               field_1126[2] = field_1126[2] * cGame.field_858 / 100;
+               field_1126[3] = field_1126[3] * cGame.field_858 / 100;
             }
 
             for(var4 = 0; var4 < field_1128; ++var4) {
                if(field_1126[2] >= field_1127[var4][0] && field_1126[0] <= field_1127[var4][2] && field_1126[3] >= field_1127[var4][1] && field_1126[1] <= field_1127[var4][3]) {
                   var5 = this.field_1087;
                   var6 = this.field_1088;
-                  if(class_2.field_858 != 100) {
-                     var5 = var5 * class_2.field_858 / 100;
-                     var6 = var6 * class_2.field_858 / 100;
+                  if(cGame.field_858 != 100) {
+                     var5 = var5 * cGame.field_858 / 100;
+                     var6 = var6 * cGame.field_858 / 100;
                   }
 
                   int var7 = this.field_1108;
@@ -1847,11 +1847,11 @@ final class class_6 {
                   }
 
                   var8.method_971(var7);
-                  if(class_2.field_858 < 100 && class_2.method_852(var1)) {
-                     class_1.method_93();
+                  if(cGame.field_858 < 100 && cGame.method_852(var1)) {
+                     GLLib.method_93();
                      var7 = var8.method_934() / 2 + var2;
                      cSoundEngine.method_1177(0, var8, var7, var5, var6, true, field_1127[var4]);
-                     class_1.method_92();
+                     GLLib.method_92();
                   } else {
                      cSoundEngine.method_1177(0, var8, var2, var5, var6, true, field_1127[var4]);
                   }
@@ -1859,8 +1859,8 @@ final class class_6 {
             }
          }
 
-         if(class_2.field_858 != 100) {
-            class_1.method_93();
+         if(cGame.field_858 != 100) {
+            GLLib.method_93();
          }
 
       }
@@ -1869,7 +1869,7 @@ final class class_6 {
    // $FF: renamed from: g (int, int) void
    private void method_1024(int var1, int var2) {
       int var3 = var1 & 32767;
-      ASprite var5 = (var1 & '\u8000') != 0?class_2.field_124[var3]:class_2.field_864[var3];
+      ASprite var5 = (var1 & '\u8000') != 0?cGame.field_124[var3]:cGame.field_864[var3];
       int var4 = this.field_1108;
       if(var5 != null && var2 >= 0) {
          if(this.method_1086(65536)) {
@@ -1877,21 +1877,21 @@ final class class_6 {
          }
 
          var5.method_971(var4);
-         if(class_2.field_858 == 100) {
-            var5.method_980(class_1.field_1, var2, this.field_1091, this.field_1092, 0);
-         } else if(class_2.field_858 < 100 && class_2.method_852(var1)) {
+         if(cGame.field_858 == 100) {
+            var5.method_980(GLLib.field_1, var2, this.field_1091, this.field_1092, 0);
+         } else if(cGame.field_858 < 100 && cGame.method_852(var1)) {
             var1 = var5.method_934() / 2 + var2;
-            var5.method_980(class_1.field_1, var1, this.field_1091, this.field_1092, 0);
+            var5.method_980(GLLib.field_1, var1, this.field_1091, this.field_1092, 0);
          } else {
-            var5.method_982(class_1.field_1, var2, this.field_1091, this.field_1092, class_2.field_858);
+            var5.method_982(GLLib.field_1, var2, this.field_1091, this.field_1092, cGame.field_858);
          }
       }
    }
 
    // $FF: renamed from: f () void
    final void method_1025() {
-      this.field_1091 = (this.field_1087 + this.field_1094) * class_2.field_858 / 100 - class_2.field_867.field_1087;
-      this.field_1092 = (this.field_1088 + this.field_1095) * class_2.field_858 / 100 - class_2.field_867.field_1088;
+      this.field_1091 = (this.field_1087 + this.field_1094) * cGame.field_858 / 100 - cGame.field_867.field_1087;
+      this.field_1092 = (this.field_1088 + this.field_1095) * cGame.field_858 / 100 - cGame.field_867.field_1088;
    }
 
    // $FF: renamed from: c () int
@@ -1928,11 +1928,11 @@ final class class_6 {
             }
          }
 
-         class_2.method_564(54);
+         cGame.method_564(54);
          break;
       case 2:
          byte var3;
-         switch(class_2.field_376[class_2.field_379]) {
+         switch(cGame.field_376[cGame.field_379]) {
          case 0:
             var2 = 4;
             var3 = 47;
@@ -1943,9 +1943,9 @@ final class class_6 {
             break;
          case 2:
             var2 = 3;
-            if(class_2.field_378[class_2.field_379] != null && (class_2.field_378[class_2.field_379].field_1100 == 0 || class_2.field_378[class_2.field_379].field_1100 == 51 || class_2.field_378[class_2.field_379].field_1100 == 52)) {
+            if(cGame.field_378[cGame.field_379] != null && (cGame.field_378[cGame.field_379].field_1100 == 0 || cGame.field_378[cGame.field_379].field_1100 == 51 || cGame.field_378[cGame.field_379].field_1100 == 52)) {
                var3 = 23;
-            } else if(class_2.field_378[class_2.field_379] != null && (class_2.field_378[class_2.field_379].field_1100 == 1 || class_2.field_378[class_2.field_379].field_1100 == 53 || class_2.field_378[class_2.field_379].field_1100 == 54)) {
+            } else if(cGame.field_378[cGame.field_379] != null && (cGame.field_378[cGame.field_379].field_1100 == 1 || cGame.field_378[cGame.field_379].field_1100 == 53 || cGame.field_378[cGame.field_379].field_1100 == 54)) {
                var3 = 41;
             } else {
                var3 = 41;
@@ -1976,7 +1976,7 @@ final class class_6 {
 
          var4 = 1;
          if(var3 != -1) {
-            class_2.method_564(var3);
+            cGame.method_564(var3);
          }
          break;
       case 3:
@@ -2044,34 +2044,34 @@ final class class_6 {
       if(this.field_1105 == 3) {
          return false;
       } else {
-         if(class_2.field_380 == 0 && class_2.method_632() < 50) {
+         if(cGame.field_380 == 0 && cGame.method_632() < 50) {
             int[] var2 = new int[2];
             int[] var3;
-            (var3 = new int[2])[0] = class_1.field_82;
-            var3[1] = class_1.field_83;
-            class_2.method_587(var3, var2);
-            class_2.method_638(var2, var3);
+            (var3 = new int[2])[0] = GLLib.field_82;
+            var3[1] = GLLib.field_83;
+            cGame.method_587(var3, var2);
+            cGame.method_638(var2, var3);
             int var6;
-            if(class_1.method_106() && class_2.field_182 == -1) {
-               if(class_2.method_647(var3[0], var3[1])) {
+            if(GLLib.method_106() && cGame.field_182 == -1) {
+               if(cGame.method_647(var3[0], var3[1])) {
                   var1 = true;
-                  int var8 = class_1.field_83;
-                  int var7 = class_1.field_82;
+                  int var8 = GLLib.field_83;
+                  int var7 = GLLib.field_82;
                   int[] var4 = new int[2];
                   int[] var5;
                   (var5 = new int[2])[0] = var7;
                   var5[1] = var8;
-                  class_2.method_587(var5, var4);
+                  cGame.method_587(var5, var4);
                   this.method_1030(var4[0], var4[1]);
-               } else if(class_2.field_881 == 0 && class_2.method_651(var3[0], var3[1]) > 0 && (var6 = class_2.method_651(var3[0], var3[1])) >= 1 && !class_2.field_269[var6] && class_2.field_860 == -1 && class_2.method_894(class_2.field_896[0]) && class_2.method_894(class_2.field_896[1])) {
-                  class_2.field_268 = var6;
-                  class_2.method_131(12);
+               } else if(cGame.field_881 == 0 && cGame.method_651(var3[0], var3[1]) > 0 && (var6 = cGame.method_651(var3[0], var3[1])) >= 1 && !cGame.field_269[var6] && cGame.field_860 == -1 && cGame.method_894(cGame.field_896[0]) && cGame.method_894(cGame.field_896[1])) {
+                  cGame.field_268 = var6;
+                  cGame.method_131(12);
                }
-            } else if(class_2.field_881 == 0 && class_1.method_110() && !class_2.method_652(class_2.method_651(var3[0], var3[1])) && class_2.method_651(var3[0], var3[1]) > 0 && class_2.field_182 == -1 && class_2.method_894(class_2.field_896[0]) && class_2.method_894(class_2.field_896[1])) {
-               var6 = class_2.method_651(var3[0], var3[1]);
-               if(class_2.method_651(var3[0], var3[1]) > 0 && class_2.field_860 == -1) {
-                  class_2.field_268 = var6;
-                  class_2.field_288 = true;
+            } else if(cGame.field_881 == 0 && GLLib.method_110() && !cGame.method_652(cGame.method_651(var3[0], var3[1])) && cGame.method_651(var3[0], var3[1]) > 0 && cGame.field_182 == -1 && cGame.method_894(cGame.field_896[0]) && cGame.method_894(cGame.field_896[1])) {
+               var6 = cGame.method_651(var3[0], var3[1]);
+               if(cGame.method_651(var3[0], var3[1]) > 0 && cGame.field_860 == -1) {
+                  cGame.field_268 = var6;
+                  cGame.field_288 = true;
                }
             }
          }
@@ -2103,24 +2103,24 @@ final class class_6 {
    // $FF: renamed from: h () void
    final void method_1032() {
       if(this.field_1105 == 0) {
-         if(class_1.method_107()) {
+         if(GLLib.method_107()) {
             this.field_1014 = this.field_1087;
             this.field_1015 = this.field_1088;
-            this.field_1016 = class_1.field_82;
-            this.field_1017 = class_1.field_83;
+            this.field_1016 = GLLib.field_82;
+            this.field_1017 = GLLib.field_83;
             this.field_1018 = true;
             return;
          }
 
-         if(class_1.method_108() && this.field_1018 && !class_2.field_223) {
-            this.field_1087 = this.field_1014 + (this.field_1016 - class_1.field_82);
-            this.field_1088 = this.field_1015 + (this.field_1017 - class_1.field_83);
-            if(class_2.field_192 == 0 && !class_2.field_223) {
-               class_2.field_192 = -1;
-               class_2.method_186(false, 0, class_2.field_194);
+         if(GLLib.method_108() && this.field_1018 && !cGame.field_223) {
+            this.field_1087 = this.field_1014 + (this.field_1016 - GLLib.field_82);
+            this.field_1088 = this.field_1015 + (this.field_1017 - GLLib.field_83);
+            if(cGame.field_192 == 0 && !cGame.field_223) {
+               cGame.field_192 = -1;
+               cGame.method_186(false, 0, cGame.field_194);
                return;
             }
-         } else if(class_1.method_106()) {
+         } else if(GLLib.method_106()) {
             this.field_1018 = false;
          }
       }
@@ -2129,20 +2129,20 @@ final class class_6 {
 
    // $FF: renamed from: i () void
    final void method_1033() {
-      if(this.field_1105 == 0 && class_1.method_108()) {
-         if(class_1.field_82 < 40) {
-            this.field_1087 -= 1 * class_1.field_15;
-         } else if(class_1.field_82 > class_1.width - 40) {
-            this.field_1087 += 1 * class_1.field_15;
+      if(this.field_1105 == 0 && GLLib.method_108()) {
+         if(GLLib.field_82 < 40) {
+            this.field_1087 -= 1 * GLLib.field_15;
+         } else if(GLLib.field_82 > GLLib.width - 40) {
+            this.field_1087 += 1 * GLLib.field_15;
          }
 
-         if(class_1.field_83 < 40) {
-            this.field_1088 -= 1 * class_1.field_15;
+         if(GLLib.field_83 < 40) {
+            this.field_1088 -= 1 * GLLib.field_15;
             return;
          }
 
-         if(class_1.field_83 > class_1.height - 40) {
-            this.field_1088 += 1 * class_1.field_15;
+         if(GLLib.field_83 > GLLib.height - 40) {
+            this.field_1088 += 1 * GLLib.field_15;
          }
       }
 
@@ -2150,16 +2150,16 @@ final class class_6 {
 
    // $FF: renamed from: j () void
    final void method_1034() {
-      if(!class_2.field_97) {
+      if(!cGame.field_97) {
          int var1;
          int var2;
          int var3;
          int var4;
          if(this.field_1105 == 0) {
-            var1 = 0 * class_2.field_858 / 100;
-            var2 = 0 * class_2.field_858 / 100;
-            var3 = this.field_1019 * class_2.field_858 / 100 - class_1.width;
-            var4 = this.field_1020 * class_2.field_858 / 100 - class_1.height;
+            var1 = 0 * cGame.field_858 / 100;
+            var2 = 0 * cGame.field_858 / 100;
+            var3 = this.field_1019 * cGame.field_858 / 100 - GLLib.width;
+            var4 = this.field_1020 * cGame.field_858 / 100 - GLLib.height;
             if(this.field_1087 < var1) {
                this.field_1087 = var1;
             } else if(this.field_1087 > var3) {
@@ -2172,16 +2172,16 @@ final class class_6 {
                this.field_1088 = var4;
             }
          } else if(this.field_1105 == 1) {
-            this.field_1021 -= class_1.field_15;
+            this.field_1021 -= GLLib.field_15;
             int[] var5 = new int[2];
             int[] var6;
-            (var6 = new int[2])[0] = class_1.width >> 1;
-            var6[1] = class_1.height >> 1;
-            class_2.method_587(var6, var5);
+            (var6 = new int[2])[0] = GLLib.width >> 1;
+            var6[1] = GLLib.height >> 1;
+            cGame.method_587(var6, var5);
             var3 = this.field_1102 - var5[0];
             var4 = this.field_1103 - var5[1];
             if(this.field_1021 > 0) {
-               if((var1 = class_1.field_15 * 100 / this.field_1021) > 100) {
+               if((var1 = GLLib.field_15 * 100 / this.field_1021) > 100) {
                   var1 = 100;
                }
             } else {
@@ -2217,22 +2217,22 @@ final class class_6 {
 
    // $FF: renamed from: e (int) void
    static void method_1037(int var0) {
-      if(class_2.field_858 != var0) {
-         int var1 = class_1.width >> 1;
-         int var2 = class_1.height >> 1;
-         int var3 = (class_2.field_867.field_1087 - var1 * class_2.field_858 / 100 + var1) * 100 / class_2.field_858;
-         int var4 = (class_2.field_867.field_1088 - var2 * class_2.field_858 / 100 + var2) * 100 / class_2.field_858;
-         class_2.field_858 = var0;
-         class_2.method_147();
-         class_2.field_867.field_1087 = (var3 + var1) * class_2.field_858 / 100 - var1;
-         class_2.field_867.field_1088 = (var4 + var2) * class_2.field_858 / 100 - var2;
+      if(cGame.field_858 != var0) {
+         int var1 = GLLib.width >> 1;
+         int var2 = GLLib.height >> 1;
+         int var3 = (cGame.field_867.field_1087 - var1 * cGame.field_858 / 100 + var1) * 100 / cGame.field_858;
+         int var4 = (cGame.field_867.field_1088 - var2 * cGame.field_858 / 100 + var2) * 100 / cGame.field_858;
+         cGame.field_858 = var0;
+         cGame.method_147();
+         cGame.field_867.field_1087 = (var3 + var1) * cGame.field_858 / 100 - var1;
+         cGame.field_867.field_1088 = (var4 + var2) * cGame.field_858 / 100 - var2;
       }
 
    }
 
    // $FF: renamed from: k () void
    static void method_1038() {
-      class_2.field_238 = 1;
+      cGame.field_238 = 1;
       class_6[] var0 = new class_6[1];
       method_1011(0, 50, 18, var0, 1);
       if(var0[0] != null) {
@@ -2240,22 +2240,22 @@ final class class_6 {
          field_1081 = var0[0].field_1088;
       }
 
-      class_2.method_564(31);
+      cGame.method_564(31);
       field_1078 = 0;
       field_1079 = 4;
       cSoundEngine var10001;
       if(method_999(0, 23) > 0) {
          var0 = new class_6[1];
          method_1010(0, 23, var0, 1);
-         ASprite var4 = class_2.field_864[13];
+         ASprite var4 = cGame.field_864[13];
          class_6 var10000 = var0[0];
          var10001 = new cSoundEngine(var4, var0[0].field_1087, var0[0].field_1088);
          var10000.field_1113 = var10001;
          var0[0].field_1113.method_1109(1, 1);
       } else {
-         int[] var2 = new int[]{field_1080 * 100 / class_2.field_858, field_1081 * 100 / class_2.field_858, 255};
+         int[] var2 = new int[]{field_1080 * 100 / cGame.field_858, field_1081 * 100 / cGame.field_858, 255};
          class_6 var1 = method_1079(23, 0, var2);
-         ASprite var3 = class_2.field_864[13];
+         ASprite var3 = cGame.field_864[13];
          var10001 = new cSoundEngine(var3, var1.field_1087, var1.field_1088);
          var1.field_1113 = var10001;
          var1.field_1113.method_1109(1, 1);
@@ -2266,8 +2266,8 @@ final class class_6 {
    static void method_1039() {
       class_6 var0 = field_1013[0];
       int var1;
-      if(class_2.field_881 == 0) {
-         var1 = class_2.field_883;
+      if(cGame.field_881 == 0) {
+         var1 = cGame.field_883;
       } else {
          var1 = 0;
       }
@@ -2369,9 +2369,9 @@ final class class_6 {
 
    // $FF: renamed from: b () boolean
    final boolean method_1040() {
-      if(class_2.field_860 != 1 && class_2.field_860 != 2 && class_2.field_860 != 3 && (class_2.field_860 < 32 || class_2.field_860 > 36)) {
+      if(cGame.field_860 != 1 && cGame.field_860 != 2 && cGame.field_860 != 3 && (cGame.field_860 < 32 || cGame.field_860 > 36)) {
          if(this.field_1105 == 5) {
-            class_2.method_579(1);
+            cGame.method_579(1);
          }
 
          return this.method_1041();
@@ -2382,67 +2382,67 @@ final class class_6 {
 
    // $FF: renamed from: c () boolean
    final boolean method_1041() {
-      if(class_2.field_860 == 4 || class_2.field_860 == 7 || class_2.field_860 == 44) {
-         class_2.field_244 = true;
+      if(cGame.field_860 == 4 || cGame.field_860 == 7 || cGame.field_860 == 44) {
+         cGame.field_244 = true;
       }
 
-      if(this.field_1105 == 1 && class_2.field_192 == 0) {
-         if(class_2.field_202 <= class_2.method_670()) {
-            if(class_2.field_860 == 45) {
-               class_2.field_195 = 1;
+      if(this.field_1105 == 1 && cGame.field_192 == 0) {
+         if(cGame.field_202 <= cGame.method_670()) {
+            if(cGame.field_860 == 45) {
+               cGame.field_195 = 1;
             }
 
-            this.method_1043(class_2.field_195);
-            if((class_2.field_198 <= 0 || !class_2.method_678(class_2.field_198)) && (class_2.field_199 <= 0 || !class_2.method_679(class_2.field_199))) {
-               class_2.field_695 = -1;
+            this.method_1043(cGame.field_195);
+            if((cGame.field_198 <= 0 || !cGame.method_678(cGame.field_198)) && (cGame.field_199 <= 0 || !cGame.method_679(cGame.field_199))) {
+               cGame.field_695 = -1;
                String var1;
                String var2;
-               if(class_2.field_198 > 0) {
-                  var1 = (var1 = class_1.method_74(379)) == null?"":var1;
-                  var2 = class_1.method_77((long)(class_2.field_198 - class_2.method_668()), class_2.field_862, " ");
-                  class_2.field_696 = class_1.method_79(var1, "%d", var2);
-                  class_2.field_695 = 18;
-                  class_2.field_774 = false;
-               } else if(class_2.field_199 > 0) {
-                  var1 = (var1 = class_1.method_74(381)) == null?"":var1;
-                  var2 = class_1.method_77((long)(class_2.field_199 - class_2.method_669()), class_2.field_862, " ");
-                  class_2.field_696 = class_1.method_79(var1, "%d", var2);
-                  class_2.field_695 = 19;
-                  class_2.field_774 = true;
+               if(cGame.field_198 > 0) {
+                  var1 = (var1 = GLLib.method_74(379)) == null?"":var1;
+                  var2 = GLLib.method_77((long)(cGame.field_198 - cGame.method_668()), cGame.field_862, " ");
+                  cGame.field_696 = GLLib.method_79(var1, "%d", var2);
+                  cGame.field_695 = 18;
+                  cGame.field_774 = false;
+               } else if(cGame.field_199 > 0) {
+                  var1 = (var1 = GLLib.method_74(381)) == null?"":var1;
+                  var2 = GLLib.method_77((long)(cGame.field_199 - cGame.method_669()), cGame.field_862, " ");
+                  cGame.field_696 = GLLib.method_79(var1, "%d", var2);
+                  cGame.field_695 = 19;
+                  cGame.field_774 = true;
                }
 
-               if(class_2.field_695 != -1) {
-                  class_2.method_131(34);
-                  class_2.field_909 = true;
+               if(cGame.field_695 != -1) {
+                  cGame.method_131(34);
+                  cGame.field_909 = true;
                }
 
-               class_2.field_192 = -1;
+               cGame.field_192 = -1;
                this.field_1031 = false;
             } else {
-               class_2.method_702(0, this);
-               if(class_2.field_860 == 5 || class_2.field_860 == 8) {
-                  class_2.field_251 = false;
+               cGame.method_702(0, this);
+               if(cGame.field_860 == 5 || cGame.field_860 == 8) {
+                  cGame.field_251 = false;
                }
             }
          }
 
          return true;
-      } else if(this.field_1105 == 5 && class_2.field_192 == 1) {
-         if((class_2.field_382 & 2) != 2) {
+      } else if(this.field_1105 == 5 && cGame.field_192 == 1) {
+         if((cGame.field_382 & 2) != 2) {
             return false;
-         } else if(class_2.field_349) {
+         } else if(cGame.field_349) {
             return false;
-         } else if((class_2.field_881 != 0 || class_2.method_659(5) + method_1019(2) + 1 <= class_2.method_662()) && (class_2.field_881 != 0 || class_2.method_659(5) + class_2.field_348 + 1 <= class_2.method_662())) {
-            class_2.method_702(1, this);
-            if(class_2.field_860 == 5) {
-               class_2.field_251 = false;
+         } else if((cGame.field_881 != 0 || cGame.method_659(5) + method_1019(2) + 1 <= cGame.method_662()) && (cGame.field_881 != 0 || cGame.method_659(5) + cGame.field_348 + 1 <= cGame.method_662())) {
+            cGame.method_702(1, this);
+            if(cGame.field_860 == 5) {
+               cGame.field_251 = false;
             }
 
             return true;
          } else {
-            class_2.field_349 = true;
-            class_2.method_186(false, 1, class_2.field_194);
-            class_2.method_828(471, 477);
+            cGame.field_349 = true;
+            cGame.method_186(false, 1, cGame.field_194);
+            cGame.method_828(471, 477);
             return false;
          }
       } else {
@@ -2452,17 +2452,17 @@ final class class_6 {
 
    // $FF: renamed from: d () boolean
    final boolean method_1042() {
-      if(class_2.field_860 == 38) {
+      if(cGame.field_860 == 38) {
          return false;
-      } else if(this.field_1105 == 1 && class_2.field_192 != 0 && (class_2.field_382 & 1) == 1) {
-         class_2.method_579(0);
+      } else if(this.field_1105 == 1 && cGame.field_192 != 0 && (cGame.field_382 & 1) == 1) {
+         cGame.method_579(0);
          return true;
-      } else if(class_2.field_860 >= 14 && class_2.field_860 <= 35) {
+      } else if(cGame.field_860 >= 14 && cGame.field_860 <= 35) {
          return false;
-      } else if((this.field_1105 == 3 || this.field_1105 == 4) && class_2.field_192 == -1) {
-         if(class_2.field_860 == -1) {
-            class_2.method_564(47);
-            class_2.method_188(true, this);
+      } else if((this.field_1105 == 3 || this.field_1105 == 4) && cGame.field_192 == -1) {
+         if(cGame.field_860 == -1) {
+            cGame.method_564(47);
+            cGame.method_188(true, this);
          }
 
          return false;
@@ -2476,58 +2476,58 @@ final class class_6 {
       if(!this.field_1031) {
          this.field_1031 = true;
          this.field_1100 = (char)var1;
-         this.field_1111 = class_2.field_196;
-         this.field_1027 = class_2.field_197;
-         this.field_1030 = class_2.field_203;
-         this.field_1028 = class_2.field_198;
-         this.field_1029 = class_2.field_199;
-         this.field_1100 = class_2.field_195;
-         this.field_1118 = class_2.field_200;
-         this.field_1106 = class_2.field_201;
+         this.field_1111 = cGame.field_196;
+         this.field_1027 = cGame.field_197;
+         this.field_1030 = cGame.field_203;
+         this.field_1028 = cGame.field_198;
+         this.field_1029 = cGame.field_199;
+         this.field_1100 = cGame.field_195;
+         this.field_1118 = cGame.field_200;
+         this.field_1106 = cGame.field_201;
       }
    }
 
    // $FF: renamed from: m () void
    final void method_1044() {
-      if((this.field_1028 <= 0 || !class_2.method_677(this.field_1028)) && (this.field_1029 <= 0 || !class_2.method_681(this.field_1029))) {
-         class_2.field_695 = -1;
+      if((this.field_1028 <= 0 || !cGame.method_677(this.field_1028)) && (this.field_1029 <= 0 || !cGame.method_681(this.field_1029))) {
+         cGame.field_695 = -1;
          String var1;
          String var2;
          if(this.field_1028 > 0) {
-            var1 = (var1 = class_1.method_74(379)) == null?"":var1;
-            var2 = class_1.method_77((long)(this.field_1028 - class_2.method_668()), class_2.field_862, " ");
-            class_2.field_696 = class_1.method_79(var1, "%d", var2);
-            class_2.field_695 = 18;
-            class_2.field_774 = false;
+            var1 = (var1 = GLLib.method_74(379)) == null?"":var1;
+            var2 = GLLib.method_77((long)(this.field_1028 - cGame.method_668()), cGame.field_862, " ");
+            cGame.field_696 = GLLib.method_79(var1, "%d", var2);
+            cGame.field_695 = 18;
+            cGame.field_774 = false;
          } else if(this.field_1029 > 0) {
-            var1 = (var1 = class_1.method_74(381)) == null?"":var1;
-            var2 = class_1.method_77((long)(this.field_1029 - class_2.method_669()), class_2.field_862, " ");
-            class_2.field_696 = class_1.method_79(var1, "%d", var2);
-            class_2.field_695 = 19;
-            class_2.field_774 = true;
+            var1 = (var1 = GLLib.method_74(381)) == null?"":var1;
+            var2 = GLLib.method_77((long)(this.field_1029 - cGame.method_669()), cGame.field_862, " ");
+            cGame.field_696 = GLLib.method_79(var1, "%d", var2);
+            cGame.field_695 = 19;
+            cGame.field_774 = true;
          }
 
-         if(class_2.field_695 != -1) {
-            class_2.method_131(34);
-            class_2.field_909 = true;
+         if(cGame.field_695 != -1) {
+            cGame.method_131(34);
+            cGame.field_909 = true;
          }
 
-         class_2.field_192 = -1;
+         cGame.field_192 = -1;
          this.field_1031 = false;
       } else {
          this.method_1047(3);
-         if(class_2.field_860 == 45) {
-            ++class_2.field_249;
+         if(cGame.field_860 == 45) {
+            ++cGame.field_249;
             return;
          }
 
-         if(class_2.field_860 == 8) {
-            ++class_2.field_249;
+         if(cGame.field_860 == 8) {
+            ++cGame.field_249;
             return;
          }
 
-         if(class_2.field_860 == -1) {
-            class_2.method_889(this.field_1118, 1, 12);
+         if(cGame.field_860 == -1) {
+            cGame.method_889(this.field_1118, 1, 12);
             return;
          }
       }
@@ -2537,14 +2537,14 @@ final class class_6 {
    // $FF: renamed from: n () void
    final void method_1045() {
       this.method_1047(1);
-      if(class_2.field_860 == 38) {
-         ++class_2.field_249;
-      } else if(class_2.field_860 == 5) {
-         ++class_2.field_249;
+      if(cGame.field_860 == 38) {
+         ++cGame.field_249;
+      } else if(cGame.field_860 == 5) {
+         ++cGame.field_249;
       }
 
       this.method_1046(false);
-      this.field_1118 = class_2.field_884[0];
+      this.field_1118 = cGame.field_884[0];
       this.method_1085(1024);
    }
 
@@ -2552,7 +2552,7 @@ final class class_6 {
    private void method_1046(boolean var1) {
       int[] var2 = new int[]{0, 0, 14};
       method_1079(47, 2, var2).method_1068(this.field_1087, this.field_1088, 37, 1000, false, this.field_1030);
-      if(class_2.field_881 == 0 || class_2.method_659(5) < class_2.method_662() && class_1.method_16(0, 100) < class_2.field_878[20]) {
+      if(cGame.field_881 == 0 || cGame.method_659(5) < cGame.method_662() && GLLib.method_16(0, 100) < cGame.field_878[20]) {
          class_6 var3 = method_1079(47, 2, var2);
          int var4 = this.field_1111;
          if(this.field_1111 == -1) {
@@ -2568,19 +2568,19 @@ final class class_6 {
             ++var5;
          }
 
-         if(var1 && class_2.field_860 == -1) {
-            class_2.method_627(this.field_1118, var5, 14);
+         if(var1 && cGame.field_860 == -1) {
+            cGame.method_627(this.field_1118, var5, 14);
          }
 
-         if(class_2.field_860 == -1) {
-            class_2.method_889(this.field_1118, var5, 14);
+         if(cGame.field_860 == -1) {
+            cGame.method_889(this.field_1118, var5, 14);
          }
 
          var4 |= var5 << 16;
          var3.method_1068(this.field_1087, this.field_1088, 59, 1000, true, var4);
       }
 
-      if(class_2.method_670() >= class_2.field_674[0] && class_1.method_16(0, 100) < class_2.field_878[10]) {
+      if(cGame.method_670() >= cGame.field_674[0] && GLLib.method_16(0, 100) < cGame.field_878[10]) {
          method_1079(47, 2, var2).method_1068(this.field_1087 - 60, this.field_1088, 60, 2000, false, 1);
       }
 
@@ -2638,7 +2638,7 @@ final class class_6 {
    // $FF: renamed from: e () boolean
    final boolean method_1049() {
       if(this.field_1105 == 3) {
-         class_2.method_579(1);
+         cGame.method_579(1);
       }
 
       return this.method_1050();
@@ -2646,21 +2646,21 @@ final class class_6 {
 
    // $FF: renamed from: f () boolean
    final boolean method_1050() {
-      if(this.field_1105 == 3 && class_2.field_192 == 1) {
-         if(class_2.field_349) {
+      if(this.field_1105 == 3 && cGame.field_192 == 1) {
+         if(cGame.field_349) {
             return false;
-         } else if((class_2.field_881 != 0 || class_2.method_659(5) + method_1019(2) + 3 <= class_2.method_662()) && (class_2.field_881 != 0 || class_2.method_659(5) + class_2.field_348 + 3 <= class_2.method_662())) {
-            class_2.method_702(1, this);
+         } else if((cGame.field_881 != 0 || cGame.method_659(5) + method_1019(2) + 3 <= cGame.method_662()) && (cGame.field_881 != 0 || cGame.method_659(5) + cGame.field_348 + 3 <= cGame.method_662())) {
+            cGame.method_702(1, this);
             return true;
          } else {
-            class_2.field_349 = true;
-            class_2.method_186(false, 1, class_2.field_194);
-            if(class_2.method_659(5) < class_2.method_662()) {
-               String var2 = class_1.method_79((var2 = class_1.method_74(476)) == null?"":var2, "%slots", "3");
+            cGame.field_349 = true;
+            cGame.method_186(false, 1, cGame.field_194);
+            if(cGame.method_659(5) < cGame.method_662()) {
+               String var2 = GLLib.method_79((var2 = GLLib.method_74(476)) == null?"":var2, "%slots", "3");
                String var1;
-               class_2.method_829((var1 = class_1.method_74(475)) == null?"":var1, var2, 7, 0);
+               cGame.method_829((var1 = GLLib.method_74(475)) == null?"":var1, var2, 7, 0);
             } else {
-               class_2.method_828(471, 477);
+               cGame.method_828(471, 477);
             }
 
             return false;
@@ -2673,13 +2673,13 @@ final class class_6 {
    // $FF: renamed from: g () boolean
    final boolean method_1051() {
       if(this.field_1105 == 2) {
-         if(class_2.field_860 != 18 && class_2.field_192 == -1) {
-            class_2.method_564(47);
-            class_2.method_188(true, this);
+         if(cGame.field_860 != 18 && cGame.field_192 == -1) {
+            cGame.method_564(47);
+            cGame.method_188(true, this);
             return true;
          }
-      } else if(this.field_1105 == 3 && class_2.field_192 != 1) {
-         class_2.method_579(1);
+      } else if(this.field_1105 == 3 && cGame.field_192 != 1) {
+         cGame.method_579(1);
          return true;
       }
 
@@ -2718,17 +2718,17 @@ final class class_6 {
          var1 = this.field_1106;
          var2 = this.field_1106 & 32767;
          ASprite var6;
-         var2 = (var6 = (var1 & '\u8000') != 0?class_2.field_124[var2]:class_2.field_864[var2]).method_918(this.field_1107) >> 1;
+         var2 = (var6 = (var1 & '\u8000') != 0?cGame.field_124[var2]:cGame.field_864[var2]).method_918(this.field_1107) >> 1;
          var3 = var6.method_919(this.field_1107) >> 1;
          if(this.field_1087 - var2 > cSoundEngine.method_1168(0) && this.field_1088 - var3 > cSoundEngine.method_1169(0)) {
             this.method_1094();
          } else {
             cSoundEngine.method_1174();
-            class_2.field_880 = true;
+            cGame.field_880 = true;
          }
       }
 
-      class_2.method_641(this);
+      cGame.method_641(this);
       cResource var7;
       var2 = (var7 = cResource.resources[11]).field_1133[this.field_1100][3];
       var3 = var7.field_1133[this.field_1100][4];
@@ -2743,7 +2743,7 @@ final class class_6 {
          method_1079(47, 2, var5).method_1068(this.field_1087, this.field_1088, 36, 1000, true, var3);
       }
 
-      if(var1 > 0 && (var1 = class_1.method_16(var4, var1 + 1)) > 0) {
+      if(var1 > 0 && (var1 = GLLib.method_16(var4, var1 + 1)) > 0) {
          method_1079(47, 2, var5).method_1068(this.field_1087, this.field_1088, 6, 1000, true, var1);
       }
 
@@ -2762,43 +2762,43 @@ final class class_6 {
 
    // $FF: renamed from: h () boolean
    final boolean method_1056() {
-      if(class_2.field_238 == 1) {
+      if(cGame.field_238 == 1) {
          return false;
       } else if(this.field_1105 == 3) {
          return false;
       } else if(this.field_1105 == 7) {
          return false;
       } else {
-         class_2.method_564(this.field_1120);
-         if(class_2.field_245 == this) {
-            class_2.method_605();
+         cGame.method_564(this.field_1120);
+         if(cGame.field_245 == this) {
+            cGame.method_605();
          }
 
          if(this.method_1086(4)) {
-            if(class_2.method_692(this.field_1046) >= this.field_1039) {
-               class_2.method_702(4, this);
+            if(cGame.method_692(this.field_1046) >= this.field_1039) {
+               cGame.method_702(4, this);
             } else {
-               class_2.method_820(391, 7, 0);
+               cGame.method_820(391, 7, 0);
             }
 
             return true;
          } else if(this.method_1086(16)) {
-            if(class_2.method_659(5) + method_1019(2) >= class_2.method_662() && class_2.field_881 == 0) {
-               class_2.method_828(471, 477);
+            if(cGame.method_659(5) + method_1019(2) >= cGame.method_662() && cGame.field_881 == 0) {
+               cGame.method_828(471, 477);
                return false;
             } else {
-               class_2.method_702(7, this);
+               cGame.method_702(7, this);
                return true;
             }
          } else if(this.method_1086(256)) {
-            class_2.method_702(4, this);
+            cGame.method_702(4, this);
             return true;
          } else {
             this.method_1062(0);
-            class_2.method_188(true, this);
-            if(!this.method_1086(32) && this.field_1034 == 0 && this.field_1033 != 0L && class_2.field_881 == 0) {
+            cGame.method_188(true, this);
+            if(!this.method_1086(32) && this.field_1034 == 0 && this.field_1033 != 0L && cGame.field_881 == 0) {
                this.method_1063(16);
-               class_2.method_188(false, (class_6)null);
+               cGame.method_188(false, (class_6)null);
             }
 
             return false;
@@ -2823,25 +2823,25 @@ final class class_6 {
    // $FF: renamed from: t () void
    final void method_1059() {
       if(this.method_1086(4)) {
-         if(this.field_1105 != 3 && class_2.field_881 == 0) {
-            class_2.method_680(this.field_1039, this.field_1046);
+         if(this.field_1105 != 3 && cGame.field_881 == 0) {
+            cGame.method_680(this.field_1039, this.field_1046);
             this.method_1062(3);
             ++this.field_1036;
             if(this.field_1036 >= this.field_1035 && !this.method_1086(2048)) {
                this.method_1084(2048);
-               class_2.method_827();
-               class_2.method_898(0);
+               cGame.method_827();
+               cGame.method_898(0);
             }
 
-            class_2.method_889(this.field_1118, 1, 19);
+            cGame.method_889(this.field_1118, 1, 19);
             this.method_1085(4);
             this.method_1093();
             this.field_1033 = System.currentTimeMillis();
             this.field_1040 = false;
             this.field_1041 = this.field_1042 = this.field_1043 = false;
             this.field_1044 = false;
-            class_2.method_564(36);
-         } else if(class_2.field_881 != 0) {
+            cGame.method_564(36);
+         } else if(cGame.field_881 != 0) {
             this.method_1062(3);
             this.method_1085(4);
             this.method_1093();
@@ -2849,22 +2849,22 @@ final class class_6 {
             this.field_1040 = false;
             this.field_1041 = this.field_1042 = this.field_1043 = false;
             this.field_1044 = false;
-            class_2.method_564(36);
+            cGame.method_564(36);
          } else {
-            class_2.method_564(56);
+            cGame.method_564(56);
          }
       } else {
          if(this.method_1086(256)) {
             this.method_1062(7);
-            class_2.method_889(this.field_1118, 1, 20);
+            cGame.method_889(this.field_1118, 1, 20);
             this.method_1085(256);
             this.method_1093();
-            cSoundEngine var10001 = new cSoundEngine(class_2.field_864[13], this.field_1091, this.field_1092);
+            cSoundEngine var10001 = new cSoundEngine(cGame.field_864[13], this.field_1091, this.field_1092);
             this.field_1116 = var10001;
             this.field_1116.method_1109(0, 2);
             this.field_1114 = this.field_1053;
             this.field_1115 = this.field_1054;
-            class_2.method_564(32);
+            cGame.method_564(32);
          }
 
       }
@@ -2882,7 +2882,7 @@ final class class_6 {
    private void method_1061() {
       if(this.method_1086(32)) {
          int var1 = this.field_1118;
-         class_2.method_188(false, (class_6)null);
+         cGame.method_188(false, (class_6)null);
          this.method_1085(32);
          ++this.field_1100;
          cResource var2 = cResource.resources[0];
@@ -2892,7 +2892,7 @@ final class class_6 {
          this.field_1036 = 0;
          this.field_1096 = var2.field_1133[this.field_1100][27];
          this.field_1097 = var2.field_1133[this.field_1100][28];
-         ASprite var3 = class_2.field_864[var2.field_1133[this.field_1100][31]];
+         ASprite var3 = cGame.field_864[var2.field_1133[this.field_1100][31]];
          this.field_1108 = var2.field_1133[this.field_1100][32];
          this.field_1107 = var2.field_1133[this.field_1100][33];
          this.field_1049 = (short)var2.field_1133[this.field_1100][29];
@@ -2902,17 +2902,17 @@ final class class_6 {
             this.field_1113.method_1109(0, -1);
          }
 
-         cSoundEngine var10001 = new cSoundEngine(class_2.field_864[13], this.field_1091, this.field_1092 + -50);
+         cSoundEngine var10001 = new cSoundEngine(cGame.field_864[13], this.field_1091, this.field_1092 + -50);
          this.field_1116 = var10001;
          this.field_1116.method_1109(1, 1);
-         if(class_2.field_881 == 0) {
-            class_2.method_889(var1, 1, 21);
+         if(cGame.field_881 == 0) {
+            cGame.method_889(var1, 1, 21);
          }
 
          this.field_1118 = var2.field_1133[this.field_1100][1];
-         if(class_2.field_881 == 0) {
-            class_2.method_898(this.field_1118);
-            class_2.method_631(true);
+         if(cGame.field_881 == 0) {
+            cGame.method_898(this.field_1118);
+            cGame.method_631(true);
          }
 
          this.method_1057();
@@ -2925,7 +2925,7 @@ final class class_6 {
             this.field_1059 = var2.field_1133[this.field_1100][21];
          }
 
-         class_2.method_564(44);
+         cGame.method_564(44);
          short var4 = var3.field_934[this.field_1049];
          this.field_1051 = var3.method_916(var4);
          this.field_1052 = var3.method_917(var4);
@@ -2951,7 +2951,7 @@ final class class_6 {
             var2 = 0;
          }
 
-         var3 = class_1.method_16(1, 5);
+         var3 = GLLib.method_16(1, 5);
          break;
       case 1:
          byte var5 = 0;
@@ -3024,7 +3024,7 @@ final class class_6 {
 
    // $FF: renamed from: j (int) void
    final void method_1063(int var1) {
-      if(class_2.field_881 == 0 || var1 != 4) {
+      if(cGame.field_881 == 0 || var1 != 4) {
          this.method_1093();
          this.method_1084(var1);
          byte var2 = 0;
@@ -3067,12 +3067,12 @@ final class class_6 {
 
    // $FF: renamed from: K () void
    private void method_1066() {
-      if((class_1.method_16(0, 100) & 1) == 0) {
-         this.field_1087 = class_1.method_16(cSoundEngine.method_1170() >> 1, cSoundEngine.method_1170());
+      if((GLLib.method_16(0, 100) & 1) == 0) {
+         this.field_1087 = GLLib.method_16(cSoundEngine.method_1170() >> 1, cSoundEngine.method_1170());
          this.field_1088 = cSoundEngine.method_1171();
       } else {
          this.field_1087 = cSoundEngine.method_1170();
-         this.field_1088 = class_1.method_16(cSoundEngine.method_1171() >> 1, cSoundEngine.method_1171());
+         this.field_1088 = GLLib.method_16(cSoundEngine.method_1171() >> 1, cSoundEngine.method_1171());
       }
 
       this.field_1102 = 0;
@@ -3086,8 +3086,8 @@ final class class_6 {
          int var1;
          int var2;
          if(!this.field_1067) {
-            this.field_1072 += class_1.field_15;
-            this.field_1073 += class_1.field_15;
+            this.field_1072 += GLLib.field_15;
+            this.field_1073 += GLLib.field_15;
             var1 = this.field_1072 << 1;
             var2 = this.field_1068?1:-1;
             int var4;
@@ -3106,44 +3106,44 @@ final class class_6 {
                }
             } else {
                this.field_1067 = true;
-               class_2.method_564(38);
+               cGame.method_564(38);
                if(this.field_1061 == 60) {
                   var4 = ((this.field_1106 & -32769) - 107 << 2) + this.field_1107;
-                  class_2.method_806(true, var4);
+                  cGame.method_806(true, var4);
                }
             }
 
             this.field_1087 = this.field_1064 + this.field_1069;
             this.field_1088 = this.field_1065 + this.field_1070;
          } else {
-            this.field_1062 += 4 * class_1.field_15;
+            this.field_1062 += 4 * GLLib.field_15;
             if(this.field_1061 == 57) {
-               this.field_1102 = class_2.field_867.field_1087 + class_2.field_121[1][26][2] + (class_2.field_124[1].method_918(33) >> 1);
-               this.field_1103 = class_2.field_867.field_1088 + class_2.field_121[1][26][3] + (class_2.field_124[1].method_918(33) >> 1);
+               this.field_1102 = cGame.field_867.field_1087 + cGame.field_121[1][26][2] + (cGame.field_124[1].method_918(33) >> 1);
+               this.field_1103 = cGame.field_867.field_1088 + cGame.field_121[1][26][3] + (cGame.field_124[1].method_918(33) >> 1);
             } else if(this.field_1061 >= 59) {
                if((this.field_1066 & '\uffff') == 5) {
-                  this.field_1102 = class_2.field_867.field_1087 + class_2.field_121[1][28][2];
-                  this.field_1103 = class_2.field_867.field_1088 + class_2.field_121[1][28][3];
+                  this.field_1102 = cGame.field_867.field_1087 + cGame.field_121[1][28][2];
+                  this.field_1103 = cGame.field_867.field_1088 + cGame.field_121[1][28][3];
                } else {
-                  this.field_1102 = class_2.field_867.field_1087 + class_2.field_121[1][59][2];
-                  this.field_1103 = class_2.field_867.field_1088 + class_2.field_121[1][59][3];
+                  this.field_1102 = cGame.field_867.field_1087 + cGame.field_121[1][59][2];
+                  this.field_1103 = cGame.field_867.field_1088 + cGame.field_121[1][59][3];
                }
             } else if(this.field_1061 == 37) {
-               this.field_1102 = class_2.field_867.field_1087 + class_2.field_121[1][21][2] + (class_2.field_124[1].method_918(4) >> 1);
-               this.field_1103 = class_2.field_867.field_1088 + class_2.field_121[1][21][3] + (class_2.field_124[1].method_918(4) >> 1);
+               this.field_1102 = cGame.field_867.field_1087 + cGame.field_121[1][21][2] + (cGame.field_124[1].method_918(4) >> 1);
+               this.field_1103 = cGame.field_867.field_1088 + cGame.field_121[1][21][3] + (cGame.field_124[1].method_918(4) >> 1);
             } else {
-               this.field_1102 = class_2.field_867.field_1087;
-               this.field_1103 = class_2.field_867.field_1088;
+               this.field_1102 = cGame.field_867.field_1087;
+               this.field_1103 = cGame.field_867.field_1088;
             }
 
             if(this.field_1061 == 60) {
-               this.field_1102 = class_2.field_867.field_1087 + class_2.field_121[1][80 + this.field_1107][2];
-               this.field_1103 = class_2.field_867.field_1088 + class_2.field_121[1][80 + this.field_1107][3];
+               this.field_1102 = cGame.field_867.field_1087 + cGame.field_121[1][80 + this.field_1107][2];
+               this.field_1103 = cGame.field_867.field_1088 + cGame.field_121[1][80 + this.field_1107][3];
             }
 
             if(this.field_1063 > 0) {
-               this.field_1087 = this.field_1064 + (this.field_1102 * 100 / class_2.field_858 - this.field_1064) * this.field_1062 / this.field_1063;
-               this.field_1088 = this.field_1065 + (this.field_1103 * 100 / class_2.field_858 - this.field_1065) * this.field_1062 * this.field_1062 / this.field_1063 / this.field_1063;
+               this.field_1087 = this.field_1064 + (this.field_1102 * 100 / cGame.field_858 - this.field_1064) * this.field_1062 / this.field_1063;
+               this.field_1088 = this.field_1065 + (this.field_1103 * 100 / cGame.field_858 - this.field_1065) * this.field_1062 * this.field_1062 / this.field_1063 / this.field_1063;
             }
 
             if(this.field_1062 > this.field_1063) {
@@ -3151,17 +3151,17 @@ final class class_6 {
                if(this.field_1075) {
                   this.method_998();
                   if(this.field_1061 == 37) {
-                     class_2.method_688(this.field_1066);
+                     cGame.method_688(this.field_1066);
                      return;
                   }
 
                   if(this.field_1061 == 36) {
-                     class_2.method_682(this.field_1066);
+                     cGame.method_682(this.field_1066);
                      return;
                   }
 
                   if(this.field_1061 == 6) {
-                     class_2.method_684(this.field_1066);
+                     cGame.method_684(this.field_1066);
                      return;
                   }
 
@@ -3169,26 +3169,26 @@ final class class_6 {
                      var1 = this.field_1066 & '\uffff';
                      var2 = this.field_1066 >> 16;
                      if(var1 == 110) {
-                        class_2.method_686(var2);
+                        cGame.method_686(var2);
                         short var3;
-                        class_2.method_627(var3 = class_2.field_891[var1], var2, 34);
-                        class_2.method_889(var3, var2, 34);
-                        class_2.method_889(var3, var2, 22);
+                        cGame.method_627(var3 = cGame.field_891[var1], var2, 34);
+                        cGame.method_889(var3, var2, 34);
+                        cGame.method_889(var3, var2, 22);
                      } else if(var1 == 5) {
-                        class_2.method_685(var2);
+                        cGame.method_685(var2);
                      } else if(var1 >= 111 && var1 <= 116) {
-                        class_2.method_683(var2, var1 - 111);
+                        cGame.method_683(var2, var1 - 111);
                      } else {
-                        class_2.method_657(0, var1, var2);
+                        cGame.method_657(0, var1, var2);
                         if(var2 > 0) {
-                           class_2.method_663(-var2);
+                           cGame.method_663(-var2);
                         }
 
-                        class_2.method_664();
+                        cGame.method_664();
                      }
 
                      if(var1 >= 0 && var1 < 6) {
-                        class_2.method_889(class_2.field_891[var1], var2, 22);
+                        cGame.method_889(cGame.field_891[var1], var2, 22);
                      }
                   }
                }
@@ -3213,17 +3213,17 @@ final class class_6 {
       if(var3 == 59) {
          var1 = this.field_1066 & '\uffff';
          (new StringBuffer()).append("itemIndex : ").append(var1);
-         this.field_1106 = class_2.field_892[var1] | '\u8000';
-         this.field_1107 = class_2.field_893[var1];
+         this.field_1106 = cGame.field_892[var1] | '\u8000';
+         this.field_1107 = cGame.field_893[var1];
       } else if(var3 == 60) {
-         var1 = class_2.method_809();
+         var1 = cGame.method_809();
          var2 = 107 + var1 / 4;
          this.field_1106 = var2 | '\u8000';
          this.field_1107 = var1 % 4;
-         class_2.method_153(1, var2, 1, 0, 24, 0, -1);
-         class_1.method_21("/7");
-         class_2.method_150(1);
-         class_1.method_23();
+         cGame.method_153(1, var2, 1, 0, 24, 0, -1);
+         GLLib.method_21("/7");
+         cGame.method_150(1);
+         GLLib.method_23();
       } else {
          this.field_1106 = '\u8001';
          this.field_1107 = this.field_1061;
@@ -3252,11 +3252,11 @@ final class class_6 {
       }
 
       if(var1 > 0) {
-         class_1.method_97(true);
-         int var2 = (this.field_1087 + this.field_1094) * class_2.field_858 / 100 - class_2.field_867.field_1087;
-         int var3 = (this.field_1088 + this.field_1095) * class_2.field_858 / 100 - class_2.field_867.field_1088;
-         class_2.method_533("+" + class_1.method_77((long)var1, class_2.field_862, " "), var2 + 10, var3 + 10, 0, 0, 0, 0, 2, 1, false, false);
-         class_1.method_97(false);
+         GLLib.method_97(true);
+         int var2 = (this.field_1087 + this.field_1094) * cGame.field_858 / 100 - cGame.field_867.field_1087;
+         int var3 = (this.field_1088 + this.field_1095) * cGame.field_858 / 100 - cGame.field_867.field_1088;
+         cGame.method_533("+" + GLLib.method_77((long)var1, cGame.field_862, " "), var2 + 10, var3 + 10, 0, 0, 0, 0, 2, 1, false, false);
+         GLLib.method_97(false);
       }
 
    }
@@ -3264,7 +3264,7 @@ final class class_6 {
    // $FF: renamed from: A () void
    final void method_1071() {
       if(this.field_1113 != null) {
-         this.field_1113.method_1121(class_2.field_858);
+         this.field_1113.method_1121(cGame.field_858);
          this.field_1113.method_1105(this.field_1091, this.field_1092);
          this.field_1113.method_1119();
       }
@@ -3274,19 +3274,19 @@ final class class_6 {
    // $FF: renamed from: B () void
    final void method_1072() {
       if(this.field_1113 != null && this.field_1113.method_1118() && (field_1076 == -1 || field_1076 < field_1077)) {
-         class_2.method_564(class_1.method_16(26, 30));
+         cGame.method_564(GLLib.method_16(26, 30));
          this.field_1113.method_1109(0, 1);
          int var4 = this.field_1113.method_1106().method_918(0);
          int var2 = this.field_1113.method_1106().method_919(0);
-         this.field_1087 = (class_2.field_867.field_1087 + class_1.method_16(var4, class_1.width - var4)) * 100 / class_2.field_858;
-         this.field_1088 = (class_2.field_867.field_1088 + class_1.method_16(var2, class_1.height - var2)) * 100 / class_2.field_858;
-         if(class_2.field_93[class_2.field_92] == 13) {
-            this.field_1091 = this.field_1087 * class_2.field_858 / 100 - class_2.field_867.field_1087;
-            this.field_1092 = this.field_1088 * class_2.field_858 / 100 - class_2.field_867.field_1088;
+         this.field_1087 = (cGame.field_867.field_1087 + GLLib.method_16(var4, GLLib.width - var4)) * 100 / cGame.field_858;
+         this.field_1088 = (cGame.field_867.field_1088 + GLLib.method_16(var2, GLLib.height - var2)) * 100 / cGame.field_858;
+         if(cGame.field_93[cGame.field_92] == 13) {
+            this.field_1091 = this.field_1087 * cGame.field_858 / 100 - cGame.field_867.field_1087;
+            this.field_1092 = this.field_1088 * cGame.field_858 / 100 - cGame.field_867.field_1088;
          }
 
          var4 = this.field_1113.method_1106().field_960;
-         var4 = class_1.method_16(0, var4);
+         var4 = GLLib.method_16(0, var4);
          this.field_1113.method_1114(var4);
          if(field_1076 > -1) {
             ++field_1076;
@@ -3299,8 +3299,8 @@ final class class_6 {
             class_6[] var1 = new class_6[1];
             if(method_1010(0, 21, var1, 1) == 0) {
                char var3 = '\uffff';
-               class_2.method_153(0, 85, var3, 1, 0, 0, -1);
-               class_2.method_150(0);
+               cGame.method_153(0, 85, var3, 1, 0, 0, -1);
+               cGame.method_150(0);
             }
          }
 
@@ -3309,7 +3309,7 @@ final class class_6 {
 
    // $FF: renamed from: a (int) f
    static class_6 method_1073(int var0) {
-      class_2.method_564(class_1.method_16(26, 30));
+      cGame.method_564(GLLib.method_16(26, 30));
       if(var0 == -1) {
          field_1076 = -1;
       } else {
@@ -3317,27 +3317,27 @@ final class class_6 {
          field_1077 = var0;
       }
 
-      if(class_2.field_864[85] == null) {
-         class_2.method_153(0, 85, 15, 0, 24, 0, -1);
-         class_1.method_21("/5");
-         class_2.method_150(0);
-         class_1.method_23();
+      if(cGame.field_864[85] == null) {
+         cGame.method_153(0, 85, 15, 0, 24, 0, -1);
+         GLLib.method_21("/5");
+         cGame.method_150(0);
+         GLLib.method_23();
       }
 
       cSoundEngine var10001;
       if(method_999(0, 21) > 0) {
          class_6[] var4 = new class_6[1];
          method_1010(0, 21, var4, 1);
-         ASprite var5 = class_2.field_864[85];
+         ASprite var5 = cGame.field_864[85];
          class_6 var10000 = var4[0];
          var10001 = new cSoundEngine(var5, var4[0].field_1087, var4[0].field_1088);
          var10000.field_1113 = var10001;
          var4[0].field_1113.method_1109(0, 1);
          return var4[0];
       } else {
-         int[] var2 = new int[]{(class_2.field_867.field_1087 + (class_1.width >> 1)) * 100 / class_2.field_858, (class_2.field_867.field_1088 + (class_1.height >> 1)) * 100 / class_2.field_858, 255};
+         int[] var2 = new int[]{(cGame.field_867.field_1087 + (GLLib.width >> 1)) * 100 / cGame.field_858, (cGame.field_867.field_1088 + (GLLib.height >> 1)) * 100 / cGame.field_858, 255};
          class_6 var1 = method_1079(21, 0, var2);
-         ASprite var3 = class_2.field_864[85];
+         ASprite var3 = cGame.field_864[85];
          var10001 = new cSoundEngine(var3, var1.field_1087, var1.field_1088);
          var1.field_1113 = var10001;
          var1.field_1113.method_1109(0, 1);
@@ -3384,13 +3384,13 @@ final class class_6 {
 
    // $FF: renamed from: C () void
    final void method_1076() {
-      class_2.method_641(this);
+      cGame.method_641(this);
       this.method_998();
    }
 
    // $FF: renamed from: D () void
    final void method_1077() {
-      class_2.method_640(this);
+      cGame.method_640(this);
       this.field_1105 = 1;
       this.field_1113.method_1109(0, -1);
       this.field_1107 = 0;
@@ -3507,9 +3507,9 @@ final class class_6 {
          var6.field_1107 = var4[6];
          var6.field_1096 = var4[7];
          var6.field_1097 = var4[8];
-         var6.field_1098 = class_2.method_654(var6.field_1096, var6.field_1097);
-         if(class_2.field_864[var6.field_1106].method_933() > 0) {
-            var8 = class_2.field_864[var6.field_1106];
+         var6.field_1098 = cGame.method_654(var6.field_1096, var6.field_1097);
+         if(cGame.field_864[var6.field_1106].method_933() > 0) {
+            var8 = cGame.field_864[var6.field_1106];
             var10001 = new cSoundEngine(var8, var6.field_1087, var6.field_1088);
             var6.field_1113 = var10001;
             var6.field_1113.method_1109(0, -1);
@@ -3539,7 +3539,7 @@ final class class_6 {
          var6.field_1087 = var4[0];
          var6.field_1088 = var4[1];
          var6.field_1089 = var4[2];
-         var10001 = new cSoundEngine(class_2.field_864[144], var6.field_1087, var6.field_1088);
+         var10001 = new cSoundEngine(cGame.field_864[144], var6.field_1087, var6.field_1088);
          var6.field_1113 = var10001;
          var6.field_1113.method_1109(0, -1);
          var6.method_1084(514);
@@ -3562,7 +3562,7 @@ final class class_6 {
          var6.field_1107 = var4[4];
          var6.field_1108 = var4[5];
          if(var4[6] != -1) {
-            var10001 = new cSoundEngine(class_2.field_864[var6.field_1106], var6.field_1087, var6.field_1088);
+            var10001 = new cSoundEngine(cGame.field_864[var6.field_1106], var6.field_1087, var6.field_1088);
             var6.field_1113 = var10001;
             var6.field_1113.method_1109(var4[6], -1);
          } else if(var6.field_1106 == 152 || var6.field_1106 == 153 || var6.field_1106 == 154 || var6.field_1106 == 156 || var6.field_1106 == 9) {
@@ -3582,7 +3582,7 @@ final class class_6 {
          var6.field_1094 = var4[5];
          var6.field_1095 = var4[6];
          if(var4.length > 7) {
-            var10001 = new cSoundEngine(class_2.field_864[var6.field_1106], var6.field_1087, var6.field_1088);
+            var10001 = new cSoundEngine(cGame.field_864[var6.field_1106], var6.field_1087, var6.field_1088);
             var6.field_1113 = var10001;
             var6.field_1113.method_1109(var4[7], var4[8]);
          } else {
@@ -3594,7 +3594,7 @@ final class class_6 {
       case 34:
          var6.field_1089 = var4[0];
          var6.field_1106 = var4[1];
-         var10001 = new cSoundEngine(class_2.field_864[var6.field_1106], 0, 0);
+         var10001 = new cSoundEngine(cGame.field_864[var6.field_1106], 0, 0);
          var6.field_1113 = var10001;
          var6.field_1113.method_1109(var4[2], -1);
          var6.field_1105 = var4[3];
@@ -3603,7 +3603,7 @@ final class class_6 {
             var7 = var4[4];
             class_6[] var10 = new class_6[100];
             if((var7 = method_1010(0, var7, var10, 100)) > 0) {
-               var7 = class_1.method_16(0, var7);
+               var7 = GLLib.method_16(0, var7);
                var6.field_1087 = var10[var7].field_1087;
                var6.field_1088 = var10[var7].field_1088;
                var6.field_1102 = var6.field_1087;
@@ -3621,7 +3621,7 @@ final class class_6 {
          var6.field_1088 = var4[1];
          var6.field_1089 = var4[2];
          var6.field_1106 = var4[3];
-         var8 = class_2.field_864[var6.field_1106];
+         var8 = cGame.field_864[var6.field_1106];
          var10001 = new cSoundEngine(var8, var6.field_1087, var6.field_1088);
          var6.field_1113 = var10001;
          var6.field_1102 = var6.field_1087;
@@ -3671,7 +3671,7 @@ final class class_6 {
          var6.field_1107 = var4[5];
          var6.field_1096 = var4[6];
          var6.field_1097 = var4[7];
-         var6.field_1098 = class_2.method_654(var6.field_1096, var6.field_1097);
+         var6.field_1098 = cGame.method_654(var6.field_1096, var6.field_1097);
          var6.method_1084(16777730);
          var7 = var4[8];
          var11 = var4[9];
@@ -3691,8 +3691,8 @@ final class class_6 {
          if(var6.field_1100 == 18) {
             var6.field_1109 = 135;
             var6.field_1110 = 0;
-            class_2.field_902 = var6.field_1087;
-            class_2.field_903 = var6.field_1088;
+            cGame.field_902 = var6.field_1087;
+            cGame.field_903 = var6.field_1088;
          }
 
          if(var6.field_1106 == 4 || var6.field_1106 == 145) {
@@ -3704,7 +3704,7 @@ final class class_6 {
          var6.field_1088 = var4[1];
          var6.field_1089 = var4[2];
          var6.field_1106 = var4[4];
-         var8 = class_2.field_864[var6.field_1106];
+         var8 = cGame.field_864[var6.field_1106];
          var6.field_1107 = 0;
          var10001 = new cSoundEngine(var8, var6.field_1087, var6.field_1088);
          var6.field_1113 = var10001;
@@ -3742,7 +3742,7 @@ final class class_6 {
          var6.field_1096 = var4[3];
          var6.field_1097 = var4[4];
          var6.field_1098 = 16;
-         var8 = class_2.field_864[var4[5]];
+         var8 = cGame.field_864[var4[5]];
          var6.field_1108 = var4[6];
          if(var4[7] == 1) {
             var6.method_1084(32);
@@ -3797,14 +3797,14 @@ final class class_6 {
       int[] var2 = new int[2];
       var1[0] = this.field_1087;
       var1[1] = this.field_1088;
-      class_2.method_638(var1, var2);
+      cGame.method_638(var1, var2);
       var2[0] -= this.field_1096 >> 1;
       var2[1] -= this.field_1097 >> 1;
       int[] var3;
-      (var3 = new int[2])[0] = class_1.field_82;
-      var3[1] = class_1.field_83;
-      class_2.method_587(var3, var1);
-      class_2.method_638(var1, var3);
+      (var3 = new int[2])[0] = GLLib.field_82;
+      var3[1] = GLLib.field_83;
+      cGame.method_587(var3, var1);
+      cGame.method_638(var1, var3);
       return var3[0] >= var2[0] && var3[0] < var2[0] + this.field_1096 && var3[1] >= var2[1] && var3[1] < var2[1] + this.field_1097;
    }
 
@@ -3813,22 +3813,22 @@ final class class_6 {
       if(this.field_1106 != -1 && this.field_1107 != -1 && (this.field_1106 & -65536) == 0) {
          int var1;
          if((this.field_1106 & '\u8000') != 0) {
-            var1 = class_2.field_124[this.field_1106 & 32767].method_937(this.field_1107);
+            var1 = cGame.field_124[this.field_1106 & 32767].method_937(this.field_1107);
          } else {
-            var1 = class_2.field_864[this.field_1106].method_937(this.field_1107);
+            var1 = cGame.field_864[this.field_1106].method_937(this.field_1107);
          }
 
          if(var1 > 0) {
             int[] var6 = new int[4];
             int[] var2 = new int[2];
             int[] var3 = new int[2];
-            var2[0] = class_1.field_82;
-            var2[1] = class_1.field_83;
-            class_2.method_587(var2, var3);
+            var2[0] = GLLib.field_82;
+            var2[1] = GLLib.field_83;
+            cGame.method_587(var2, var3);
             if((this.field_1106 & '\u8000') != 0) {
-               class_2.field_124[this.field_1106 & 32767].method_938(this.field_1107, 0, var6, 0);
+               cGame.field_124[this.field_1106 & 32767].method_938(this.field_1107, 0, var6, 0);
             } else {
-               class_2.field_864[this.field_1106].method_938(this.field_1107, 0, var6, 0);
+               cGame.field_864[this.field_1106].method_938(this.field_1107, 0, var6, 0);
             }
 
             int var7 = this.field_1087 + var6[0];
@@ -3887,8 +3887,8 @@ final class class_6 {
             this.field_1034 = 0;
          }
 
-         class_2.field_874 = 100;
-         class_2.field_875 = "0:0:0";
+         cGame.field_874 = 100;
+         cGame.field_875 = "0:0:0";
       } else if(this.field_1086 == 52) {
          this.method_1053(3);
       } else {
@@ -3914,7 +3914,7 @@ final class class_6 {
          for(var6 = 0; var6 < 3; ++var6) {
             var2[0] = this.field_1121.method_1237(var6);
             var2[1] = this.field_1121.method_1238(var6);
-            class_2.method_639(var2, var3);
+            cGame.method_639(var2, var3);
             var4[var6] = var3[0];
             var5[var6] = var3[1];
          }
@@ -3928,9 +3928,9 @@ final class class_6 {
          if(this.field_1123 <= 0) {
             this.field_1122 = 0;
          } else {
-            class_1.method_19(var4[0], var5[0], var4[1], var5[1], var4[2], var5[2], this.field_1123);
-            var1[0] = class_1.field_34;
-            var1[1] = class_1.field_35;
+            GLLib.method_19(var4[0], var5[0], var4[1], var5[1], var4[2], var5[2], this.field_1123);
+            var1[0] = GLLib.field_34;
+            var1[1] = GLLib.field_35;
             if(this.field_1086 == 42) {
                this.method_1028();
             }
@@ -3939,7 +3939,7 @@ final class class_6 {
 
       int var9 = var1[0] - this.field_1087;
       int var10 = var1[1] - this.field_1088;
-      if((var6 = class_1.method_18(var9 * var9 + var10 * var10)) == 0) {
+      if((var6 = GLLib.method_18(var9 * var9 + var10 * var10)) == 0) {
          this.field_1087 = var1[0];
          this.field_1088 = var1[1];
          if(this.field_1123 <= 0) {
@@ -3948,7 +3948,7 @@ final class class_6 {
          }
 
       } else {
-         int var7 = (this.field_1090 * class_1.field_15 << 8) / 1000;
+         int var7 = (this.field_1090 * GLLib.field_15 << 8) / 1000;
          int var8 = var9 * var7 / var6 >> 8;
          var7 = var10 * var7 / var6 >> 8;
          if((var8 < 0?-var8:var8) < (var9 < 0?-var9:var9) && var8 != 0) {
@@ -4001,7 +4001,7 @@ final class class_6 {
       if(this.field_1086 == 49) {
          if(this.field_1105 != 3 && this.field_1105 != 4) {
             if(this.method_1086(2)) {
-               class_2.method_641(this);
+               cGame.method_641(this);
             }
 
             var1 = this.method_1089();
@@ -4009,12 +4009,12 @@ final class class_6 {
          } else {
             var1 = this.method_1089();
             this.method_1047(1);
-            this.field_1118 = class_2.field_884[0];
+            this.field_1118 = cGame.field_884[0];
             this.method_1085(1024);
          }
       } else {
          if(this.method_1086(2)) {
-            class_2.method_641(this);
+            cGame.method_641(this);
          }
 
          var1 = this.method_1089();
@@ -4069,17 +4069,17 @@ final class class_6 {
    // $FF: renamed from: h (int, int) void
    private void method_1095(int var1, int var2) {
       if(var1 > -1 && var2 > -1) {
-         int var3 = class_2.field_864[0].field_928[0] & '\uffff';
-         int var4 = class_2.field_864[0].field_929[0] & '\uffff';
+         int var3 = cGame.field_864[0].field_928[0] & '\uffff';
+         int var4 = cGame.field_864[0].field_929[0] & '\uffff';
          int var5 = var1 & 32767;
-         ((var1 & '\u8000') != 0?class_2.field_124[var5]:class_2.field_864[var5]).method_931(field_1126, var2, this.field_1087, this.field_1088);
-         if(class_2.field_858 != 100) {
-            field_1126[0] = field_1126[0] * class_2.field_858 / 100;
-            field_1126[1] = field_1126[1] * class_2.field_858 / 100;
-            field_1126[2] = field_1126[2] * class_2.field_858 / 100;
-            field_1126[3] = field_1126[3] * class_2.field_858 / 100;
-            var3 = class_2.field_864[158].field_928[0] & '\uffff';
-            var4 = class_2.field_864[158].field_929[0] & '\uffff';
+         ((var1 & '\u8000') != 0?cGame.field_124[var5]:cGame.field_864[var5]).method_931(field_1126, var2, this.field_1087, this.field_1088);
+         if(cGame.field_858 != 100) {
+            field_1126[0] = field_1126[0] * cGame.field_858 / 100;
+            field_1126[1] = field_1126[1] * cGame.field_858 / 100;
+            field_1126[2] = field_1126[2] * cGame.field_858 / 100;
+            field_1126[3] = field_1126[3] * cGame.field_858 / 100;
+            var3 = cGame.field_864[158].field_928[0] & '\uffff';
+            var4 = cGame.field_864[158].field_929[0] & '\uffff';
          }
 
          field_1126[0] = field_1126[0] / var3 * var3;
@@ -4087,7 +4087,7 @@ final class class_6 {
          field_1126[2] = (field_1126[2] + var3 - 1) / var3 * var3;
          field_1126[3] = (field_1126[3] + var4 - 1) / var4 * var4;
          method_992(field_1126[0], field_1126[1], field_1126[2], field_1126[3]);
-         if(!class_2.method_707()) {
+         if(!cGame.method_707()) {
             cSoundEngine.method_1161(field_1126[0], field_1126[1], field_1126[2] - field_1126[0], field_1126[3] - field_1126[1], 0);
          }
       }
@@ -4101,21 +4101,21 @@ final class class_6 {
       var3[1] = var2;
       class_13 var10001 = new class_13();
       this.field_1121 = var10001;
-      this.field_1121.method_1234(96, 96, class_2.field_346, 14, 10, 10, 8);
+      this.field_1121.method_1234(96, 96, cGame.field_346, 14, 10, 10, 8);
       int[] var4 = new int[2];
-      class_2.method_638(var3, var4);
+      cGame.method_638(var3, var4);
       var4[0] = var4[0] < 0?0:(var4[0] > 95?95:var4[0]);
       var4[1] = var4[1] < 0?0:(var4[1] > 95?95:var4[1]);
       var3 = new int[2];
       int[] var5;
       (var5 = new int[2])[0] = this.field_1087;
       var5[1] = this.field_1088;
-      class_2.method_638(var5, var3);
+      cGame.method_638(var5, var3);
       var3[0] = var3[0] < 0?0:(var3[0] > 95?95:var3[0]);
       var3[1] = var3[1] < 0?0:(var3[1] > 95?95:var3[1]);
       this.field_1121.method_1235(var3[0], var3[1], 0, var4[0], var4[1]);
       int var8 = this.field_1121.method_1236();
-      this.field_1123 = class_1.field_31;
+      this.field_1123 = GLLib.field_31;
       this.field_1122 = 0;
       if(this.field_1086 != 42) {
          if(this.field_1086 == 54) {
@@ -4144,7 +4144,7 @@ final class class_6 {
             (var6 = new int[2])[0] = this.field_1121.method_1237(this.field_1122);
             var6[1] = this.field_1121.method_1238(this.field_1122);
             int[] var7 = new int[2];
-            class_2.method_639(var6, var7);
+            cGame.method_639(var6, var7);
             this.field_1087 = var7[0];
             this.field_1088 = var7[1];
          } else {
@@ -4164,8 +4164,8 @@ final class class_6 {
       int[] var2 = new int[2];
       var1[0] = this.field_1087;
       var1[1] = this.field_1088;
-      class_2.method_588(var1, var2);
-      return var2[0] > -100 && var2[0] < class_1.width + 100 && var2[1] >= -100 && var2[1] < class_1.height + 100;
+      cGame.method_588(var1, var2);
+      return var2[0] > -100 && var2[0] < GLLib.width + 100 && var2[1] >= -100 && var2[1] < GLLib.height + 100;
    }
 
    // $FF: renamed from: <clinit> () void

@@ -1124,14 +1124,14 @@ public final class ASprite {
 
    // $FF: renamed from: a (int[], int) int
    private static int method_945(int[] var0, int var1) {
-      return class_1.method_68(var0, 0, var0.length, var1);
+      return GLLib.method_68(var0, 0, var0.length, var1);
    }
 
    // $FF: renamed from: a (int, int, int, int) boolean
    private boolean method_946(int var1, int var2, int var3, int var4) {
       if(this.method_944()) {
          int var5;
-         int[] var6 = class_1.method_88(var5 = class_1.method_89());
+         int[] var6 = GLLib.method_88(var5 = GLLib.method_89());
          if(this.field_988 != null && this.field_988[this.field_962][var1] != null?method_945(var6, var5) == this.field_989[this.field_962][var1]:false) {
             class_11 var8;
             class_11 var10000 = var8 = this.field_988[this.field_962][var1];
@@ -1141,7 +1141,7 @@ public final class ASprite {
             var4 = var10002;
             var1 = var10001;
             var8 = var10000;
-            class_1.method_49(class_1.field_1, var8, 0, 0, var1, var4, var5, var2, var3, 20, false);
+            GLLib.method_49(GLLib.field_1, var8, 0, 0, var1, var4, var5, var2, var3, 20, false);
             return true;
          }
       }
@@ -1153,8 +1153,8 @@ public final class ASprite {
    private boolean method_947(int var1, int var2, int var3, int[] var4, int var5) {
       if(this.method_944() && var4 != null) {
          int var6;
-         int[] var7 = class_1.method_88(var6 = class_1.method_89());
-         class_11 var10 = class_11.method_1185(var4, class_1.field_79, class_1.field_80, true);
+         int[] var7 = GLLib.method_88(var6 = GLLib.method_89());
+         class_11 var10 = class_11.method_1185(var4, GLLib.field_79, GLLib.field_80, true);
          this.field_988[this.field_962][var1] = var10;
          this.field_989[this.field_962][var1] = method_945(var7, var6);
          class_11 var10000 = var10;
@@ -1164,7 +1164,7 @@ public final class ASprite {
          int var11 = var10002;
          var1 = var10001;
          class_11 var9 = var10000;
-         class_1.method_49(class_1.field_1, var9, 0, 0, var1, var11, var5, var2, var3, 20, false);
+         GLLib.method_49(GLLib.field_1, var9, 0, 0, var1, var11, var5, var2, var3, 20, false);
          return true;
       } else {
          return false;
@@ -1665,7 +1665,7 @@ public final class ASprite {
       boolean var11 = this.field_1004;
       boolean var12 = this.field_1003;
       int var13;
-      int var14 = (var13 = class_1.method_37(var1, true)) + class_1.method_39(var1, true);
+      int var14 = (var13 = GLLib.method_37(var1, true)) + GLLib.method_39(var1, true);
       var13 -= var9;
       var14 += var9;
       int var15 = 0;
@@ -1986,11 +1986,11 @@ public final class ASprite {
                   int var6 = this.field_929[var2] & '\uffff';
                   int[] var7;
                   if(var5 > 0 && var6 > 0 && (var7 = this.method_954(var2)) != null) {
-                     if(class_1.field_71 && (class_1.field_72 & 1046496) != 0) {
+                     if(GLLib.field_71 && (GLLib.field_72 & 1046496) != 0) {
                         boolean var8 = this.field_963;
-                        var7 = class_1.method_100((Graphics)null, var7, 0, 0, var5, var6, 0, var8, false, false);
-                        var5 = class_1.field_79;
-                        var6 = class_1.field_80;
+                        var7 = GLLib.method_100((Graphics)null, var7, 0, 0, var5, var6, 0, var8, false, false);
+                        var5 = GLLib.field_79;
+                        var6 = GLLib.field_80;
                      }
 
                      int[] var13 = var7;
@@ -2105,9 +2105,9 @@ public final class ASprite {
          class_11[] var26 = this.field_972[var1][var5];
          var2 = this.method_918(var6);
          int var9 = this.method_919(var6);
-         if((class_1.field_72 & 8192) != 0) {
-            int var10 = class_1.method_94();
-            var4 = class_1.method_95();
+         if((GLLib.field_72 & 8192) != 0) {
+            int var10 = GLLib.method_94();
+            var4 = GLLib.method_95();
             var2 = var2 * var10 / 100;
             var9 = var9 * var4 / 100;
          }
@@ -2126,9 +2126,9 @@ public final class ASprite {
             var15 = -var15;
             int var16;
             int var17;
-            if((class_1.field_72 & 8192) != 0) {
-               var16 = class_1.method_94();
-               var17 = class_1.method_95();
+            if((GLLib.field_72 & 8192) != 0) {
+               var16 = GLLib.method_94();
+               var17 = GLLib.method_95();
                var12 = var12 * var16 / 100;
                var13 = var13 * var17 / 100;
                var14 = var14 * var16 / 100;
@@ -2159,14 +2159,14 @@ public final class ASprite {
 
                this.method_980(var19, var6, var14, var15, 0);
                if((var8 & 4) != 0) {
-                  var8 = class_1.height;
-                  field_969 = class_1.width;
+                  var8 = GLLib.height;
+                  field_969 = GLLib.width;
                   field_970 = var8;
                }
 
-               class_1.method_52(var28, var24, 0, var12, 0, 0, var12, var13);
+               GLLib.method_52(var28, var24, 0, var12, 0, 0, var12, var13);
                int var21 = 16711935;
-               var21 = class_1.field_1.getDisplayColor(var21);
+               var21 = GLLib.field_1.getDisplayColor(var21);
 
                while(var16 > 0) {
                   --var16;
@@ -2205,16 +2205,16 @@ public final class ASprite {
 
    // $FF: renamed from: a (javax.microedition.lcdui.Graphics, int, int, int, int) boolean
    private static boolean method_978(Graphics var0, int var1, int var2, int var3, int var4) {
-      int var5 = class_1.method_36(var0, true);
-      int var6 = class_1.method_37(var0, true);
-      int var7 = class_1.method_38(var0, true);
-      int var10 = class_1.method_39(var0, true);
-      if((class_1.field_72 & 8192) != 0) {
-         int var8 = class_1.method_94();
-         int var9 = class_1.method_95();
+      int var5 = GLLib.method_36(var0, true);
+      int var6 = GLLib.method_37(var0, true);
+      int var7 = GLLib.method_38(var0, true);
+      int var10 = GLLib.method_39(var0, true);
+      if((GLLib.field_72 & 8192) != 0) {
+         int var8 = GLLib.method_94();
+         int var9 = GLLib.method_95();
          var3 = var3 * var8 / 100;
          var4 = var4 * var9 / 100;
-      } else if((class_1.field_72 & 1 << 15) != 0) {
+      } else if((GLLib.field_72 & 1 << 15) != 0) {
          return true;
       }
 
@@ -2245,9 +2245,9 @@ public final class ASprite {
          var8 = var2;
       }
 
-      if((class_1.field_72 & 8192) != 0 && class_1.field_73[13][5] == 0) {
-         var2 = class_1.method_94();
-         var6 = class_1.method_95();
+      if((GLLib.field_72 & 8192) != 0 && GLLib.field_73[13][5] == 0) {
+         var2 = GLLib.method_94();
+         var6 = GLLib.method_95();
          var7 = var2 * var7 / 100;
          var8 = var6 * var8 / 100;
       }
@@ -2307,16 +2307,16 @@ public final class ASprite {
 
                var11 = var3 + var17;
                var12 = var4 + var18;
-               if((class_1.field_72 & 8192) != 0) {
-                  var19 = class_1.method_94();
-                  var7 = class_1.method_95();
+               if((GLLib.field_72 & 8192) != 0) {
+                  var19 = GLLib.method_94();
+                  var7 = GLLib.method_95();
                   var17 -= var19 * var17 / 100;
                   var18 -= var7 * var18 / 100;
                   var11 -= var17;
                   var12 -= var18;
                }
 
-               if((class_1.field_72 & 1 << 15) != 0) {
+               if((GLLib.field_72 & 1 << 15) != 0) {
                   var11 -= var17;
                   var12 -= var18;
                }
@@ -2334,8 +2334,8 @@ public final class ASprite {
                   }
 
                   var7 = var16;
-                  if((class_1.field_72 & 8192) != 0) {
-                     var7 = var16 * class_1.method_95() / 100;
+                  if((GLLib.field_72 & 8192) != 0) {
+                     var7 = var16 * GLLib.method_95() / 100;
                   }
 
                   var17 = var11;
@@ -2353,7 +2353,7 @@ public final class ASprite {
                   class_11 var24 = var10000;
                   if(var10000 != null) {
                      label140: {
-                        if(class_1.field_71 && (class_1.field_72 & 1046496) != 0) {
+                        if(GLLib.field_71 && (GLLib.field_72 & 1046496) != 0) {
                            int var20 = var19;
                            var19 = var16;
                            var18 = var17;
@@ -2362,10 +2362,10 @@ public final class ASprite {
                            if(var24 != null) {
                               boolean var22 = this.field_963;
                               int[] var23 = method_939((int[])null);
-                              class_1.method_52(var24, var23, 0, var16, 0, 0, var16, var20);
-                              int[] var25 = class_1.method_100(var1, var23, var11, var18, var16, var20, var13, var22, false, true);
+                              GLLib.method_52(var24, var23, 0, var16, 0, 0, var16, var20);
+                              int[] var25 = GLLib.method_100(var1, var23, var11, var18, var16, var20, var13, var22, false, true);
                               if(var25 != null) {
-                                 class_1.method_51(var1, var25, 0, class_1.field_79, var11, var18, class_1.field_79, class_1.field_80, class_1.field_74, true, 0, -1, false);
+                                 GLLib.method_51(var1, var25, 0, GLLib.field_79, var11, var18, GLLib.field_79, GLLib.field_80, GLLib.field_74, true, 0, -1, false);
                               }
 
                               var27 = true;
@@ -2379,9 +2379,9 @@ public final class ASprite {
                         }
 
                         if(var13 == 0) {
-                           class_1.method_48(var1, var24, var11, var17, 20, false);
+                           GLLib.method_48(var1, var24, var11, var17, 20, false);
                         } else {
-                           class_1.method_49(var1, var24, 0, 0, var16, var19, field_974[var13 & 7], var11, var17, 20, false);
+                           GLLib.method_49(var1, var24, 0, 0, var16, var19, field_974[var13 & 7], var11, var17, 20, false);
                         }
                      }
 
@@ -2437,14 +2437,14 @@ public final class ASprite {
                var10 = var19;
             }
 
-            if((class_1.field_72 & 8192) != 0 && class_1.field_73[13][5] == 0) {
-               var11 = class_1.method_94();
-               int var26 = class_1.method_95();
-               if(class_1.field_73[13][6] % class_1.field_31 != 0) {
+            if((GLLib.field_72 & 8192) != 0 && GLLib.field_73[13][5] == 0) {
+               var11 = GLLib.method_94();
+               int var26 = GLLib.method_95();
+               if(GLLib.field_73[13][6] % GLLib.field_31 != 0) {
                   var15 = -var17;
-                  class_1.field_73[16][1] = var15;
+                  GLLib.field_73[16][1] = var15;
                   var15 = -var10;
-                  class_1.field_73[16][2] = var15;
+                  GLLib.field_73[16][2] = var15;
                }
 
                var17 = var11 * var17 / 100;
@@ -2461,10 +2461,10 @@ public final class ASprite {
 
    // $FF: renamed from: c (javax.microedition.lcdui.Graphics, int, int, int, int) void
    final void method_982(Graphics var1, int var2, int var3, int var4, int var5) {
-      class_1.method_92();
-      class_1.method_96(var5);
+      GLLib.method_92();
+      GLLib.method_96(var5);
       this.method_980(var1, var2, var3, var4, 0);
-      class_1.method_93();
+      GLLib.method_93();
    }
 
    // $FF: renamed from: t (int) int
@@ -2497,9 +2497,9 @@ public final class ASprite {
 
       int var10;
       int var11;
-      if((class_1.field_72 & 8192) != 0 && class_1.field_73[13][5] != 0) {
-         var10 = class_1.method_94();
-         var11 = class_1.method_95();
+      if((GLLib.field_72 & 8192) != 0 && GLLib.field_73[13][5] != 0) {
+         var10 = GLLib.method_94();
+         var11 = GLLib.method_95();
          var3 = var3 * var10 / 100;
          var4 = var4 * var11 / 100;
       }
@@ -2526,8 +2526,8 @@ public final class ASprite {
             var12 += 255;
          }
 
-         if((class_1.field_72 & 8192) != 0) {
-            var13 = class_1.method_95();
+         if((GLLib.field_72 & 8192) != 0) {
+            var13 = GLLib.method_95();
             var12 = var12 * var13 / 100;
          }
 
@@ -2563,16 +2563,16 @@ public final class ASprite {
          case 1:
             --var12;
             var13 = var6 - 1;
-            class_1.method_44(var1, var3, var4, var12, var13, true);
+            GLLib.method_44(var1, var3, var4, var12, var13, true);
             return;
          case 2:
             if((var2 & -16777216) != -16777216 && (var2 & -16777216) != 0) {
-               class_1.method_86(var2);
-               class_1.method_87(var1, var3, var4, var12, var6);
+               GLLib.method_86(var2);
+               GLLib.method_87(var1, var3, var4, var12, var6);
                return;
             }
 
-            class_1.method_43(var1, var3, var4, var12, var6, true);
+            GLLib.method_43(var1, var3, var4, var12, var6, true);
             return;
          case 3:
          case 4:
@@ -2593,11 +2593,11 @@ public final class ASprite {
                }
 
                if(this.field_978[var11] == 3) {
-                  class_1.method_46(var1, var3, var4, var12, var13, var6, var7, true);
+                  GLLib.method_46(var1, var3, var4, var12, var13, var6, var7, true);
                   break;
                }
 
-               class_1.method_45(var1, var3, var4, var12, var13, var6, var7, true);
+               GLLib.method_45(var1, var3, var4, var12, var13, var6, var7, true);
             }
 
             return;
@@ -2638,18 +2638,18 @@ public final class ASprite {
                   var10003 = var101 + var6;
                   int var77 = var102 + var7;
                   int var76 = var10003;
-                  class_1.method_42(var1, var101, var102, var76, var77, true);
+                  GLLib.method_42(var1, var101, var102, var76, var77, true);
                   var10001 = var101 + var6;
                   var10002 = var102 + var7;
                   var10003 = var101 + var8;
                   int var81 = var102 + var64;
                   int var80 = var10003;
                   int var79 = var10002;
-                  class_1.method_42(var1, var10001, var79, var80, var81, true);
+                  GLLib.method_42(var1, var10001, var79, var80, var81, true);
                   var10003 = var101 + var8;
                   int var85 = var102 + var64;
                   int var84 = var10003;
-                  class_1.method_42(var1, var101, var102, var84, var85, true);
+                  GLLib.method_42(var1, var101, var102, var84, var85, true);
                   break;
                }
 
@@ -2660,7 +2660,7 @@ public final class ASprite {
                int var98 = var10005;
                int var97 = var10004;
                int var96 = var10003;
-               class_1.method_50(var1, var101, var102, var96, var97, var98, var99, true);
+               GLLib.method_50(var1, var101, var102, var96, var97, var98, var99, true);
             }
 
             return;
@@ -2685,7 +2685,7 @@ public final class ASprite {
                var6 = var64;
             }
 
-            class_1.method_42(var1, var5, var7, var6, var8, true);
+            GLLib.method_42(var1, var5, var7, var6, var8, true);
             return;
          case 9:
             if((var5 = this.method_983(var11)) != -1) {
@@ -2727,38 +2727,38 @@ public final class ASprite {
                }
 
                if(var6 >>> 24 != 255 || var7 >>> 24 != 255) {
-                  class_1.method_103(var1, var3, var4, var12, var13, var6, var7, var107);
+                  GLLib.method_103(var1, var3, var4, var12, var13, var6, var7, var107);
                   return;
                }
 
-               class_1.method_101(var1, var3, var4, var12, var13, var6, var7, var107);
+               GLLib.method_101(var1, var3, var4, var12, var13, var6, var7, var107);
             }
          case 5:
          default:
             return;
          }
       } else {
-         if((class_1.field_72 & 8192) != 0 && class_1.field_73[13][6] % 360 != 0) {
-            var15 = (class_1.field_72 & 8192) != 0?class_1.field_73[13][6]:class_1.field_73[16][0];
+         if((GLLib.field_72 & 8192) != 0 && GLLib.field_73[13][6] % 360 != 0) {
+            var15 = (GLLib.field_72 & 8192) != 0?GLLib.field_73[13][6]:GLLib.field_73[16][0];
             if((var5 & 4) != 0) {
                var5 &= -5;
-               var15 += 90 * class_1.field_38 / 360;
+               var15 += 90 * GLLib.field_38 / 360;
             }
 
-            int var16 = class_1.method_17(class_1.field_39 - var15);
-            int var17 = class_1.method_17(var15);
-            class_1.method_99(var16, var17, var6, var12, field_985);
+            int var16 = GLLib.method_17(GLLib.field_39 - var15);
+            int var17 = GLLib.method_17(var15);
+            GLLib.method_99(var16, var17, var6, var12, field_985);
             var17 = field_985[0];
             int var18 = field_985[1];
-            var16 = var6 - class_1.field_73[16][2];
-            int var19 = class_1.field_73[16][1];
-            if((class_1.field_72 & 8192) != 0) {
-               var16 = var16 * class_1.method_94() / 100;
-               var19 = var19 * class_1.method_95() / 100;
-               var6 = var6 * class_1.method_94() / 100;
-               var12 = var12 * class_1.method_95() / 100;
-               var17 = var17 * class_1.method_94() / 100;
-               var18 = var18 * class_1.method_94() / 100;
+            var16 = var6 - GLLib.field_73[16][2];
+            int var19 = GLLib.field_73[16][1];
+            if((GLLib.field_72 & 8192) != 0) {
+               var16 = var16 * GLLib.method_94() / 100;
+               var19 = var19 * GLLib.method_95() / 100;
+               var6 = var6 * GLLib.method_94() / 100;
+               var12 = var12 * GLLib.method_95() / 100;
+               var17 = var17 * GLLib.method_94() / 100;
+               var18 = var18 * GLLib.method_94() / 100;
             }
 
             var10001 = (var6 >> 1) - var16;
@@ -2766,9 +2766,9 @@ public final class ASprite {
             int[] var22 = field_985;
             int var21 = var10002;
             int var20 = var10001;
-            int var23 = class_1.method_17(class_1.field_39 - var15);
-            var15 = class_1.method_17(var15);
-            class_1.method_98(var23, var15, var20, var21, var22);
+            int var23 = GLLib.method_17(GLLib.field_39 - var15);
+            var15 = GLLib.method_17(var15);
+            GLLib.method_98(var23, var15, var20, var21, var22);
             var3 += field_985[0] - var17 / 2 + var16;
             var4 += field_985[1] - var18 / 2 + var19;
          }
@@ -2787,7 +2787,7 @@ public final class ASprite {
                boolean var113 = this.field_963;
                if(var112 == null) {
                   int[] var114;
-                  if(class_1.field_71 && (class_1.field_72 & 1046496) != 0 && this.method_944()) {
+                  if(GLLib.field_71 && (GLLib.field_72 & 1046496) != 0 && this.method_944()) {
                      if(this.method_946(var2, var3, var4, var5)) {
                         return;
                      }
@@ -2800,7 +2800,7 @@ public final class ASprite {
                   if(var114 != null) {
                      boolean var116 = false;
                      boolean var108;
-                     if(class_1.field_71 && (class_1.field_72 & 1046496) != 0) {
+                     if(GLLib.field_71 && (GLLib.field_72 & 1046496) != 0) {
                         if(this.method_946(var2, var3, var4, var5)) {
                            return;
                         }
@@ -2809,20 +2809,20 @@ public final class ASprite {
                            var5 = field_977[var9 & 7] | var9 & -8;
                         }
 
-                        var114 = class_1.method_100(var1, var114, var3, var4, var10, var13, var108?4:var5, var113, false, !var108);
+                        var114 = GLLib.method_100(var1, var114, var3, var4, var10, var13, var108?4:var5, var113, false, !var108);
                         if(this.method_947(var2, var3, var4, var114, var5) || var114 == null) {
                            return;
                         }
 
-                        var113 = class_1.field_74;
+                        var113 = GLLib.field_74;
                         var5 = 0;
-                        var3 = class_1.field_77;
-                        var4 = class_1.field_78;
-                        var6 = class_1.field_79;
-                        var12 = class_1.field_80;
+                        var3 = GLLib.field_77;
+                        var4 = GLLib.field_78;
+                        var6 = GLLib.field_79;
+                        var12 = GLLib.field_80;
                         var13 = var6;
                         var14 = var12;
-                        class_1.method_51(var1, var114, 0, var6, var3, var4, var6, var12, var113, var113, 0, -1, false);
+                        GLLib.method_51(var1, var114, 0, var6, var3, var4, var6, var12, var113, var113, 0, -1, false);
                         var116 = true;
                      }
 
@@ -2869,41 +2869,41 @@ public final class ASprite {
                         if(!var116) {
                            if(var112 != null) {
                               if(field_974[var5 & 7] == 0) {
-                                 class_1.method_48(var1, var112, var3, var4, 20, false);
+                                 GLLib.method_48(var1, var112, var3, var4, 20, false);
                                  return;
                               }
 
                               if((var5 & 4) != 0) {
-                                 class_1.method_49(var1, var112, 0, 0, var12, var6, field_974[var5 & 7], var3, var4, 20, false);
+                                 GLLib.method_49(var1, var112, 0, 0, var12, var6, field_974[var5 & 7], var3, var4, 20, false);
                                  return;
                               }
 
-                              class_1.method_49(var1, var112, 0, 0, var6, var12, field_974[var5 & 7], var3, var4, 20, false);
+                              GLLib.method_49(var1, var112, 0, 0, var6, var12, field_974[var5 & 7], var3, var4, 20, false);
                            }
 
                            return;
                         }
                      } else if(!var116) {
-                        class_1.method_51(var1, var114, 0, var14, var3, var4, var14, var13, var113, var113, var9, -1, true);
+                        GLLib.method_51(var1, var114, 0, var14, var3, var4, var14, var13, var113, var113, var9, -1, true);
                         return;
                      }
                   }
-               } else if(class_1.field_71 && (class_1.field_72 & 1046496) != 0) {
+               } else if(GLLib.field_71 && (GLLib.field_72 & 1046496) != 0) {
                   if(!this.method_946(var2, var3, var4, var5)) {
                      boolean var117 = this.method_944();
                      int var10006 = var117?0:var5;
                      boolean var110 = !var117;
                      var12 = var10006;
                      int[] var111 = method_939((int[])null);
-                     class_1.method_52(var112, var111, 0, var13, 0, 0, var13, var10);
-                     int[] var115 = class_1.method_100(var1, var111, var3, var4, var13, var10, var12, var113, false, var110);
+                     GLLib.method_52(var112, var111, 0, var13, 0, 0, var13, var10);
+                     int[] var115 = GLLib.method_100(var1, var111, var3, var4, var13, var10, var12, var113, false, var110);
                      if(!this.method_947(var2, var3, var4, var115, var5) && var115 != null) {
-                        var113 = class_1.field_74;
-                        var3 = class_1.field_77;
-                        var4 = class_1.field_78;
-                        var6 = class_1.field_79;
-                        var12 = class_1.field_80;
-                        class_1.method_51(var1, var115, 0, var6, var3, var4, var6, var12, var113, true, 0, -1, false);
+                        var113 = GLLib.field_74;
+                        var3 = GLLib.field_77;
+                        var4 = GLLib.field_78;
+                        var6 = GLLib.field_79;
+                        var12 = GLLib.field_80;
+                        GLLib.method_51(var1, var115, 0, var6, var3, var4, var6, var12, var113, true, 0, -1, false);
                         return;
                      }
                   }
@@ -2911,11 +2911,11 @@ public final class ASprite {
                   this.method_952(var2, var112);
                   if(var112 != null) {
                      if(field_974[var5 & 7] == 0) {
-                        class_1.method_48(var1, var112, var3, var4, 20, false);
+                        GLLib.method_48(var1, var112, var3, var4, 20, false);
                         return;
                      }
 
-                     class_1.method_49(var1, var112, 0, 0, var11, var10, field_974[var5 & 7], var3, var4, 20, false);
+                     GLLib.method_49(var1, var112, 0, 0, var11, var10, field_974[var5 & 7], var3, var4, 20, false);
                   }
                }
             }
