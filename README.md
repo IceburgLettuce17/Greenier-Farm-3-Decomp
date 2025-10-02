@@ -1,3 +1,6 @@
+# IMPORTANT
+This repo is no longer in use. I am in the progress of making a new Greenier Farm that uses Procyon as a base, along with code from Vineflower and CFR.
+
 # Greenier-Farm-3-Decomp
  A de-compilation of the third version of Gameloft's Green Farm series. This decomp is based on the launch version (1.0.6) for the Samsung GT-S8000 Jet. The goal is not matching, but deobfuscating and documenting it enough for the code to by readable and logically identical.
 # Building
